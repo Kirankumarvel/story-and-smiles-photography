@@ -99,6 +99,19 @@ This is a static site and can be hosted on:
 
 Serve `index.html` as the entry point.
 
+### Vercel (recommended settings)
+
+- Framework Preset: `Other`
+- Root Directory: repository root
+- Build Command: leave empty
+- Output Directory: leave empty (or set to `.`)
+- Install Command: leave empty
+- Environment Variables: none required
+
+This repository includes a `vercel.json` that:
+- serves existing static files first, and
+- falls back to `index.html` for non-file routes.
+
 ---
 
 ## License
