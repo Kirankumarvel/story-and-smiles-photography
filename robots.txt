@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://story-and-smiles-photography.vercel.app/sitemap.xml
