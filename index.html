@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Story and Smiles Photography is a candid wedding photographer in Bengaluru, based in Banashankari. We capture weddings, pre‑weddings, maternity, newborn, baby and family events across the city with warm, storytelling images.">
     <meta name="keywords" content="wedding photographers bangalore, best wedding photographers in bangalore, candid wedding photographers bangalore, portfolio photographers bangalore, event photography bangalore, baby shower photography bangalore, photographers in karnataka, affordable wedding photographers bangalore, pre wedding shoot bangalore, karthik photography, story and smiles photography">
     <meta name="author" content="Story and Smiles Photography">
@@ -17,18 +17,14 @@
     <meta property="og:image" content="https://storyandsmiles.com/assets/images/hero-bg.jpeg">
     <meta property="og:url" content="https://story-and-smiles-photography.vercel.app/">
     
-    
-    
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Story and Smiles | Wedding Photographer in Bengaluru">
     <meta name="twitter:description" content="Candid wedding and family photography in Bengaluru. Maternity, newborn and event coverage from Banashankari‑based Story and Smiles.">
 
     <title>Wedding Photographer in Bengaluru | Story and Smiles Photography</title>
-    <!-- <title>Story and Smiles Photography | Best Wedding Photographers Bangalore, Karnataka | Candid, Event & Portfolio Photography</title> -->
 
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     
     <!-- Preload Critical Assets -->
@@ -39,19 +35,192 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
-    <!-- Canonical & Structured Data (Schema.org) -->
+    
+    <!-- CRITICAL RESPONSIVE FIXES FOR HERO SECTION -->
+    <style>
+        /* Hero Mobile Responsiveness Fixes */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 100vh;
+                padding: 80px 20px 60px;
+                text-align: center;
+            }
+            
+            .hero-content {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+            
+            .hero-title {
+                font-size: 2rem !important;
+                line-height: 1.3 !important;
+                word-wrap: break-word;
+            }
+            
+            .hero-title br {
+                display: none; /* Remove manual br on mobile, let text wrap naturally */
+            }
+            
+            .hero-title .highlight {
+                display: inline-block;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem !important;
+                line-height: 1.4;
+                margin: 15px 0 20px;
+            }
+            
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+                width: 100%;
+                margin: 20px 0;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+            
+            /* Hero stats responsive grid */
+            .hero-stats {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                margin-top: 30px;
+                text-align: center;
+            }
+            
+            .hero-stats .stat-item {
+                margin: 0;
+                padding: 10px;
+            }
+            
+            .stat-number {
+                font-size: 1.6rem !important;
+            }
+            
+            .stat-label {
+                font-size: 0.85rem !important;
+            }
+            
+            /* Floating Instagram Badge - reposition for mobile */
+            .instagram-header-badge {
+                top: 15px !important;
+                right: 15px !important;
+                left: auto !important;
+                bottom: auto !important;
+                transform: none !important;
+                position: fixed;
+                z-index: 1001;
+            }
+            
+            .insta-badge-link {
+                padding: 6px 12px !important;
+                border-radius: 40px !important;
+                background: rgba(0,0,0,0.75) !important;
+                backdrop-filter: blur(8px);
+                gap: 6px !important;
+            }
+            
+            .insta-handle {
+                font-size: 12px !important;
+            }
+            
+            .insta-followers {
+                display: none; /* Hide followers count on mobile to save space */
+            }
+            
+            /* Instagram social proof strip */
+            .instagram-social-proof {
+                justify-content: center;
+                margin: 15px 0;
+            }
+            
+            /* Scroll indicator - adjust position */
+            .scroll-indicator {
+                bottom: 15px !important;
+            }
+            
+            /* Hero overlay opacity adjustment for better text contrast */
+            .hero-overlay {
+                background: rgba(0,0,0,0.6) !important;
+            }
+        }
+        
+        /* Small mobile devices (max-width: 480px) */
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.6rem !important;
+            }
+            
+            .hero-subtitle {
+                font-size: 0.9rem !important;
+            }
+            
+            .hero-stats {
+                gap: 12px;
+            }
+            
+            .stat-number {
+                font-size: 1.3rem !important;
+            }
+            
+            .stat-label {
+                font-size: 0.7rem !important;
+            }
+            
+            .insta-badge-link {
+                padding: 4px 10px !important;
+            }
+            
+            .insta-handle {
+                font-size: 10px !important;
+            }
+        }
+        
+        /* Tablet devices (769px - 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .hero-title {
+                font-size: 2.8rem !important;
+            }
+            
+            .hero-buttons {
+                gap: 20px;
+            }
+            
+            .hero-stats {
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        
+        /* Ensure the hero background covers properly */
+        .hero {
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    
     <link rel="canonical" href="https://story-and-smiles-photography.vercel.app/">
     
     <meta name="google-site-verification" content="ZMTUWN4rBwuVtQTiprMbyWiizYeSOAj3S2h0cnIvQhc" />
     <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6NL6CT9YJ"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-F6NL6CT9YJ');
-        </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6NL6CT9YJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-F6NL6CT9YJ');
+    </script>
+    
     <!-- Schema Markup -->
     <script type="application/ld+json">
     {
@@ -187,10 +356,9 @@
 
     <div class="hero-content">
         <h1 class="hero-title fade-in-up">
-            <br> Premium Events Photographer in <span class="highlight">Bengaluru</span><br>
-            
+            Premium Events Photographer in <span class="highlight">Bengaluru</span>
+            <br>
             Capturing Your <span class="highlight">Stories</span>, Creating Timeless <span class="highlight">Smiles</span>
-           
         </h1>
         <h4 class="hero-subtitle fade-in-up delay-1">
             Premium Wedding & Event Photography in Bangalore, Karnataka & South India
@@ -198,7 +366,6 @@
         
         <!-- Instagram Social Proof Strip -->
         <div class="instagram-social-proof fade-in-up delay-2">
-            
             <a href="https://www.instagram.com/storyandsmiles" target="_blank" rel="noopener noreferrer" class="insta-view-more">
                 View Instagram Portfolio →
             </a>
