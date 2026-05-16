@@ -207,6 +207,73 @@
             background-size: cover;
             background-position: center;
         }
+
+        /* Professional credit styling */
+.credit-wrapper {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.credit-separator {
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    margin: 0 auto 0.8rem auto;
+}
+
+.credit-line {
+    font-size: 0.75rem;
+    letter-spacing: 0.3px;
+    color: rgba(255,255,255,0.6);
+    font-family: inherit;
+    margin: 0;
+}
+
+.credit-heart {
+    color: #e07a5f;
+    font-size: 0.8rem;
+    display: inline-block;
+    animation: subtlePulse 1.5s ease infinite;
+}
+
+.credit-link {
+    color: #e07a5f;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-bottom: 1px dotted rgba(224,122,95,0.3);
+}
+
+.credit-link:hover {
+    color: #f4a261;
+    border-bottom-color: #f4a261;
+}
+
+.credit-role {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.4);
+    margin-left: 4px;
+}
+
+@keyframes subtlePulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.08); opacity: 1; }
+}
+
+/* Remove animation on mobile if desired */
+@media (max-width: 768px) {
+    .credit-heart {
+        animation: none;
+    }
+    .credit-role {
+        display: block;
+        margin-left: 0;
+        margin-top: 2px;
+    }
+}
+
+        
     </style>
     
     <link rel="canonical" href="https://story-and-smiles-photography.vercel.app/">
@@ -819,6 +886,18 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Story and Smiles Photography. All rights reserved. | <strong>Wedding Photographers Bangalore, Karnataka</strong></p>
+
+            <!-- Professional Credit Line -->
+            <div class="credit-wrapper">
+                <span class="credit-separator"></span>
+                <p class="credit-line">
+                    Crafted with <span class="credit-heart">❤</span> by 
+                    <a href="https://kirankumarvel.github.io/" target="_blank" rel="noopener noreferrer" class="credit-link">Kiran</a>
+                    <span class="credit-role">— Web &amp; Creative</span>
+                </p>
+            </div>
+        </div>
+            
             </div>
         </div>
 
