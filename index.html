@@ -22,7 +22,7 @@
     <meta name="twitter:title" content="Story and Smiles | Wedding Photographer in Bengaluru">
     <meta name="twitter:description" content="Candid wedding and family photography in Bengaluru. Maternity, newborn and event coverage from Banashankari‑based Story and Smiles.">
 
-    <title>Wedding Photographer in Bengaluru | Story and Smiles Photography</title>
+    <title>Candid Wedding Photographer in Banashankari, Bangalore | Story & Smiles</title>
 
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -273,7 +273,92 @@
     }
 }
 
-        
+        /* Map + GMB Review badge additions – seamlessly integrated */
+        .gmb-map-container {
+            margin-top: 2rem;
+            margin-bottom: 1.2rem;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .gmb-map-container iframe {
+            width: 100%;
+            height: 280px;
+            border: none;
+            display: block;
+        }
+        .gmb-review-badge {
+            background: white;
+            border-radius: 24px;
+            padding: 1rem 1.2rem;
+            margin: 0.5rem 0 0.5rem;
+            border: 1px solid rgba(224,122,95,0.2);
+            box-shadow: 0 6px 14px rgba(0,0,0,0.03);
+            transition: all 0.2s ease;
+        }
+        .gmb-review-inner {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .gmb-rating-stars {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #fef7e8;
+            padding: 5px 12px;
+            border-radius: 60px;
+        }
+        .stars {
+            color: #f5b042;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+        }
+        .rating-num {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 1rem;
+        }
+        .gmb-review-text {
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+        .gmb-review-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e07a5f10;
+            padding: 6px 14px;
+            border-radius: 40px;
+            text-decoration: none;
+            color: #e07a5f;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: 0.2s;
+            border: 1px solid #e07a5f30;
+        }
+        .gmb-review-link:hover {
+            background: #e07a5f;
+            color: white;
+            border-color: #e07a5f;
+        }
+        @media (max-width: 600px) {
+            .gmb-review-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .gmb-review-link {
+                align-self: stretch;
+                justify-content: center;
+            }
+            .gmb-map-container iframe {
+                height: 220px;
+            }
+        }
     </style>
     
     <link rel="canonical" href="https://story-and-smiles-photography.vercel.app/">
@@ -390,6 +475,56 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PhotographyStudio",
+  "name": "Story And Smiles Photography",
+  "image": "https://story-and-smiles-photography.vercel.app/logo.png",
+  "url": "https://story-and-smiles-photography.vercel.app",
+  "telephone": "+91XXXXXXXXXX",
+  "email": "storyandsmiles@gmail.com",
+  "priceRange": "₹₹ (15,000 - 60,000)",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2A, 5th main, 3rd Cross Rd, near Om Shakthi Temple, Hanumagiri, Chikkalasandra",
+    "addressLocality": "Bengaluru",
+    "addressRegion": "Karnataka",
+    "postalCode": "560061",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 12.9061,
+    "longitude": 77.5578
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "10:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "10:00",
+      "closes": "17:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/storyandsmiles",
+    "https://www.facebook.com/storyandsmiles"
+  ],
+  "areaServed": {
+    "@type": "City",
+    "name": "Bengaluru"
+  },
+  "serviceType": ["Wedding Photography", "Candid Photography", "Baby Shower Photography", "Newborn Photography", "Pre Wedding Shoot"],
+  "hasMap": "https://maps.app.goo.gl/your-google-maps-short-link"
+}
+</script>
+
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -592,21 +727,21 @@
             <div class="gallery-grid">
                 <div class="gallery-item animate-on-scroll">
                     <!-- <img src="assets/images/wedding-1.jpg" alt="Best Wedding Photography Bangalore Karnataka" loading="lazy" width="400" height="300"> -->
-                    <img src="assets/images/wedding-1.jpg" alt="Candid wedding photographer in Bengaluru capturing South Indian wedding rituals" loading="lazy" width="400" height="300"> 
+                    <img src="assets/images/wedding-1.jpg" alt="Candid wedding photographer in Banashankari, Bangalore capturing South Indian wedding rituals" loading="lazy" width="400" height="300"> 
                     <div class="gallery-overlay">
                         <span>Wedding</span>
                     </div>
                 </div>
                 <div class="gallery-item animate-on-scroll">
                     <!-- <img src="assets/images/pre-wedding.jpg" alt="Pre Wedding Photoshoot Bangalore" loading="lazy" width="400" height="300"> -->
-                    <img src="assets/images/pre-wedding.jpg"  alt="Pre‑wedding photoshoot in Bengaluru for couple at outdoor location"   loading="lazy" width="400" height="300">
+                    <img src="assets/images/pre-wedding.jpg"  alt="Pre‑wedding photoshoot in Banashankari, Bangalore for couple at outdoor location"   loading="lazy" width="400" height="300">
                     <div class="gallery-overlay">
                         <span>Pre-Wedding</span>
                     </div>
                 </div>
                 <div class="gallery-item animate-on-scroll">
                     <!-- <img src="assets/images/event.jpg" alt="Event Photography Bangalore" loading="lazy" width="400" height="300"> -->
-                   <img src="assets/images/event.jpg" alt="Birthday and event photography in Bengaluru with candid guest moments"  loading="lazy" width="400" height="300">
+                   <img src="assets/images/event.jpg" alt="Birthday and event photography in Banashankari, Bangalore with candid guest moments"  loading="lazy" width="400" height="300">
                     <div class="gallery-overlay">
                         <span>Events</span>
                     </div>
@@ -727,7 +862,39 @@
                             </a>
                         </div>
                     </div>
+
+                    <!-- ===== GOOGLE MAPS EMBED (from GBP) ===== -->
+                    <div class="gmb-map-container">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Story%20and%20Smiles%20Photography%2C%202A%2C%205th%20main%2C%203rd%20Cross%20Rd%2C%20near%20Om%20Shakthi%20Temple%2C%20Hanumagiri%2C%20Chikkalasandra%2C%20Bengaluru%2C%20Karnataka%20560061&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="280" 
+                            style="border:0; border-radius: 20px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Story and Smiles Photography - Google Maps from GBP">
+                        </iframe>
+                    </div>
+
+                    <!-- ===== GMB REVIEW BADGE (connects website to GBP) ===== -->
+                    <div class="gmb-review-badge">
+                        <div class="gmb-review-inner">
+                            <div class="gmb-rating-stars">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-num">5.0 (89+ reviews)</span>
+                            </div>
+                            <div class="gmb-review-text">
+                                ⭐ Rated one of the best wedding photographers in Bangalore
+                            </div>
+                            <a href="https://search.google.com/local/reviews?placeid=ChIJu3grGi1RrjsRI_yNq1Bk-8A" target="_blank" rel="noopener noreferrer" class="gmb-review-link">
+                                📝 Read Google Reviews
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+
                 <form class="contact-form animate-on-scroll" id="contactForm" action="https://formspree.io/f/info.storyandsmiles@gmail.com" method="POST">
                     <div class="form-group">
                         <input type="text" name="name" id="name" placeholder="Your Full Name*" required>
