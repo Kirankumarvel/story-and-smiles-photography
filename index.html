@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <!-- ===== SECURITY & REFERRER ===== -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src https://maps.google.com; connect-src 'self' https://www.clarity.ms https://www.google-analytics.com;" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src https://maps.google.com https://www.google.com; connect-src 'self' https://www.clarity.ms https://www.google-analytics.com;" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <!-- ===== PRIMARY META ===== -->
@@ -35,10 +33,12 @@
     <meta name="twitter:site" content="@storyandsmiles" />
     <meta name="twitter:creator" content="@storyandsmiles" />
 
-    <!-- ===== FAVICON (CLEAN, RELIABLE) ===== -->
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.85em' font-size='80'%3E📸%3C/text%3E%3C/svg%3E" />
+    <!-- ===== FAVICON (FIXED: clean, reliable, no endless loading) ===== -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📸%3C/text%3E%3C/svg%3E" />
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='.85em' font-size='28'%3E📸%3C/text%3E%3C/svg%3E" />
     <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Ctext y='.85em' font-size='140'%3E📸%3C/text%3E%3C/svg%3E" />
+    <!-- Prevent browser from endlessly trying to fetch /favicon.ico -->
+    <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📸%3C/text%3E%3C/svg%3E" />
 
     <!-- ===== CANONICAL ===== -->
     <link rel="canonical" href="https://story-and-smiles-photography.vercel.app/" />
@@ -277,6 +277,16 @@
             color: #fff;
             transform: translateY(-2px);
         }
+        .btn-outline {
+            background: transparent;
+            color: #e07a5f;
+            border: 2px solid #e07a5f;
+        }
+        .btn-outline:hover {
+            background: #e07a5f;
+            color: #fff;
+            transform: translateY(-2px);
+        }
 
         /* ----- STICKY HEADER (fixed) ----- */
         .navbar {
@@ -448,6 +458,33 @@
             }
         }
 
+        /* ===== TRUST BADGES (FIXED: visible on dark bg) ===== */
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: center;
+            margin: 16px 0 10px;
+        }
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 6px 16px 6px 12px;
+            border-radius: 40px;
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+        }
+        .trust-badge svg {
+            flex-shrink: 0;
+            opacity: 0.9;
+        }
+
         /* ----- INSTAGRAM BADGE (floating) ----- */
         .instagram-header-badge {
             position: fixed;
@@ -606,7 +643,7 @@
             line-height: 1.6;
         }
 
-        /* ----- GALLERY (with grid) ----- */
+        /* ----- GALLERY (with portfolio link) ----- */
         .gallery-section {
             padding: 80px 0;
             background: #fff;
@@ -655,6 +692,22 @@
             backdrop-filter: blur(4px);
             padding: 4px 16px;
             border-radius: 40px;
+        }
+        .gallery-portfolio-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .gallery-portfolio-link .btn {
+            background: #fff;
+            color: #e07a5f;
+            border: 2px solid #e07a5f;
+            box-shadow: 0 4px 16px rgba(224, 122, 95, 0.10);
+        }
+        .gallery-portfolio-link .btn:hover {
+            background: #e07a5f;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(224, 122, 95, 0.30);
         }
 
         /* ----- TESTIMONIALS ----- */
@@ -809,13 +862,140 @@
             color: #7a7272;
         }
 
-        /* ----- FAQ (enhanced accordion) ----- */
+        /* ===== GMB MAP & REVIEW BADGE (FIXED: map visible) ===== */
+        .gmb-map-container {
+            margin-top: 24px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            background: #f0eeec;
+            min-height: 200px;
+            position: relative;
+        }
+        .gmb-map-container iframe {
+            width: 100%;
+            height: 260px;
+            border: none;
+            display: block;
+            background: #f0eeec;
+        }
+        .gmb-map-fallback {
+            display: none;
+            padding: 40px 20px;
+            text-align: center;
+            color: #7a7272;
+            background: #f5f2f0;
+            border-radius: 20px;
+        }
+        .gmb-map-fallback a {
+            color: #e07a5f;
+            font-weight: 600;
+        }
+        .gmb-review-badge {
+            background: #fff;
+            border-radius: 20px;
+            padding: 16px 20px;
+            margin-top: 16px;
+            border: 1px solid rgba(224, 122, 95, 0.15);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+        }
+        .gmb-review-inner {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .gmb-rating-stars {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #fef7e8;
+            padding: 4px 14px;
+            border-radius: 60px;
+        }
+        .stars {
+            color: #f5b042;
+            letter-spacing: 2px;
+            font-size: 1rem;
+        }
+        .rating-num {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 0.9rem;
+        }
+        .gmb-review-text {
+            font-size: 0.85rem;
+            color: #4a5568;
+        }
+        .gmb-review-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e07a5f10;
+            padding: 6px 16px;
+            border-radius: 40px;
+            text-decoration: none;
+            color: #e07a5f;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: 0.2s;
+            border: 1px solid #e07a5f30;
+        }
+        .gmb-review-link:hover {
+            background: #e07a5f;
+            color: #fff;
+            border-color: #e07a5f;
+        }
+        @media (max-width: 600px) {
+            .gmb-review-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .gmb-review-link {
+                align-self: stretch;
+                justify-content: center;
+            }
+            .gmb-map-container iframe {
+                height: 200px;
+            }
+        }
+
+        /* ===== TL;DR / SUMMARY BOX (for AI & readers) ===== */
+        .summary-box {
+            background: rgba(255, 255, 255, 0.10);
+            backdrop-filter: blur(6px);
+            border-left: 4px solid #f4a261;
+            border-radius: 12px;
+            padding: 16px 22px;
+            margin: 16px 0 28px;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .summary-box strong {
+            color: #f4a261;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .summary-box p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.90);
+            line-height: 1.6;
+        }
+
+        /* ----- FAQ (enhanced accordion with "read more") ----- */
         .faq-section {
             padding: 80px 0;
             background: #fcf9f7;
         }
         .faq-accordion {
-            max-width: 800px;
+            max-width: 820px;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -827,6 +1007,14 @@
             border: 1px solid rgba(0, 0, 0, 0.04);
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
             overflow: hidden;
+            transition: all 0.2s;
+        }
+        .faq-item.hidden-faq {
+            display: none;
+        }
+        .faq-item.hidden-faq.visible {
+            display: block;
+            animation: fadeInUp 0.5s ease forwards;
         }
         .faq-item summary {
             padding: 18px 24px;
@@ -848,6 +1036,8 @@
             font-size: 1.2rem;
             color: #e07a5f;
             transition: transform 0.3s;
+            flex-shrink: 0;
+            margin-left: 16px;
         }
         .faq-item[open] summary::after {
             transform: rotate(180deg);
@@ -861,7 +1051,26 @@
             line-height: 1.7;
         }
         .faq-answer p {
-            margin: 0;
+            margin: 0 0 6px;
+        }
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-show-more {
+            text-align: center;
+            margin-top: 28px;
+        }
+        .faq-show-more .btn {
+            background: transparent;
+            color: #e07a5f;
+            border: 2px solid #e07a5f;
+            padding: 12px 36px;
+        }
+        .faq-show-more .btn:hover {
+            background: #e07a5f;
+            color: #fff;
+            transform: translateY(-2px);
         }
 
         /* ----- FOOTER (enhanced) ----- */
@@ -1310,6 +1519,13 @@
             .breadcrumb {
                 font-size: 0.7rem;
             }
+            .trust-badges {
+                gap: 10px;
+            }
+            .trust-badge {
+                font-size: 0.75rem;
+                padding: 4px 12px 4px 10px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1336,141 +1552,6 @@
             .stat-number {
                 font-size: 1.2rem !important;
             }
-        }
-
-        /* ===== GMB MAP & REVIEW BADGE ===== */
-        .gmb-map-container {
-            margin-top: 24px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-        }
-        .gmb-map-container iframe {
-            width: 100%;
-            height: 260px;
-            border: none;
-            display: block;
-        }
-        .gmb-review-badge {
-            background: #fff;
-            border-radius: 20px;
-            padding: 16px 20px;
-            margin-top: 16px;
-            border: 1px solid rgba(224, 122, 95, 0.15);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
-        }
-        .gmb-review-inner {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .gmb-rating-stars {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: #fef7e8;
-            padding: 4px 14px;
-            border-radius: 60px;
-        }
-        .stars {
-            color: #f5b042;
-            letter-spacing: 2px;
-            font-size: 1rem;
-        }
-        .rating-num {
-            font-weight: 700;
-            color: #2c3e50;
-            font-size: 0.9rem;
-        }
-        .gmb-review-text {
-            font-size: 0.85rem;
-            color: #4a5568;
-        }
-        .gmb-review-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #e07a5f10;
-            padding: 6px 16px;
-            border-radius: 40px;
-            text-decoration: none;
-            color: #e07a5f;
-            font-weight: 500;
-            font-size: 0.85rem;
-            transition: 0.2s;
-            border: 1px solid #e07a5f30;
-        }
-        .gmb-review-link:hover {
-            background: #e07a5f;
-            color: #fff;
-            border-color: #e07a5f;
-        }
-        @media (max-width: 600px) {
-            .gmb-review-inner {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 12px;
-            }
-            .gmb-review-link {
-                align-self: stretch;
-                justify-content: center;
-            }
-            .gmb-map-container iframe {
-                height: 200px;
-            }
-        }
-
-        /* ===== TL;DR / SUMMARY BOX (for AI & readers) ===== */
-        .summary-box {
-            background: #fdf0eb;
-            border-left: 4px solid #e07a5f;
-            border-radius: 12px;
-            padding: 20px 24px;
-            margin: 20px 0 32px;
-            max-width: 760px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .summary-box strong {
-            color: #1e1a1a;
-            display: block;
-            margin-bottom: 4px;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #e07a5f;
-        }
-        .summary-box p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: #3a3232;
-            line-height: 1.6;
-        }
-
-        /* ===== TRUST BADGES (CRO) ===== */
-        .trust-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            justify-content: center;
-            margin: 20px 0 10px;
-        }
-        .trust-badge {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.8rem;
-            color: #5a5252;
-            background: rgba(255, 255, 255, 0.08);
-            padding: 4px 14px 4px 10px;
-            border-radius: 40px;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-        }
-        .trust-badge svg {
-            flex-shrink: 0;
         }
 
         /* ----- ANIMATIONS (reduced motion) ----- */
@@ -1532,6 +1613,7 @@
                 <li role="none"><a href="#services" class="nav-link" role="menuitem">Services</a></li>
                 <li role="none"><a href="#gallery" class="nav-link" role="menuitem">Gallery</a></li>
                 <li role="none"><a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a></li>
+                <li role="none"><a href="#faq" class="nav-link" role="menuitem">FAQs</a></li>
                 <li role="none"><a href="#contact" class="nav-link nav-cta" role="menuitem">Book Now</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -1577,7 +1659,7 @@
                 Premium Wedding &amp; Event Photography in Karnataka &amp; South India
             </p>
 
-            <!-- Trust badges (CRO) -->
+            <!-- TRUST BADGES — FIXED: visible on dark background -->
             <div class="trust-badges fade-in-up delay-1">
                 <span class="trust-badge">⭐ 5.0 ★ 89+ reviews</span>
                 <span class="trust-badge">📸 7+ years experience</span>
@@ -1754,7 +1836,7 @@
         </div>
     </section>
 
-    <!-- ===== GALLERY ===== -->
+    <!-- ===== GALLERY (with portfolio link added) ===== -->
     <section id="gallery" class="gallery-section" aria-labelledby="gallery-heading">
         <div class="container">
             <div class="section-header">
@@ -1786,6 +1868,14 @@
                     <img src="assets/images/placeholder.jpg" alt="Candid family photography in Bengaluru capturing natural smiles" loading="lazy" width="400" height="300" />
                     <div class="gallery-overlay"><span>Candid Moments</span></div>
                 </div>
+            </div>
+
+            <!-- ===== PORTFOLIO LINK (FIXED: added Canva link) ===== -->
+            <div class="gallery-portfolio-link animate-on-scroll">
+                <a href="https://karthikstories.my.canva.site/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-weight:600;">
+                    🖼️ View Full Portfolio on Canva
+                </a>
+                <p style="margin-top:10px; font-size:0.85rem; color:#7a7272;">Explore more of our work — weddings, maternity, events &amp; more</p>
             </div>
         </div>
     </section>
@@ -1873,360 +1963,460 @@
                         </div>
                     </div>
 
-                    <!-- Google Maps -->
+                    <!-- ===== GOOGLE MAPS (FIXED: simpler, reliable embed) ===== -->
                     <div class="gmb-map-container">
-                        <iframe src="https://maps.google.com/maps?q=Story%20and%20Smiles%20Photography%2C%202A%2C%205th%20main%2C%203rd%20Cross%20Rd%2C%20near%20Om%20Shakthi%20Temple%2C%20Hanumagiri%2C%20Chikkalasandra%2C%20Bengaluru%2C%20Karnataka%20560061&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="260" style="border:0; border-radius:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Story and Smiles Photography location on Google Maps"></iframe>
-                    </div>
+                        <iframe
+                        src="https://maps.google.com/maps?q=Story+and+Smiles+Photography+Bangalore&output=embed&z=15"
+                        width="100%"
+                        height="260"
+                        style="border:0; border-radius:20px;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Story and Smiles Photography location on Google Maps"
+                    ></iframe>
+                </div>
 
-                    <!-- Google Review Badge -->
-                    <div class="gmb-review-badge">
-                        <div class="gmb-review-inner">
-                            <div class="gmb-rating-stars">
-                                <span class="stars">★★★★★</span>
-                                <span class="rating-num">5.0 (89+ reviews)</span>
-                            </div>
-                            <div class="gmb-review-text">⭐ Rated one of the best wedding photographers in Bangalore</div>
-                            <a href="https://search.google.com/local/reviews?placeid=ChIJu3grGi1RrjsRI_yNq1Bk-8A" target="_blank" rel="noopener noreferrer" class="gmb-review-link">📝 Read Google Reviews</a>
+                <!-- Google Review Badge -->
+                <div class="gmb-review-badge">
+                    <div class="gmb-review-inner">
+                        <div class="gmb-rating-stars">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-num">5.0 (89+ reviews)</span>
                         </div>
+                        <div class="gmb-review-text">⭐ Rated one of the best wedding photographers in Bangalore</div>
+                        <a href="https://search.google.com/local/reviews?placeid=ChIJu3grGi1RrjsRI_yNq1Bk-8A" target="_blank" rel="noopener noreferrer" class="gmb-review-link">📝 Read Google Reviews</a>
                     </div>
                 </div>
-
-                <!-- Contact Form -->
-                <form class="contact-form animate-on-scroll" id="contactForm" action="https://formspree.io/f/info.storyandsmiles@gmail.com" method="POST" aria-label="Contact form">
-                    <div class="form-group">
-                        <input type="text" name="name" id="name" placeholder="Your Full Name*" required autocomplete="name" />
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" id="email" placeholder="Your Email Address*" required autocomplete="email" />
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" name="phone" id="phone" placeholder="Your Phone Number*" required autocomplete="tel" />
-                    </div>
-                    <div class="form-group">
-                        <select name="service" id="service">
-                            <option value="">Select Service Interested In</option>
-                            <option value="wedding">Wedding Photography</option>
-                            <option value="pre-wedding">Pre-Wedding Photoshoot</option>
-                            <option value="event">Event Photography</option>
-                            <option value="baby-shower">Baby Shower &amp; Maternity</option>
-                            <option value="portfolio">Portfolio Photography</option>
-                            <option value="newborn">Newborn Photography</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" id="message" placeholder="Tell us about your event (date, venue, requirements)*" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit">Send Inquiry Now</button>
-                    <p class="form-note">We'll get back to you within 2 hours!</p>
-                </form>
             </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form animate-on-scroll" id="contactForm" action="https://formspree.io/f/info.storyandsmiles@gmail.com" method="POST" aria-label="Contact form">
+                <div class="form-group">
+                    <input type="text" name="name" id="name" placeholder="Your Full Name*" required autocomplete="name" />
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="Your Email Address*" required autocomplete="email" />
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" id="phone" placeholder="Your Phone Number*" required autocomplete="tel" />
+                </div>
+                <div class="form-group">
+                    <select name="service" id="service">
+                        <option value="">Select Service Interested In</option>
+                        <option value="wedding">Wedding Photography</option>
+                        <option value="pre-wedding">Pre-Wedding Photoshoot</option>
+                        <option value="event">Event Photography</option>
+                        <option value="baby-shower">Baby Shower &amp; Maternity</option>
+                        <option value="portfolio">Portfolio Photography</option>
+                        <option value="newborn">Newborn Photography</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="message" placeholder="Tell us about your event (date, venue, requirements)*" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit">Send Inquiry Now</button>
+                <p class="form-note">We'll get back to you within 2 hours!</p>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===== FAQ ===== -->
-    <section id="faq" class="faq-section" aria-labelledby="faq-heading">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">FAQs</span>
-                <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
-                <p class="section-description">Quick answers to common questions about our wedding, maternity, newborn &amp; event photography.</p>
-            </div>
-            <div class="faq-accordion">
-                <details class="faq-item" open>
-                    <summary>Are you based in Banashankari? Do you travel across Bengaluru?</summary>
-                    <div class="faq-answer"><p>Yes, we are based in Banashankari and happily travel across Bengaluru and nearby areas for weddings, maternity, newborn and family events. We bring the same candid, storytelling style to every location.</p></div>
-                </details>
-                <details class="faq-item">
-                    <summary>How far in advance should I book?</summary>
-                    <div class="faq-answer"><p>For popular wedding dates, we recommend booking at least 3–6 months in advance. Smaller events, maternity and baby shoots can often be scheduled 4–6 weeks ahead, depending on availability.</p></div>
-                </details>
-                <details class="faq-item">
-                    <summary>What wedding photography packages do you offer?</summary>
-                    <div class="faq-answer"><p>We offer custom packages for full-day and half-day wedding coverage, pre-wedding shoots, mehendi, sangeet and reception. Each includes candid photography, family portraits, and a curated set of high-resolution edited images.</p></div>
-                </details>
-                <details class="faq-item">
-                    <summary>When is the best time for a maternity shoot?</summary>
-                    <div class="faq-answer"><p>The ideal time is between 28–34 weeks of pregnancy, when the bump is clearly visible and you're still comfortable. For twins or medical considerations, we may suggest an earlier week.</p></div>
-                </details>
-                <details class="faq-item">
-                    <summary>How do you ensure safety during newborn shoots?</summary>
-                    <div class="faq-answer"><p>Newborn safety is our top priority. We keep the room warm, use soft props, follow baby-led posing, and never force positions. Sessions are relaxed with breaks for feeding and cuddles.</p></div>
-                </details>
-                <details class="faq-item">
-                    <summary>What are your starting prices?</summary>
-                    <div class="faq-answer"><p>Pricing depends on hours, location and services. We share customised quotes for each event. A booking advance confirms your date, with the remaining payment split across milestones.</p></div>
-                </details>
-                <details class="faq-item">
-                    <summary>How long until we receive our photos?</summary>
-                    <div class="faq-answer"><p>For weddings, we deliver curated, edited photos within a few weeks. Maternity, newborn and baby shoots are usually delivered sooner, so you can quickly use them for announcements and framing.</p></div>
-                </details>
-            </div>
+<!-- ===== FAQ (15 FAQs with "Read More" toggle) ===== -->
+<section id="faq" class="faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">FAQs</span>
+            <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+            <p class="section-description">Quick answers to common questions about our wedding, maternity, newborn &amp; event photography.</p>
         </div>
-    </section>
+        <div class="faq-accordion" id="faqAccordion">
+            <!-- FAQ 1 -->
+            <details class="faq-item" open>
+                <summary>Are you based in Banashankari? Do you travel across Bengaluru?</summary>
+                <div class="faq-answer"><p>Yes, we are based in Banashankari and happily travel across Bengaluru and nearby areas for weddings, maternity, newborn and family events. We bring the same candid, storytelling style to every location.</p></div>
+            </details>
+            <!-- FAQ 2 -->
+            <details class="faq-item">
+                <summary>How far in advance should I book?</summary>
+                <div class="faq-answer"><p>For popular wedding dates, we recommend booking at least 3–6 months in advance. Smaller events, maternity and baby shoots can often be scheduled 4–6 weeks ahead, depending on availability.</p></div>
+            </details>
+            <!-- FAQ 3 -->
+            <details class="faq-item">
+                <summary>What wedding photography packages do you offer?</summary>
+                <div class="faq-answer"><p>We offer custom packages for full-day and half-day wedding coverage, pre-wedding shoots, mehendi, sangeet and reception. Each includes candid photography, family portraits, and a curated set of high-resolution edited images.</p></div>
+            </details>
+            <!-- FAQ 4 -->
+            <details class="faq-item">
+                <summary>When is the best time for a maternity shoot?</summary>
+                <div class="faq-answer"><p>The ideal time is between 28–34 weeks of pregnancy, when the bump is clearly visible and you're still comfortable. For twins or medical considerations, we may suggest an earlier week.</p></div>
+            </details>
+            <!-- FAQ 5 -->
+            <details class="faq-item">
+                <summary>How do you ensure safety during newborn shoots?</summary>
+                <div class="faq-answer"><p>Newborn safety is our top priority. We keep the room warm, use soft props, follow baby-led posing, and never force positions. Sessions are relaxed with breaks for feeding and cuddles.</p></div>
+            </details>
+            <!-- FAQ 6 -->
+            <details class="faq-item">
+                <summary>What are your starting prices?</summary>
+                <div class="faq-answer"><p>Pricing depends on hours, location and services. We share customised quotes for each event. A booking advance confirms your date, with the remaining payment split across milestones.</p></div>
+            </details>
+            <!-- FAQ 7 -->
+            <details class="faq-item">
+                <summary>How long until we receive our photos?</summary>
+                <div class="faq-answer"><p>For weddings, we deliver curated, edited photos within a few weeks. Maternity, newborn and baby shoots are usually delivered sooner, so you can quickly use them for announcements and framing.</p></div>
+            </details>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="assets/images/logo-white.png" alt="Story and Smiles Photography" class="footer-logo" width="150" height="48" loading="lazy" />
-                    <p>Story and Smiles is one of the best wedding photographers in Bangalore, capturing stories across Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Lucknow, Goa, and Puducherry.</p>
-                    <p>Phone: <a href="tel:+919845808890">+91-98458 08890</a> | Email: <a href="mailto:info.storyandsmiles@gmail.com">info.storyandsmiles@gmail.com</a></p>
-                    <p style="font-size:0.85rem; opacity:0.6;">2A, 5th main, 3rd Cross Rd, near Om Shakthi Temple, Hanumagiri, Chikkalasandra, Bengaluru, Karnataka 560061</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-services">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><a href="#services">Wedding Photography</a></li>
-                        <li><a href="#services">Pre-Wedding Shoot</a></li>
-                        <li><a href="#services">Event Photography</a></li>
-                        <li><a href="#services">Baby Shower &amp; Maternity</a></li>
-                        <li><a href="#services">Newborn Photography</a></li>
-                    </ul>
-                </div>
+            <!-- ===== HIDDEN FAQS (8–15) — shown via "Read More" ===== -->
+            <div id="hiddenFaqs">
+                <!-- FAQ 8 -->
+                <details class="faq-item hidden-faq">
+                    <summary>Do you offer videography as well?</summary>
+                    <div class="faq-answer"><p>Yes, we offer cinematic wedding videography alongside photography. Our team captures the essence of your day with a highlight film and full ceremony coverage. Ask us about our photo + video combo packages.</p></div>
+                </details>
+                <!-- FAQ 9 -->
+                <details class="faq-item hidden-faq">
+                    <summary>Can we choose the location for our pre-wedding shoot?</summary>
+                    <div class="faq-answer"><p>Absolutely! We work with you to select the perfect location — whether it's a scenic outdoor spot in Bangalore, a heritage site, or a place that holds special meaning for you both.</p></div>
+                </details>
+                <!-- FAQ 10 -->
+                <details class="faq-item hidden-faq">
+                    <summary>Do you provide albums and prints?</summary>
+                    <div class="faq-answer"><p>Yes, we offer premium handcrafted albums, prints, and canvas frames as add-ons. These make for beautiful keepsakes and gifts for family members.</p></div>
+                </details>
+                <!-- FAQ 11 -->
+                <details class="faq-item hidden-faq">
+                    <summary>What happens if it rains on the wedding day?</summary>
+                    <div class="faq-answer"><p>We have backup plans for indoor and covered outdoor spaces. We also carry professional lighting to adapt to any weather condition, ensuring your photos are stunning rain or shine.</p></div>
+                </details>
+                <!-- FAQ 12 -->
+                <details class="faq-item hidden-faq">
+                    <summary>Do you cover destination weddings?</summary>
+                    <div class="faq-answer"><p>Yes, we love destination weddings! We've covered events in Goa, Kerala, Tamil Nadu, and beyond. We handle all travel logistics so you can focus on your celebration.</p></div>
+                </details>
+                <!-- FAQ 13 -->
+                <details class="faq-item hidden-faq">
+                    <summary>How many photos do we get?</summary>
+                    <div class="faq-answer"><p>For a full-day wedding, we typically deliver 600–1000+ high-resolution edited images. Pre-wedding shoots usually yield 100–200 beautifully edited photos.</p></div>
+                </details>
+                <!-- FAQ 14 -->
+                <details class="faq-item hidden-faq">
+                    <summary>Can we request specific shots or poses?</summary>
+                    <div class="faq-answer"><p>Of course! We create a shot list with you before the event. We blend your must-have shots with our candid storytelling style for a perfect mix.</p></div>
+                </details>
+                <!-- FAQ 15 -->
+                <details class="faq-item hidden-faq">
+                    <summary>How do we book you?</summary>
+                    <div class="faq-answer"><p>Simply reach out via our contact form, WhatsApp, or phone. We'll discuss your requirements, share our packages, and confirm your date with a booking advance. It's that easy!</p></div>
+                </details>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Story and Smiles Photography. All rights reserved. | <strong>Wedding Photographers Bangalore</strong></p>
-                <div class="credit-wrapper">
-                    <span class="credit-separator"></span>
-                    <p class="credit-line">
-                        Crafted with <span class="credit-heart">❤</span> by
-                        <a href="https://kirankumarvel.github.io/" target="_blank" rel="noopener noreferrer" class="credit-link">Kiran (Kronix Systems)</a>
-                        <span class="credit-role">— Web &amp; Creative</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    <!-- ===== BACK TO TOP ===== -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6" /></svg>
-    </button>
-
-    <!-- ===== WHATSAPP FLOAT ===== -->
-    <div class="whatsapp-float" id="whatsappFloat">
-        <button class="whatsapp-main-btn" id="whatsappMainBtn" aria-label="Chat on WhatsApp">
-            <svg class="whatsapp-icon" width="28" height="28" viewBox="0 0 24 24" fill="white">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/>
-            </svg>
-            <span class="whatsapp-btn-text">Chat with us</span>
-        </button>
-
-        <div class="whatsapp-popup" id="whatsappPopup">
-            <div class="whatsapp-popup-header">
-                <div class="whatsapp-popup-avatar">
-                    <img src="assets/images/about-us.webp" alt="Story and Smiles Photography" onerror="this.src='assets/images/logo.png'" />
-                    <div class="whatsapp-online-dot"></div>
-                </div>
-                <div class="whatsapp-popup-info">
-                    <h4>Story and Smiles 📸</h4>
-                    <p>Typically replies within 2 hours</p>
-                </div>
-                <button class="whatsapp-popup-close" id="whatsappPopupClose" aria-label="Close chat">✕</button>
-            </div>
-            <div class="whatsapp-popup-body">
-                <div class="whatsapp-message-preview">
-                    <p>Hello! 👋 Welcome to Story and Smiles Photography.</p>
-                    <p>How can we help you today?</p>
-                </div>
-                <div class="whatsapp-quick-options">
-                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20interested%20in%20Wedding%20Photography%20services." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">💍</span> Wedding Photography</a>
-                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'd%20like%20to%20know%20about%20Pre-Wedding%20Photoshoot." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">💑</span> Pre-Wedding Shoot</a>
-                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20looking%20for%20Event%20Photography%20coverage." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">🎉</span> Event Photography</a>
-                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20interested%20in%20Baby%20Shower%20Photography." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">👶</span> Baby Shower</a>
-                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'd%20like%20to%20discuss%20photography%20packages%20and%20pricing." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">💬</span> Pricing &amp; Packages</a>
-                </div>
-            </div>
-            <div class="whatsapp-popup-footer">
-                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I%20need%20a%20photographer%20for%20my%20event." target="_blank" class="whatsapp-start-chat">Start WhatsApp Chat</a>
+            <!-- "Read More" / "Show More" button -->
+            <div class="faq-show-more" id="faqShowMoreWrapper">
+                <button class="btn btn-outline" id="faqShowMoreBtn">📖 Read More FAQs</button>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- ============================================================
-    SCRIPTS
-    ============================================================ -->
-    <script>
-        (function() {
-            'use strict';
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/images/logo-white.png" alt="Story and Smiles Photography" class="footer-logo" width="150" height="48" loading="lazy" />
+                <p>Story and Smiles is one of the best wedding photographers in Bangalore, capturing stories across Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Lucknow, Goa, and Puducherry.</p>
+                <p>Phone: <a href="tel:+919845808890">+91-98458 08890</a> | Email: <a href="mailto:info.storyandsmiles@gmail.com">info.storyandsmiles@gmail.com</a></p>
+                <p style="font-size:0.85rem; opacity:0.6;">2A, 5th main, 3rd Cross Rd, near Om Shakthi Temple, Hanumagiri, Chikkalasandra, Bengaluru, Karnataka 560061</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-services">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#services">Wedding Photography</a></li>
+                    <li><a href="#services">Pre-Wedding Shoot</a></li>
+                    <li><a href="#services">Event Photography</a></li>
+                    <li><a href="#services">Baby Shower &amp; Maternity</a></li>
+                    <li><a href="#services">Newborn Photography</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Story and Smiles Photography. All rights reserved. | <strong>Wedding Photographers Bangalore</strong></p>
+            <div class="credit-wrapper">
+                <span class="credit-separator"></span>
+                <p class="credit-line">
+                    Crafted with <span class="credit-heart">❤</span> by
+                    <a href="https://kirankumarvel.github.io/" target="_blank" rel="noopener noreferrer" class="credit-link">Kiran (Kronix Systems)</a>
+                    <span class="credit-role">— Web &amp; Creative</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
-            // ---- NAVIGATION ----
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('navMenu');
-            const navLinks = document.querySelectorAll('.nav-link');
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6" /></svg>
+</button>
 
-            if (hamburger && navMenu) {
-                hamburger.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                    const expanded = this.classList.contains('active');
-                    this.setAttribute('aria-expanded', expanded);
-                });
+<!-- ===== WHATSAPP FLOAT (working) ===== -->
+<div class="whatsapp-float" id="whatsappFloat">
+    <button class="whatsapp-main-btn" id="whatsappMainBtn" aria-label="Chat on WhatsApp">
+        <svg class="whatsapp-icon" width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/>
+        </svg>
+        <span class="whatsapp-btn-text">Chat with us</span>
+    </button>
 
-                navLinks.forEach(function(link) {
-                    link.addEventListener('click', function() {
-                        hamburger.classList.remove('active');
-                        navMenu.classList.remove('active');
-                        hamburger.setAttribute('aria-expanded', 'false');
-                        // update active link
-                        navLinks.forEach(l => l.classList.remove('active'));
-                        this.classList.add('active');
-                    });
-                });
-            }
+    <div class="whatsapp-popup" id="whatsappPopup">
+        <div class="whatsapp-popup-header">
+            <div class="whatsapp-popup-avatar">
+                <img src="assets/images/about-us.webp" alt="Story and Smiles Photography" onerror="this.src='assets/images/logo.png'" />
+                <div class="whatsapp-online-dot"></div>
+            </div>
+            <div class="whatsapp-popup-info">
+                <h4>Story and Smiles 📸</h4>
+                <p>Typically replies within 2 hours</p>
+            </div>
+            <button class="whatsapp-popup-close" id="whatsappPopupClose" aria-label="Close chat">✕</button>
+        </div>
+        <div class="whatsapp-popup-body">
+            <div class="whatsapp-message-preview">
+                <p>Hello! 👋 Welcome to Story and Smiles Photography.</p>
+                <p>How can we help you today?</p>
+            </div>
+            <div class="whatsapp-quick-options">
+                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20interested%20in%20Wedding%20Photography%20services." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">💍</span> Wedding Photography</a>
+                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'd%20like%20to%20know%20about%20Pre-Wedding%20Photoshoot." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">💑</span> Pre-Wedding Shoot</a>
+                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20looking%20for%20Event%20Photography%20coverage." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">🎉</span> Event Photography</a>
+                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20interested%20in%20Baby%20Shower%20Photography." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">👶</span> Baby Shower</a>
+                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'd%20like%20to%20discuss%20photography%20packages%20and%20pricing." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">💬</span> Pricing &amp; Packages</a>
+            </div>
+        </div>
+        <div class="whatsapp-popup-footer">
+            <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I%20need%20a%20photographer%20for%20my%20event." target="_blank" class="whatsapp-start-chat">Start WhatsApp Chat</a>
+        </div>
+    </div>
+</div>
 
-            // ---- SCROLL EFFECTS ----
-            const navbar = document.getElementById('navbar');
-            const backToTop = document.getElementById('backToTop');
+<!-- ============================================================
+SCRIPTS
+============================================================ -->
+<script>
+    (function() {
+        'use strict';
 
-            window.addEventListener('scroll', function() {
-                const scrollY = window.scrollY;
+        // ---- NAVIGATION ----
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-                // Navbar shadow
-                if (navbar) {
-                    navbar.classList.toggle('scrolled', scrollY > 60);
-                }
-
-                // Back to top
-                if (backToTop) {
-                    backToTop.classList.toggle('visible', scrollY > 400);
-                }
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                const expanded = this.classList.contains('active');
+                this.setAttribute('aria-expanded', expanded);
             });
 
+            navLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        }
+
+        // ---- SCROLL EFFECTS ----
+        const navbar = document.getElementById('navbar');
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', function() {
+            const scrollY = window.scrollY;
+            if (navbar) {
+                navbar.classList.toggle('scrolled', scrollY > 60);
+            }
             if (backToTop) {
-                backToTop.addEventListener('click', function() {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
+                backToTop.classList.toggle('visible', scrollY > 400);
             }
+        });
 
-            // ---- COUNTER ANIMATION ----
-            const counters = document.querySelectorAll('.counter');
-            let counterAnimated = false;
+        if (backToTop) {
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
 
-            function animateCounters() {
-                if (counterAnimated) return;
-                counters.forEach(function(counter) {
-                    const target = parseInt(counter.getAttribute('data-target'));
-                    if (!target || isNaN(target)) return;
-                    let current = 0;
-                    const increment = Math.ceil(target / 60);
-                    const timer = setInterval(function() {
-                        current += increment;
-                        if (current >= target) {
-                            current = target;
-                            clearInterval(timer);
-                        }
-                        counter.textContent = current;
-                    }, 20);
-                });
-                counterAnimated = true;
-            }
+        // ---- COUNTER ANIMATION ----
+        const counters = document.querySelectorAll('.counter');
+        let counterAnimated = false;
 
-            // ---- SCROLL ANIMATIONS (Intersection Observer) ----
-            const animateElements = document.querySelectorAll('.animate-on-scroll');
+        function animateCounters() {
+            if (counterAnimated) return;
+            counters.forEach(function(counter) {
+                const target = parseInt(counter.getAttribute('data-target'));
+                if (!target || isNaN(target)) return;
+                let current = 0;
+                const increment = Math.ceil(target / 60);
+                const timer = setInterval(function() {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    counter.textContent = current;
+                }, 20);
+            });
+            counterAnimated = true;
+        }
 
-            const observer = new IntersectionObserver(function(entries) {
+        // ---- SCROLL ANIMATIONS (Intersection Observer) ----
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const delay = parseFloat(el.getAttribute('data-delay')) || 0;
+                    setTimeout(function() {
+                        el.classList.add('visible');
+                    }, delay * 1000);
+                    observer.unobserve(el);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        animateElements.forEach(function(el) {
+            observer.observe(el);
+        });
+
+        // ---- TRIGGER COUNTERS WHEN HERO STATS VISIBLE ----
+        const heroStats = document.querySelector('.hero-stats');
+        if (heroStats) {
+            const statsObserver = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
                     if (entry.isIntersecting) {
-                        const el = entry.target;
-                        const delay = parseFloat(el.getAttribute('data-delay')) || 0;
-                        setTimeout(function() {
-                            el.classList.add('visible');
-                        }, delay * 1000);
-                        observer.unobserve(el);
+                        animateCounters();
+                        statsObserver.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+            }, { threshold: 0.3 });
+            statsObserver.observe(heroStats);
+        }
 
-            animateElements.forEach(function(el) {
-                observer.observe(el);
+        // ---- WHATSAPP POPUP ----
+        const mainBtn = document.getElementById('whatsappMainBtn');
+        const popup = document.getElementById('whatsappPopup');
+        const closeBtn = document.getElementById('whatsappPopupClose');
+
+        if (mainBtn && popup) {
+            mainBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                popup.classList.toggle('open');
             });
+        }
+        if (closeBtn && popup) {
+            closeBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                popup.classList.remove('open');
+            });
+        }
+        document.addEventListener('click', function(e) {
+            const float = document.getElementById('whatsappFloat');
+            if (float && !float.contains(e.target) && popup) {
+                popup.classList.remove('open');
+            }
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && popup) {
+                popup.classList.remove('open');
+            }
+        });
 
-            // ---- TRIGGER COUNTERS WHEN HERO STATS VISIBLE ----
-            const heroStats = document.querySelector('.hero-stats');
-            if (heroStats) {
-                const statsObserver = new IntersectionObserver(function(entries) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            animateCounters();
-                            statsObserver.unobserve(entry.target);
+        // Auto-open once per session (gentle)
+        if (!sessionStorage.getItem('whatsappAutoOpen')) {
+            setTimeout(function() {
+                if (popup) {
+                    popup.classList.add('open');
+                    sessionStorage.setItem('whatsappAutoOpen', 'true');
+                    setTimeout(function() {
+                        popup.classList.remove('open');
+                    }, 5000);
+                }
+            }, 3000);
+        }
+
+        // ---- SMOOTH SCROLL FOR ANCHOR LINKS ----
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    e.preventDefault();
+                    const offset = 80;
+                    const top = targetEl.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top: top, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // ---- FAQ "READ MORE" TOGGLE (15 FAQs) ----
+        const showMoreBtn = document.getElementById('faqShowMoreBtn');
+        const hiddenFaqs = document.querySelectorAll('.faq-item.hidden-faq');
+        let faqsVisible = false;
+
+        if (showMoreBtn && hiddenFaqs.length) {
+            showMoreBtn.addEventListener('click', function() {
+                faqsVisible = !faqsVisible;
+                hiddenFaqs.forEach(function(faq) {
+                    faq.classList.toggle('visible', faqsVisible);
+                });
+                showMoreBtn.textContent = faqsVisible ? '📕 Show Less FAQs' : '📖 Read More FAQs';
+                // If showing, open the first hidden one for UX
+                if (faqsVisible) {
+                    const firstHidden = document.querySelector('.faq-item.hidden-faq.visible');
+                    if (firstHidden && firstHidden.tagName === 'DETAILS' && !firstHidden.hasAttribute('open')) {
+                        firstHidden.setAttribute('open', '');
+                    }
+                }
+            });
+        }
+
+        // ---- AUTO-OPEN FIRST HIDDEN FAQ ON "READ MORE" CLICK (already handled above) ----
+        // Also ensure that when a hidden FAQ is opened, it gets the open attribute properly
+        hiddenFaqs.forEach(function(faq) {
+            if (faq.tagName === 'DETAILS') {
+                faq.addEventListener('toggle', function() {
+                    // If this is a hidden FAQ and it's being opened, make sure it's visible
+                    if (this.open && this.classList.contains('hidden-faq') && !this.classList.contains('visible')) {
+                        // If user manually opens a hidden FAQ, show all
+                        if (!faqsVisible) {
+                            faqsVisible = true;
+                            hiddenFaqs.forEach(function(f) { f.classList.add('visible'); });
+                            if (showMoreBtn) showMoreBtn.textContent = '📕 Show Less FAQs';
                         }
-                    });
-                }, { threshold: 0.3 });
-                statsObserver.observe(heroStats);
-            }
-
-            // ---- WHATSAPP POPUP ----
-            const mainBtn = document.getElementById('whatsappMainBtn');
-            const popup = document.getElementById('whatsappPopup');
-            const closeBtn = document.getElementById('whatsappPopupClose');
-
-            if (mainBtn && popup) {
-                mainBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    popup.classList.toggle('open');
-                });
-            }
-            if (closeBtn && popup) {
-                closeBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    popup.classList.remove('open');
-                });
-            }
-            document.addEventListener('click', function(e) {
-                const float = document.getElementById('whatsappFloat');
-                if (float && !float.contains(e.target) && popup) {
-                    popup.classList.remove('open');
-                }
-            });
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && popup) {
-                    popup.classList.remove('open');
-                }
-            });
-
-            // Auto-open once per session (gentle)
-            if (!sessionStorage.getItem('whatsappAutoOpen')) {
-                setTimeout(function() {
-                    if (popup) {
-                        popup.classList.add('open');
-                        sessionStorage.setItem('whatsappAutoOpen', 'true');
-                        setTimeout(function() {
-                            popup.classList.remove('open');
-                        }, 5000);
-                    }
-                }, 3000);
-            }
-
-            // ---- SMOOTH SCROLL FOR ANCHOR LINKS ----
-            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-                anchor.addEventListener('click', function(e) {
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    const targetEl = document.querySelector(targetId);
-                    if (targetEl) {
-                        e.preventDefault();
-                        const offset = 80;
-                        const top = targetEl.getBoundingClientRect().top + window.scrollY - offset;
-                        window.scrollTo({ top: top, behavior: 'smooth' });
                     }
                 });
-            });
+            }
+        });
 
-        })();
-    </script>
+    })();
+</script>
 
 </body>
 </html>
