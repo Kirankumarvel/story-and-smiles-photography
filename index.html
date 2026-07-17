@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <!-- ===== SECURITY & REFERRER ===== -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://images.unsplash.com; frame-src https://maps.google.com; connect-src 'self' https://www.clarity.ms https://www.google-analytics.com;" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src https://maps.google.com; connect-src 'self' https://www.clarity.ms https://www.google-analytics.com;" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <!-- ===== PRIMARY META ===== -->
@@ -21,26 +23,28 @@
     <meta property="og:title" content="Story & Smiles | Wedding Photographer in Bengaluru" />
     <meta property="og:description" content="Candid wedding, maternity, newborn & family photography in Bengaluru. Based in Banashankari, serving couples across Karnataka." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&q=80" />
+    <meta property="og:image" content="https://storyandsmiles.com/assets/images/hero-bg.jpeg" />
     <meta property="og:url" content="https://story-and-smiles-photography.vercel.app/" />
     <meta property="og:site_name" content="Story and Smiles Photography" />
 
-    <!-- ===== TWITTER CARD ===== -->
+    <!-- ===== TWITTER CARD (FULL) ===== -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Story & Smiles | Wedding Photographer in Bengaluru" />
-    <meta name="twitter:description" content="Candid wedding, maternity & family photography in Bengaluru. Based in Banashankari." />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&q=80" />
+    <meta name="twitter:description" content="Candid wedding, maternity & family photography in Bengaluru. Based in Banashankari, capturing your story with warmth." />
+    <meta name="twitter:image" content="https://storyandsmiles.com/assets/images/hero-bg.jpeg" />
     <meta name="twitter:site" content="@storyandsmiles" />
     <meta name="twitter:creator" content="@storyandsmiles" />
 
-    <!-- ===== FAVICON ===== -->
+    <!-- ===== FAVICON (CLEAN, RELIABLE) ===== -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.85em' font-size='80'%3E📸%3C/text%3E%3C/svg%3E" />
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='.85em' font-size='28'%3E📸%3C/text%3E%3C/svg%3E" />
     <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Ctext y='.85em' font-size='140'%3E📸%3C/text%3E%3C/svg%3E" />
 
+    <!-- ===== CANONICAL ===== -->
     <link rel="canonical" href="https://story-and-smiles-photography.vercel.app/" />
 
     <!-- ===== PRELOAD ===== -->
+    <link rel="preload" href="assets/images/hero-bg.jpeg" as="image" />
     <link rel="preload" href="css/style.css" as="style" />
     <link rel="preload" href="css/animations.css" as="style" />
 
@@ -48,9 +52,10 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.css" />
 
+    <!-- ===== GOOGLE VERIFICATION ===== -->
     <meta name="google-site-verification" content="ZMTUWN4rBwuVtQTiprMbyWiizYeSOAj3S2h0cnIvQhc" />
 
-    <!-- Google tag (gtag.js) -->
+    <!-- ===== GOOGLE ANALYTICS ===== -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6NL6CT9YJ">
     </script>
     <script>
@@ -61,7 +66,7 @@
         gtag('config', 'G-F6NL6CT9YJ');
     </script>
 
-    <!-- Google Tag Manager -->
+    <!-- ===== GOOGLE TAG MANAGER ===== -->
     <script>
         (function(w, d, s, l, i) {
             w[l] = w[l] || [];
@@ -75,7 +80,7 @@
         })(window, document, 'script', 'dataLayer', 'GTM-TC9D7BX3');
     </script>
 
-    <!-- Clarity -->
+    <!-- ===== CLARITY ===== -->
     <script>
         (function(c, l, a, r, i, t, y) {
             c[a] = c[a] || function() { (c[a].q = c[a].q || []).push(arguments) };
@@ -87,14 +92,14 @@
         })(window, document, "clarity", "script", "wpjxrcvyk6");
     </script>
 
-    <!-- Schema Markup -->
+    <!-- ===== SCHEMA: LOCAL BUSINESS ===== -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Story and Smiles Photography",
             "description": "Best wedding photographers in Bangalore specializing in candid, traditional & event photography.",
-            "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=600&fit=crop",
+            "image": "https://storyandsmiles.com/assets/images/logo.png",
             "telephone": "+91-9845808890",
             "email": "info.storyandsmiles@gmail.com",
             "address": {
@@ -112,6 +117,7 @@
         }
     </script>
 
+    <!-- ===== SCHEMA: FAQ ===== -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -148,6 +154,7 @@
         }
     </script>
 
+    <!-- ===== SCHEMA: BREADCRUMB ===== -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -172,7 +179,7 @@
     </script>
 
     <!-- ================================================================
-    CRITICAL INLINE STYLES (Enhanced UI/UX)
+    CRITICAL INLINE STYLES (enhanced UI/UX)
     ================================================================ -->
     <style>
         /* ----- RESET & BASE ----- */
@@ -271,7 +278,7 @@
             transform: translateY(-2px);
         }
 
-        /* ----- STICKY HEADER ----- */
+        /* ----- STICKY HEADER (fixed) ----- */
         .navbar {
             position: fixed;
             top: 0;
@@ -346,14 +353,14 @@
             transition: all 0.3s;
         }
 
-        /* ----- HERO (Top: Beautiful Wedding Couple Stock Image) ----- */
+        /* ----- HERO (enhanced) ----- */
         .hero {
             position: relative;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1600&q=80') center center / cover no-repeat;
+            background: url('assets/images/hero-bg.jpeg') center center / cover no-repeat;
             padding: 100px 24px 60px;
             text-align: center;
             color: #fff;
@@ -441,7 +448,7 @@
             }
         }
 
-        /* ----- INSTAGRAM BADGE ----- */
+        /* ----- INSTAGRAM BADGE (floating) ----- */
         .instagram-header-badge {
             position: fixed;
             top: 80px;
@@ -476,7 +483,7 @@
             font-size: 0.75rem;
         }
 
-        /* ----- BREADCRUMB ----- */
+        /* ----- BREADCRUMB (inline) ----- */
         .breadcrumb {
             padding: 12px 0 0;
             font-size: 0.8rem;
@@ -492,7 +499,7 @@
             margin: 0 6px;
         }
 
-        /* ----- ABOUT (Middle: Photographer interacting & laughing with client) ----- */
+        /* ----- ABOUT ----- */
         .about-section {
             padding: 80px 0;
             background: #fff;
@@ -560,7 +567,7 @@
             flex-shrink: 0;
         }
 
-        /* ----- SERVICES ----- */
+        /* ----- SERVICES (with cards) ----- */
         .services-section {
             padding: 80px 0;
             background: #fcf9f7;
@@ -599,7 +606,7 @@
             line-height: 1.6;
         }
 
-        /* ----- GALLERY ----- */
+        /* ----- GALLERY (with grid) ----- */
         .gallery-section {
             padding: 80px 0;
             background: #fff;
@@ -802,7 +809,7 @@
             color: #7a7272;
         }
 
-        /* ----- FAQ ----- */
+        /* ----- FAQ (enhanced accordion) ----- */
         .faq-section {
             padding: 80px 0;
             background: #fcf9f7;
@@ -857,7 +864,7 @@
             margin: 0;
         }
 
-        /* ----- FOOTER (Bottom: No photographer image, just logo, maps, credit) ----- */
+        /* ----- FOOTER (enhanced) ----- */
         .footer {
             background: #1e1a1a;
             color: rgba(255, 255, 255, 0.7);
@@ -883,7 +890,6 @@
         .footer-logo {
             margin-bottom: 12px;
             filter: brightness(0.9);
-            max-width: 150px;
         }
         .footer-links h4,
         .footer-services h4 {
@@ -992,7 +998,7 @@
             box-shadow: 0 12px 32px rgba(224, 122, 95, 0.45);
         }
 
-        /* ----- WHATSAPP FLOAT ----- */
+        /* ----- WHATSAPP FLOAT (enhanced) ----- */
         .whatsapp-float {
             position: fixed;
             bottom: 28px;
@@ -1186,164 +1192,6 @@
             color: #fff;
         }
 
-        /* ===== GMB MAP & REVIEW BADGE ===== */
-        .gmb-map-container {
-            margin-top: 24px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-        }
-        .gmb-map-container iframe {
-            width: 100%;
-            height: 260px;
-            border: none;
-            display: block;
-        }
-        .gmb-review-badge {
-            background: #fff;
-            border-radius: 20px;
-            padding: 16px 20px;
-            margin-top: 16px;
-            border: 1px solid rgba(224, 122, 95, 0.15);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
-        }
-        .gmb-review-inner {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .gmb-rating-stars {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: #fef7e8;
-            padding: 4px 14px;
-            border-radius: 60px;
-        }
-        .stars {
-            color: #f5b042;
-            letter-spacing: 2px;
-            font-size: 1rem;
-        }
-        .rating-num {
-            font-weight: 700;
-            color: #2c3e50;
-            font-size: 0.9rem;
-        }
-        .gmb-review-text {
-            font-size: 0.85rem;
-            color: #4a5568;
-        }
-        .gmb-review-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #e07a5f10;
-            padding: 6px 16px;
-            border-radius: 40px;
-            text-decoration: none;
-            color: #e07a5f;
-            font-weight: 500;
-            font-size: 0.85rem;
-            transition: 0.2s;
-            border: 1px solid #e07a5f30;
-        }
-        .gmb-review-link:hover {
-            background: #e07a5f;
-            color: #fff;
-            border-color: #e07a5f;
-        }
-
-        /* ===== TL;DR SUMMARY ===== */
-        .summary-box {
-            background: #fdf0eb;
-            border-left: 4px solid #e07a5f;
-            border-radius: 12px;
-            padding: 20px 24px;
-            margin: 20px 0 32px;
-            max-width: 760px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .summary-box strong {
-            color: #1e1a1a;
-            display: block;
-            margin-bottom: 4px;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #e07a5f;
-        }
-        .summary-box p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: #3a3232;
-            line-height: 1.6;
-        }
-
-        /* ===== TRUST BADGES ===== */
-        .trust-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            justify-content: center;
-            margin: 20px 0 10px;
-        }
-        .trust-badge {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.8rem;
-            color: #5a5252;
-            background: rgba(255, 255, 255, 0.08);
-            padding: 4px 14px 4px 10px;
-            border-radius: 40px;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-        }
-
-        /* ----- ANIMATIONS ----- */
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(24px);
-            animation: fadeInUp 0.8s ease forwards;
-        }
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .delay-1 {
-            animation-delay: 0.15s;
-        }
-        .delay-2 {
-            animation-delay: 0.3s;
-        }
-        .delay-3 {
-            animation-delay: 0.5s;
-        }
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.7s ease;
-        }
-        .animate-on-scroll.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
         /* ----- RESPONSIVE ----- */
         @media (max-width: 992px) {
             .about-grid,
@@ -1490,6 +1338,75 @@
             }
         }
 
+        /* ===== GMB MAP & REVIEW BADGE ===== */
+        .gmb-map-container {
+            margin-top: 24px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+        .gmb-map-container iframe {
+            width: 100%;
+            height: 260px;
+            border: none;
+            display: block;
+        }
+        .gmb-review-badge {
+            background: #fff;
+            border-radius: 20px;
+            padding: 16px 20px;
+            margin-top: 16px;
+            border: 1px solid rgba(224, 122, 95, 0.15);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+        }
+        .gmb-review-inner {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .gmb-rating-stars {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #fef7e8;
+            padding: 4px 14px;
+            border-radius: 60px;
+        }
+        .stars {
+            color: #f5b042;
+            letter-spacing: 2px;
+            font-size: 1rem;
+        }
+        .rating-num {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 0.9rem;
+        }
+        .gmb-review-text {
+            font-size: 0.85rem;
+            color: #4a5568;
+        }
+        .gmb-review-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e07a5f10;
+            padding: 6px 16px;
+            border-radius: 40px;
+            text-decoration: none;
+            color: #e07a5f;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: 0.2s;
+            border: 1px solid #e07a5f30;
+        }
+        .gmb-review-link:hover {
+            background: #e07a5f;
+            color: #fff;
+            border-color: #e07a5f;
+        }
         @media (max-width: 600px) {
             .gmb-review-inner {
                 flex-direction: column;
@@ -1504,15 +1421,106 @@
                 height: 200px;
             }
         }
+
+        /* ===== TL;DR / SUMMARY BOX (for AI & readers) ===== */
+        .summary-box {
+            background: #fdf0eb;
+            border-left: 4px solid #e07a5f;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 20px 0 32px;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .summary-box strong {
+            color: #1e1a1a;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #e07a5f;
+        }
+        .summary-box p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #3a3232;
+            line-height: 1.6;
+        }
+
+        /* ===== TRUST BADGES (CRO) ===== */
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin: 20px 0 10px;
+        }
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            color: #5a5252;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 4px 14px 4px 10px;
+            border-radius: 40px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .trust-badge svg {
+            flex-shrink: 0;
+        }
+
+        /* ----- ANIMATIONS (reduced motion) ----- */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(24px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-1 {
+            animation-delay: 0.15s;
+        }
+        .delay-2 {
+            animation-delay: 0.3s;
+        }
+        .delay-3 {
+            animation-delay: 0.5s;
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s ease;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Google Tag Manager (noscript) -->
+    <!-- ===== GOOGLE TAG MANAGER (noscript) ===== -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TC9D7BX3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- ===== NAVIGATION ===== -->
+    <!-- ===== STICKY NAVIGATION ===== -->
     <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         <div class="container nav-container">
             <a href="/" class="logo-link" aria-label="Story and Smiles Photography home">
@@ -1534,7 +1542,7 @@
         </div>
     </nav>
 
-    <!-- ===== HERO (Top: Beautiful Wedding Couple Stock Image) ===== -->
+    <!-- ===== HERO ===== -->
     <header id="home" class="hero" role="banner">
         <div class="hero-overlay"></div>
 
@@ -1552,7 +1560,7 @@
         </div>
 
         <div class="hero-content">
-            <!-- Breadcrumb -->
+            <!-- Breadcrumb (inline) -->
             <nav class="breadcrumb" aria-label="Breadcrumb">
                 <a href="/">Home</a> <span>›</span>
                 <a href="#services">Services</a> <span>›</span>
@@ -1569,7 +1577,7 @@
                 Premium Wedding &amp; Event Photography in Karnataka &amp; South India
             </p>
 
-            <!-- Trust badges -->
+            <!-- Trust badges (CRO) -->
             <div class="trust-badges fade-in-up delay-1">
                 <span class="trust-badge">⭐ 5.0 ★ 89+ reviews</span>
                 <span class="trust-badge">📸 7+ years experience</span>
@@ -1581,7 +1589,7 @@
                 <a href="#gallery" class="btn btn-secondary">View Portfolio</a>
             </div>
 
-            <!-- TL;DR Summary -->
+            <!-- TL;DR Summary (for AI & quick readers) -->
             <div class="summary-box fade-in-up delay-2">
                 <strong>📸 In a nutshell</strong>
                 <p>Story and Smiles is a candid wedding photographer based in Banashankari, Bengaluru. We cover weddings, pre-weddings, maternity, newborn, baby &amp; family events across Karnataka with warm, storytelling images.</p>
@@ -1616,15 +1624,12 @@
         </div>
     </header>
 
-    <!-- ===== ABOUT (Middle: Team interacting & laughing with clients) ===== -->
+    <!-- ===== ABOUT ===== -->
     <section id="about" class="about-section" aria-labelledby="about-heading">
         <div class="container">
             <div class="about-grid">
                 <div class="about-image animate-on-scroll">
-                    <!-- REPLACED with stock image of photographer interacting & laughing with couple -->
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=700&fit=crop&crop=center" 
-                         alt="Story and Smiles photographer laughing and interacting with a happy couple during a candid shoot in Bengaluru" 
-                         loading="lazy" width="600" height="700" />
+                    <img src="assets/images/about-us.jpg" alt="Story and Smiles Photography team in Banashankari, Bengaluru – candid wedding and maternity photographers" loading="lazy" width="600" height="700" />
                     <div class="experience-badge">
                         <span>6+</span>
                         <span>Years</span>
@@ -1703,7 +1708,7 @@
                 </div>
             </div>
 
-            <!-- Pricing Table -->
+            <!-- Pricing table (CRO & content) -->
             <div style="margin-top:50px; background:#fff; border-radius:24px; padding:32px 28px; box-shadow:0 6px 24px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.03);">
                 <h3 style="text-align:center; font-size:1.4rem; margin-bottom:20px; color:#1e1a1a;">📋 Quick Pricing Guide</h3>
                 <div style="overflow-x:auto;">
@@ -1960,12 +1965,11 @@
         </div>
     </section>
 
-    <!-- ===== FOOTER (Bottom: No photographer image, just logo, maps, credit) ===== -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <!-- Only logo here, no photographer image -->
                     <img src="assets/images/logo-white.png" alt="Story and Smiles Photography" class="footer-logo" width="150" height="48" loading="lazy" />
                     <p>Story and Smiles is one of the best wedding photographers in Bangalore, capturing stories across Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Lucknow, Goa, and Puducherry.</p>
                     <p>Phone: <a href="tel:+919845808890">+91-98458 08890</a> | Email: <a href="mailto:info.storyandsmiles@gmail.com">info.storyandsmiles@gmail.com</a></p>
@@ -1994,7 +1998,6 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Story and Smiles Photography. All rights reserved. | <strong>Wedding Photographers Bangalore</strong></p>
-                <!-- Credit Line -->
                 <div class="credit-wrapper">
                     <span class="credit-separator"></span>
                     <p class="credit-line">
@@ -2024,8 +2027,7 @@
         <div class="whatsapp-popup" id="whatsappPopup">
             <div class="whatsapp-popup-header">
                 <div class="whatsapp-popup-avatar">
-                    <!-- Avatar uses logo fallback, not a photographer image -->
-                    <img src="assets/images/logo.png" alt="Story and Smiles Photography" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.85em%22 font-size=%2280%22%3E📸%3C/text%3E%3C/svg%3E'" />
+                    <img src="assets/images/about-us.webp" alt="Story and Smiles Photography" onerror="this.src='assets/images/logo.png'" />
                     <div class="whatsapp-online-dot"></div>
                 </div>
                 <div class="whatsapp-popup-info">
@@ -2078,6 +2080,7 @@
                         hamburger.classList.remove('active');
                         navMenu.classList.remove('active');
                         hamburger.setAttribute('aria-expanded', 'false');
+                        // update active link
                         navLinks.forEach(l => l.classList.remove('active'));
                         this.classList.add('active');
                     });
@@ -2090,8 +2093,16 @@
 
             window.addEventListener('scroll', function() {
                 const scrollY = window.scrollY;
-                if (navbar) navbar.classList.toggle('scrolled', scrollY > 60);
-                if (backToTop) backToTop.classList.toggle('visible', scrollY > 400);
+
+                // Navbar shadow
+                if (navbar) {
+                    navbar.classList.toggle('scrolled', scrollY > 60);
+                }
+
+                // Back to top
+                if (backToTop) {
+                    backToTop.classList.toggle('visible', scrollY > 400);
+                }
             });
 
             if (backToTop) {
@@ -2123,8 +2134,9 @@
                 counterAnimated = true;
             }
 
-            // ---- SCROLL ANIMATIONS ----
+            // ---- SCROLL ANIMATIONS (Intersection Observer) ----
             const animateElements = document.querySelectorAll('.animate-on-scroll');
+
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
                     if (entry.isIntersecting) {
@@ -2137,9 +2149,12 @@
                     }
                 });
             }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-            animateElements.forEach(function(el) { observer.observe(el); });
 
-            // ---- TRIGGER COUNTERS ----
+            animateElements.forEach(function(el) {
+                observer.observe(el);
+            });
+
+            // ---- TRIGGER COUNTERS WHEN HERO STATS VISIBLE ----
             const heroStats = document.querySelector('.hero-stats');
             if (heroStats) {
                 const statsObserver = new IntersectionObserver(function(entries) {
@@ -2177,7 +2192,9 @@
                 }
             });
             document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && popup) popup.classList.remove('open');
+                if (e.key === 'Escape' && popup) {
+                    popup.classList.remove('open');
+                }
             });
 
             // Auto-open once per session (gentle)
@@ -2186,12 +2203,14 @@
                     if (popup) {
                         popup.classList.add('open');
                         sessionStorage.setItem('whatsappAutoOpen', 'true');
-                        setTimeout(function() { popup.classList.remove('open'); }, 5000);
+                        setTimeout(function() {
+                            popup.classList.remove('open');
+                        }, 5000);
                     }
                 }, 3000);
             }
 
-            // ---- SMOOTH SCROLL ----
+            // ---- SMOOTH SCROLL FOR ANCHOR LINKS ----
             document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
                 anchor.addEventListener('click', function(e) {
                     const targetId = this.getAttribute('href');
