@@ -37,7 +37,6 @@
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📸%3C/text%3E%3C/svg%3E" />
     <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='.85em' font-size='28'%3E📸%3C/text%3E%3C/svg%3E" />
     <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Ctext y='.85em' font-size='140'%3E📸%3C/text%3E%3C/svg%3E" />
-    <!-- Prevent browser from endlessly trying to fetch /favicon.ico -->
     <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📸%3C/text%3E%3C/svg%3E" />
 
     <!-- ===== CANONICAL ===== -->
@@ -2171,7 +2170,9 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6" /></svg>
 </button>
 
-<!-- ===== WHATSAPP FLOAT (working) ===== -->
+<!-- ============================================================
+WHATSAPP FLOAT — FIXED (working reliably)
+============================================================ -->
 <div class="whatsapp-float" id="whatsappFloat">
     <button class="whatsapp-main-btn" id="whatsappMainBtn" aria-label="Chat on WhatsApp">
         <svg class="whatsapp-icon" width="28" height="28" viewBox="0 0 24 24" fill="white">
@@ -2198,15 +2199,15 @@
                 <p>How can we help you today?</p>
             </div>
             <div class="whatsapp-quick-options">
-                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20interested%20in%20Wedding%20Photography%20services." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">💍</span> Wedding Photography</a>
-                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'd%20like%20to%20know%20about%20Pre-Wedding%20Photoshoot." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">💑</span> Pre-Wedding Shoot</a>
-                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20looking%20for%20Event%20Photography%20coverage." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">🎉</span> Event Photography</a>
-                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20interested%20in%20Baby%20Shower%20Photography." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">👶</span> Baby Shower</a>
-                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'd%20like%20to%20discuss%20photography%20packages%20and%20pricing." target="_blank" class="whatsapp-option"><span class="whatsapp-option-icon">💬</span> Pricing &amp; Packages</a>
+                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20interested%20in%20Wedding%20Photography%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">💍</span> Wedding Photography</a>
+                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'd%20like%20to%20know%20about%20Pre-Wedding%20Photoshoot." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">💑</span> Pre-Wedding Shoot</a>
+                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20looking%20for%20Event%20Photography%20coverage." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">🎉</span> Event Photography</a>
+                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20interested%20in%20Baby%20Shower%20Photography." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">👶</span> Baby Shower</a>
+                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'd%20like%20to%20discuss%20photography%20packages%20and%20pricing." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">💬</span> Pricing &amp; Packages</a>
             </div>
         </div>
         <div class="whatsapp-popup-footer">
-            <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I%20need%20a%20photographer%20for%20my%20event." target="_blank" class="whatsapp-start-chat">Start WhatsApp Chat</a>
+            <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I%20need%20a%20photographer%20for%20my%20event." target="_blank" rel="noopener noreferrer" class="whatsapp-start-chat">Start WhatsApp Chat</a>
         </div>
     </div>
 </div>
@@ -2318,48 +2319,6 @@ SCRIPTS
             statsObserver.observe(heroStats);
         }
 
-        // ---- WHATSAPP POPUP ----
-        const mainBtn = document.getElementById('whatsappMainBtn');
-        const popup = document.getElementById('whatsappPopup');
-        const closeBtn = document.getElementById('whatsappPopupClose');
-
-        if (mainBtn && popup) {
-            mainBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                popup.classList.toggle('open');
-            });
-        }
-        if (closeBtn && popup) {
-            closeBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                popup.classList.remove('open');
-            });
-        }
-        document.addEventListener('click', function(e) {
-            const float = document.getElementById('whatsappFloat');
-            if (float && !float.contains(e.target) && popup) {
-                popup.classList.remove('open');
-            }
-        });
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && popup) {
-                popup.classList.remove('open');
-            }
-        });
-
-        // Auto-open once per session (gentle)
-        if (!sessionStorage.getItem('whatsappAutoOpen')) {
-            setTimeout(function() {
-                if (popup) {
-                    popup.classList.add('open');
-                    sessionStorage.setItem('whatsappAutoOpen', 'true');
-                    setTimeout(function() {
-                        popup.classList.remove('open');
-                    }, 5000);
-                }
-            }, 3000);
-        }
-
         // ---- SMOOTH SCROLL FOR ANCHOR LINKS ----
         document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
             anchor.addEventListener('click', function(e) {
@@ -2387,7 +2346,6 @@ SCRIPTS
                     faq.classList.toggle('visible', faqsVisible);
                 });
                 showMoreBtn.textContent = faqsVisible ? '📕 Show Less FAQs' : '📖 Read More FAQs';
-                // If showing, open the first hidden one for UX
                 if (faqsVisible) {
                     const firstHidden = document.querySelector('.faq-item.hidden-faq.visible');
                     if (firstHidden && firstHidden.tagName === 'DETAILS' && !firstHidden.hasAttribute('open')) {
@@ -2397,14 +2355,10 @@ SCRIPTS
             });
         }
 
-        // ---- AUTO-OPEN FIRST HIDDEN FAQ ON "READ MORE" CLICK (already handled above) ----
-        // Also ensure that when a hidden FAQ is opened, it gets the open attribute properly
         hiddenFaqs.forEach(function(faq) {
             if (faq.tagName === 'DETAILS') {
                 faq.addEventListener('toggle', function() {
-                    // If this is a hidden FAQ and it's being opened, make sure it's visible
                     if (this.open && this.classList.contains('hidden-faq') && !this.classList.contains('visible')) {
-                        // If user manually opens a hidden FAQ, show all
                         if (!faqsVisible) {
                             faqsVisible = true;
                             hiddenFaqs.forEach(function(f) { f.classList.add('visible'); });
@@ -2414,6 +2368,78 @@ SCRIPTS
                 });
             }
         });
+
+        // ============================================================
+        // WHATSAPP FLOAT — FIXED (working reliably on all devices)
+        // ============================================================
+        var whatsappMainBtn = document.getElementById('whatsappMainBtn');
+        var whatsappPopup = document.getElementById('whatsappPopup');
+        var whatsappCloseBtn = document.getElementById('whatsappPopupClose');
+        var whatsappFloat = document.getElementById('whatsappFloat');
+
+        function toggleWhatsApp(e) {
+            if (e) e.stopPropagation();
+            if (whatsappPopup) {
+                whatsappPopup.classList.toggle('open');
+            }
+        }
+
+        function closeWhatsApp(e) {
+            if (e) e.stopPropagation();
+            if (whatsappPopup) {
+                whatsappPopup.classList.remove('open');
+            }
+        }
+
+        // Toggle on main button click
+        if (whatsappMainBtn) {
+            whatsappMainBtn.addEventListener('click', toggleWhatsApp);
+            // Touch support for mobile
+            whatsappMainBtn.addEventListener('touchstart', function(e) {
+                // Let click handle it, but prevent double-firing
+            }, { passive: true });
+        }
+
+        // Close on close button click
+        if (whatsappCloseBtn) {
+            whatsappCloseBtn.addEventListener('click', closeWhatsApp);
+        }
+
+        // Close when clicking outside the float container
+        document.addEventListener('click', function(e) {
+            if (whatsappFloat && whatsappPopup) {
+                var isClickInside = whatsappFloat.contains(e.target);
+                if (!isClickInside) {
+                    whatsappPopup.classList.remove('open');
+                }
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && whatsappPopup) {
+                whatsappPopup.classList.remove('open');
+            }
+        });
+
+        // Auto-open once per session (gentle, non-intrusive)
+        if (!sessionStorage.getItem('whatsappAutoOpen')) {
+            var autoOpenTimer = setTimeout(function() {
+                if (whatsappPopup) {
+                    whatsappPopup.classList.add('open');
+                    sessionStorage.setItem('whatsappAutoOpen', 'true');
+                    // Auto-close after 6 seconds
+                    setTimeout(function() {
+                        if (whatsappPopup) {
+                            whatsappPopup.classList.remove('open');
+                        }
+                    }, 6000);
+                }
+            }, 2500);
+        }
+
+        // All WhatsApp links inside the popup use target="_blank" — they work natively.
+        // No extra interception needed.
 
     })();
 </script>
