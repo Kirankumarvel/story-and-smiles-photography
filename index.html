@@ -2121,16 +2121,24 @@
 </section>
 
 <!-- ===== FOOTER ===== -->
+<!-- ===== FOOTER ===== -->
 <footer class="footer" role="contentinfo">
     <div class="container">
         <div class="footer-grid">
+            <!-- Column 1: Brand -->
             <div class="footer-brand">
                 <img src="assets/images/logo-white.png" alt="Story and Smiles Photography" class="footer-logo" width="150" height="48" loading="lazy" />
                 <p>Story and Smiles is one of the best wedding photographers in Bangalore, capturing stories across Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Lucknow, Goa, and Puducherry.</p>
                 <p>Phone: <a href="tel:+919845808890">+91-98458 08890</a> | Email: <a href="mailto:info.storyandsmiles@gmail.com">info.storyandsmiles@gmail.com</a></p>
                 <p style="font-size:0.85rem; opacity:0.6;">2A, 5th main, 3rd Cross Rd, near Om Shakthi Temple, Hanumagiri, Chikkalasandra, Bengaluru, Karnataka 560061</p>
             </div>
-            
+
+            <!-- Column 2: Google Button (centered) -->
+            <div class="footer-google-btn">
+                <div google-add-preferred-source-btn data-theme="dark" data-lang="en"></div>
+            </div>
+
+            <!-- Column 3: Quick Links -->
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
@@ -2142,6 +2150,8 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
+
+            <!-- Column 4: Services -->
             <div class="footer-services">
                 <h4>Our Services</h4>
                 <ul>
@@ -2152,8 +2162,8 @@
                     <li><a href="#services">Newborn Photography</a></li>
                 </ul>
             </div>
-        </div>
-        <div google-add-preferred-source-btn data-theme="dark" data-lang="en"></div>
+        </div> <!-- /footer-grid -->
+
         <div class="footer-bottom">
             <p>&copy; 2026 Story and Smiles Photography. All rights reserved. | <strong>Wedding Photographers Bangalore</strong></p>
             <div class="credit-wrapper">
@@ -2168,6 +2178,104 @@
     </div>
 </footer>
 
+<!-- ✅ ADD THIS CSS (in your main stylesheet or inside <style> in <head>) -->
+<style>
+  /* --- Grid Layout (4 columns) --- */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 2rem;
+    padding: 3rem 0;
+    align-items: start;
+  }
+
+  /* --- Google Button Column (centered) --- */
+  .footer-google-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px; /* gives button breathing room */
+    background: rgba(255,255,255,0.03); /* subtle background to define the column */
+    border-radius: 8px;
+    padding: 1rem 0;
+  }
+
+  /* Optional: add a tiny label above the button */
+  .footer-google-btn::before {
+    content: "📰 Add to Google News";
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.6;
+    margin-bottom: 0.5rem;
+    color: #fff;
+  }
+
+  /* --- Responsive: Mobile & Tablet --- */
+  @media (max-width: 992px) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+      gap: 1.5rem;
+    }
+    /* Reset button column order if needed */
+    .footer-google-btn {
+      min-height: 80px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .footer-grid {
+      grid-template-columns: 1fr; /* 1 column on mobile */
+      gap: 2rem;
+    }
+    .footer-google-btn {
+      min-height: 60px;
+      padding: 0.5rem;
+    }
+    .footer-google-btn::before {
+      font-size: 0.65rem;
+    }
+  }
+
+  /* --- Keep your existing footer styles below --- */
+  .footer {
+    background: #1a1a1a;
+    color: #eee;
+    padding: 0 1rem;
+  }
+  .footer a {
+    color: #ffd27a;
+    text-decoration: none;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  .footer-links ul,
+  .footer-services ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-links li,
+  .footer-services li {
+    margin-bottom: 0.5rem;
+  }
+  .footer-brand p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .credit-heart {
+    color: #ff4d4d;
+  }
+</style>
+    
 <!-- ===== BACK TO TOP ===== -->
 <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6" /></svg>
