@@ -17,31 +17,39 @@
     <meta name="geo.region" content="IN-KA" />
     <meta name="geo.placename" content="Bangalore" />
 
-    <!-- ===== OPEN GRAPH ===== -->
+    <!-- ===== OPEN GRAPH (UPDATED URLs) ===== -->
     <meta property="og:title" content="Story & Smiles | Wedding Photographer in Bengaluru" />
     <meta property="og:description" content="Candid wedding, maternity, newborn & family photography in Bengaluru. Based in Banashankari, serving couples across Karnataka." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://storyandsmiles.com/assets/images/hero-bg.jpeg" />
-    <meta property="og:url" content="https://story-and-smiles-photography.vercel.app/" />
+    <meta property="og:image" content="https://story-and-smiles-photography.vercel.app/assets/images/hero-bg.jpeg" />
+    <meta property="og:url" content="https://story-and-smiles-photography.vercel.app//" />
     <meta property="og:site_name" content="Story and Smiles Photography" />
+    <meta property="og:locale" content="en_IN" />
 
-    <!-- ===== TWITTER CARD (FULL) ===== -->
+    <!-- ===== TWITTER CARD (UPDATED IMAGE) ===== -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Story & Smiles | Wedding Photographer in Bengaluru" />
     <meta name="twitter:description" content="Candid wedding, maternity & family photography in Bengaluru. Based in Banashankari, capturing your story with warmth." />
-    <meta name="twitter:image" content="https://storyandsmiles.com/assets/images/hero-bg.jpeg" />
+    <meta name="twitter:image" content="https://story-and-smiles-photography.vercel.app/assets/images/hero-bg.jpeg" />
     <meta name="twitter:site" content="@storyandsmiles" />
     <meta name="twitter:creator" content="@storyandsmiles" />
 
-    <!-- ===== FAVICON (FIXED: clean, reliable, no endless loading) ===== -->
+    <!-- ===== GEO META ===== -->
+    <meta name="geo.position" content="12.9090;77.5610" />
+    <meta name="ICBM" content="12.9090, 77.5610" />
+
+    <!-- ===== FAVICON ===== -->
     <link rel="icon" href="assets/images/favicon.png" sizes="32x32" />
     <link rel="icon" href="assets/images/favicon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png" />
     <link rel="apple-touch-icon" href="assets/images/favicon.png" />
     <link rel="shortcut icon" href="assets/images/favicon.png" /> 
 
-    <!-- ===== CANONICAL ===== -->
-    <link rel="canonical" href="https://story-and-smiles-photography.vercel.app/" />
+    <!-- ===== CANONICAL (FIXED – now points to main domain) ===== -->
+    <link rel="canonical" href="https://story-and-smiles-photography.vercel.app//" />
+
+    <!-- ===== SITEMAP (added) ===== -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
     <!-- ===== PRELOAD ===== -->
     <link rel="preload" href="assets/images/hero-bg.jpeg" as="image" />
@@ -93,23 +101,30 @@
     </script>
     <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 
-    <!-- ===== SCHEMA: LOCAL BUSINESS ===== -->
+    <!-- ===== SCHEMA: LOCAL BUSINESS (FULL ADDRESS ADDED) ===== -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Story and Smiles Photography",
             "description": "Best wedding photographers in Bangalore specializing in candid, traditional & event photography.",
-            "image": "https://storyandsmiles.com/assets/images/logo.png",
+            "image": "https://story-and-smiles-photography.vercel.app/assets/images/logo.png",
             "telephone": "+91-9845808890",
             "email": "info.storyandsmiles@gmail.com",
             "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "2A, 5th main, 3rd Cross Rd, near Om Shakthi Temple, Hanumagiri, Chikkalasandra",
                 "addressLocality": "Bangalore",
                 "addressRegion": "Karnataka",
+                "postalCode": "560061",
                 "addressCountry": "IN"
             },
-            "url": "https://storyandsmiles.com",
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "12.9090",
+                "longitude": "77.5610"
+            },
+            "url": "https://story-and-smiles-photography.vercel.app/",
             "sameAs": [
                 "https://www.instagram.com/storyandsmiles",
                 "https://www.facebook.com/storyandsmiles"
@@ -118,44 +133,137 @@
         }
     </script>
 
-    <!-- ===== SCHEMA: FAQ ===== -->
+    <!-- ===== SCHEMA: FAQ (ALL 15 QUESTIONS – FIXED) ===== -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            "mainEntity": [{
-                "@type": "Question",
-                "name": "Are you based in Banashankari?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes, we are based in Banashankari and travel across Bengaluru for weddings, maternity, newborn and family events."
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Are you based in Banashankari? Do you travel across Bengaluru?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we are based in Banashankari and happily travel across Bengaluru and nearby areas for weddings, maternity, newborn and family events."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How far in advance should I book?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For popular wedding dates, we recommend booking at least 3–6 months in advance. Smaller events, maternity and baby shoots can often be scheduled 4–6 weeks ahead."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What wedding photography packages do you offer?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We offer custom packages for full-day and half-day wedding coverage, pre-wedding shoots, mehendi, sangeet and reception."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "When is the best time for a maternity shoot?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The ideal time is between 28–34 weeks of pregnancy, when the bump is clearly visible and you're still comfortable."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do you ensure safety during newborn shoots?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Newborn safety is our top priority. We keep the room warm, use soft props, follow baby-led posing, and never force positions."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What are your starting prices?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Pricing depends on hours, location and services. We share customised quotes for each event. A booking advance confirms your date."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How long until we receive our photos?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For weddings, we deliver curated, edited photos within a few weeks. Maternity, newborn and baby shoots are usually delivered sooner."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you offer videography as well?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we offer cinematic wedding videography alongside photography. Our team captures the essence of your day with a highlight film."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can we choose the location for our pre-wedding shoot?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Absolutely! We work with you to select the perfect location — whether it's a scenic outdoor spot in Bangalore, a heritage site, or a place that holds special meaning for you both."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you provide albums and prints?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we offer premium handcrafted albums, prints, and canvas frames as add-ons. These make for beautiful keepsakes."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What happens if it rains on the wedding day?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We have backup plans for indoor and covered outdoor spaces. We also carry professional lighting to adapt to any weather condition."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you cover destination weddings?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we love destination weddings! We've covered events in Goa, Kerala, Tamil Nadu, and beyond. We handle all travel logistics."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How many photos do we get?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "For a full-day wedding, we typically deliver 600–1000+ high-resolution edited images. Pre-wedding shoots usually yield 100–200 beautifully edited photos."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can we request specific shots or poses?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Of course! We create a shot list with you before the event. We blend your must-have shots with our candid storytelling style."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do we book you?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Simply reach out via our contact form, WhatsApp, or phone. We'll discuss your requirements, share our packages, and confirm your date with a booking advance."
+                    }
                 }
-            }, {
-                "@type": "Question",
-                "name": "How far in advance should I book?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We recommend booking 3–6 months in advance for weddings, and 4–6 weeks for maternity or baby shoots."
-                }
-            }, {
-                "@type": "Question",
-                "name": "What packages do you offer?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We offer custom packages for full-day and half-day wedding coverage, pre-wedding shoots, mehendi, sangeet and reception."
-                }
-            }, {
-                "@type": "Question",
-                "name": "When is the best time for a maternity shoot?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The ideal time is between 28–34 weeks of pregnancy, when the bump is visible and you're still comfortable."
-                }
-            }]
+            ]
         }
     </script>
 
-    <!-- ===== SCHEMA: BREADCRUMB ===== -->
+    <!-- ===== SCHEMA: BREADCRUMB (UPDATED URLs) ===== -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -164,23 +272,23 @@
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://story-and-smiles-photography.vercel.app/"
+                "item": "https://story-and-smiles-photography.vercel.app//"
             }, {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://story-and-smiles-photography.vercel.app/#services"
+                "item": "https://story-and-smiles-photography.vercel.app//#services"
             }, {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Contact",
-                "item": "https://story-and-smiles-photography.vercel.app/#contact"
+                "item": "https://story-and-smiles-photography.vercel.app//#contact"
             }]
         }
     </script>
 
     <!-- ================================================================
-    CRITICAL INLINE STYLES (enhanced UI/UX)
+    CRITICAL INLINE STYLES (enhanced UI/UX) – unchanged
     ================================================================ -->
     <style>
         /* ----- RESET & BASE ----- */
@@ -863,7 +971,7 @@
             color: #7a7272;
         }
 
-        /* ===== GMB MAP & REVIEW BADGE (FIXED: map visible) ===== */
+        /* ===== GMB MAP & REVIEW BADGE ===== */
         .gmb-map-container {
             margin-top: 24px;
             border-radius: 20px;
@@ -963,7 +1071,7 @@
             }
         }
 
-        /* ===== TL;DR / SUMMARY BOX (for AI & readers) ===== */
+        /* ===== TL;DR / SUMMARY BOX ===== */
         .summary-box {
             background: rgba(255, 255, 255, 0.10);
             backdrop-filter: blur(6px);
@@ -1707,7 +1815,7 @@
         </div>
     </header>
 
-    <!-- ===== ABOUT ===== -->
+    <!-- ===== ABOUT (with added location content) ===== -->
     <section id="about" class="about-section" aria-labelledby="about-heading">
         <div class="container">
             <div class="about-grid">
@@ -1726,6 +1834,10 @@
                     </p>
                     <p class="about-text">
                         Based in <strong>Bangalore</strong>, we serve couples and families across <strong>Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Lucknow, Goa, and Puducherry</strong>.
+                    </p>
+                    <!-- ADDED: location‑specific content -->
+                    <p class="about-text" style="background:#f9f5f2; padding:12px 18px; border-radius:12px; border-left:4px solid #e07a5f;">
+                        <strong>📍 Serving Banashankari, Chikkalasandra, Hanumagiri, Jayanagar, JP Nagar, and all of Bengaluru.</strong> Our studio is conveniently located near Om Shakthi Temple, making us the go‑to choice for local couples and families.
                     </p>
                     <div class="about-features">
                         <div class="feature">
@@ -1837,7 +1949,7 @@
         </div>
     </section>
 
-    <!-- ===== GALLERY (with portfolio link added) ===== -->
+    <!-- ===== GALLERY (with portfolio link) ===== -->
     <section id="gallery" class="gallery-section" aria-labelledby="gallery-heading">
         <div class="container">
             <div class="section-header">
@@ -1964,600 +2076,483 @@
                         </div>
                     </div>
 
-                    <!-- ===== GOOGLE MAPS (FIXED: simpler, reliable embed) ===== -->
+                    <!-- ===== GOOGLE MAPS (UPDATED – uses Place ID) ===== -->
                     <div class="gmb-map-container">
                         <iframe
-                        src="https://maps.google.com/maps?q=Story+and+Smiles+Photography+Bangalore&output=embed&z=15"
-                        width="100%"
-                        height="260"
-                        style="border:0; border-radius:20px;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Story and Smiles Photography location on Google Maps"
-                    ></iframe>
-                </div>
+                            src="https://maps.google.com/maps?q=place_id:ChIJu3grGi1RrjsRI_yNq1Bk-8A&output=embed&z=15"
+                            width="100%"
+                            height="260"
+                            style="border:0; border-radius:20px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Story and Smiles Photography location on Google Maps"
+                        ></iframe>
+                    </div>
 
-                <!-- Google Review Badge -->
-                <div class="gmb-review-badge">
-                    <div class="gmb-review-inner">
-                        <div class="gmb-rating-stars">
-                            <span class="stars">★★★★★</span>
-                            <span class="rating-num">5.0 (89+ reviews)</span>
+                    <!-- Google Review Badge -->
+                    <div class="gmb-review-badge">
+                        <div class="gmb-review-inner">
+                            <div class="gmb-rating-stars">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-num">5.0 (89+ reviews)</span>
+                            </div>
+                            <div class="gmb-review-text">⭐ Rated one of the best wedding photographers in Bangalore</div>
+                            <a href="https://search.google.com/local/reviews?placeid=ChIJu3grGi1RrjsRI_yNq1Bk-8A" target="_blank" rel="noopener noreferrer" class="gmb-review-link">📝 Read Google Reviews</a>
                         </div>
-                        <div class="gmb-review-text">⭐ Rated one of the best wedding photographers in Bangalore</div>
-                        <a href="https://search.google.com/local/reviews?placeid=ChIJu3grGi1RrjsRI_yNq1Bk-8A" target="_blank" rel="noopener noreferrer" class="gmb-review-link">📝 Read Google Reviews</a>
                     </div>
                 </div>
-            </div>
 
-            <!-- Contact Form -->
-            <form class="contact-form animate-on-scroll" id="contactForm" action="https://formspree.io/f/info.storyandsmiles@gmail.com" method="POST" aria-label="Contact form">
-                <div class="form-group">
-                    <input type="text" name="name" id="name" placeholder="Your Full Name*" required autocomplete="name" />
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" id="email" placeholder="Your Email Address*" required autocomplete="email" />
-                </div>
-                <div class="form-group">
-                    <input type="tel" name="phone" id="phone" placeholder="Your Phone Number*" required autocomplete="tel" />
-                </div>
-                <div class="form-group">
-                    <select name="service" id="service">
-                        <option value="">Select Service Interested In</option>
-                        <option value="wedding">Wedding Photography</option>
-                        <option value="pre-wedding">Pre-Wedding Photoshoot</option>
-                        <option value="event">Event Photography</option>
-                        <option value="baby-shower">Baby Shower &amp; Maternity</option>
-                        <option value="portfolio">Portfolio Photography</option>
-                        <option value="newborn">Newborn Photography</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" id="message" placeholder="Tell us about your event (date, venue, requirements)*" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-submit">Send Inquiry Now</button>
-                <p class="form-note">We'll get back to you within 2 hours!</p>
-            </form>
-        </div>
-    </div>
-</section>
-
-<!-- ===== FAQ (15 FAQs with "Read More" toggle) ===== -->
-<section id="faq" class="faq-section" aria-labelledby="faq-heading">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-subtitle">FAQs</span>
-            <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
-            <p class="section-description">Quick answers to common questions about our wedding, maternity, newborn &amp; event photography.</p>
-        </div>
-        <div class="faq-accordion" id="faqAccordion">
-            <!-- FAQ 1 -->
-            <details class="faq-item" open>
-                <summary>Are you based in Banashankari? Do you travel across Bengaluru?</summary>
-                <div class="faq-answer"><p>Yes, we are based in Banashankari and happily travel across Bengaluru and nearby areas for weddings, maternity, newborn and family events. We bring the same candid, storytelling style to every location.</p></div>
-            </details>
-            <!-- FAQ 2 -->
-            <details class="faq-item">
-                <summary>How far in advance should I book?</summary>
-                <div class="faq-answer"><p>For popular wedding dates, we recommend booking at least 3–6 months in advance. Smaller events, maternity and baby shoots can often be scheduled 4–6 weeks ahead, depending on availability.</p></div>
-            </details>
-            <!-- FAQ 3 -->
-            <details class="faq-item">
-                <summary>What wedding photography packages do you offer?</summary>
-                <div class="faq-answer"><p>We offer custom packages for full-day and half-day wedding coverage, pre-wedding shoots, mehendi, sangeet and reception. Each includes candid photography, family portraits, and a curated set of high-resolution edited images.</p></div>
-            </details>
-            <!-- FAQ 4 -->
-            <details class="faq-item">
-                <summary>When is the best time for a maternity shoot?</summary>
-                <div class="faq-answer"><p>The ideal time is between 28–34 weeks of pregnancy, when the bump is clearly visible and you're still comfortable. For twins or medical considerations, we may suggest an earlier week.</p></div>
-            </details>
-            <!-- FAQ 5 -->
-            <details class="faq-item">
-                <summary>How do you ensure safety during newborn shoots?</summary>
-                <div class="faq-answer"><p>Newborn safety is our top priority. We keep the room warm, use soft props, follow baby-led posing, and never force positions. Sessions are relaxed with breaks for feeding and cuddles.</p></div>
-            </details>
-            <!-- FAQ 6 -->
-            <details class="faq-item">
-                <summary>What are your starting prices?</summary>
-                <div class="faq-answer"><p>Pricing depends on hours, location and services. We share customised quotes for each event. A booking advance confirms your date, with the remaining payment split across milestones.</p></div>
-            </details>
-            <!-- FAQ 7 -->
-            <details class="faq-item">
-                <summary>How long until we receive our photos?</summary>
-                <div class="faq-answer"><p>For weddings, we deliver curated, edited photos within a few weeks. Maternity, newborn and baby shoots are usually delivered sooner, so you can quickly use them for announcements and framing.</p></div>
-            </details>
-
-            <!-- ===== HIDDEN FAQS (8–15) — shown via "Read More" ===== -->
-            <div id="hiddenFaqs">
-                <!-- FAQ 8 -->
-                <details class="faq-item hidden-faq">
-                    <summary>Do you offer videography as well?</summary>
-                    <div class="faq-answer"><p>Yes, we offer cinematic wedding videography alongside photography. Our team captures the essence of your day with a highlight film and full ceremony coverage. Ask us about our photo + video combo packages.</p></div>
-                </details>
-                <!-- FAQ 9 -->
-                <details class="faq-item hidden-faq">
-                    <summary>Can we choose the location for our pre-wedding shoot?</summary>
-                    <div class="faq-answer"><p>Absolutely! We work with you to select the perfect location — whether it's a scenic outdoor spot in Bangalore, a heritage site, or a place that holds special meaning for you both.</p></div>
-                </details>
-                <!-- FAQ 10 -->
-                <details class="faq-item hidden-faq">
-                    <summary>Do you provide albums and prints?</summary>
-                    <div class="faq-answer"><p>Yes, we offer premium handcrafted albums, prints, and canvas frames as add-ons. These make for beautiful keepsakes and gifts for family members.</p></div>
-                </details>
-                <!-- FAQ 11 -->
-                <details class="faq-item hidden-faq">
-                    <summary>What happens if it rains on the wedding day?</summary>
-                    <div class="faq-answer"><p>We have backup plans for indoor and covered outdoor spaces. We also carry professional lighting to adapt to any weather condition, ensuring your photos are stunning rain or shine.</p></div>
-                </details>
-                <!-- FAQ 12 -->
-                <details class="faq-item hidden-faq">
-                    <summary>Do you cover destination weddings?</summary>
-                    <div class="faq-answer"><p>Yes, we love destination weddings! We've covered events in Goa, Kerala, Tamil Nadu, and beyond. We handle all travel logistics so you can focus on your celebration.</p></div>
-                </details>
-                <!-- FAQ 13 -->
-                <details class="faq-item hidden-faq">
-                    <summary>How many photos do we get?</summary>
-                    <div class="faq-answer"><p>For a full-day wedding, we typically deliver 600–1000+ high-resolution edited images. Pre-wedding shoots usually yield 100–200 beautifully edited photos.</p></div>
-                </details>
-                <!-- FAQ 14 -->
-                <details class="faq-item hidden-faq">
-                    <summary>Can we request specific shots or poses?</summary>
-                    <div class="faq-answer"><p>Of course! We create a shot list with you before the event. We blend your must-have shots with our candid storytelling style for a perfect mix.</p></div>
-                </details>
-                <!-- FAQ 15 -->
-                <details class="faq-item hidden-faq">
-                    <summary>How do we book you?</summary>
-                    <div class="faq-answer"><p>Simply reach out via our contact form, WhatsApp, or phone. We'll discuss your requirements, share our packages, and confirm your date with a booking advance. It's that easy!</p></div>
-                </details>
-            </div>
-
-            <!-- "Read More" / "Show More" button -->
-            <div class="faq-show-more" id="faqShowMoreWrapper">
-                <button class="btn btn-outline" id="faqShowMoreBtn">📖 Read More FAQs</button>
+                <!-- Contact Form (UPDATED action placeholder) -->
+                <form class="contact-form animate-on-scroll" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" aria-label="Contact form">
+                    <!-- ⚠️ IMPORTANT: Replace YOUR_FORM_ID with your actual Formspree endpoint -->
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="Your Full Name*" required autocomplete="name" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Your Email Address*" required autocomplete="email" />
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" id="phone" placeholder="Your Phone Number*" required autocomplete="tel" />
+                    </div>
+                    <div class="form-group">
+                        <select name="service" id="service">
+                            <option value="">Select Service Interested In</option>
+                            <option value="wedding">Wedding Photography</option>
+                            <option value="pre-wedding">Pre-Wedding Photoshoot</option>
+                            <option value="event">Event Photography</option>
+                            <option value="baby-shower">Baby Shower &amp; Maternity</option>
+                            <option value="portfolio">Portfolio Photography</option>
+                            <option value="newborn">Newborn Photography</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" placeholder="Tell us about your event (date, venue, requirements)*" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">Send Inquiry Now</button>
+                    <p class="form-note">We'll get back to you within 2 hours!</p>
+                </form>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ===== FOOTER ===== -->
-
-<footer class="footer" role="contentinfo">
-    <div class="container">
-        <div class="footer-grid">
-            <!-- Column 1: Brand -->
-            <div class="footer-brand">
-                <img src="assets/images/logo-white.png" alt="Story and Smiles Photography" class="footer-logo" width="150" height="48" loading="lazy" />
-                <p>Story and Smiles is one of the best wedding photographers in Bangalore, capturing stories across Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Lucknow, Goa, and Puducherry.</p>
-                <p>Phone: <a href="tel:+919845808890">+91-98458 08890</a> | Email: <a href="mailto:info.storyandsmiles@gmail.com">info.storyandsmiles@gmail.com</a></p>
-                <p style="font-size:0.85rem; opacity:0.6;">2A, 5th main, 3rd Cross Rd, near Om Shakthi Temple, Hanumagiri, Chikkalasandra, Bengaluru, Karnataka 560061</p>
-                <p> 
-                <a
-                  href="https://www.google.com/preferences/source?q=story-and-smiles-photography.vercel.app/">
-                  <img src="assets/images/google_preferred_source_badge_dark_en.png" alt="Add as Preferred Source">
-                </a>
-                </p>
+    <!-- ===== FAQ (15 FAQs with "Read More" toggle) – unchanged content ===== -->
+    <section id="faq" class="faq-section" aria-labelledby="faq-heading">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">FAQs</span>
+                <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">Quick answers to common questions about our wedding, maternity, newborn &amp; event photography.</p>
             </div>
-         
-            
+            <div class="faq-accordion" id="faqAccordion">
+                <!-- FAQ 1 -->
+                <details class="faq-item" open>
+                    <summary>Are you based in Banashankari? Do you travel across Bengaluru?</summary>
+                    <div class="faq-answer"><p>Yes, we are based in Banashankari and happily travel across Bengaluru and nearby areas for weddings, maternity, newborn and family events. We bring the same candid, storytelling style to every location.</p></div>
+                </details>
+                <!-- FAQ 2 -->
+                <details class="faq-item">
+                    <summary>How far in advance should I book?</summary>
+                    <div class="faq-answer"><p>For popular wedding dates, we recommend booking at least 3–6 months in advance. Smaller events, maternity and baby shoots can often be scheduled 4–6 weeks ahead, depending on availability.</p></div>
+                </details>
+                <!-- FAQ 3 -->
+                <details class="faq-item">
+                    <summary>What wedding photography packages do you offer?</summary>
+                    <div class="faq-answer"><p>We offer custom packages for full-day and half-day wedding coverage, pre-wedding shoots, mehendi, sangeet and reception. Each includes candid photography, family portraits, and a curated set of high-resolution edited images.</p></div>
+                </details>
+                <!-- FAQ 4 -->
+                <details class="faq-item">
+                    <summary>When is the best time for a maternity shoot?</summary>
+                    <div class="faq-answer"><p>The ideal time is between 28–34 weeks of pregnancy, when the bump is clearly visible and you're still comfortable. For twins or medical considerations, we may suggest an earlier week.</p></div>
+                </details>
+                <!-- FAQ 5 -->
+                <details class="faq-item">
+                    <summary>How do you ensure safety during newborn shoots?</summary>
+                    <div class="faq-answer"><p>Newborn safety is our top priority. We keep the room warm, use soft props, follow baby-led posing, and never force positions. Sessions are relaxed with breaks for feeding and cuddles.</p></div>
+                </details>
+                <!-- FAQ 6 -->
+                <details class="faq-item">
+                    <summary>What are your starting prices?</summary>
+                    <div class="faq-answer"><p>Pricing depends on hours, location and services. We share customised quotes for each event. A booking advance confirms your date, with the remaining payment split across milestones.</p></div>
+                </details>
+                <!-- FAQ 7 -->
+                <details class="faq-item">
+                    <summary>How long until we receive our photos?</summary>
+                    <div class="faq-answer"><p>For weddings, we deliver curated, edited photos within a few weeks. Maternity, newborn and baby shoots are usually delivered sooner, so you can quickly use them for announcements and framing.</p></div>
+                </details>
 
-            <!-- Column 2: Quick Links -->
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#faq">FAQs</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+                <!-- ===== HIDDEN FAQS (8–15) — shown via "Read More" ===== -->
+                <div id="hiddenFaqs">
+                    <!-- FAQ 8 -->
+                    <details class="faq-item hidden-faq">
+                        <summary>Do you offer videography as well?</summary>
+                        <div class="faq-answer"><p>Yes, we offer cinematic wedding videography alongside photography. Our team captures the essence of your day with a highlight film and full ceremony coverage. Ask us about our photo + video combo packages.</p></div>
+                    </details>
+                    <!-- FAQ 9 -->
+                    <details class="faq-item hidden-faq">
+                        <summary>Can we choose the location for our pre-wedding shoot?</summary>
+                        <div class="faq-answer"><p>Absolutely! We work with you to select the perfect location — whether it's a scenic outdoor spot in Bangalore, a heritage site, or a place that holds special meaning for you both.</p></div>
+                    </details>
+                    <!-- FAQ 10 -->
+                    <details class="faq-item hidden-faq">
+                        <summary>Do you provide albums and prints?</summary>
+                        <div class="faq-answer"><p>Yes, we offer premium handcrafted albums, prints, and canvas frames as add-ons. These make for beautiful keepsakes and gifts for family members.</p></div>
+                    </details>
+                    <!-- FAQ 11 -->
+                    <details class="faq-item hidden-faq">
+                        <summary>What happens if it rains on the wedding day?</summary>
+                        <div class="faq-answer"><p>We have backup plans for indoor and covered outdoor spaces. We also carry professional lighting to adapt to any weather condition, ensuring your photos are stunning rain or shine.</p></div>
+                    </details>
+                    <!-- FAQ 12 -->
+                    <details class="faq-item hidden-faq">
+                        <summary>Do you cover destination weddings?</summary>
+                        <div class="faq-answer"><p>Yes, we love destination weddings! We've covered events in Goa, Kerala, Tamil Nadu, and beyond. We handle all travel logistics so you can focus on your celebration.</p></div>
+                    </details>
+                    <!-- FAQ 13 -->
+                    <details class="faq-item hidden-faq">
+                        <summary>How many photos do we get?</summary>
+                        <div class="faq-answer"><p>For a full-day wedding, we typically deliver 600–1000+ high-resolution edited images. Pre-wedding shoots usually yield 100–200 beautifully edited photos.</p></div>
+                    </details>
+                    <!-- FAQ 14 -->
+                    <details class="faq-item hidden-faq">
+                        <summary>Can we request specific shots or poses?</summary>
+                        <div class="faq-answer"><p>Of course! We create a shot list with you before the event. We blend your must-have shots with our candid storytelling style for a perfect mix.</p></div>
+                    </details>
+                    <!-- FAQ 15 -->
+                    <details class="faq-item hidden-faq">
+                        <summary>How do we book you?</summary>
+                        <div class="faq-answer"><p>Simply reach out via our contact form, WhatsApp, or phone. We'll discuss your requirements, share our packages, and confirm your date with a booking advance. It's that easy!</p></div>
+                    </details>
+                </div>
 
-            <!-- Column 3: Services -->
-            <div class="footer-services">
-                <h4>Our Services</h4>
-                <ul>
-                    <li><a href="#services">Wedding Photography</a></li>
-                    <li><a href="#services">Pre-Wedding Shoot</a></li>
-                    <li><a href="#services">Event Photography</a></li>
-                    <li><a href="#services">Baby Shower &amp; Maternity</a></li>
-                    <li><a href="#services">Newborn Photography</a></li>
-                </ul>
-            </div>
-        </div> <!-- /footer-grid -->
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 Story and Smiles Photography. All rights reserved. | <strong>Wedding Photographers Bangalore</strong></p>
-            <div class="credit-wrapper">
-                <span class="credit-separator"></span>
-                <p class="credit-line">
-                    Crafted with <span class="credit-heart">❤</span> by
-                    <a href="https://kirankumarvel.github.io/" target="_blank" rel="noopener noreferrer" class="credit-link">Kiran (Kronix Systems)</a>
-                    <span class="credit-role">— Web &amp; Creative</span>
-                </p>
+                <!-- "Read More" / "Show More" button -->
+                <div class="faq-show-more" id="faqShowMoreWrapper">
+                    <button class="btn btn-outline" id="faqShowMoreBtn">📖 Read More FAQs</button>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </section>
 
-<!-- ✅ ADD THIS CSS (in your main stylesheet or inside <style> in <head>) -->
-<style>
-  /* --- Grid Layout (4 columns) --- */
-  .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-    gap: 2rem;
-    padding: 3rem 0;
-    align-items: start;
-  }
+    <!-- ===== FOOTER (REMOVED broken Google badge, kept all else) ===== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand -->
+                <div class="footer-brand">
+                    <img src="assets/images/logo-white.png" alt="Story and Smiles Photography" class="footer-logo" width="150" height="48" loading="lazy" />
+                    <p>Story and Smiles is one of the best wedding photographers in Bangalore, capturing stories across Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Lucknow, Goa, and Puducherry.</p>
+                    <p>Phone: <a href="tel:+919845808890">+91-98458 08890</a> | Email: <a href="mailto:info.storyandsmiles@gmail.com">info.storyandsmiles@gmail.com</a></p>
+                    <p style="font-size:0.85rem; opacity:0.6;">2A, 5th main, 3rd Cross Rd, near Om Shakthi Temple, Hanumagiri, Chikkalasandra, Bengaluru, Karnataka 560061</p>
+                    <!-- BROKEN BADGE REMOVED -->
+                </div>
 
-  /* --- Google Button Column (centered) --- */
-  .footer-google-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 120px; /* gives button breathing room */
-    background: rgba(255,255,255,0.03); /* subtle background to define the column */
-    border-radius: 8px;
-    padding: 1rem 0;
-  }
+                <!-- Column 2: Quick Links -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
 
-  /* Optional: add a tiny label above the button */
-  .footer-google-btn::before {
-    content: "📰 Add to Google News";
-    display: block;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.6;
-    margin-bottom: 0.5rem;
-    color: #fff;
-  }
+                <!-- Column 3: Services -->
+                <div class="footer-services">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#services">Wedding Photography</a></li>
+                        <li><a href="#services">Pre-Wedding Shoot</a></li>
+                        <li><a href="#services">Event Photography</a></li>
+                        <li><a href="#services">Baby Shower &amp; Maternity</a></li>
+                        <li><a href="#services">Newborn Photography</a></li>
+                    </ul>
+                </div>
+            </div> <!-- /footer-grid -->
 
-  /* --- Responsive: Mobile & Tablet --- */
-  @media (max-width: 992px) {
-    .footer-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-      gap: 1.5rem;
-    }
-    /* Reset button column order if needed */
-    .footer-google-btn {
-      min-height: 80px;
-    }
-  }
+            <div class="footer-bottom">
+                <p>&copy; 2026 Story and Smiles Photography. All rights reserved. | <strong>Wedding Photographers Bangalore</strong></p>
+                <div class="credit-wrapper">
+                    <span class="credit-separator"></span>
+                    <p class="credit-line">
+                        Crafted with <span class="credit-heart">❤</span> by
+                        <a href="https://kirankumarvel.github.io/" target="_blank" rel="noopener noreferrer" class="credit-link">Kiran (Kronix Systems)</a>
+                        <span class="credit-role">— Web &amp; Creative</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  @media (max-width: 576px) {
-    .footer-grid {
-      grid-template-columns: 1fr; /* 1 column on mobile */
-      gap: 2rem;
-    }
-    .footer-google-btn {
-      min-height: 60px;
-      padding: 0.5rem;
-    }
-    .footer-google-btn::before {
-      font-size: 0.65rem;
-    }
-  }
-
-  /* --- Keep your existing footer styles below --- */
-  .footer {
-    background: #1a1a1a;
-    color: #eee;
-    padding: 0 1rem;
-  }
-  .footer a {
-    color: #ffd27a;
-    text-decoration: none;
-  }
-  .footer a:hover {
-    text-decoration: underline;
-  }
-  .footer-links ul,
-  .footer-services ul {
-    list-style: none;
-    padding: 0;
-  }
-  .footer-links li,
-  .footer-services li {
-    margin-bottom: 0.5rem;
-  }
-  .footer-brand p {
-    line-height: 1.6;
-    font-size: 0.95rem;
-  }
-  .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding: 1.5rem 0;
-    text-align: center;
-    font-size: 0.9rem;
-  }
-  .credit-heart {
-    color: #ff4d4d;
-  }
-</style>
-    
-<!-- ===== BACK TO TOP ===== -->
-<button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6" /></svg>
-</button>
-
-<!-- ============================================================
-WHATSAPP FLOAT — FIXED (working reliably)
-============================================================ -->
-<div class="whatsapp-float" id="whatsappFloat">
-    <button class="whatsapp-main-btn" id="whatsappMainBtn" aria-label="Chat on WhatsApp">
-        <svg class="whatsapp-icon" width="28" height="28" viewBox="0 0 24 24" fill="white">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/>
-        </svg>
-        <span class="whatsapp-btn-text">Chat with us</span>
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6" /></svg>
     </button>
 
-    <div class="whatsapp-popup" id="whatsappPopup">
-        <div class="whatsapp-popup-header">
-            <div class="whatsapp-popup-avatar">
-                <img src="assets/images/about-us.webp" alt="Story and Smiles Photography" onerror="this.src='assets/images/logo.png'" />
-                <div class="whatsapp-online-dot"></div>
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <div class="whatsapp-float" id="whatsappFloat">
+        <button class="whatsapp-main-btn" id="whatsappMainBtn" aria-label="Chat on WhatsApp">
+            <svg class="whatsapp-icon" width="28" height="28" viewBox="0 0 24 24" fill="white">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/>
+            </svg>
+            <span class="whatsapp-btn-text">Chat with us</span>
+        </button>
+
+        <div class="whatsapp-popup" id="whatsappPopup">
+            <div class="whatsapp-popup-header">
+                <div class="whatsapp-popup-avatar">
+                    <img src="assets/images/about-us.webp" alt="Story and Smiles Photography" onerror="this.src='assets/images/logo.png'" />
+                    <div class="whatsapp-online-dot"></div>
+                </div>
+                <div class="whatsapp-popup-info">
+                    <h4>Story and Smiles 📸</h4>
+                    <p>Typically replies within 2 hours</p>
+                </div>
+                <button class="whatsapp-popup-close" id="whatsappPopupClose" aria-label="Close chat">✕</button>
             </div>
-            <div class="whatsapp-popup-info">
-                <h4>Story and Smiles 📸</h4>
-                <p>Typically replies within 2 hours</p>
+            <div class="whatsapp-popup-body">
+                <div class="whatsapp-message-preview">
+                    <p>Hello! 👋 Welcome to Story and Smiles Photography.</p>
+                    <p>How can we help you today?</p>
+                </div>
+                <div class="whatsapp-quick-options">
+                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20interested%20in%20Wedding%20Photography%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">💍</span> Wedding Photography</a>
+                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'd%20like%20to%20know%20about%20Pre-Wedding%20Photoshoot." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">💑</span> Pre-Wedding Shoot</a>
+                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20looking%20for%20Event%20Photography%20coverage." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">🎉</span> Event Photography</a>
+                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20interested%20in%20Baby%20Shower%20Photography." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">👶</span> Baby Shower</a>
+                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'd%20like%20to%20discuss%20photography%20packages%20and%20pricing." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">💬</span> Pricing &amp; Packages</a>
+                </div>
             </div>
-            <button class="whatsapp-popup-close" id="whatsappPopupClose" aria-label="Close chat">✕</button>
-        </div>
-        <div class="whatsapp-popup-body">
-            <div class="whatsapp-message-preview">
-                <p>Hello! 👋 Welcome to Story and Smiles Photography.</p>
-                <p>How can we help you today?</p>
+            <div class="whatsapp-popup-footer">
+                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I%20need%20a%20photographer%20for%20my%20event." target="_blank" rel="noopener noreferrer" class="whatsapp-start-chat">Start WhatsApp Chat</a>
             </div>
-            <div class="whatsapp-quick-options">
-                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20interested%20in%20Wedding%20Photography%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">💍</span> Wedding Photography</a>
-                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'd%20like%20to%20know%20about%20Pre-Wedding%20Photoshoot." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">💑</span> Pre-Wedding Shoot</a>
-                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20looking%20for%20Event%20Photography%20coverage." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">🎉</span> Event Photography</a>
-                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20interested%20in%20Baby%20Shower%20Photography." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">👶</span> Baby Shower</a>
-                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'd%20like%20to%20discuss%20photography%20packages%20and%20pricing." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">💬</span> Pricing &amp; Packages</a>
-            </div>
-        </div>
-        <div class="whatsapp-popup-footer">
-            <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I%20need%20a%20photographer%20for%20my%20event." target="_blank" rel="noopener noreferrer" class="whatsapp-start-chat">Start WhatsApp Chat</a>
         </div>
     </div>
-</div>
 
-<!-- ============================================================
-SCRIPTS
-============================================================ -->
-<script>
-    (function() {
-        'use strict';
+    <!-- ============================================================
+    SCRIPTS – unchanged
+    ============================================================ -->
+    <script>
+        (function() {
+            'use strict';
 
-        // ---- NAVIGATION ----
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
-        const navLinks = document.querySelectorAll('.nav-link');
+            // ---- NAVIGATION ----
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('navMenu');
+            const navLinks = document.querySelectorAll('.nav-link');
 
-        if (hamburger && navMenu) {
-            hamburger.addEventListener('click', function() {
-                this.classList.toggle('active');
-                navMenu.classList.toggle('active');
-                const expanded = this.classList.contains('active');
-                this.setAttribute('aria-expanded', expanded);
-            });
-
-            navLinks.forEach(function(link) {
-                link.addEventListener('click', function() {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                    const expanded = this.classList.contains('active');
+                    this.setAttribute('aria-expanded', expanded);
                 });
-            });
-        }
 
-        // ---- SCROLL EFFECTS ----
-        const navbar = document.getElementById('navbar');
-        const backToTop = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', function() {
-            const scrollY = window.scrollY;
-            if (navbar) {
-                navbar.classList.toggle('scrolled', scrollY > 60);
+                navLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    });
+                });
             }
-            if (backToTop) {
-                backToTop.classList.toggle('visible', scrollY > 400);
-            }
-        });
 
-        if (backToTop) {
-            backToTop.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
+            // ---- SCROLL EFFECTS ----
+            const navbar = document.getElementById('navbar');
+            const backToTop = document.getElementById('backToTop');
 
-        // ---- COUNTER ANIMATION ----
-        const counters = document.querySelectorAll('.counter');
-        let counterAnimated = false;
-
-        function animateCounters() {
-            if (counterAnimated) return;
-            counters.forEach(function(counter) {
-                const target = parseInt(counter.getAttribute('data-target'));
-                if (!target || isNaN(target)) return;
-                let current = 0;
-                const increment = Math.ceil(target / 60);
-                const timer = setInterval(function() {
-                    current += increment;
-                    if (current >= target) {
-                        current = target;
-                        clearInterval(timer);
-                    }
-                    counter.textContent = current;
-                }, 20);
-            });
-            counterAnimated = true;
-        }
-
-        // ---- SCROLL ANIMATIONS (Intersection Observer) ----
-        const animateElements = document.querySelectorAll('.animate-on-scroll');
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    const el = entry.target;
-                    const delay = parseFloat(el.getAttribute('data-delay')) || 0;
-                    setTimeout(function() {
-                        el.classList.add('visible');
-                    }, delay * 1000);
-                    observer.unobserve(el);
+            window.addEventListener('scroll', function() {
+                const scrollY = window.scrollY;
+                if (navbar) {
+                    navbar.classList.toggle('scrolled', scrollY > 60);
+                }
+                if (backToTop) {
+                    backToTop.classList.toggle('visible', scrollY > 400);
                 }
             });
-        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
-        animateElements.forEach(function(el) {
-            observer.observe(el);
-        });
+            if (backToTop) {
+                backToTop.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
 
-        // ---- TRIGGER COUNTERS WHEN HERO STATS VISIBLE ----
-        const heroStats = document.querySelector('.hero-stats');
-        if (heroStats) {
-            const statsObserver = new IntersectionObserver(function(entries) {
+            // ---- COUNTER ANIMATION ----
+            const counters = document.querySelectorAll('.counter');
+            let counterAnimated = false;
+
+            function animateCounters() {
+                if (counterAnimated) return;
+                counters.forEach(function(counter) {
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    if (!target || isNaN(target)) return;
+                    let current = 0;
+                    const increment = Math.ceil(target / 60);
+                    const timer = setInterval(function() {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        counter.textContent = current;
+                    }, 20);
+                });
+                counterAnimated = true;
+            }
+
+            // ---- SCROLL ANIMATIONS (Intersection Observer) ----
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
                     if (entry.isIntersecting) {
-                        animateCounters();
-                        statsObserver.unobserve(entry.target);
+                        const el = entry.target;
+                        const delay = parseFloat(el.getAttribute('data-delay')) || 0;
+                        setTimeout(function() {
+                            el.classList.add('visible');
+                        }, delay * 1000);
+                        observer.unobserve(el);
                     }
                 });
-            }, { threshold: 0.3 });
-            statsObserver.observe(heroStats);
-        }
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
-        // ---- SMOOTH SCROLL FOR ANCHOR LINKS ----
-        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-            anchor.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                const targetEl = document.querySelector(targetId);
-                if (targetEl) {
-                    e.preventDefault();
-                    const offset = 80;
-                    const top = targetEl.getBoundingClientRect().top + window.scrollY - offset;
-                    window.scrollTo({ top: top, behavior: 'smooth' });
-                }
+            animateElements.forEach(function(el) {
+                observer.observe(el);
             });
-        });
 
-        // ---- FAQ "READ MORE" TOGGLE (15 FAQs) ----
-        const showMoreBtn = document.getElementById('faqShowMoreBtn');
-        const hiddenFaqs = document.querySelectorAll('.faq-item.hidden-faq');
-        let faqsVisible = false;
+            // ---- TRIGGER COUNTERS WHEN HERO STATS VISIBLE ----
+            const heroStats = document.querySelector('.hero-stats');
+            if (heroStats) {
+                const statsObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            animateCounters();
+                            statsObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.3 });
+                statsObserver.observe(heroStats);
+            }
 
-        if (showMoreBtn && hiddenFaqs.length) {
-            showMoreBtn.addEventListener('click', function() {
-                faqsVisible = !faqsVisible;
-                hiddenFaqs.forEach(function(faq) {
-                    faq.classList.toggle('visible', faqsVisible);
-                });
-                showMoreBtn.textContent = faqsVisible ? '📕 Show Less FAQs' : '📖 Read More FAQs';
-                if (faqsVisible) {
-                    const firstHidden = document.querySelector('.faq-item.hidden-faq.visible');
-                    if (firstHidden && firstHidden.tagName === 'DETAILS' && !firstHidden.hasAttribute('open')) {
-                        firstHidden.setAttribute('open', '');
+            // ---- SMOOTH SCROLL FOR ANCHOR LINKS ----
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const targetEl = document.querySelector(targetId);
+                    if (targetEl) {
+                        e.preventDefault();
+                        const offset = 80;
+                        const top = targetEl.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({ top: top, behavior: 'smooth' });
                     }
-                }
+                });
             });
-        }
 
-        hiddenFaqs.forEach(function(faq) {
-            if (faq.tagName === 'DETAILS') {
-                faq.addEventListener('toggle', function() {
-                    if (this.open && this.classList.contains('hidden-faq') && !this.classList.contains('visible')) {
-                        if (!faqsVisible) {
-                            faqsVisible = true;
-                            hiddenFaqs.forEach(function(f) { f.classList.add('visible'); });
-                            if (showMoreBtn) showMoreBtn.textContent = '📕 Show Less FAQs';
+            // ---- FAQ "READ MORE" TOGGLE (15 FAQs) ----
+            const showMoreBtn = document.getElementById('faqShowMoreBtn');
+            const hiddenFaqs = document.querySelectorAll('.faq-item.hidden-faq');
+            let faqsVisible = false;
+
+            if (showMoreBtn && hiddenFaqs.length) {
+                showMoreBtn.addEventListener('click', function() {
+                    faqsVisible = !faqsVisible;
+                    hiddenFaqs.forEach(function(faq) {
+                        faq.classList.toggle('visible', faqsVisible);
+                    });
+                    showMoreBtn.textContent = faqsVisible ? '📕 Show Less FAQs' : '📖 Read More FAQs';
+                    if (faqsVisible) {
+                        const firstHidden = document.querySelector('.faq-item.hidden-faq.visible');
+                        if (firstHidden && firstHidden.tagName === 'DETAILS' && !firstHidden.hasAttribute('open')) {
+                            firstHidden.setAttribute('open', '');
                         }
                     }
                 });
             }
-        });
 
-        // ============================================================
-        // WHATSAPP FLOAT — FIXED (working reliably on all devices)
-        // ============================================================
-        var whatsappMainBtn = document.getElementById('whatsappMainBtn');
-        var whatsappPopup = document.getElementById('whatsappPopup');
-        var whatsappCloseBtn = document.getElementById('whatsappPopupClose');
-        var whatsappFloat = document.getElementById('whatsappFloat');
+            hiddenFaqs.forEach(function(faq) {
+                if (faq.tagName === 'DETAILS') {
+                    faq.addEventListener('toggle', function() {
+                        if (this.open && this.classList.contains('hidden-faq') && !this.classList.contains('visible')) {
+                            if (!faqsVisible) {
+                                faqsVisible = true;
+                                hiddenFaqs.forEach(function(f) { f.classList.add('visible'); });
+                                if (showMoreBtn) showMoreBtn.textContent = '📕 Show Less FAQs';
+                            }
+                        }
+                    });
+                }
+            });
 
-        function toggleWhatsApp(e) {
-            if (e) e.stopPropagation();
-            if (whatsappPopup) {
-                whatsappPopup.classList.toggle('open');
+            // ============================================================
+            // WHATSAPP FLOAT
+            // ============================================================
+            var whatsappMainBtn = document.getElementById('whatsappMainBtn');
+            var whatsappPopup = document.getElementById('whatsappPopup');
+            var whatsappCloseBtn = document.getElementById('whatsappPopupClose');
+            var whatsappFloat = document.getElementById('whatsappFloat');
+
+            function toggleWhatsApp(e) {
+                if (e) e.stopPropagation();
+                if (whatsappPopup) {
+                    whatsappPopup.classList.toggle('open');
+                }
             }
-        }
 
-        function closeWhatsApp(e) {
-            if (e) e.stopPropagation();
-            if (whatsappPopup) {
-                whatsappPopup.classList.remove('open');
-            }
-        }
-
-        // Toggle on main button click
-        if (whatsappMainBtn) {
-            whatsappMainBtn.addEventListener('click', toggleWhatsApp);
-            // Touch support for mobile
-            whatsappMainBtn.addEventListener('touchstart', function(e) {
-                // Let click handle it, but prevent double-firing
-            }, { passive: true });
-        }
-
-        // Close on close button click
-        if (whatsappCloseBtn) {
-            whatsappCloseBtn.addEventListener('click', closeWhatsApp);
-        }
-
-        // Close when clicking outside the float container
-        document.addEventListener('click', function(e) {
-            if (whatsappFloat && whatsappPopup) {
-                var isClickInside = whatsappFloat.contains(e.target);
-                if (!isClickInside) {
+            function closeWhatsApp(e) {
+                if (e) e.stopPropagation();
+                if (whatsappPopup) {
                     whatsappPopup.classList.remove('open');
                 }
             }
-        });
 
-        // Close on Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && whatsappPopup) {
-                whatsappPopup.classList.remove('open');
+            if (whatsappMainBtn) {
+                whatsappMainBtn.addEventListener('click', toggleWhatsApp);
+                whatsappMainBtn.addEventListener('touchstart', function(e) {
+                    // passive
+                }, { passive: true });
             }
-        });
 
-        // Auto-open once per session (gentle, non-intrusive)
-        if (!sessionStorage.getItem('whatsappAutoOpen')) {
-            var autoOpenTimer = setTimeout(function() {
-                if (whatsappPopup) {
-                    whatsappPopup.classList.add('open');
-                    sessionStorage.setItem('whatsappAutoOpen', 'true');
-                    // Auto-close after 6 seconds
-                    setTimeout(function() {
-                        if (whatsappPopup) {
-                            whatsappPopup.classList.remove('open');
-                        }
-                    }, 6000);
+            if (whatsappCloseBtn) {
+                whatsappCloseBtn.addEventListener('click', closeWhatsApp);
+            }
+
+            document.addEventListener('click', function(e) {
+                if (whatsappFloat && whatsappPopup) {
+                    var isClickInside = whatsappFloat.contains(e.target);
+                    if (!isClickInside) {
+                        whatsappPopup.classList.remove('open');
+                    }
                 }
-            }, 2500);
-        }
+            });
 
-        // All WhatsApp links inside the popup use target="_blank" — they work natively.
-        // No extra interception needed.
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && whatsappPopup) {
+                    whatsappPopup.classList.remove('open');
+                }
+            });
 
-    })();
-</script>
-<script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
+            if (!sessionStorage.getItem('whatsappAutoOpen')) {
+                var autoOpenTimer = setTimeout(function() {
+                    if (whatsappPopup) {
+                        whatsappPopup.classList.add('open');
+                        sessionStorage.setItem('whatsappAutoOpen', 'true');
+                        setTimeout(function() {
+                            if (whatsappPopup) {
+                                whatsappPopup.classList.remove('open');
+                            }
+                        }, 6000);
+                    }
+                }, 2500);
+            }
+
+        })();
+    </script>
+    <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 </body>
 </html>
