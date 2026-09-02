@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <!-- ===== SECURITY & REFERRER ===== -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src https://maps.google.com https://www.google.com; connect-src 'self' https://www.clarity.ms https://www.google-analytics.com;" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://www.google-analytics.com https://connect.facebook.net https://platform-api.sharethis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src https://maps.google.com https://www.google.com; connect-src 'self' https://www.clarity.ms https://www.google-analytics.com;" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <!-- ===== PRIMARY META ===== -->
     <title>Best Wedding Photographers in Bangalore – Candid & Maternity Photography | Story & Smiles</title>
     <meta name="description" content="Book the best wedding photographers in Bangalore. Story & Smiles offers candid wedding, maternity, newborn & event photography in Banashankari, Chikkalasandra & across Karnataka. Get a free quote today!" />
-    <!-- meta keywords removed (obsolete) -->
     <meta name="author" content="Story and Smiles Photography" />
     <meta name="robots" content="index, follow" />
     <meta name="geo.region" content="IN-KA" />
@@ -38,7 +37,7 @@
     <meta name="geo.position" content="12.9100;77.5590" />
     <meta name="ICBM" content="12.9100, 77.5590" />
 
-    <!-- ===== FAVICON (no infinite loading) ===== -->
+    <!-- ===== FAVICON ===== -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>" />
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>" />
 
@@ -73,12 +72,28 @@
     <!-- ===== GOOGLE TAG MANAGER ===== -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TC9D7BX3');</script>
 
+    <!-- ===== FACEBOOK PIXEL ===== -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+
     <!-- ===== CLARITY ===== -->
     <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wpjxrcvyk6");</script>
-    <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
 
     <!-- ================================================================
-    SCHEMA MARKUP (ALL REQUIRED + NEW ImageObject + Review)
+    SCHEMA MARKUP (UPDATED WITH MORE SERVICES)
     ================================================================ -->
 
     <!-- ===== SCHEMA: LOCAL BUSINESS ===== -->
@@ -126,46 +141,17 @@
                 "worstRating": "1"
             },
             "makesOffer": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Wedding Photography",
-                        "description": "Candid, traditional & cinematic wedding coverage in Bangalore."
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Maternity & Baby Shower Photography",
-                        "description": "Heartwarming maternity photoshoots in Banashankari & Bengaluru."
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Pre-Wedding Photoshoot",
-                        "description": "Romantic pre-wedding shoots at scenic locations in Karnataka."
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Newborn Photography",
-                        "description": "Safe and adorable newborn sessions in Bangalore."
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Event Photography",
-                        "description": "Corporate, birthday & anniversary event photography in South India."
-                    }
-                }
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wedding Photography", "description": "Candid, traditional & cinematic wedding coverage in Bangalore." } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pre-Wedding Photoshoot", "description": "Romantic pre-wedding shoots at scenic locations in Karnataka." } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maternity & Baby Shower Photography", "description": "Heartwarming maternity photoshoots in Banashankari & Bengaluru." } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Newborn Photography", "description": "Safe and adorable newborn sessions in Bangalore." } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Event Photography", "description": "Corporate, birthday & anniversary event photography in South India." } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Portfolio Photography", "description": "Professional portfolios for models, actors, and professionals." } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Product E-Commerce Photography", "description": "High-quality product shots for online stores." } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Candid Videography", "description": "Cinematic wedding and event videography." } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Photo Restoration", "description": "Restore old and damaged photographs." } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Album Design & Printing", "description": "Premium Karizma, Canvera albums and custom photo books." } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drone Photography", "description": "Aerial shots for weddings and events." } }
             ]
         }
     </script>
@@ -185,6 +171,37 @@
                     "urlTemplate": "https://story-and-smiles-photography.vercel.app/search?q={search_term_string}"
                 },
                 "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+
+    <!-- ===== SCHEMA: SERVICE (EXPANDED) ===== -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Photography Services",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Story and Smiles Photography"
+            },
+            "areaServed": {
+                "@type": "City",
+                "name": "Bangalore"
+            },
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Photography Packages",
+                "itemListElement": [
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Day Wedding Photography" }, "price": "45000", "priceCurrency": "INR" },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half Day Wedding Photography" }, "price": "25000", "priceCurrency": "INR" },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pre-Wedding Photoshoot" }, "price": "15000", "priceCurrency": "INR" },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maternity & Baby Shower" }, "price": "12000", "priceCurrency": "INR" },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Newborn Photography" }, "price": "10000", "priceCurrency": "INR" },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Event Photography" }, "price": "20000", "priceCurrency": "INR" },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Portfolio Shoot" }, "price": "8000", "priceCurrency": "INR" },
+                    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Product Photography" }, "price": "5000", "priceCurrency": "INR" }
+                ]
             }
         }
     </script>
@@ -343,7 +360,7 @@
         }
     </script>
 
-    <!-- ===== SCHEMA: IMAGEOBJECT (NEW – for rich image results) ===== -->
+    <!-- ===== SCHEMA: IMAGEOBJECT ===== -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -373,7 +390,7 @@
         }
     </script>
 
-    <!-- ===== SCHEMA: REVIEW (NEW – 3 testimonials) ===== -->
+    <!-- ===== SCHEMA: REVIEW ===== -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -436,7 +453,7 @@
     </script>
 
     <!-- ================================================================
-    CRITICAL INLINE STYLES (enhanced UI/UX + NEW STYLES)
+    CRITICAL INLINE STYLES (with additions for all‑services grid)
     ================================================================ -->
     <style>
         /* ----- RESET & BASE ----- */
@@ -853,7 +870,7 @@
             flex-shrink: 0;
         }
 
-        /* ----- WHY CHOOSE US (NEW) ----- */
+        /* ----- WHY CHOOSE US ----- */
         .why-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -897,7 +914,7 @@
             }
         }
 
-        /* ----- SERVICES ----- */
+        /* ----- SERVICES (WHAT WE DO) ----- */
         .services-section {
             padding: 80px 0;
             background: #fcf9f7;
@@ -934,6 +951,54 @@
             font-size: 0.95rem;
             color: #5a5252;
             line-height: 1.6;
+        }
+
+        /* ===== ALL SERVICES GRID (NEW) ===== */
+        .all-services-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+        .all-services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px 20px;
+            margin-top: 20px;
+        }
+        .all-services-grid .service-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: #2d2a2a;
+            padding: 6px 0;
+            border-bottom: 1px solid #f0ecea;
+        }
+        .all-services-grid .service-item::before {
+            content: "▸";
+            color: #e07a5f;
+            font-weight: 700;
+        }
+        .all-services-grid .service-item a {
+            color: #2d2a2a;
+            text-decoration: none;
+        }
+        .all-services-grid .service-item a:hover {
+            color: #e07a5f;
+        }
+        @media (max-width: 992px) {
+            .all-services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .all-services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .all-services-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* ----- GALLERY ----- */
@@ -1003,7 +1068,7 @@
             box-shadow: 0 8px 28px rgba(224, 122, 95, 0.30);
         }
 
-        /* ===== TESTIMONIALS (horizontal scroll) ===== */
+        /* ===== TESTIMONIALS ===== */
         .testimonials-section {
             padding: 80px 0;
             background: #fcf9f7;
@@ -1104,7 +1169,7 @@
             }
         }
 
-        /* ===== MID-PAGE CTA (NEW) ===== */
+        /* ===== MID-PAGE CTA ===== */
         .mid-cta {
             padding: 60px 0;
             background: #fcf9f7;
@@ -1137,7 +1202,7 @@
             color: #1e1a1a;
         }
 
-        /* ----- BLOG TEASER (NEW) ----- */
+        /* ===== BLOG TEASER ===== */
         .blog-section {
             padding: 80px 0;
             background: #fff;
@@ -1190,7 +1255,7 @@
             color: #c25f45;
         }
 
-        /* ----- CTA ----- */
+        /* ===== CTA ===== */
         .cta-section {
             padding: 80px 0;
             background: linear-gradient(135deg, #2d1f1a, #1e1410);
@@ -1209,7 +1274,7 @@
             margin: 0 auto 28px;
         }
 
-        /* ----- CONTACT ----- */
+        /* ===== CONTACT ===== */
         .contact-section {
             padding: 80px 0;
             background: #fff;
@@ -1385,6 +1450,43 @@
             }
         }
 
+        /* ===== STUDIO SECTION ===== */
+        .studio-section {
+            padding: 60px 0;
+            background: #fcf9f7;
+        }
+        .studio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .studio-grid .studio-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #1e1a1a;
+        }
+        .studio-grid .studio-info p {
+            color: #4a4242;
+            margin-bottom: 6px;
+        }
+        .studio-grid .studio-info .btn {
+            margin-top: 12px;
+        }
+        .studio-map iframe {
+            width: 100%;
+            height: 280px;
+            border: 0;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+        @media (max-width: 768px) {
+            .studio-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
         /* ===== TL;DR ===== */
         .summary-box {
             background: rgba(255, 255, 255, 0.10);
@@ -1412,7 +1514,7 @@
             line-height: 1.6;
         }
 
-        /* ----- FAQ ----- */
+        /* ===== FAQ ===== */
         .faq-section {
             padding: 80px 0;
             background: #fcf9f7;
@@ -1495,7 +1597,7 @@
             transform: translateY(-2px);
         }
 
-        /* ----- FOOTER ----- */
+        /* ===== FOOTER ===== */
         .footer {
             background: #1e1a1a;
             color: rgba(255, 255, 255, 0.7);
@@ -1545,6 +1647,31 @@
         .footer-services ul li a:hover {
             color: #e07a5f;
         }
+        /* ===== TOP SEARCHES ===== */
+        .footer-keywords {
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            margin-top: 20px;
+        }
+        .footer-keywords p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 2;
+        }
+        .footer-keywords p strong {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .footer-keywords p a {
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+        }
+        .footer-keywords p a:hover {
+            color: #e07a5f;
+        }
+
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.06);
             padding-top: 24px;
@@ -1589,7 +1716,7 @@
             50% { transform: scale(1.08); opacity: 1; }
         }
 
-        /* ----- BACK TO TOP ----- */
+        /* ===== BACK TO TOP ===== */
         .back-to-top {
             position: fixed;
             bottom: 100px;
@@ -1622,7 +1749,7 @@
             box-shadow: 0 12px 32px rgba(224, 122, 95, 0.45);
         }
 
-        /* ----- WHATSAPP FLOAT ----- */
+        /* ===== WHATSAPP FLOAT ===== */
         .whatsapp-float {
             position: fixed;
             bottom: 28px;
@@ -1816,7 +1943,7 @@
             color: #fff;
         }
 
-        /* ===== MOBILE STICKY CTA (NEW) ===== */
+        /* ===== MOBILE STICKY CTA ===== */
         .mobile-sticky-cta {
             display: none;
             position: fixed;
@@ -1950,7 +2077,7 @@
                 font-size: 0.75rem;
             }
             .whatsapp-float {
-                bottom: 76px; /* Move up to avoid overlap with sticky CTA */
+                bottom: 76px;
                 right: 16px;
             }
             .whatsapp-main-btn {
@@ -1978,12 +2105,15 @@
                 font-size: 0.75rem;
                 padding: 4px 12px 4px 10px;
             }
-            /* Show mobile sticky CTA */
             .mobile-sticky-cta {
                 display: flex;
             }
             .footer {
                 padding-bottom: 100px;
+            }
+            .studio-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
             }
         }
 
@@ -2070,10 +2200,12 @@
                 <li role="none"><a href="#home" class="nav-link active" role="menuitem">Home</a></li>
                 <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
                 <li role="none"><a href="#why" class="nav-link" role="menuitem">Why Us</a></li>
-                <li role="none"><a href="#services" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="#services" class="nav-link" role="menuitem">What We Do</a></li>
+                <li role="none"><a href="#all-services" class="nav-link" role="menuitem">All Services</a></li>
                 <li role="none"><a href="#gallery" class="nav-link" role="menuitem">Gallery</a></li>
                 <li role="none"><a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a></li>
                 <li role="none"><a href="#faq" class="nav-link" role="menuitem">FAQs</a></li>
+                <li role="none"><a href="https://karthikstories.my.canva.site/" target="_blank" rel="noopener noreferrer" class="nav-link" role="menuitem">Portfolio</a></li>
                 <li role="none"><a href="#contact" class="nav-link nav-cta" role="menuitem">Book Now</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -2183,7 +2315,6 @@
                     <p class="about-text">
                         Based in <strong>Bangalore</strong>, we serve couples and families across <strong>Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Lucknow, Goa, and Puducherry</strong>.
                     </p>
-                    <!-- Founder story snippet (NEW) -->
                     <p class="about-text" style="background:#f9f5f2; padding:12px 18px; border-radius:12px; border-left:4px solid #e07a5f;">
                         <strong>👋 Meet Karthik</strong> – A self‑taught photographer who turned his passion into a full‑time career after realising that candid moments tell the truest stories. Today, he and his team bring that same heart to every wedding and event.
                     </p>
@@ -2213,7 +2344,7 @@
         </div>
     </section>
 
-    <!-- ===== WHY CHOOSE US (NEW) ===== -->
+    <!-- ===== WHY CHOOSE US ===== -->
     <section id="why" class="why-section" style="padding:60px 0; background:#fff;">
         <div class="container">
             <div class="section-header">
@@ -2249,48 +2380,48 @@
         </div>
     </section>
 
-    <!-- ===== SERVICES ===== -->
+    <!-- ===== WHAT WE DO? (SERVICES) ===== -->
     <section id="services" class="services-section" aria-labelledby="services-heading">
         <div class="container">
             <div class="section-header">
-                <span class="section-subtitle">What We Offer</span>
-                <h2 id="services-heading" class="section-title">Our Photography Services in Banashankari &amp; Across Karnataka</h2>
-                <p class="section-description">Full coverage for all your precious moments — from weddings to newborn sessions.</p>
+                <span class="section-subtitle">What We Do</span>
+                <h2 id="services-heading" class="section-title">Photography Services in Banashankari &amp; Across Karnataka</h2>
+                <p class="section-description">We cover every milestone – from weddings to newborns – with a personal, storytelling touch.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card animate-on-scroll">
-                    <div class="service-icon">📸</div>
+                    <div class="service-icon">💍</div>
                     <h3>Wedding Photography</h3>
-                    <p>Candid, traditional &amp; cinematic coverage that preserves every ritual and emotion.</p>
+                    <p>Candid, traditional &amp; cinematic coverage that preserves every ritual and emotion. Full‑day and half‑day packages available.</p>
                 </div>
                 <div class="service-card animate-on-scroll" data-delay="0.15">
                     <div class="service-icon">💑</div>
-                    <h3>Pre-Wedding Shoot</h3>
-                    <p>Romantic couple sessions at Bangalore's most picturesque locations.</p>
+                    <h3>Pre‑Wedding Shoot</h3>
+                    <p>Romantic couple sessions at Bangalore’s most picturesque locations – from palaces to serene lakes.</p>
                 </div>
                 <div class="service-card animate-on-scroll" data-delay="0.3">
                     <div class="service-icon">🎉</div>
                     <h3>Event Photography</h3>
-                    <p>Corporate events, birthdays, anniversaries — captured professionally with quick turnaround.</p>
+                    <p>Corporate events, birthdays, anniversaries – captured professionally with quick turnaround and full coverage.</p>
                 </div>
                 <div class="service-card animate-on-scroll" data-delay="0.15">
                     <div class="service-icon">👶</div>
                     <h3>Baby Shower &amp; Maternity</h3>
-                    <p>Cherish the journey of motherhood with heartwarming, beautiful photography.</p>
+                    <p>Heartwarming photoshoots that celebrate the journey of motherhood – in our studio or at your home.</p>
                 </div>
                 <div class="service-card animate-on-scroll" data-delay="0.3">
                     <div class="service-icon">👤</div>
                     <h3>Portfolio Photography</h3>
-                    <p>Professional portfolios for models, actors, and professionals.</p>
+                    <p>Professional headshots and creative portfolios for models, actors, and professionals looking to stand out.</p>
                 </div>
                 <div class="service-card animate-on-scroll" data-delay="0.45">
                     <div class="service-icon">🍼</div>
                     <h3>Newborn Photography</h3>
-                    <p>Safe and adorable newborn sessions with natural props.</p>
+                    <p>Safe and gentle newborn sessions with natural props, capturing the purest moments of your baby’s first days.</p>
                 </div>
             </div>
 
-            <!-- Pricing table -->
+            <!-- Pricing Table -->
             <div style="margin-top:50px; background:#fff; border-radius:24px; padding:32px 28px; box-shadow:0 6px 24px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.03);">
                 <h3 style="text-align:center; font-size:1.4rem; margin-bottom:20px; color:#1e1a1a;">📋 Quick Pricing Guide</h3>
                 <div style="overflow-x:auto;">
@@ -2303,38 +2434,85 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr style="border-bottom:1px solid #eee;">
-                                <td style="padding:12px 16px; font-weight:500;">Wedding (Full Day)</td>
-                                <td style="padding:12px 16px; color:#4a4242;">10+ hrs · 2 photographers</td>
-                                <td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹45,000</td>
-                            </tr>
-                            <tr style="border-bottom:1px solid #eee;">
-                                <td style="padding:12px 16px; font-weight:500;">Wedding (Half Day)</td>
-                                <td style="padding:12px 16px; color:#4a4242;">5 hrs · 1 photographer</td>
-                                <td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹25,000</td>
-                            </tr>
-                            <tr style="border-bottom:1px solid #eee;">
-                                <td style="padding:12px 16px; font-weight:500;">Pre-Wedding Shoot</td>
-                                <td style="padding:12px 16px; color:#4a4242;">2-3 hrs · 1 location</td>
-                                <td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹15,000</td>
-                            </tr>
-                            <tr style="border-bottom:1px solid #eee;">
-                                <td style="padding:12px 16px; font-weight:500;">Maternity / Baby Shower</td>
-                                <td style="padding:12px 16px; color:#4a4242;">2 hrs · studio or home</td>
-                                <td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹12,000</td>
-                            </tr>
-                            <tr>
-                                <td style="padding:12px 16px; font-weight:500;">Newborn Session</td>
-                                <td style="padding:12px 16px; color:#4a4242;">2-3 hrs · in-home</td>
-                                <td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹10,000</td>
-                            </tr>
+                            <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Wedding (Full Day)</td><td style="padding:12px 16px; color:#4a4242;">10+ hrs · 2 photographers</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹45,000</td></tr>
+                            <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Wedding (Half Day)</td><td style="padding:12px 16px; color:#4a4242;">5 hrs · 1 photographer</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹25,000</td></tr>
+                            <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Pre-Wedding Shoot</td><td style="padding:12px 16px; color:#4a4242;">2-3 hrs · 1 location</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹15,000</td></tr>
+                            <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Maternity / Baby Shower</td><td style="padding:12px 16px; color:#4a4242;">2 hrs · studio or home</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹12,000</td></tr>
+                            <tr><td style="padding:12px 16px; font-weight:500;">Newborn Session</td><td style="padding:12px 16px; color:#4a4242;">2-3 hrs · in-home</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹10,000</td></tr>
                         </tbody>
                     </table>
                 </div>
                 <p style="text-align:center; margin-top:14px; font-size:0.85rem; color:#4a4242; background:#fef7e8; padding:10px 16px; border-radius:12px; border:1px solid #f5dcc6;">
                     ⭐ <strong>Prices are indicative. Final quote depends on location, duration &amp; add-ons.</strong>
                 </p>
+                <div style="text-align:center; margin-top:20px;">
+                    <a href="#all-services" class="btn btn-outline">📸 View All Services</a>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ===== ALL SERVICES SECTION (NEW) ===== -->
+    <section id="all-services" class="all-services-section" aria-labelledby="all-services-heading">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Complete List</span>
+                <h2 id="all-services-heading" class="section-title">All Photography Services We Offer</h2>
+                <p class="section-description">From weddings to product shoots – every service you need under one roof.</p>
+            </div>
+            <div class="all-services-grid">
+                <!-- List generated from Wedding Photographers.txt -->
+                <div class="service-item"><a href="#services">Wedding Photographers</a></div>
+                <div class="service-item"><a href="#services">Pre Wedding Photoshoot</a></div>
+                <div class="service-item"><a href="#services">Maternity and Pregnancy Photographers</a></div>
+                <div class="service-item"><a href="#services">Baby Shower Photographers</a></div>
+                <div class="service-item"><a href="#services">Events Photographers</a></div>
+                <div class="service-item"><a href="#services">Portfolio Shoot</a></div>
+                <div class="service-item"><a href="#services">Product E‑Commerce Photographers</a></div>
+                <div class="service-item"><a href="#services">Birthday Photographers</a></div>
+                <div class="service-item"><a href="#services">Newborn Photography</a></div>
+                <div class="service-item"><a href="#services">Engagement Photographers</a></div>
+                <div class="service-item"><a href="#services">Family Shoot</a></div>
+                <div class="service-item"><a href="#services">House Warming Ceremony Photographers</a></div>
+                <div class="service-item"><a href="#services">Photo Restoration Service</a></div>
+                <div class="service-item"><a href="#services">Post Wedding Photoshoot</a></div>
+                <div class="service-item"><a href="#services">Naming Ceremony Photography</a></div>
+                <div class="service-item"><a href="#services">Upanayana Photography</a></div>
+                <div class="service-item"><a href="#services">Shastipurthi Photography</a></div>
+                <div class="service-item"><a href="#services">Photo Frames</a></div>
+                <div class="service-item"><a href="#services">Album Designers and Printers</a></div>
+                <div class="service-item"><a href="#services">Candid Wedding Photography</a></div>
+                <div class="service-item"><a href="#services">Candid Videographers</a></div>
+                <div class="service-item"><a href="#services">Professional Videography</a></div>
+                <div class="service-item"><a href="#services">Corporate Photographers</a></div>
+                <div class="service-item"><a href="#services">Christian Wedding Photographers</a></div>
+                <div class="service-item"><a href="#services">Muslim Wedding Photographers</a></div>
+                <div class="service-item"><a href="#services">Digital Photo Studio Near Me</a></div>
+                <div class="service-item"><a href="#services">Puberty Function Photographers</a></div>
+                <div class="service-item"><a href="#services">Portrait Photography</a></div>
+                <div class="service-item"><a href="#services">Karizma Album Printing</a></div>
+                <div class="service-item"><a href="#services">Drone Photography</a></div>
+                <div class="service-item"><a href="#services">Baby Photoshoot</a></div>
+                <div class="service-item"><a href="#services">Photographers Near Me</a></div>
+                <div class="service-item"><a href="#services">Cradle Ceremony</a></div>
+                <div class="service-item"><a href="#services">Photographers</a></div>
+                <div class="service-item"><a href="#services">Video Editing Services</a></div>
+                <div class="service-item"><a href="#services">Corporate Video Production</a></div>
+                <div class="service-item"><a href="#services">Personalized Coffee Mug Printing</a></div>
+                <div class="service-item"><a href="#services">Freelance Photographers</a></div>
+                <div class="service-item"><a href="#services">Canvera Album Design and Printing</a></div>
+                <div class="service-item"><a href="#services">Elements Resort Prewedding Shoot</a></div>
+                <div class="service-item"><a href="#services">Baby Photoshoot Places</a></div>
+                <div class="service-item"><a href="#services">Maternity Photoshoot Places</a></div>
+                <div class="service-item"><a href="#services">Anniversary Photoshoot</a></div>
+                <div class="service-item"><a href="#services">Holy Communion Baptism Photoshoot</a></div>
+                <div class="service-item"><a href="#services">Indoor Maternity Photoshoot</a></div>
+                <div class="service-item"><a href="#services">Fashion Photographers</a></div>
+                <div class="service-item"><a href="#services">Baby’s Backyard Studio</a></div>
+            </div>
+            <p style="text-align:center; margin-top:24px; font-size:0.9rem; color:#7a7272;">
+                👆 Click any service to learn more – or <a href="#contact" style="color:#e07a5f; font-weight:600;">contact us</a> for a custom quote.
+            </p>
         </div>
     </section>
 
@@ -2381,7 +2559,7 @@
         </div>
     </section>
 
-    <!-- ===== MID-PAGE CTA (NEW) ===== -->
+    <!-- ===== MID-PAGE CTA ===== -->
     <section class="mid-cta">
         <div class="container">
             <div class="inner animate-on-scroll">
@@ -2392,7 +2570,7 @@
         </div>
     </section>
 
-    <!-- ===== TESTIMONIALS (horizontal scroll) ===== -->
+    <!-- ===== TESTIMONIALS ===== -->
     <section id="testimonials" class="testimonials-section" aria-labelledby="testimonials-heading">
         <div class="container">
             <div class="section-header">
@@ -2458,7 +2636,7 @@
         </div>
     </section>
 
-    <!-- ===== BLOG TEASER (NEW) ===== -->
+    <!-- ===== BLOG TEASER ===== -->
     <section id="blog" class="blog-section">
         <div class="container">
             <div class="section-header">
@@ -2474,7 +2652,7 @@
                         <p>Avoid the rush — book your photographer 6 months in advance.</p>
                     </div>
                     <div class="footer">
-                        <a href="#" aria-label="Read more about best wedding dates">Read More →</a>
+                        <a href="/blog/best-wedding-dates-2026" aria-label="Read more about best wedding dates">Read More →</a>
                     </div>
                 </div>
                 <div class="blog-card animate-on-scroll" data-delay="0.15">
@@ -2484,7 +2662,7 @@
                         <p>Comfortable, elegant outfit ideas for Banashankari studio shoots.</p>
                     </div>
                     <div class="footer">
-                        <a href="#" aria-label="Read more about maternity shoot outfits">Read More →</a>
+                        <a href="/blog/maternity-shoot-outfits" aria-label="Read more about maternity shoot outfits">Read More →</a>
                     </div>
                 </div>
                 <div class="blog-card animate-on-scroll" data-delay="0.3">
@@ -2494,7 +2672,7 @@
                         <p>Tips to look relaxed and radiant in every frame.</p>
                     </div>
                     <div class="footer">
-                        <a href="#" aria-label="Read more about candid poses">Read More →</a>
+                        <a href="/blog/candid-wedding-poses" aria-label="Read more about candid poses">Read More →</a>
                     </div>
                 </div>
             </div>
@@ -2601,6 +2779,31 @@
         </div>
     </section>
 
+    <!-- ===== STUDIO SECTION ===== -->
+    <section id="studio" class="studio-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Office</span>
+                <h2 style="font-size:2.2rem; font-weight:700; color:#1e1a1a;">Visit Our Photography office in Banashankari</h2>
+                <p class="section-description">We offer photo shoot service, Editing, album designing, printing, and more at our Story and Smile  office  near Chikkalasandra.</p>
+            </div>
+            <div class="studio-grid">
+                <div class="studio-info animate-on-scroll">
+                    <h3>📍  Address</h3>
+                    <p>2A, 5th main, 3rd Cross Rd, near Chikkalasandra, Banashankari, Bengaluru, Karnataka 560061</p>
+                    <p><strong>Phone:</strong> <a href="tel:+919845808890">+91-98458 08890</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info.storyandsmiles@gmail.com">info.storyandsmiles@gmail.com</a></p>
+                    <div style="margin-top:20px;">
+                        <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I%20want%20to%20visit%20your%20studio." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book a Studio Visit</a>
+                    </div>
+                </div>
+                <div class="studio-map animate-on-scroll">
+                    <iframe src="https://maps.google.com/maps?q=Story+And+Smiles+Photography+2A+5th+main+3rd+Cross+Rd+near+Chikkalasandra+Banashankari+Bengaluru&output=embed&z=15" width="100%" height="280" style="border:0; border-radius:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Story and Smiles Photography Studio Location"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== FAQ ===== -->
     <section id="faq" class="faq-section" aria-labelledby="faq-heading">
         <div class="container">
@@ -2698,11 +2901,13 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#why">Why Us</a></li>
-                        <li><a href="#services">Services</a></li>
+                        <li><a href="#services">What We Do</a></li>
+                        <li><a href="#all-services">All Services</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#blog">Blog</a></li>
                         <li><a href="#faq">FAQs</a></li>
+                        <li><a href="https://karthikstories.my.canva.site/" target="_blank">Portfolio</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -2719,6 +2924,28 @@
                 </div>
             </div>
 
+            <!-- ===== TOP SEARCHES ===== -->
+            <div class="footer-keywords">
+                <p>
+                    <strong>Top Searches:</strong>
+                    <a href="#services">Photographers Near me</a> &middot;
+                    <a href="#services">Professional Photographer Near me</a> &middot;
+                    <a href="#services">Photographers in Bangalore</a> &middot;
+                    <a href="#services">Hire Photographer in Bangalore</a> &middot;
+                    <a href="#services">Baby Photoshoot in Bangalore</a> &middot;
+                    <a href="#services">Maternity Photoshoot in Bangalore</a> &middot;
+                    <a href="#services">Wedding Photographers in Bangalore</a> &middot;
+                    <a href="#services">Candid Photographers in Bangalore</a> &middot;
+                    <a href="#services">Photographer for Birthday Party</a> &middot;
+                    <a href="#services">Photo Studio Near Me Bangalore</a> &middot;
+                    <a href="#services">Pre Wedding Shoot</a> &middot;
+                    <a href="#services">Newborn Photography</a> &middot;
+                    <a href="#services">Event Photography</a> &middot;
+                    <a href="#services">Album Designers</a> &middot;
+                    <a href="#services">Drone Photography</a>
+                </p>
+            </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Story and Smiles Photography. All rights reserved. | <strong>Wedding Photographers Bangalore</strong></p>
                 <div class="credit-wrapper">
@@ -2726,304 +2953,4 @@
                     <p class="credit-line">
                         Crafted with <span class="credit-heart">❤</span> by
                         <a href="https://kirankumarvel.github.io/" target="_blank" rel="noopener noreferrer" class="credit-link">Kiran (Kronix Systems)</a>
-                        <span class="credit-role">— Web &amp; Creative</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ===== BACK TO TOP ===== -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M18 15l-6-6-6 6" /></svg>
-    </button>
-
-    <!-- ============================================================
-    WHATSAPP FLOAT – FULLY FIXED
-    ============================================================ -->
-    <div class="whatsapp-float" id="whatsappFloat">
-        <button class="whatsapp-main-btn" id="whatsappMainBtn" aria-label="Chat on WhatsApp">
-            <svg class="whatsapp-icon" width="28" height="28" viewBox="0 0 24 24" fill="white">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/>
-            </svg>
-            <span class="whatsapp-btn-text">Chat with us</span>
-        </button>
-
-        <div class="whatsapp-popup" id="whatsappPopup">
-            <div class="whatsapp-popup-header">
-                <div class="whatsapp-popup-avatar">
-                    <img src="assets/images/about-us.webp" alt="Story and Smiles Photography" onerror="this.src='assets/images/logo.png'" />
-                    <div class="whatsapp-online-dot"></div>
-                </div>
-                <div class="whatsapp-popup-info">
-                    <h4>Story and Smiles 📸</h4>
-                    <p>Typically replies within 2 hours</p>
-                </div>
-                <button class="whatsapp-popup-close" id="whatsappPopupClose" aria-label="Close chat">✕</button>
-            </div>
-            <div class="whatsapp-popup-body">
-                <div class="whatsapp-message-preview">
-                    <p>Hello! 👋 Welcome to Story and Smiles Photography.</p>
-                    <p>How can we help you today?</p>
-                </div>
-                <div class="whatsapp-quick-options">
-                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20interested%20in%20Wedding%20Photography%20services." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">💍</span> Wedding Photography</a>
-                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'd%20like%20to%20know%20about%20Pre-Wedding%20Photoshoot." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">💑</span> Pre-Wedding Shoot</a>
-                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20looking%20for%20Event%20Photography%20coverage." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">🎉</span> Event Photography</a>
-                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'm%20interested%20in%20Baby%20Shower%20Photography." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">👶</span> Baby Shower</a>
-                    <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I'd%20like%20to%20discuss%20photography%20packages%20and%20pricing." target="_blank" rel="noopener noreferrer" class="whatsapp-option"><span class="whatsapp-option-icon">💬</span> Pricing &amp; Packages</a>
-                </div>
-            </div>
-            <div class="whatsapp-popup-footer">
-                <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I%20need%20a%20photographer%20for%20my%20event." target="_blank" rel="noopener noreferrer" class="whatsapp-start-chat">Start WhatsApp Chat</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== MOBILE STICKY CTA (NEW) ===== -->
-    <div class="mobile-sticky-cta" id="mobileStickyCta">
-        <a href="tel:+919845808890" class="btn btn-call">📞 Call</a>
-        <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I%20want%20to%20book%20a%20session." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">💬 WhatsApp</a>
-    </div>
-
-    <!-- ============================================================
-    SCRIPTS
-    ============================================================ -->
-    <script>
-        (function() {
-            'use strict';
-
-            // ---- NAVIGATION ----
-            var hamburger = document.getElementById('hamburger');
-            var navMenu = document.getElementById('navMenu');
-            var navLinks = document.querySelectorAll('.nav-link');
-
-            if (hamburger && navMenu) {
-                hamburger.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                    this.setAttribute('aria-expanded', this.classList.contains('active'));
-                });
-
-                navLinks.forEach(function(link) {
-                    link.addEventListener('click', function() {
-                        hamburger.classList.remove('active');
-                        navMenu.classList.remove('active');
-                        hamburger.setAttribute('aria-expanded', 'false');
-                        navLinks.forEach(function(l) { l.classList.remove('active'); });
-                        this.classList.add('active');
-                    });
-                });
-            }
-
-            // ---- SCROLL EFFECTS ----
-            var navbar = document.getElementById('navbar');
-            var backToTop = document.getElementById('backToTop');
-
-            window.addEventListener('scroll', function() {
-                var scrollY = window.scrollY;
-                if (navbar) {
-                    navbar.classList.toggle('scrolled', scrollY > 60);
-                }
-                if (backToTop) {
-                    backToTop.classList.toggle('visible', scrollY > 400);
-                }
-            });
-
-            if (backToTop) {
-                backToTop.addEventListener('click', function() {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-
-            // ---- COUNTER ANIMATION ----
-            var counters = document.querySelectorAll('.counter');
-            var counterAnimated = false;
-
-            function animateCounters() {
-                if (counterAnimated) return;
-                counters.forEach(function(counter) {
-                    var target = parseInt(counter.getAttribute('data-target'));
-                    if (!target || isNaN(target)) return;
-                    var current = 0;
-                    var increment = Math.ceil(target / 60);
-                    var timer = setInterval(function() {
-                        current += increment;
-                        if (current >= target) {
-                            current = target;
-                            clearInterval(timer);
-                        }
-                        counter.textContent = current;
-                    }, 20);
-                });
-                counterAnimated = true;
-            }
-
-            // ---- SCROLL ANIMATIONS ----
-            var animateElements = document.querySelectorAll('.animate-on-scroll');
-            var observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        var el = entry.target;
-                        var delay = parseFloat(el.getAttribute('data-delay')) || 0;
-                        setTimeout(function() {
-                            el.classList.add('visible');
-                        }, delay * 1000);
-                        observer.unobserve(el);
-                    }
-                });
-            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-
-            animateElements.forEach(function(el) {
-                observer.observe(el);
-            });
-
-            // ---- TRIGGER COUNTERS ----
-            var heroStats = document.querySelector('.hero-stats');
-            if (heroStats) {
-                var statsObserver = new IntersectionObserver(function(entries) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            animateCounters();
-                            statsObserver.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.3 });
-                statsObserver.observe(heroStats);
-            }
-
-            // ---- SMOOTH SCROLL ----
-            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-                anchor.addEventListener('click', function(e) {
-                    var targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    var targetEl = document.querySelector(targetId);
-                    if (targetEl) {
-                        e.preventDefault();
-                        var offset = 80;
-                        var top = targetEl.getBoundingClientRect().top + window.scrollY - offset;
-                        window.scrollTo({ top: top, behavior: 'smooth' });
-                    }
-                });
-            });
-
-            // ---- FAQ "READ MORE" TOGGLE ----
-            var showMoreBtn = document.getElementById('faqShowMoreBtn');
-            var hiddenFaqs = document.querySelectorAll('.faq-item.hidden-faq');
-            var faqsVisible = false;
-
-            if (showMoreBtn && hiddenFaqs.length) {
-                showMoreBtn.addEventListener('click', function() {
-                    faqsVisible = !faqsVisible;
-                    hiddenFaqs.forEach(function(faq) {
-                        faq.classList.toggle('visible', faqsVisible);
-                    });
-                    showMoreBtn.textContent = faqsVisible ? '📕 Show Less FAQs' : '📖 Read More FAQs';
-                    if (faqsVisible) {
-                        var firstHidden = document.querySelector('.faq-item.hidden-faq.visible');
-                        if (firstHidden && firstHidden.tagName === 'DETAILS' && !firstHidden.hasAttribute('open')) {
-                            firstHidden.setAttribute('open', '');
-                        }
-                    }
-                });
-            }
-
-            hiddenFaqs.forEach(function(faq) {
-                if (faq.tagName === 'DETAILS') {
-                    faq.addEventListener('toggle', function() {
-                        if (this.open && this.classList.contains('hidden-faq') && !this.classList.contains('visible')) {
-                            if (!faqsVisible) {
-                                faqsVisible = true;
-                                hiddenFaqs.forEach(function(f) { f.classList.add('visible'); });
-                                if (showMoreBtn) showMoreBtn.textContent = '📕 Show Less FAQs';
-                            }
-                        }
-                    });
-                }
-            });
-
-            // ============================================================
-            // WHATSAPP FLOAT – FULLY FIXED
-            // ============================================================
-            var whatsappMainBtn = document.getElementById('whatsappMainBtn');
-            var whatsappPopup = document.getElementById('whatsappPopup');
-            var whatsappCloseBtn = document.getElementById('whatsappPopupClose');
-            var whatsappFloat = document.getElementById('whatsappFloat');
-
-            function toggleWhatsApp(e) {
-                if (e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                }
-                if (!whatsappPopup) return;
-                whatsappPopup.classList.toggle('open');
-            }
-
-            function closeWhatsApp(e) {
-                if (e) {
-                    e.stopPropagation();
-                }
-                if (!whatsappPopup) return;
-                whatsappPopup.classList.remove('open');
-            }
-
-            if (whatsappMainBtn) {
-                whatsappMainBtn.addEventListener('click', toggleWhatsApp);
-                whatsappMainBtn.addEventListener('touchstart', function(e) {
-                    // passive
-                }, { passive: true });
-            }
-
-            if (whatsappCloseBtn) {
-                whatsappCloseBtn.addEventListener('click', closeWhatsApp);
-            }
-
-            document.addEventListener('click', function(e) {
-                if (!whatsappFloat) return;
-                if (!whatsappFloat.contains(e.target)) {
-                    closeWhatsApp(e);
-                }
-            });
-
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && whatsappPopup && whatsappPopup.classList.contains('open')) {
-                    closeWhatsApp(e);
-                }
-            });
-
-            // Gentle auto-open (once per session)
-            if (!sessionStorage.getItem('whatsappAutoOpen')) {
-                setTimeout(function() {
-                    if (whatsappPopup && !whatsappPopup.classList.contains('open')) {
-                        whatsappPopup.classList.add('open');
-                        sessionStorage.setItem('whatsappAutoOpen', 'true');
-                        setTimeout(function() {
-                            if (whatsappPopup && whatsappPopup.classList.contains('open')) {
-                                whatsappPopup.classList.remove('open');
-                            }
-                        }, 7000);
-                    }
-                }, 3000);
-            }
-
-            // ============================================================
-            // TESTIMONIALS HORIZONTAL SCROLL
-            // ============================================================
-            var testimonialsGrid = document.getElementById('testimonialsGrid');
-            var leftBtn = document.getElementById('testimonialLeftBtn');
-            var rightBtn = document.getElementById('testimonialRightBtn');
-
-            if (testimonialsGrid && leftBtn && rightBtn) {
-                leftBtn.addEventListener('click', function() {
-                    testimonialsGrid.scrollBy({ left: -340, behavior: 'smooth' });
-                });
-                rightBtn.addEventListener('click', function() {
-                    testimonialsGrid.scrollBy({ left: 340, behavior: 'smooth' });
-                });
-            }
-
-        })();
-    </script>
-    <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
-</body>
-</html>
+                        <span class="credit-role">
