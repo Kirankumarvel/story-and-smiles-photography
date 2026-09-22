@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ===== HOMEPAGE (primary conversion page) ===== -->
   <url>
     <loc>https://story-and-smiles-photography.vercel.app/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+
+    <!-- Hero -->
+    <image:image>
+      <image:loc>https://story-and-smiles-photography.vercel.app/assets/images/hero-bg.webp</image:loc>
+      <image:title>Candid wedding photography in Bangalore – Story and Smiles</image:title>
+      <image:caption>Couple during South Indian wedding rituals – Story and Smiles Photography, Banashankari, Bengaluru</image:caption>
+    </image:image>
+
+    <!-- Founder -->
+    <image:image>
+      <image:loc>https://story-and-smiles-photography.vercel.app/assets/images/about-us.jpg</image:loc>
+      <image:title>Karthik – Founder &amp; Lead Photographer, Story and Smiles</image:title>
+      <image:caption>Karthik, founder of Story and Smiles Photography, Banashankari, Bengaluru</image:caption>
+    </image:image>
+
+    <!-- Portfolio gallery -->
+    <image:image>
+      <image:loc>https://story-and-smiles-photography.vercel.app/assets/images/wedding-1.jpg</image:loc>
+      <image:title>Candid wedding photography in Banashankari, Bangalore</image:title>
+      <image:caption>South Indian wedding rituals captured candidly in Bengaluru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://story-and-smiles-photography.vercel.app/assets/images/pre-wedding.jpg</image:loc>
+      <image:title>Pre-wedding photoshoot in Bangalore</image:title>
+      <image:caption>Romantic pre-wedding couple session at a scenic outdoor location in Bangalore</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://story-and-smiles-photography.vercel.app/assets/images/event.jpg</image:loc>
+      <image:title>Event photography in Bangalore</image:title>
+      <image:caption>Candid guest moments captured at an event in Banashankari, Bengaluru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://story-and-smiles-photography.vercel.app/assets/images/baby-shower.jpg</image:loc>
+      <image:title>Maternity and baby shower photography in Bengaluru</image:title>
+      <image:caption>Maternity and baby shower photoshoot in Banashankari, Bengaluru</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://story-and-smiles-photography.vercel.app/assets/images/portfolio.jpg</image:loc>
+      <image:title>Portfolio photography in Bengaluru</image:title>
+      <image:caption>Professional portfolio photoshoot for models and professionals in Bangalore</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://story-and-smiles-photography.vercel.app/assets/images/placeholder.jpg</image:loc>
+      <image:title>Candid family photography in Bengaluru</image:title>
+      <image:caption>Natural family moments captured candidly in Bangalore</image:caption>
+    </image:image>
+
+    <!-- Brand assets (helps Knowledge Panel / image pack) -->
+    <image:image>
+      <image:loc>https://story-and-smiles-photography.vercel.app/assets/images/logo.png</image:loc>
+      <image:title>Story and Smiles Photography logo</image:title>
+      <image:caption>Story and Smiles Photography – Best wedding photographers in Bangalore</image:caption>
+    </image:image>
   </url>
+
 </urlset>
