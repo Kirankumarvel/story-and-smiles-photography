@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -17,18 +17,21 @@
         img-src 'self' data:
             https://www.facebook.com
             https://www.google-analytics.com
-            https://www.googletagmanager.com;
+            https://www.googletagmanager.com
+            https://www.clarity.ms;
         font-src 'self' data:;
         frame-src
             https://maps.google.com
             https://www.google.com
             https://www.googletagmanager.com;
         connect-src 'self'
-            https://www.clarity.ms
+            https://*.clarity.ms
             https://www.google-analytics.com
+            https://analytics.google.com
             https://region1.google-analytics.com
             https://www.googletagmanager.com
             https://connect.facebook.net
+            https://www.facebook.com
             https://formspree.io;
         form-action 'self' https://formspree.io;
         object-src 'none';
@@ -40,9 +43,9 @@
 
     <!-- ===== PRIMARY META ===== -->
     <title>Best Wedding Photographers in Bangalore | Story &amp; Smiles – Candid &amp; Maternity Photography</title>
-    <meta name="description" content="Top-rated wedding photographers in Bangalore (Banashankari). Candid wedding, maternity, newborn & event photography. Free quote. 5-star rated. Book today!" />
+    <meta name="description" content="Top-rated wedding photographers in Bangalore (Banashankari). Candid wedding, maternity, newborn &amp; event photography. 5.0★ from 92 Google reviews. Full-day weddings from ₹45,000. Free quote." />
     <meta name="author" content="Story and Smiles Photography" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="geo.region" content="IN-KA" />
     <meta name="geo.placename" content="Bangalore" />
     <meta name="geo.position" content="12.9100;77.5590" />
@@ -50,7 +53,7 @@
 
     <!-- ===== OPEN GRAPH ===== -->
     <meta property="og:title" content="Best Wedding Photographers in Bangalore – Story &amp; Smiles" />
-    <meta property="og:description" content="Candid wedding, maternity, newborn & family photography in Bengaluru. Based in Banashankari, serving couples across Karnataka." />
+    <meta property="og:description" content="Candid wedding, maternity, newborn &amp; family photography in Bengaluru. Based in Banashankari, serving couples across Karnataka." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://story-and-smiles-photography.vercel.app/assets/images/hero-bg.webp" />
     <meta property="og:image:alt" content="Story and Smiles Photography – Best wedding photographers in Bangalore" />
@@ -64,7 +67,7 @@
     <!-- ===== TWITTER ===== -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Best Wedding Photographers in Bangalore – Story &amp; Smiles" />
-    <meta name="twitter:description" content="Candid wedding, maternity & family photography in Bengaluru." />
+    <meta name="twitter:description" content="Candid wedding, maternity &amp; family photography in Bengaluru." />
     <meta name="twitter:image" content="https://story-and-smiles-photography.vercel.app/assets/images/hero-bg.webp" />
     <meta name="twitter:image:alt" content="Story and Smiles Photography portfolio" />
     <meta name="twitter:site" content="@storyandsmiles" />
@@ -74,13 +77,13 @@
     <link rel="icon" href="/assets/images/favicon.png" />
     <link rel="apple-touch-icon" href="/assets/images/favicon.png" />
 
-    <!-- ===== CANONICAL (UNIFIED) ===== -->
+    <!-- ===== CANONICAL ===== -->
     <link rel="canonical" href="https://story-and-smiles-photography.vercel.app/" />
 
     <!-- ===== SITEMAP ===== -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
-    <!-- ===== PRECONNECT / DNS-PREFETCH (PERFORMANCE FIX) ===== -->
+    <!-- ===== PRECONNECT / DNS-PREFETCH ===== -->
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
     <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
@@ -88,8 +91,9 @@
     <link rel="dns-prefetch" href="https://maps.google.com" />
     <link rel="dns-prefetch" href="https://formspree.io" />
 
-    <!-- ===== PRELOAD ===== -->
-    <link rel="preload" href="assets/images/hero-bg.webp" as="image" type="image/webp" fetchpriority="high" />
+    <!-- ===== PRELOAD (responsive hero — FIXED) ===== -->
+    <link rel="preload" href="assets/images/hero-bg.webp" as="image" type="image/webp" fetchpriority="high" media="(min-width: 768px)" />
+    <link rel="preload" href="assets/images/hero-bg-mobile.jpg" as="image" type="image/jpeg" fetchpriority="high" media="(max-width: 767px)" />
     <link rel="preload" href="css/style.css" as="style" />
     <link rel="preload" href="css/animations.css" as="style" />
 
@@ -100,6 +104,17 @@
     <!-- ===== VERIFICATION ===== -->
     <meta name="google-site-verification" content="ZMTUWN4rBwuVtQTiprMbyWiizYeSOAj3S2h0cnIvQhc" />
     <meta name="msvalidate.01" content="REPLACE_WITH_BING_VERIFICATION" />
+
+    <!-- ===== SITE CONFIG (single source of truth) ===== -->
+    <script>
+        window.SMS_CONFIG = {
+            ga4Id:        'G-F6NL6CT9YJ',
+            gtmId:        'GTM-TC9D7BX3',
+            clarityId:    'wpjxrcvyk6',
+            fbPixelId:    '',   /* ← put your Meta Pixel ID here, e.g. '1234567890' */
+            formspreeUrl: 'https://formspree.io/f/mljeepvo'
+        };
+    </script>
 
     <!-- ===== GA4 CONSENT MODE v2 (default denied until consent) ===== -->
     <script>
@@ -126,28 +141,29 @@
     <!-- ===== GTM ===== -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TC9D7BX3');</script>
 
-    <!-- ===== FACEBOOK PIXEL (FIXED placeholder pattern) ===== -->
+    <!-- ===== FACEBOOK PIXEL (only loads when a real ID is configured) ===== -->
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'REPLACE_WITH_YOUR_PIXEL_ID');
-        fbq('track', 'PageView');
+        (function () {
+            var id = window.SMS_CONFIG && window.SMS_CONFIG.fbPixelId;
+            if (!id || id.indexOf('REPLACE') === 0) return;
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', id);
+            fbq('track', 'PageView');
+        })();
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=REPLACE_WITH_YOUR_PIXEL_ID&ev=PageView&noscript=1"
-        alt="" /></noscript>
 
     <!-- ===== CLARITY ===== -->
     <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wpjxrcvyk6");</script>
 
     <!-- ================================================================
-    SCHEMA MARKUP (EXPANDED + FIXED + DEDUPED)
+    SCHEMA MARKUP
     ================================================================ -->
 
     <!-- ===== SCHEMA: ORGANIZATION ===== -->
@@ -176,18 +192,20 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: LOCAL BUSINESS (with @id, unified 92 reviews) ===== -->
+    <!-- ===== SCHEMA: LOCAL BUSINESS / PROFESSIONAL SERVICE ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": ["LocalBusiness", "ProfessionalService"],
         "@id": "https://story-and-smiles-photography.vercel.app/#localbusiness",
         "name": "Story and Smiles Photography",
-        "description": "Best wedding photographers in Bangalore specializing in candid, traditional & event photography. Based in Banashankari.",
+        "description": "Best wedding photographers in Bangalore specializing in candid, traditional & event photography. Based in Banashankari, serving South India.",
         "image": "https://story-and-smiles-photography.vercel.app/assets/images/logo.png",
         "telephone": "+91-9845808890",
         "email": "info.storyandsmiles@gmail.com",
-        "priceRange": "₹₹ (15,000 - 60,000)",
+        "priceRange": "₹10,000 - ₹60,000",
+        "currenciesAccepted": "INR",
+        "paymentAccepted": "Cash, UPI, Bank Transfer",
         "url": "https://story-and-smiles-photography.vercel.app/",
         "address": {
             "@type": "PostalAddress",
@@ -209,6 +227,16 @@
             "opens": "09:00",
             "closes": "20:00"
         }],
+        "areaServed": [
+            { "@type": "City", "name": "Bengaluru" },
+            { "@type": "City", "name": "Mysore" },
+            { "@type": "State", "name": "Karnataka" },
+            { "@type": "State", "name": "Tamil Nadu" },
+            { "@type": "State", "name": "Andhra Pradesh" },
+            { "@type": "State", "name": "Telangana" },
+            { "@type": "State", "name": "Goa" },
+            { "@type": "UnionTerritory", "name": "Puducherry" }
+        ],
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5.0",
@@ -246,6 +274,7 @@
         "jobTitle": "Founder & Lead Photographer",
         "worksFor": { "@id": "https://story-and-smiles-photography.vercel.app/#organization" },
         "url": "https://story-and-smiles-photography.vercel.app/",
+        "knowsAbout": ["Wedding Photography", "Candid Photography", "Maternity Photography", "Newborn Photography"],
         "sameAs": [
             "https://www.instagram.com/storyandsmiles",
             "https://www.facebook.com/storyandsmiles"
@@ -253,7 +282,7 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: WEBSITE (SearchAction removed — no /search page) ===== -->
+    <!-- ===== SCHEMA: WEBSITE ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -284,7 +313,7 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: PLACE (service area) ===== -->
+    <!-- ===== SCHEMA: PLACE ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -317,7 +346,11 @@
         "areaServed": [
             { "@type": "City", "name": "Bangalore" },
             { "@type": "City", "name": "Mysore" },
-            { "@type": "State", "name": "Karnataka" }
+            { "@type": "State", "name": "Karnataka" },
+            { "@type": "State", "name": "Tamil Nadu" },
+            { "@type": "State", "name": "Andhra Pradesh" },
+            { "@type": "State", "name": "Telangana" },
+            { "@type": "State", "name": "Goa" }
         ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -336,7 +369,7 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: FAQ ===== -->
+    <!-- ===== SCHEMA: FAQ (synced 1:1 with the visible FAQ section) ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -347,8 +380,8 @@
             { "@type": "Question", "name": "What wedding photography packages do you offer?", "acceptedAnswer": { "@type": "Answer", "text": "We offer custom packages for full-day and half-day wedding coverage, pre-wedding shoots, mehendi, sangeet and reception." } },
             { "@type": "Question", "name": "When is the best time for a maternity shoot?", "acceptedAnswer": { "@type": "Answer", "text": "The ideal time is between 28–34 weeks of pregnancy, when the bump is clearly visible and you're still comfortable." } },
             { "@type": "Question", "name": "How do you ensure safety during newborn shoots?", "acceptedAnswer": { "@type": "Answer", "text": "Newborn safety is our top priority. We keep the room warm, use soft props, follow baby-led posing, and never force positions." } },
-            { "@type": "Question", "name": "What are your starting prices?", "acceptedAnswer": { "@type": "Answer", "text": "Pricing depends on hours, location and services. We share customised quotes for each event." } },
-            { "@type": "Question", "name": "How long until we receive our photos?", "acceptedAnswer": { "@type": "Answer", "text": "For weddings, we deliver curated, edited photos within a few weeks. Maternity, newborn and baby shoots are usually delivered sooner." } },
+            { "@type": "Question", "name": "What are your starting prices?", "acceptedAnswer": { "@type": "Answer", "text": "Full-day wedding coverage starts at ₹45,000, half-day at ₹25,000, pre-wedding shoots at ₹15,000, maternity and baby shower sessions at ₹12,000, and newborn sessions at ₹10,000. Final quotes depend on location, duration and add-ons." } },
+            { "@type": "Question", "name": "How long until we receive our photos?", "acceptedAnswer": { "@type": "Answer", "text": "For weddings, we deliver curated, edited photos within 3–4 weeks. Maternity, newborn and baby shoots are usually delivered sooner." } },
             { "@type": "Question", "name": "Do you offer videography as well?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we offer cinematic wedding videography alongside photography. Ask us about our photo + video combo packages." } },
             { "@type": "Question", "name": "Can we choose the location for our pre-wedding shoot?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely! We work with you to select the perfect location in or around Bangalore." } },
             { "@type": "Question", "name": "Do you provide albums and prints?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we offer premium handcrafted albums, prints, and canvas frames as add-ons." } },
@@ -356,12 +389,12 @@
             { "@type": "Question", "name": "Do you cover destination weddings?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, we love destination weddings! We've covered events in Goa, Kerala, Tamil Nadu, and beyond." } },
             { "@type": "Question", "name": "How many photos do we get?", "acceptedAnswer": { "@type": "Answer", "text": "For a full-day wedding, we typically deliver 600–1000+ high-resolution edited images." } },
             { "@type": "Question", "name": "Can we request specific shots or poses?", "acceptedAnswer": { "@type": "Answer", "text": "Of course! We create a shot list with you before the event and blend your must-have shots with our candid style." } },
-            { "@type": "Question", "name": "How do we book you?", "acceptedAnswer": { "@type": "Answer", "text": "Simply reach out via our contact form, WhatsApp, or phone. We'll confirm your date with a booking advance." } }
+            { "@type": "Question", "name": "How do we book you?", "acceptedAnswer": { "@type": "Answer", "text": "Simply reach out via our contact form, WhatsApp, or phone at +91-98458 08890. We'll confirm your date with a booking advance." } }
         ]
     }
     </script>
 
-    <!-- ===== SCHEMA: BREADCRUMB (unified URL) ===== -->
+    <!-- ===== SCHEMA: BREADCRUMB ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -383,14 +416,14 @@
         "name": "Story and Smiles Photography Portfolio",
         "description": "Candid wedding, maternity and event photography portfolio in Bangalore.",
         "mainEntity": [
-            { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/wedding-1.jpg", "caption": "Candid wedding photography in Banashankari, Bangalore" },
-            { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/baby-shower.jpg", "caption": "Maternity and baby shower photoshoot in Banashankari, Bengaluru" },
-            { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/pre-wedding.jpg", "caption": "Pre-wedding photoshoot at a scenic outdoor location in Bangalore" }
+            { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/wedding-1.jpg", "caption": "Candid wedding photography in Banashankari, Bangalore", "creator": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" } },
+            { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/baby-shower.jpg", "caption": "Maternity and baby shower photoshoot in Banashankari, Bengaluru", "creator": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" } },
+            { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/pre-wedding.jpg", "caption": "Pre-wedding photoshoot at a scenic outdoor location in Bangalore", "creator": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" } }
         ]
     }
     </script>
 
-    <!-- ===== SCHEMA: REVIEWS (8 reviews, all with datePublished) ===== -->
+    <!-- ===== SCHEMA: REVIEWS ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -498,17 +531,12 @@
         a { color: #e07a5f; text-decoration: none; transition: color 0.2s; }
         a:hover { color: #c25f45; }
 
-        /* ===== ACCESSIBILITY: SKIP LINK + FOCUS ===== */
+        /* ===== ACCESSIBILITY ===== */
         .skip-link {
-            position: absolute;
-            top: -100px;
-            left: 0;
-            background: #e07a5f;
-            color: #fff;
-            padding: 12px 20px;
-            z-index: 10000;
-            border-radius: 0 0 8px 0;
-            font-weight: 600;
+            position: absolute; top: -100px; left: 0;
+            background: #e07a5f; color: #fff;
+            padding: 12px 20px; z-index: 10000;
+            border-radius: 0 0 8px 0; font-weight: 600;
             transition: top 0.2s;
         }
         .skip-link:focus { top: 0; color: #fff; }
@@ -516,11 +544,6 @@
             outline: 3px solid #e07a5f;
             outline-offset: 3px;
             border-radius: 4px;
-        }
-        button:focus-visible, a:focus-visible, input:focus-visible,
-        select:focus-visible, textarea:focus-visible, summary:focus-visible {
-            outline: 3px solid #e07a5f;
-            outline-offset: 3px;
         }
         .sr-only {
             position: absolute; width: 1px; height: 1px;
@@ -530,14 +553,10 @@
 
         /* ===== COOKIE CONSENT BANNER ===== */
         .cookie-banner {
-            position: fixed;
-            bottom: 0; left: 0; right: 0;
-            background: #1e1a1a;
-            color: #fff;
-            padding: 16px 24px;
-            z-index: 10001;
-            display: none;
-            box-shadow: 0 -8px 32px rgba(0,0,0,0.3);
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: #1e1a1a; color: #fff;
+            padding: 16px 24px; z-index: 10001;
+            display: none; box-shadow: 0 -8px 32px rgba(0,0,0,0.3);
             font-size: 0.9rem;
         }
         .cookie-banner.visible { display: block; }
@@ -552,7 +571,7 @@
         .cookie-btn {
             padding: 10px 20px; border-radius: 40px; border: none;
             font-weight: 600; cursor: pointer; font-size: 0.85rem;
-            transition: all 0.2s;
+            transition: all 0.2s; font-family: inherit;
         }
         .cookie-accept { background: #e07a5f; color: #fff; }
         .cookie-accept:hover { background: #c96b52; }
@@ -564,7 +583,7 @@
             .cookie-btn { flex: 1; text-align: center; }
         }
 
-        /* ===== MODALS (legal pages) ===== */
+        /* ===== LEGAL MODALS ===== */
         .legal-modal {
             position: fixed; inset: 0; z-index: 10002;
             background: rgba(0,0,0,0.7);
@@ -587,13 +606,17 @@
             font-size: 1.2rem; cursor: pointer; color: #2d2a2a;
         }
         .legal-modal-close:hover { background: #e07a5f; color: #fff; }
-        .legal-trigger { background: none; border: none; color: rgba(255,255,255,0.6); font-size: 0.85rem; cursor: pointer; padding: 0; font-family: inherit; }
+        .legal-trigger {
+            background: none; border: none;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem; cursor: pointer;
+            padding: 0; font-family: inherit;
+        }
         .legal-trigger:hover { color: #e07a5f; }
 
-        /* ===== TOAST (form success/error) ===== */
+        /* ===== TOAST ===== */
         .toast {
-            position: fixed;
-            top: 90px; right: 24px;
+            position: fixed; top: 90px; right: 24px;
             background: #fff; border-radius: 14px;
             padding: 16px 22px; z-index: 10003;
             box-shadow: 0 12px 40px rgba(0,0,0,0.18);
@@ -616,12 +639,12 @@
             -webkit-backdrop-filter: blur(14px);
             border-bottom: 1px solid rgba(0,0,0,0.04);
             padding: 10px 0;
-            transition: all 0.3s ease;
+            transition: box-shadow 0.3s ease, background 0.3s ease;
         }
         .navbar.scrolled { box-shadow: 0 8px 32px rgba(0,0,0,0.06); background: rgba(255,252,250,0.97); }
         .nav-container { display: flex; align-items: center; justify-content: space-between; }
         .logo { height: 48px; width: auto; }
-        .nav-menu { display: flex; align-items: center; gap: 28px; list-style: none; }
+        .nav-menu { display: flex; align-items: center; gap: 22px; list-style: none; }
         .nav-menu li a {
             font-size: 0.9rem; font-weight: 500; color: #2d2a2a;
             padding: 4px 0; border-bottom: 2px solid transparent;
@@ -634,7 +657,10 @@
             border-bottom: none !important; font-weight: 600 !important;
         }
         .nav-cta:hover { background: #c96b52 !important; color: #fff !important; transform: translateY(-1px); }
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+        .hamburger {
+            display: none; flex-direction: column; gap: 5px;
+            cursor: pointer; padding: 4px; background: none; border: none;
+        }
         .hamburger span { display: block; width: 26px; height: 2.5px; background: #2d2a2a; border-radius: 4px; transition: all 0.3s; }
         .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
         .hamburger.active span:nth-child(2) { opacity: 0; }
@@ -648,7 +674,7 @@
             padding: 100px 24px 60px;
             text-align: center; color: #fff;
         }
-        .hero picture { position: absolute; inset: 0; z-index: 0; }
+        .hero picture { position: absolute; inset: 0; z-index: 0; display: block; }
         .hero picture img { width: 100%; height: 100%; object-fit: cover; }
         .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.55); z-index: 1; }
         .hero-content { position: relative; z-index: 2; max-width: 820px; margin: 0 auto; }
@@ -669,7 +695,11 @@
         .stat-item { text-align: center; }
         .stat-number { font-size: 2rem; font-weight: 700; display: block; }
         .stat-label { font-size: 0.85rem; opacity: 0.75; font-weight: 400; }
-        .scroll-indicator { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 2; animation: bounceDown 2s infinite; }
+        .scroll-indicator {
+            position: absolute; bottom: 30px; left: 50%;
+            transform: translateX(-50%); z-index: 2;
+            animation: bounceDown 2s infinite;
+        }
         .scroll-indicator svg { width: 32px; height: 32px; opacity: 0.6; }
         @keyframes bounceDown {
             0%, 100% { transform: translateX(-50%) translateY(0); }
@@ -680,7 +710,7 @@
         .btn {
             display: inline-block; padding: 14px 36px; border-radius: 60px;
             font-weight: 600; font-size: 1rem; border: none; cursor: pointer;
-            transition: all 0.25s ease; text-align: center;
+            transition: all 0.25s ease; text-align: center; font-family: inherit;
         }
         .btn-primary { background: #e07a5f; color: #fff; box-shadow: 0 8px 24px rgba(224,122,95,0.35); }
         .btn-primary:hover { background: #c96b52; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(224,122,95,0.45); color: #fff; }
@@ -711,7 +741,7 @@
             border: 1px solid rgba(255,255,255,0.10);
         }
 
-        /* ===== INSTAGRAM BADGE (repositioned for <1024) ===== */
+        /* ===== INSTAGRAM BADGE ===== */
         .instagram-header-badge { position: fixed; top: 80px; right: 24px; z-index: 999; }
         .insta-badge-link {
             display: flex; align-items: center; gap: 10px;
@@ -749,7 +779,11 @@
 
         /* ===== WHY ===== */
         .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 20px; }
-        .why-card { background: #fcf9f7; padding: 30px 20px; border-radius: 20px; text-align: center; border: 1px solid rgba(0,0,0,0.03); transition: all 0.3s; }
+        .why-card {
+            background: #fcf9f7; padding: 30px 20px; border-radius: 20px;
+            text-align: center; border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.3s;
+        }
         .why-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.06); }
         .why-card .icon { font-size: 2.8rem; margin-bottom: 10px; }
         .why-card h3 { font-size: 1.1rem; color: #1e1a1a; margin-bottom: 6px; }
@@ -770,6 +804,9 @@
         .service-card h3 { font-size: 1.2rem; margin-bottom: 8px; color: #1e1a1a; }
         .service-card p { font-size: 0.95rem; color: #5a5252; line-height: 1.6; }
 
+        /* ===== PRICING ===== */
+        #pricing { scroll-margin-top: 100px; }
+
         /* ===== ALL SERVICES ===== */
         .all-services-section { padding: 60px 0; background: #fff; }
         .all-services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px 20px; margin-top: 20px; }
@@ -788,7 +825,8 @@
         .gallery-item {
             position: relative; border-radius: 20px; overflow: hidden;
             aspect-ratio: 4/3; box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-            transition: all 0.4s ease; background: #f0eeec;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            background: #f0eeec;
         }
         .gallery-item:hover { transform: scale(1.03); box-shadow: 0 16px 48px rgba(0,0,0,0.12); z-index: 2; }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
@@ -798,8 +836,10 @@
             background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 60%);
             display: flex; align-items: flex-end; justify-content: center;
             padding: 24px; opacity: 0; transition: opacity 0.4s ease;
+            pointer-events: none;   /* FIX: never swallow clicks */
         }
-        .gallery-item:hover .gallery-overlay, .gallery-item:focus-within .gallery-overlay { opacity: 1; }
+        .gallery-item:hover .gallery-overlay,
+        .gallery-item:focus-within .gallery-overlay { opacity: 1; }
         .gallery-overlay span {
             color: #fff; font-weight: 600; font-size: 1.1rem;
             background: rgba(224,122,95,0.85); padding: 8px 24px;
@@ -807,7 +847,7 @@
         }
         .gallery-btn {
             position: absolute; inset: 0; background: transparent;
-            border: none; cursor: pointer; z-index: 1;
+            border: none; cursor: pointer; z-index: 3;   /* FIX: above overlay */
         }
         .gallery-portfolio-link { text-align: center; margin-top: 48px; }
 
@@ -861,13 +901,14 @@
         }
         .testimonial-scroll-btn:hover { background: #e07a5f; color: #fff; border-color: #e07a5f; }
 
-        /* ===== CONTACT FORM (FIXED) ===== */
+        /* ===== CONTACT ===== */
         .contact-section { padding: 80px 0; background: #fff; }
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
-        .contact-info h3 { font-size: 1.6rem; margin-bottom: 12px; }
+        .contact-info h3 { font-size: 1.4rem; margin-bottom: 12px; color: #1e1a1a; }
         .contact-info p { color: #5a5252; margin-bottom: 24px; }
         .contact-details { display: flex; flex-direction: column; gap: 16px; }
-        .contact-item { display: flex; align-items: center; gap: 14px; color: #2d2a2a; }
+        .contact-item { display: flex; align-items: flex-start; gap: 14px; color: #2d2a2a; }
+        .contact-item svg { flex-shrink: 0; margin-top: 3px; }
         .contact-item a { color: #2d2a2a; }
         .contact-item a:hover { color: #e07a5f; }
         .whatsapp-contact a { color: #25D366; font-weight: 600; }
@@ -888,7 +929,7 @@
             width: 100%; padding: 14px 18px;
             border: 1.5px solid #e8e0dc; border-radius: 14px;
             font-size: 0.95rem; font-family: inherit;
-            background: #fff; transition: border-color 0.2s;
+            background: #fff; transition: border-color 0.2s, box-shadow 0.2s;
             color: #1e1a1a;
         }
         .form-group input:focus,
@@ -897,10 +938,17 @@
             outline: none; border-color: #e07a5f;
             box-shadow: 0 0 0 4px rgba(224,122,95,0.08);
         }
+        .form-group input[aria-invalid="true"],
+        .form-group textarea[aria-invalid="true"] {
+            border-color: #e63946;
+            box-shadow: 0 0 0 4px rgba(230,57,70,0.08);
+        }
         .form-group textarea { resize: vertical; min-height: 120px; }
         .btn-submit { width: 100%; padding: 16px; font-size: 1.05rem; }
+        .btn-submit:disabled { opacity: 0.65; cursor: not-allowed; transform: none !important; }
         .form-note { text-align: center; margin-top: 12px; font-size: 0.85rem; color: #7a7272; }
-        /* Honeypot — hidden from humans, visible to bots */
+
+        /* Honeypot */
         .hp-field {
             position: absolute !important;
             left: -9999px !important;
@@ -910,13 +958,21 @@
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
         @media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
 
-        /* ===== COOKIE / MISC FIXES ===== */
-        .hero-cta-section { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding: 40px 0; border-bottom: 4px solid #e07a5f; }
+        /* ===== HERO CTA STRIP ===== */
+        .hero-cta-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 40px 0; border-bottom: 4px solid #e07a5f;
+        }
         .hero-cta-grid { display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: center; }
         .hero-cta-grid h2 { color: #fff; font-size: 2rem; font-weight: 700; margin: 0; }
         .hero-cta-grid p { color: rgba(255,255,255,0.8); font-size: 1.1rem; margin: 8px 0 0; }
-        .hero-cta-grid .btn { background: #f4a261; color: #1a1a2e; font-weight: 700; font-size: 1.1rem; padding: 16px 40px; box-shadow: 0 8px 32px rgba(244,162,97,0.3); }
+        .hero-cta-grid .btn {
+            background: #f4a261; color: #1a1a2e; font-weight: 700;
+            font-size: 1.1rem; padding: 16px 40px;
+            box-shadow: 0 8px 32px rgba(244,162,97,0.3);
+        }
 
+        /* ===== RATINGS ===== */
         .ratings-section { padding: 40px 0; background: #fff; }
         .ratings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; text-align: center; }
         .rating-card { background: #fcf9f7; padding: 24px; border-radius: 20px; border: 1px solid #f0ecea; }
@@ -926,20 +982,34 @@
         .rating-card .rating-label { color: #4a4242; margin: 6px 0 0; }
         .rating-card a { display: inline-block; margin-top: 10px; color: #e07a5f; font-weight: 600; font-size: 0.85rem; }
 
-        .gmb-map-container { margin-top: 24px; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); background: #f0eeec; position: relative; }
+        /* ===== MAP / GMB ===== */
+        .gmb-map-container {
+            margin-top: 24px; border-radius: 20px; overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            background: #f0eeec; position: relative;
+        }
         .gmb-map-container iframe { width: 100%; height: 260px; border: none; display: block; background: #f0eeec; }
-        .gmb-review-badge { background: #fff; border-radius: 20px; padding: 16px 20px; margin-top: 16px; border: 1px solid rgba(224,122,95,0.15); box-shadow: 0 4px 16px rgba(0,0,0,0.02); }
+        .gmb-review-badge {
+            background: #fff; border-radius: 20px; padding: 16px 20px;
+            margin-top: 16px; border: 1px solid rgba(224,122,95,0.15);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+        }
         .gmb-review-inner { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: space-between; }
         .gmb-rating-stars { display: flex; align-items: center; gap: 8px; background: #fef7e8; padding: 4px 14px; border-radius: 60px; }
         .stars { color: #f5b042; letter-spacing: 2px; font-size: 1rem; }
         .rating-num { font-weight: 700; color: #2c3e50; font-size: 0.9rem; }
         .gmb-review-text { font-size: 0.85rem; color: #4a5568; }
-        .gmb-review-link { display: inline-flex; align-items: center; gap: 8px; background: #e07a5f10; padding: 6px 16px; border-radius: 40px; text-decoration: none; color: #e07a5f; font-weight: 500; font-size: 0.85rem; transition: 0.2s; border: 1px solid #e07a5f30; }
+        .gmb-review-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: #e07a5f10; padding: 6px 16px; border-radius: 40px;
+            text-decoration: none; color: #e07a5f; font-weight: 500;
+            font-size: 0.85rem; transition: 0.2s; border: 1px solid #e07a5f30;
+        }
         .gmb-review-link:hover { background: #e07a5f; color: #fff; border-color: #e07a5f; }
 
         .studio-section { padding: 60px 0; background: #fcf9f7; }
 
-        /* ===== AREAS WE SERVE ===== */
+        /* ===== AREAS ===== */
         .areas-section { padding: 60px 0; background: #fff; }
         .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-top: 24px; }
         .area-chip {
@@ -966,7 +1036,10 @@
             transition: background 0.2s; color: #1e1a1a;
         }
         .faq-item summary::-webkit-details-marker { display: none; }
-        .faq-item summary::after { content: "▾"; font-size: 1.2rem; color: #e07a5f; transition: transform 0.3s; flex-shrink: 0; margin-left: 16px; }
+        .faq-item summary::after {
+            content: "▾"; font-size: 1.2rem; color: #e07a5f;
+            transition: transform 0.3s; flex-shrink: 0; margin-left: 16px;
+        }
         .faq-item[open] summary::after { transform: rotate(180deg); }
         .faq-item summary:hover { background: #fcf9f7; }
         .faq-answer { padding: 0 24px 24px; color: #4a4242; line-height: 1.7; }
@@ -1006,7 +1079,8 @@
             width: 46px; height: 46px; border-radius: 50%;
             background: #e07a5f; color: #fff; border: none;
             cursor: pointer; box-shadow: 0 8px 24px rgba(224,122,95,0.35);
-            transition: all 0.3s; opacity: 0; visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s, transform 0.3s, background 0.3s;
+            opacity: 0; visibility: hidden;
             transform: translateY(12px); z-index: 900;
             display: flex; align-items: center; justify-content: center;
         }
@@ -1018,7 +1092,6 @@
             position: fixed; bottom: 28px; right: 28px;
             z-index: 9999; display: flex;
             flex-direction: column; align-items: flex-end;
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
         }
         .whatsapp-main-btn {
             display: flex; align-items: center; gap: 10px;
@@ -1028,6 +1101,7 @@
             cursor: pointer; transition: all 0.25s ease;
             color: #fff; font-weight: 600; font-size: 15px;
             line-height: 1; border: 1px solid rgba(255,255,255,0.2);
+            font-family: inherit;
         }
         .whatsapp-main-btn:hover { transform: scale(1.04); box-shadow: 0 12px 36px rgba(37,211,102,0.55); background: #20b85a; }
         .whatsapp-icon { flex-shrink: 0; width: 28px; height: 28px; fill: #fff; }
@@ -1043,15 +1117,27 @@
         }
         .whatsapp-popup.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
         .whatsapp-popup-header { display: flex; align-items: center; gap: 12px; padding: 16px 18px; background: #075E54; color: #fff; }
-        .whatsapp-popup-avatar { position: relative; flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; overflow: hidden; background: #e8e8e8; border: 2px solid rgba(255,255,255,0.3); }
+        .whatsapp-popup-avatar {
+            position: relative; flex-shrink: 0; width: 44px; height: 44px;
+            border-radius: 50%; overflow: hidden; background: #e8e8e8;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
         .whatsapp-popup-avatar img { width: 100%; height: 100%; object-fit: cover; }
         .whatsapp-online-dot { position: absolute; bottom: 0; right: 0; width: 12px; height: 12px; background: #25D366; border-radius: 50%; border: 2px solid #075E54; }
         .whatsapp-popup-info h4 { margin: 0; font-size: 15px; font-weight: 600; }
         .whatsapp-popup-info p { margin: 2px 0 0; font-size: 12px; opacity: 0.8; }
-        .whatsapp-popup-close { margin-left: auto; background: none; border: none; color: rgba(255,255,255,0.7); font-size: 20px; cursor: pointer; padding: 4px 8px; border-radius: 40px; transition: 0.2s; }
+        .whatsapp-popup-close {
+            margin-left: auto; background: none; border: none;
+            color: rgba(255,255,255,0.7); font-size: 20px;
+            cursor: pointer; padding: 4px 8px; border-radius: 40px; transition: 0.2s;
+        }
         .whatsapp-popup-close:hover { background: rgba(255,255,255,0.15); color: #fff; }
         .whatsapp-popup-body { padding: 16px 18px 10px; background: #f0f0f0; }
-        .whatsapp-message-preview { background: #fff; padding: 12px 14px; border-radius: 12px 12px 12px 4px; margin-bottom: 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+        .whatsapp-message-preview {
+            background: #fff; padding: 12px 14px;
+            border-radius: 12px 12px 12px 4px; margin-bottom: 14px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
         .whatsapp-message-preview p { margin: 0 0 4px; font-size: 14px; color: #1a1a1a; line-height: 1.5; }
         .whatsapp-quick-options { display: flex; flex-direction: column; gap: 6px; }
         .whatsapp-option {
@@ -1078,6 +1164,7 @@
             display: none; position: fixed; bottom: 0; left: 0; width: 100%;
             background: rgba(255,255,255,0.98);
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             padding: 12px 16px;
             box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
             z-index: 9998; justify-content: space-between;
@@ -1087,7 +1174,7 @@
         .mobile-sticky-cta .btn-call { background: #1e1a1a; color: #fff; border: 1px solid #333; }
         .mobile-sticky-cta .btn-whatsapp { background: #25D366; color: #fff; }
 
-        /* ===== SHARE BUTTONS (hidden < 1024) ===== */
+        /* ===== SHARE BUTTONS ===== */
         .share-buttons {
             position: fixed; left: 16px; bottom: 120px;
             z-index: 999; display: flex; flex-direction: column; gap: 10px;
@@ -1118,15 +1205,21 @@
         .delay-1 { animation-delay: 0.15s; }
         .delay-2 { animation-delay: 0.3s; }
         .delay-3 { animation-delay: 0.5s; }
-        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.7s ease; }
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
         .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
 
         /* ===== INPUT PREFIX ===== */
-        .input-with-prefix { display: flex; align-items: center; background: #fff; border: 1.5px solid #e8e0dc; border-radius: 14px; overflow: hidden; }
+        .input-with-prefix {
+            display: flex; align-items: center; background: #fff;
+            border: 1.5px solid #e8e0dc; border-radius: 14px; overflow: hidden;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .input-with-prefix:focus-within { border-color: #e07a5f; box-shadow: 0 0 0 4px rgba(224,122,95,0.08); }
         .input-with-prefix span { padding: 14px 12px; background: #f5f0ec; font-weight: 600; color: #1e1a1a; border-right: 1px solid #e8e0dc; }
-        .input-with-prefix input { border: none; padding: 14px 12px; width: 100%; outline: none; font-size: 0.95rem; border-radius: 0; }
+        .input-with-prefix input { border: none; padding: 14px 12px; width: 100%; outline: none; font-size: 0.95rem; border-radius: 0; box-shadow: none !important; }
+        .input-with-prefix input:focus { box-shadow: none !important; }
         .budget-input-wrapper { position: relative; }
-        .budget-input-wrapper span { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #999; font-weight: 600; }
+        .budget-input-wrapper > span { position: absolute; left: 14px; top: 42px; color: #999; font-weight: 600; pointer-events: none; }
         .budget-input-wrapper input { padding-left: 36px; }
 
         /* ===== RESPONSIVE ===== */
@@ -1142,20 +1235,29 @@
             .all-services-grid { grid-template-columns: repeat(3, 1fr); }
         }
         @media (max-width: 768px) {
+            /* FIX: backdrop-filter creates a containing block for fixed children,
+               which breaks the full-screen mobile menu. Disable it here. */
+            .navbar {
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
+                background: rgba(255,252,250,0.99);
+            }
+            .navbar.scrolled { background: rgba(255,252,250,0.99); }
+
             .nav-menu {
                 position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
-                background: rgba(255,252,250,0.98);
-                backdrop-filter: blur(20px);
+                background: rgba(255,252,250,0.99);
                 flex-direction: column; justify-content: center;
                 gap: 24px; transform: translateX(100%);
-                transition: transform 0.4s ease; padding: 40px; list-style: none;
+                transition: transform 0.4s ease; padding: 80px 40px 40px;
+                list-style: none; overflow-y: auto;
             }
             .nav-menu.active { transform: translateX(0); }
             .hamburger { display: flex; z-index: 1001; }
-            .hero-title { font-size: 2.2rem !important; }
-            .hero-subtitle { font-size: 1rem !important; }
+            .hero-title { font-size: 2.2rem; }
+            .hero-subtitle { font-size: 1rem; }
             .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-            .stat-number { font-size: 1.4rem !important; }
+            .stat-number { font-size: 1.4rem; }
             .services-grid { grid-template-columns: 1fr; }
             .gallery-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
             .footer-grid { grid-template-columns: 1fr; gap: 30px; }
@@ -1173,17 +1275,17 @@
             .trust-badges { gap: 10px; }
             .trust-badge { font-size: 0.75rem; padding: 4px 12px 4px 10px; }
             .mobile-sticky-cta { display: flex; }
-            .footer { padding-bottom: 100px; }
+            .footer { padding-bottom: 110px; }
             .why-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
             .all-services-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 480px) {
-            .hero-title { font-size: 1.8rem !important; }
+            .hero-title { font-size: 1.8rem; }
             .hero-buttons .btn { width: 100%; max-width: 280px; }
             .gallery-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
             .about-features { grid-template-columns: 1fr; }
             .section-title { font-size: 1.6rem; }
-            .stat-number { font-size: 1.2rem !important; }
+            .stat-number { font-size: 1.2rem; }
             .why-grid { grid-template-columns: 1fr; }
             .all-services-grid { grid-template-columns: 1fr; }
             .toast { right: 12px; left: 12px; max-width: none; }
@@ -1197,12 +1299,12 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- ===== GTM NOSCRIPT ===== -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TC9D7BX3" height="0" width="0" style="display:none;visibility:hidden" title="GTM"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TC9D7BX3" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
 
     <!-- ===== NAVIGATION ===== -->
     <nav class="navbar" id="navbar" aria-label="Main navigation">
         <div class="container nav-container">
-            <a href="/" class="logo-link" aria-label="Story and Smiles Photography home">
+            <a href="#home" class="logo-link" aria-label="Story and Smiles Photography home">
                 <img src="assets/images/logo.svg" alt="Story and Smiles Photography Logo" class="logo" width="160" height="48" />
             </a>
             <ul class="nav-menu" id="navMenu">
@@ -1210,15 +1312,15 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#why" class="nav-link">Why Us</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
                 <li><a href="#all-services" class="nav-link">All Services</a></li>
                 <li><a href="#areas" class="nav-link">Areas</a></li>
                 <li><a href="#gallery" class="nav-link">Gallery</a></li>
                 <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
                 <li><a href="#faq" class="nav-link">FAQs</a></li>
-                <li><a href="https://karthikstories.my.canva.site/" target="_blank" rel="noopener noreferrer" class="nav-link">Portfolio</a></li>
                 <li><a href="#contact" class="nav-link nav-cta cta-book">Book Now</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+            <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -1233,11 +1335,13 @@
     </div>
 
     <!-- ===== HERO ===== -->
-    <header id="home" class="hero" role="banner">
+    <header id="home" class="hero">
         <picture>
-            <source media="(min-width: 768px)" srcset="assets/images/hero-bg.webp 1920w" type="image/webp" />
-            <source media="(max-width: 767px)" srcset="assets/images/hero-bg-mobile.jpg 800w" type="image/webp" />
-            <img src="assets/images/hero-bg.webp" alt="Candid wedding photography Bangalore – couple during South Indian rituals" fetchpriority="high" width="1920" height="1080" />
+            <source media="(min-width: 768px)" srcset="assets/images/hero-bg.webp" type="image/webp" sizes="100vw" />
+            <source media="(max-width: 767px)" srcset="assets/images/hero-bg-mobile.jpg" type="image/jpeg" sizes="100vw" />
+            <img src="assets/images/hero-bg.webp"
+                 alt="Candid wedding photography Bangalore – couple during South Indian rituals"
+                 fetchpriority="high" width="1920" height="1080" decoding="async" />
         </picture>
         <div class="hero-overlay"></div>
 
@@ -1255,7 +1359,7 @@
 
         <div class="hero-content">
             <nav class="breadcrumb" aria-label="Breadcrumb">
-                <a href="/">Home</a> <span>›</span>
+                <a href="#home">Home</a> <span>›</span>
                 <a href="#services">Services</a> <span>›</span>
                 <span style="color:rgba(255,255,255,0.6);">Photography</span>
             </nav>
@@ -1278,12 +1382,12 @@
 
             <div class="hero-buttons fade-in-up delay-2">
                 <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I%20want%20to%20book%20a%20session." target="_blank" rel="noopener noreferrer" class="btn btn-primary track-whatsapp" data-cta="hero_book">Book Your Session</a>
-                <a href="https://karthikstories.my.canva.site/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View Portfolio</a>
+                <a href="#gallery" class="btn btn-secondary">View Portfolio</a>
             </div>
 
             <div class="summary-box fade-in-up delay-2" style="background:rgba(255,255,255,0.10); backdrop-filter:blur(6px); border-left:4px solid #f4a261; border-radius:12px; padding:16px 22px; margin:16px auto 28px; max-width:760px; text-align:left;">
                 <strong style="color:#f4a261; display:block; margin-bottom:4px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px;">📸 In a nutshell</strong>
-                <p style="margin:0; font-size:0.95rem; color:rgba(255,255,255,0.90); line-height:1.6;">Story and Smiles is a candid wedding photographer based in Banashankari, Bengaluru. We cover weddings, pre-weddings, maternity, newborn, baby &amp; family events across Karnataka with warm, storytelling images.</p>
+                <p style="margin:0; font-size:0.95rem; color:rgba(255,255,255,0.90); line-height:1.6;">Story and Smiles is a candid wedding photographer based in Banashankari, Bengaluru. We cover weddings, pre-weddings, maternity, newborn, baby &amp; family events across Karnataka with warm, storytelling images. Full-day weddings start at ₹45,000.</p>
             </div>
 
             <div class="hero-stats fade-in-up delay-3">
@@ -1315,15 +1419,15 @@
         </div>
     </header>
 
-    <!-- ===== MAIN CONTENT WRAPPER (A11Y SKIP TARGET) ===== -->
+    <!-- ===== MAIN CONTENT WRAPPER ===== -->
     <main id="main-content">
 
-        <!-- ===== HERO CTA ===== -->
+        <!-- ===== HERO CTA STRIP ===== -->
         <section class="hero-cta-section" aria-labelledby="hero-cta-heading">
             <div class="container">
                 <div class="hero-cta-grid">
                     <div>
-                        <h2 id="hero-cta-heading">⭐ Hire Best Photographers in Bangalore</h2>
+                        <h2 id="hero-cta-heading">⭐ Hire the Best Photographers in Bangalore</h2>
                         <p>Top Rated <strong style="color: #f4a261;">Photographers</strong> · Videographers · Candid Specialists</p>
                     </div>
                     <div>
@@ -1339,27 +1443,27 @@
                 <h2 id="ratings-heading" class="sr-only">Ratings and Reviews</h2>
                 <div class="ratings-grid">
                     <div class="rating-card">
-                        <div class="big-icon">⭐</div>
+                        <div class="big-icon" aria-hidden="true">⭐</div>
                         <div class="rating-number">5.0</div>
-                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
                         <p class="rating-label">92+ Google Reviews</p>
                         <a href="https://search.google.com/local/reviews?placeid=ChIJu3grGi1RrjsRI_yNq1Bk-8A" target="_blank" rel="noopener noreferrer">Read on Google →</a>
                     </div>
                     <div class="rating-card">
-                        <div class="big-icon">📞</div>
+                        <div class="big-icon" aria-hidden="true">📞</div>
                         <div class="rating-number">4.8</div>
-                        <div class="stars" aria-label="4.8 out of 5 stars">★★★★☆</div>
+                        <div class="stars" role="img" aria-label="4.8 out of 5 stars">★★★★☆</div>
                         <p class="rating-label">Justdial Verified</p>
                         <a href="https://www.justdial.com/Bangalore/Story-And-Smiles-Photography-Near-Om-Shakthi-Temple-Hanumagiri/080PXX80-XX80-230210161034-P9I3_BZDET" target="_blank" rel="noopener noreferrer">View on Justdial →</a>
                     </div>
                     <div class="rating-card">
-                        <div class="big-icon">🏆</div>
+                        <div class="big-icon" aria-hidden="true">🏆</div>
                         <div class="rating-number">#1</div>
                         <div style="color: #e07a5f; font-weight: 600;">Top Rated Photographer</div>
                         <p class="rating-label">in Banashankari, Bengaluru</p>
                     </div>
                     <div class="rating-card">
-                        <div class="big-icon">❤️</div>
+                        <div class="big-icon" aria-hidden="true">❤️</div>
                         <div class="rating-number">350+</div>
                         <div style="color: #e07a5f; font-weight: 600;">Happy Families</div>
                         <p class="rating-label">Across South India</p>
@@ -1373,10 +1477,9 @@
             <div class="container">
                 <div class="about-grid">
                     <div class="about-image animate-on-scroll">
-                        <picture>
-                            <source srcset="assets/images/about-us.jpg" type="image/webp" />
-                            <img src="assets/images/about-us.jpg" alt="Karthik – Founder and Lead Photographer at Story and Smiles Photography, Banashankari, Bengaluru" loading="lazy" width="600" height="700" />
-                        </picture>
+                        <img src="assets/images/about-us.jpg"
+                             alt="Karthik – Founder and Lead Photographer at Story and Smiles Photography, Banashankari, Bengaluru"
+                             loading="lazy" width="600" height="700" decoding="async" />
                         <div class="experience-badge"><span>6+</span><span>Years</span></div>
                         <p style="position:absolute; bottom:80px; left:20px; color:#fff; font-weight:600; background:rgba(0,0,0,0.5); padding:6px 14px; border-radius:40px; font-size:0.9rem; backdrop-filter:blur(4px);">Karthik – Founder</p>
                     </div>
@@ -1386,7 +1489,7 @@
                         <p class="about-text">At <strong>Story and Smiles Photography</strong>, every frame holds a thousand emotions. Led by <strong>Karthik</strong>, our team turns fleeting moments into everlasting memories.</p>
                         <p class="about-text">Based in <strong>Bangalore</strong>, we serve couples and families across <strong>Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Lucknow, Goa, and Puducherry</strong>.</p>
                         <p class="about-text" style="background:#f9f5f2; padding:12px 18px; border-radius:12px; border-left:4px solid #e07a5f;">
-                            <strong>👋 Meet Karthik</strong> – A self‑taught photographer who turned his passion into a full‑time career after realising that candid moments tell the truest stories.
+                            <strong>👋 Meet Karthik</strong> – A self-taught photographer who turned his passion into a full-time career after realising that candid moments tell the truest stories.
                         </p>
                         <div class="about-features">
                             <div class="feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#e07a5f" stroke-width="2" stroke-linecap="round" /></svg><span>Candid &amp; Traditional Styles</span></div>
@@ -1408,10 +1511,10 @@
                     <p class="section-description">We don't just click pictures — we preserve your legacy with professionalism and heart.</p>
                 </div>
                 <div class="why-grid">
-                    <div class="why-card animate-on-scroll"><div class="icon">⏳</div><h3>6+ Years of Excellence</h3><p>Hundreds of happy couples &amp; families across South India.</p></div>
-                    <div class="why-card animate-on-scroll" data-delay="0.15"><div class="icon">📷</div><h3>Pro Grade Equipment</h3><p>Full‑frame cameras, professional lighting, and backup gear.</p></div>
-                    <div class="why-card animate-on-scroll" data-delay="0.3"><div class="icon">📬</div><h3>Delivery in Days, Not Months</h3><p>Get your edited wedding album within 3–4 weeks.</p></div>
-                    <div class="why-card animate-on-scroll" data-delay="0.45"><div class="icon">💰</div><h3>Transparent Pricing</h3><p>No hidden fees. Custom quotes tailored to your needs.</p></div>
+                    <div class="why-card animate-on-scroll"><div class="icon" aria-hidden="true">⏳</div><h3>6+ Years of Excellence</h3><p>Hundreds of happy couples &amp; families across South India.</p></div>
+                    <div class="why-card animate-on-scroll" data-delay="0.15"><div class="icon" aria-hidden="true">📷</div><h3>Pro Grade Equipment</h3><p>Full-frame cameras, professional lighting, and backup gear.</p></div>
+                    <div class="why-card animate-on-scroll" data-delay="0.3"><div class="icon" aria-hidden="true">📬</div><h3>Delivery in Days, Not Months</h3><p>Get your edited wedding album within 3–4 weeks.</p></div>
+                    <div class="why-card animate-on-scroll" data-delay="0.45"><div class="icon" aria-hidden="true">💰</div><h3>Transparent Pricing</h3><p>No hidden fees. Custom quotes tailored to your needs.</p></div>
                 </div>
                 <div style="text-align:center; margin-top:30px;">
                     <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I%20want%20to%20book%20a%20session." target="_blank" rel="noopener noreferrer" class="btn btn-primary track-whatsapp" data-cta="why_book">🎯 Book Your Free Consultation</a>
@@ -1429,39 +1532,39 @@
                 </div>
                 <div class="services-grid">
                     <article id="svc-wedding" class="service-card animate-on-scroll">
-                        <div class="service-icon">📸</div>
+                        <div class="service-icon" aria-hidden="true">📸</div>
                         <h3>Wedding Photography</h3>
                         <p>Candid, traditional &amp; cinematic coverage that preserves every ritual and emotion.</p>
                     </article>
                     <article id="svc-pre-wedding" class="service-card animate-on-scroll" data-delay="0.15">
-                        <div class="service-icon">💑</div>
+                        <div class="service-icon" aria-hidden="true">💑</div>
                         <h3>Pre-Wedding Shoot</h3>
                         <p>Romantic couple sessions at Bangalore's most picturesque locations.</p>
                     </article>
                     <article id="svc-event" class="service-card animate-on-scroll" data-delay="0.3">
-                        <div class="service-icon">🎉</div>
+                        <div class="service-icon" aria-hidden="true">🎉</div>
                         <h3>Event Photography</h3>
                         <p>Corporate events, birthdays, anniversaries — captured professionally with quick turnaround.</p>
                     </article>
                     <article id="svc-maternity" class="service-card animate-on-scroll" data-delay="0.15">
-                        <div class="service-icon">👶</div>
+                        <div class="service-icon" aria-hidden="true">👶</div>
                         <h3>Baby Shower &amp; Maternity</h3>
                         <p>Cherish the journey of motherhood with heartwarming, beautiful photography.</p>
                     </article>
                     <article id="svc-portfolio" class="service-card animate-on-scroll" data-delay="0.3">
-                        <div class="service-icon">👤</div>
+                        <div class="service-icon" aria-hidden="true">👤</div>
                         <h3>Portfolio Photography</h3>
                         <p>Professional portfolios for models, actors, and professionals.</p>
                     </article>
                     <article id="svc-newborn" class="service-card animate-on-scroll" data-delay="0.45">
-                        <div class="service-icon">🍼</div>
+                        <div class="service-icon" aria-hidden="true">🍼</div>
                         <h3>Newborn Photography</h3>
                         <p>Safe and adorable newborn sessions with natural props.</p>
                     </article>
                 </div>
 
-                <!-- Pricing -->
-                <div style="margin-top:50px; background:#fff; border-radius:24px; padding:32px 28px; box-shadow:0 6px 24px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.03);">
+                <!-- ===== PRICING ===== -->
+                <div id="pricing" style="margin-top:50px; background:#fff; border-radius:24px; padding:32px 28px; box-shadow:0 6px 24px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.03);">
                     <h3 style="text-align:center; font-size:1.4rem; margin-bottom:20px; color:#1e1a1a;">📋 Quick Pricing Guide</h3>
                     <div style="overflow-x:auto;">
                         <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
@@ -1476,9 +1579,9 @@
                             <tbody>
                                 <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Wedding (Full Day)</td><td style="padding:12px 16px; color:#4a4242;">10+ hrs · 2 photographers</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹45,000</td></tr>
                                 <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Wedding (Half Day)</td><td style="padding:12px 16px; color:#4a4242;">5 hrs · 1 photographer</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹25,000</td></tr>
-                                <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Pre-Wedding Shoot</td><td style="padding:12px 16px; color:#4a4242;">2-3 hrs · 1 location</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹15,000</td></tr>
+                                <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Pre-Wedding Shoot</td><td style="padding:12px 16px; color:#4a4242;">2–3 hrs · 1 location</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹15,000</td></tr>
                                 <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Maternity / Baby Shower</td><td style="padding:12px 16px; color:#4a4242;">2 hrs · studio or home</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹12,000</td></tr>
-                                <tr><td style="padding:12px 16px; font-weight:500;">Newborn Session</td><td style="padding:12px 16px; color:#4a4242;">2-3 hrs · in-home</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹10,000</td></tr>
+                                <tr><td style="padding:12px 16px; font-weight:500;">Newborn Session</td><td style="padding:12px 16px; color:#4a4242;">2–3 hrs · in-home</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹10,000</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -1493,7 +1596,7 @@
                 <div class="section-header">
                     <span class="section-subtitle">Complete List</span>
                     <h2 id="all-services-heading" class="section-title">All Photography Services We Offer</h2>
-                    <p class="section-description">From weddings to product shoots – every service you need under one roof.</p>
+                    <p class="section-description">From weddings to product shoots — every service you need under one roof.</p>
                 </div>
                 <div class="all-services-grid">
                     <div class="service-item"><a href="#svc-wedding">Wedding Photographers</a></div>
@@ -1502,7 +1605,7 @@
                     <div class="service-item"><a href="#svc-maternity">Baby Shower Photographers</a></div>
                     <div class="service-item"><a href="#svc-event">Events Photographers</a></div>
                     <div class="service-item"><a href="#svc-portfolio">Portfolio Shoot</a></div>
-                    <div class="service-item"><a href="#svc-event">Product E‑Commerce Photographers</a></div>
+                    <div class="service-item"><a href="#svc-event">Product E-Commerce Photographers</a></div>
                     <div class="service-item"><a href="#svc-event">Birthday Photographers</a></div>
                     <div class="service-item"><a href="#svc-newborn">Newborn Photography</a></div>
                     <div class="service-item"><a href="#svc-pre-wedding">Engagement Photographers</a></div>
@@ -1548,7 +1651,7 @@
             </div>
         </section>
 
-        <!-- ===== AREAS WE SERVE (NEW — location landing anchors) ===== -->
+        <!-- ===== AREAS WE SERVE ===== -->
         <section id="areas" class="areas-section" aria-labelledby="areas-heading">
             <div class="container">
                 <div class="section-header">
@@ -1582,56 +1685,38 @@
                 </div>
                 <div class="gallery-grid">
                     <div class="gallery-item animate-on-scroll">
-                        <picture>
-                            <source srcset="assets/images/wedding-1.jpg" type="image/webp" />
-                            <img src="assets/images/wedding-1.jpg" alt="Candid wedding photography in Banashankari, Bangalore capturing South Indian wedding rituals" loading="lazy" width="400" height="300" />
-                        </picture>
-                        <button class="gallery-btn" data-img="assets/images/wedding-1.jpg" data-alt="Candid wedding photography in Banashankari, Bangalore"><span class="sr-only">View wedding photo</span></button>
-                        <div class="gallery-overlay"><span>Wedding</span></div>
+                        <img src="assets/images/wedding-1.jpg" alt="Candid wedding photography in Banashankari, Bangalore capturing South Indian wedding rituals" loading="lazy" width="400" height="300" decoding="async" />
+                        <button class="gallery-btn" type="button" data-img="assets/images/wedding-1.jpg" data-alt="Candid wedding photography in Banashankari, Bangalore"><span class="sr-only">View wedding photo</span></button>
+                        <div class="gallery-overlay" aria-hidden="true"><span>Wedding</span></div>
                     </div>
                     <div class="gallery-item animate-on-scroll">
-                        <picture>
-                            <source srcset="assets/images/pre-wedding.jpg" type="image/webp" />
-                            <img src="assets/images/pre-wedding.jpg" alt="Pre-wedding photoshoot in Banashankari, Bangalore for couple at outdoor location" loading="lazy" width="400" height="300" />
-                        </picture>
-                        <button class="gallery-btn" data-img="assets/images/pre-wedding.jpg" data-alt="Pre-wedding photoshoot in Bangalore"><span class="sr-only">View pre-wedding photo</span></button>
-                        <div class="gallery-overlay"><span>Pre-Wedding</span></div>
+                        <img src="assets/images/pre-wedding.jpg" alt="Pre-wedding photoshoot in Banashankari, Bangalore for couple at outdoor location" loading="lazy" width="400" height="300" decoding="async" />
+                        <button class="gallery-btn" type="button" data-img="assets/images/pre-wedding.jpg" data-alt="Pre-wedding photoshoot in Bangalore"><span class="sr-only">View pre-wedding photo</span></button>
+                        <div class="gallery-overlay" aria-hidden="true"><span>Pre-Wedding</span></div>
                     </div>
                     <div class="gallery-item animate-on-scroll">
-                        <picture>
-                            <source srcset="assets/images/event.jpg" type="image/webp" />
-                            <img src="assets/images/event.jpg" alt="Event photography in Banashankari, Bangalore capturing candid guest moments" loading="lazy" width="400" height="300" />
-                        </picture>
-                        <button class="gallery-btn" data-img="assets/images/event.jpg" data-alt="Event photography in Bangalore"><span class="sr-only">View event photo</span></button>
-                        <div class="gallery-overlay"><span>Events</span></div>
+                        <img src="assets/images/event.jpg" alt="Event photography in Banashankari, Bangalore capturing candid guest moments" loading="lazy" width="400" height="300" decoding="async" />
+                        <button class="gallery-btn" type="button" data-img="assets/images/event.jpg" data-alt="Event photography in Bangalore"><span class="sr-only">View event photo</span></button>
+                        <div class="gallery-overlay" aria-hidden="true"><span>Events</span></div>
                     </div>
                     <div class="gallery-item animate-on-scroll">
-                        <picture>
-                            <source srcset="assets/images/baby-shower.jpg" type="image/webp" />
-                            <img src="assets/images/baby-shower.jpg" alt="Maternity and baby shower photography in Banashankari, Bengaluru" loading="lazy" width="400" height="300" />
-                        </picture>
-                        <button class="gallery-btn" data-img="assets/images/baby-shower.jpg" data-alt="Maternity and baby shower photography"><span class="sr-only">View baby shower photo</span></button>
-                        <div class="gallery-overlay"><span>Baby Shower</span></div>
+                        <img src="assets/images/baby-shower.jpg" alt="Maternity and baby shower photography in Banashankari, Bengaluru" loading="lazy" width="400" height="300" decoding="async" />
+                        <button class="gallery-btn" type="button" data-img="assets/images/baby-shower.jpg" data-alt="Maternity and baby shower photography"><span class="sr-only">View baby shower photo</span></button>
+                        <div class="gallery-overlay" aria-hidden="true"><span>Baby Shower</span></div>
                     </div>
                     <div class="gallery-item animate-on-scroll">
-                        <picture>
-                            <source srcset="assets/images/portfolio.jpg" type="image/webp" />
-                            <img src="assets/images/portfolio.jpg" alt="Portfolio photography in Bengaluru for professionals and models" loading="lazy" width="400" height="300" />
-                        </picture>
-                        <button class="gallery-btn" data-img="assets/images/portfolio.jpg" data-alt="Portfolio photography in Bengaluru"><span class="sr-only">View portfolio photo</span></button>
-                        <div class="gallery-overlay"><span>Portfolio</span></div>
+                        <img src="assets/images/portfolio.jpg" alt="Portfolio photography in Bengaluru for professionals and models" loading="lazy" width="400" height="300" decoding="async" />
+                        <button class="gallery-btn" type="button" data-img="assets/images/portfolio.jpg" data-alt="Portfolio photography in Bengaluru"><span class="sr-only">View portfolio photo</span></button>
+                        <div class="gallery-overlay" aria-hidden="true"><span>Portfolio</span></div>
                     </div>
                     <div class="gallery-item animate-on-scroll">
-                        <picture>
-                            <source srcset="assets/images/placeholder.jpg" type="image/webp" />
-                            <img src="assets/images/placeholder.jpg" alt="Candid family photography in Bengaluru capturing natural smiles" loading="lazy" width="400" height="300" />
-                        </picture>
-                        <button class="gallery-btn" data-img="assets/images/placeholder.jpg" data-alt="Candid family photography"><span class="sr-only">View family photo</span></button>
-                        <div class="gallery-overlay"><span>Candid Moments</span></div>
+                        <img src="assets/images/placeholder.jpg" alt="Candid family photography in Bengaluru capturing natural smiles" loading="lazy" width="400" height="300" decoding="async" />
+                        <button class="gallery-btn" type="button" data-img="assets/images/placeholder.jpg" data-alt="Candid family photography"><span class="sr-only">View family photo</span></button>
+                        <div class="gallery-overlay" aria-hidden="true"><span>Candid Moments</span></div>
                     </div>
                 </div>
                 <div class="gallery-portfolio-link animate-on-scroll">
-                    <a href="https://karthikstories.my.canva.site/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-weight:600;">🖼️ View Full Portfolio on Canva</a>
+                    <a href="https://karthikstories.my.canva.site/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-weight:600;">🖼️ View Full Portfolio</a>
                     <p style="margin-top:10px; font-size:0.85rem; color:#7a7272;">Explore more of our work — weddings, maternity, events &amp; more</p>
                 </div>
             </div>
@@ -1645,18 +1730,18 @@
                     <h2 id="testimonials-heading" class="section-title">What Our Clients Say</h2>
                 </div>
                 <div class="testimonials-wrapper">
-                    <button class="testimonial-scroll-btn" id="testimonialLeftBtn" aria-label="Scroll testimonials left">‹</button>
+                    <button class="testimonial-scroll-btn" id="testimonialLeftBtn" type="button" aria-label="Scroll testimonials left">‹</button>
                     <div class="testimonials-grid" id="testimonialsGrid">
-                        <div class="testimonial-card"><div class="testimonial-stars" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"Our occasion has been manifested ecstatically. It's not just an album of grand pics, but a visual treat!"</p><div class="testimonial-author"><strong>Srinivasa Rao N</strong><span>House Warming Ceremony</span></div></div>
-                        <div class="testimonial-card"><div class="testimonial-stars" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"Karthik and his team are very friendly and flexible. Very happy with the final output of photos and video of my wedding."</p><div class="testimonial-author"><strong>Kiran Ravindra</strong><span>Wedding</span></div></div>
-                        <div class="testimonial-card"><div class="testimonial-stars" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"We are very happy we booked Karthik for my baby shower. For sure you are our lifetime family photographer!"</p><div class="testimonial-author"><strong>Swathi Likith</strong><span>Baby Shower</span></div></div>
-                        <div class="testimonial-card"><div class="testimonial-stars" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"We contacted Story and Smiles for a family function. The flexibility was amazing—he stayed and shot the entire event."</p><div class="testimonial-author"><strong>Lokesh H</strong><span>Family Function</span></div></div>
-                        <div class="testimonial-card"><div class="testimonial-stars" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"Photos in the album are so stunning and beautiful. Wedding video quality is exceptional."</p><div class="testimonial-author"><strong>Vasantha Priya</strong><span>Wedding</span></div></div>
-                        <div class="testimonial-card"><div class="testimonial-stars" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"Karthik patiently captured pre-birthday and birthday event photoshoots. The quality of the album and photos were amazing!"</p><div class="testimonial-author"><strong>Sateesh Patil</strong><span>Birthday Photography</span></div></div>
-                        <div class="testimonial-card"><div class="testimonial-stars" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"Karthik is incredibly talented. Our pre-wedding photos looked like they belonged in a magazine."</p><div class="testimonial-author"><strong>Ananya &amp; Vikram</strong><span>Pre-Wedding Shoot</span></div></div>
-                        <div class="testimonial-card"><div class="testimonial-stars" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"The newborn session was so gentle and safe. Karthik captured our little one's first days perfectly."</p><div class="testimonial-author"><strong>Priya &amp; Ravi</strong><span>Newborn Photography</span></div></div>
+                        <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"Our occasion has been manifested ecstatically. It's not just an album of grand pics, but a visual treat!"</p><div class="testimonial-author"><strong>Srinivasa Rao N</strong><span>House Warming Ceremony</span></div></div>
+                        <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"Karthik and his team are very friendly and flexible. Very happy with the final output of photos and video of my wedding."</p><div class="testimonial-author"><strong>Kiran Ravindra</strong><span>Wedding</span></div></div>
+                        <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"We are very happy we booked Karthik for my baby shower. For sure you are our lifetime family photographer!"</p><div class="testimonial-author"><strong>Swathi Likith</strong><span>Baby Shower</span></div></div>
+                        <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"We contacted Story and Smiles for a family function. The flexibility was amazing—he stayed and shot the entire event."</p><div class="testimonial-author"><strong>Lokesh H</strong><span>Family Function</span></div></div>
+                        <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"Photos in the album are so stunning and beautiful. Wedding video quality is exceptional."</p><div class="testimonial-author"><strong>Vasantha Priya</strong><span>Wedding</span></div></div>
+                        <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"Karthik patiently captured pre-birthday and birthday event photoshoots. The quality of the album and photos were amazing!"</p><div class="testimonial-author"><strong>Sateesh Patil</strong><span>Birthday Photography</span></div></div>
+                        <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"Karthik is incredibly talented. Our pre-wedding photos looked like they belonged in a magazine."</p><div class="testimonial-author"><strong>Ananya &amp; Vikram</strong><span>Pre-Wedding Shoot</span></div></div>
+                        <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">★★★★★</div><p class="testimonial-text">"The newborn session was so gentle and safe. Karthik captured our little one's first days perfectly."</p><div class="testimonial-author"><strong>Priya &amp; Ravi</strong><span>Newborn Photography</span></div></div>
                     </div>
-                    <button class="testimonial-scroll-btn" id="testimonialRightBtn" aria-label="Scroll testimonials right">›</button>
+                    <button class="testimonial-scroll-btn" id="testimonialRightBtn" type="button" aria-label="Scroll testimonials right">›</button>
                 </div>
             </div>
         </section>
@@ -1700,7 +1785,7 @@
             </div>
         </section>
 
-        <!-- ===== CONTACT (FULLY FIXED FORM) ===== -->
+        <!-- ===== CONTACT ===== -->
         <section id="contact" class="contact-section" aria-labelledby="contact-heading">
             <div class="container">
                 <div class="section-header">
@@ -1716,7 +1801,6 @@
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#e07a5f" stroke-width="2"/><path d="M22 6l-10 7L2 6" stroke="#e07a5f" stroke-width="2"/></svg>
                                 <a href="mailto:info.storyandsmiles@gmail.com">info.storyandsmiles@gmail.com</a>
                             </div>
-                            <h3>📍 Office Address</h3>
                             <div class="contact-item">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z" stroke="#e07a5f" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="#e07a5f" stroke-width="2"/></svg>
                                 <span>2A, 5th main, 3rd Cross Rd, near Chikkalasandra, Banashankari, Bengaluru, Karnataka 560061</span>
@@ -1732,13 +1816,17 @@
                         </div>
 
                         <div class="gmb-map-container">
-                            <iframe src="https://maps.google.com/maps?q=Story+And+Smiles+Photography+2A+5th+main+3rd+Cross+Rd+near+Chikkalasandra+Banashankari+Bengaluru&output=embed&z=15" width="100%" height="260" style="border:0; border-radius:20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Story and Smiles Photography location map"></iframe>
+                            <iframe src="https://maps.google.com/maps?q=Story+And+Smiles+Photography+2A+5th+main+3rd+Cross+Rd+near+Chikkalasandra+Banashankari+Bengaluru&output=embed&z=15"
+                                    width="100%" height="260" style="border:0; border-radius:20px;"
+                                    allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Story and Smiles Photography location map"></iframe>
                         </div>
 
                         <div class="gmb-review-badge">
                             <div class="gmb-review-inner">
                                 <div class="gmb-rating-stars">
-                                    <span class="stars" aria-label="5 stars">★★★★★</span>
+                                    <span class="stars" role="img" aria-label="5 stars">★★★★★</span>
                                     <span class="rating-num">5.0 (92 reviews)</span>
                                 </div>
                                 <div class="gmb-review-text">⭐ Rated one of the best wedding photographers in Bangalore</div>
@@ -1747,9 +1835,12 @@
                         </div>
                     </div>
 
-                    <!-- ===== FIXED FORM: labels, honeypot, thank-you, states ===== -->
-                    <form class="contact-form animate-on-scroll" id="contactForm" action="https://formspree.io/f/mljeepvo" method="POST" aria-label="Book a session form" novalidate>
-                        <input type="hidden" name="_next" value="https://story-and-smiles-photography.vercel.app/thank-you.html" />
+                    <!-- ===== CONTACT FORM (AJAX + validation + honeypot) ===== -->
+                    <form class="contact-form animate-on-scroll"
+                          id="contactForm"
+                          action="https://formspree.io/f/mljeepvo"
+                          method="POST"
+                          aria-label="Book a session form">
                         <input type="hidden" name="_subject" value="New booking enquiry from StoryAndSmiles.com" />
                         <input type="hidden" name="page_url" id="pageUrlField" />
 
@@ -1764,16 +1855,14 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="cf-name">Your Full Name *</label>
-                                <input type="text" id="cf-name" name="name" placeholder="e.g. Priya Sharma" required autocomplete="name" aria-describedby="cf-name-err" />
-                                <span id="cf-name-err" class="sr-only">Please enter your full name</span>
+                                <input type="text" id="cf-name" name="name" placeholder="e.g. Priya Sharma" required autocomplete="name" minlength="2" />
                             </div>
                             <div class="form-group">
                                 <label for="cf-phone">Mobile Number *</label>
                                 <div class="input-with-prefix">
                                     <span aria-hidden="true">+91</span>
-                                    <input type="tel" id="cf-phone" name="phone" placeholder="98XXXXXXXX" required autocomplete="tel" pattern="[0-9]{10}" aria-describedby="cf-phone-err" />
+                                    <input type="tel" id="cf-phone" name="phone" placeholder="98XXXXXXXX" required autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" />
                                 </div>
-                                <span id="cf-phone-err" class="sr-only">Please enter a valid 10-digit mobile number</span>
                             </div>
                         </div>
                         <div class="form-group">
@@ -1782,7 +1871,7 @@
                         </div>
                         <div class="form-group">
                             <label for="cf-req">Tell us about your event *</label>
-                            <textarea id="cf-req" name="requirements" placeholder="Date, venue, number of guests, special requests…" rows="3" required></textarea>
+                            <textarea id="cf-req" name="requirements" placeholder="Date, venue, number of guests, special requests…" rows="3" required minlength="10"></textarea>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
@@ -1797,7 +1886,7 @@
                                     <option value="portfolio">Portfolio Photography</option>
                                     <option value="product">Product Photography</option>
                                     <option value="videography">Candid Videography</option>
-                                    <option value="album">Album Design & Printing</option>
+                                    <option value="album">Album Design &amp; Printing</option>
                                     <option value="other">Other</option>
                                 </select>
                             </div>
@@ -1834,15 +1923,15 @@
                 <div class="section-header">
                     <span class="section-subtitle">Our Office</span>
                     <h2 id="studio-heading" style="font-size:2.2rem; font-weight:700; color:#1e1a1a;">Visit Our Office in Banashankari</h2>
-                    <p class="section-description">We offer Photoshoots, editing, album designing, printing, and more at our office near Chikkalasandra.</p>
+                    <p class="section-description">We offer photoshoots, editing, album designing, printing, and more at our office near Chikkalasandra.</p>
                     <div style="margin-top:20px;">
-                        <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I%20want%20to%20visit%20your%20studio." target="_blank" rel="noopener noreferrer" class="btn btn-primary track-whatsapp" data-cta="studio_visit">For Booking Visit Our Office</a>
+                        <a href="https://wa.me/919845808890?text=Hi%20Story%20and%20Smiles!%20I%20want%20to%20visit%20your%20studio." target="_blank" rel="noopener noreferrer" class="btn btn-primary track-whatsapp" data-cta="studio_visit">For Booking, Visit Our Office</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== FAQ ===== -->
+        <!-- ===== FAQ (15 questions — synced with FAQPage schema) ===== -->
         <section id="faq" class="faq-section" aria-labelledby="faq-heading">
             <div class="container">
                 <div class="section-header">
@@ -1850,23 +1939,73 @@
                     <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
                 </div>
                 <div class="faq-accordion">
-                    <details class="faq-item" open><summary>Are you based in Banashankari? Do you travel across Bengaluru?</summary><div class="faq-answer"><p>Yes, we are based in Banashankari and happily travel across Bengaluru and nearby areas.</p></div></details>
-                    <details class="faq-item"><summary>How far in advance should I book?</summary><div class="faq-answer"><p>For popular wedding dates, we recommend booking at least 3–6 months in advance.</p></div></details>
-                    <details class="faq-item"><summary>What wedding photography packages do you offer?</summary><div class="faq-answer"><p>We offer custom packages for full-day and half-day wedding coverage, pre-wedding shoots, mehendi, sangeet and reception.</p></div></details>
-                    <details class="faq-item"><summary>When is the best time for a maternity shoot?</summary><div class="faq-answer"><p>The ideal time is between 28–34 weeks of pregnancy.</p></div></details>
-                    <details class="faq-item"><summary>How do you ensure safety during newborn shoots?</summary><div class="faq-answer"><p>Newborn safety is our top priority. We keep the room warm, use soft props, and follow baby-led posing.</p></div></details>
-                    <details class="faq-item"><summary>What are your starting prices?</summary><div class="faq-answer"><p>Pricing depends on hours, location and services. We share customised quotes for each event.</p></div></details>
-                    <details class="faq-item"><summary>How long until we receive our photos?</summary><div class="faq-answer"><p>For weddings, we deliver curated, edited photos within a few weeks.</p></div></details>
-                    <details class="faq-item"><summary>Do you offer videography as well?</summary><div class="faq-answer"><p>Yes, we offer cinematic wedding videography alongside photography.</p></div></details>
-                    <details class="faq-item"><summary>Do you cover destination weddings?</summary><div class="faq-answer"><p>Yes, we've covered events in Goa, Kerala, Tamil Nadu, and beyond.</p></div></details>
-                    <details class="faq-item"><summary>How do we book you?</summary><div class="faq-answer"><p>Reach out via our contact form, WhatsApp, or phone.</p></div></details>
+                    <details class="faq-item" open>
+                        <summary>Are you based in Banashankari? Do you travel across Bengaluru?</summary>
+                        <div class="faq-answer"><p>Yes, we are based in Banashankari and happily travel across Bengaluru and nearby areas for weddings, maternity, newborn and family events.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How far in advance should I book?</summary>
+                        <div class="faq-answer"><p>For popular wedding dates, we recommend booking at least 3–6 months in advance. Smaller events, maternity and baby shoots can often be scheduled 4–6 weeks ahead.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What wedding photography packages do you offer?</summary>
+                        <div class="faq-answer"><p>We offer custom packages for full-day and half-day wedding coverage, pre-wedding shoots, mehendi, sangeet and reception.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>When is the best time for a maternity shoot?</summary>
+                        <div class="faq-answer"><p>The ideal time is between 28–34 weeks of pregnancy, when the bump is clearly visible and you're still comfortable.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How do you ensure safety during newborn shoots?</summary>
+                        <div class="faq-answer"><p>Newborn safety is our top priority. We keep the room warm, use soft props, follow baby-led posing, and never force positions.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What are your starting prices?</summary>
+                        <div class="faq-answer"><p>Full-day wedding coverage starts at ₹45,000, half-day at ₹25,000, pre-wedding shoots at ₹15,000, maternity and baby shower sessions at ₹12,000, and newborn sessions at ₹10,000. Final quotes depend on location, duration and add-ons.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How long until we receive our photos?</summary>
+                        <div class="faq-answer"><p>For weddings, we deliver curated, edited photos within 3–4 weeks. Maternity, newborn and baby shoots are usually delivered sooner.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Do you offer videography as well?</summary>
+                        <div class="faq-answer"><p>Yes, we offer cinematic wedding videography alongside photography. Ask us about our photo + video combo packages.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can we choose the location for our pre-wedding shoot?</summary>
+                        <div class="faq-answer"><p>Absolutely! We work with you to select the perfect location in or around Bangalore.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Do you provide albums and prints?</summary>
+                        <div class="faq-answer"><p>Yes, we offer premium handcrafted albums, prints, and canvas frames as add-ons.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What happens if it rains on the wedding day?</summary>
+                        <div class="faq-answer"><p>We have backup plans for indoor and covered outdoor spaces, and carry professional lighting to adapt to any weather.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Do you cover destination weddings?</summary>
+                        <div class="faq-answer"><p>Yes, we love destination weddings! We've covered events in Goa, Kerala, Tamil Nadu, and beyond.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How many photos do we get?</summary>
+                        <div class="faq-answer"><p>For a full-day wedding, we typically deliver 600–1000+ high-resolution edited images.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can we request specific shots or poses?</summary>
+                        <div class="faq-answer"><p>Of course! We create a shot list with you before the event and blend your must-have shots with our candid style.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>How do we book you?</summary>
+                        <div class="faq-answer"><p>Simply reach out via our contact form, WhatsApp, or phone at <a href="tel:+919845808890" class="track-call">+91-98458 08890</a>. We'll confirm your date with a booking advance.</p></div>
+                    </details>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
@@ -1881,13 +2020,13 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#all-services">All Services</a></li>
                         <li><a href="#areas">Areas We Serve</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
                         <li><a href="#blog">Blog</a></li>
                         <li><a href="#faq">FAQs</a></li>
-                        <li><a href="https://karthikstories.my.canva.site/" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -1920,15 +2059,14 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Story and Smiles Photography. All rights reserved. | <strong>Wedding Photographers Bangalore</strong></p>
+                <p>&copy; <span id="footerYear">2026</span> Story and Smiles Photography. All rights reserved. | <strong>Wedding Photographers Bangalore</strong></p>
                 <p style="font-size:0.75rem; color:rgba(255,255,255,0.3); margin-top:4px;">Last Updated: September 21, 2026</p>
 
-                <!-- LEGAL LINKS -->
                 <div class="footer-legal">
-                    <button class="legal-trigger" data-modal="privacyModal">Privacy Policy</button>
-                    <button class="legal-trigger" data-modal="termsModal">Terms of Service</button>
-                    <button class="legal-trigger" data-modal="refundModal">Refund Policy</button>
-                    <button class="legal-trigger" data-modal="cookieModal">Cookie Policy</button>
+                    <button type="button" class="legal-trigger" data-modal="privacyModal">Privacy Policy</button>
+                    <button type="button" class="legal-trigger" data-modal="termsModal">Terms of Service</button>
+                    <button type="button" class="legal-trigger" data-modal="refundModal">Refund Policy</button>
+                    <button type="button" class="legal-trigger" data-modal="cookieModal">Cookie Policy</button>
                 </div>
 
                 <div class="credit-wrapper">
@@ -1942,7 +2080,7 @@
     <!-- ===== LEGAL MODALS ===== -->
     <div class="legal-modal" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
         <div class="legal-modal-inner">
-            <button class="legal-modal-close" aria-label="Close">✕</button>
+            <button type="button" class="legal-modal-close" aria-label="Close">✕</button>
             <h2 id="privacyTitle">Privacy Policy</h2>
             <p>Story and Smiles Photography respects your privacy. We collect only the information you voluntarily provide (name, phone, email, event details) to respond to your enquiry.</p>
             <h3>Data We Collect</h3>
@@ -1956,7 +2094,7 @@
 
     <div class="legal-modal" id="termsModal" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
         <div class="legal-modal-inner">
-            <button class="legal-modal-close" aria-label="Close">✕</button>
+            <button type="button" class="legal-modal-close" aria-label="Close">✕</button>
             <h2 id="termsTitle">Terms of Service</h2>
             <p>By booking Story and Smiles Photography, you agree to the following terms.</p>
             <h3>Booking</h3>
@@ -1970,7 +2108,7 @@
 
     <div class="legal-modal" id="refundModal" role="dialog" aria-modal="true" aria-labelledby="refundTitle">
         <div class="legal-modal-inner">
-            <button class="legal-modal-close" aria-label="Close">✕</button>
+            <button type="button" class="legal-modal-close" aria-label="Close">✕</button>
             <h2 id="refundTitle">Refund &amp; Cancellation Policy</h2>
             <h3>Cancellations</h3>
             <p>Cancellations made 30+ days before the event receive a 50% refund of the advance. Within 30 days, the advance is non-refundable but may be transferred once to a new date.</p>
@@ -1983,7 +2121,7 @@
 
     <div class="legal-modal" id="cookieModal" role="dialog" aria-modal="true" aria-labelledby="cookieTitle">
         <div class="legal-modal-inner">
-            <button class="legal-modal-close" aria-label="Close">✕</button>
+            <button type="button" class="legal-modal-close" aria-label="Close">✕</button>
             <h2 id="cookieTitle">Cookie Policy</h2>
             <p>We use cookies and similar technologies for analytics, advertising, and site functionality.</p>
             <h3>Cookies We Use</h3>
@@ -1996,17 +2134,17 @@
     <!-- ===== COOKIE CONSENT BANNER ===== -->
     <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
         <div class="cookie-banner-inner">
-            <p>We use cookies to improve your experience and analyse traffic. By clicking "Accept", you consent to our <button class="legal-trigger" data-modal="cookieModal" style="color:#f4a261; text-decoration:underline; display:inline;">Cookie Policy</button>.</p>
+            <p>We use cookies to improve your experience and analyse traffic. By clicking "Accept", you consent to our <button type="button" class="legal-trigger" data-modal="cookieModal" style="color:#f4a261; text-decoration:underline; display:inline;">Cookie Policy</button>.</p>
             <div class="cookie-actions">
-                <button class="cookie-btn cookie-reject" id="cookieReject">Reject</button>
-                <button class="cookie-btn cookie-accept" id="cookieAccept">Accept</button>
+                <button type="button" class="cookie-btn cookie-reject" id="cookieReject">Reject</button>
+                <button type="button" class="cookie-btn cookie-accept" id="cookieAccept">Accept</button>
             </div>
         </div>
     </div>
 
     <!-- ===== LIGHTBOX ===== -->
     <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
-        <button class="lightbox-close" id="lightboxClose" aria-label="Close image">✕</button>
+        <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close image">✕</button>
         <img id="lightboxImg" src="" alt="" />
     </div>
 
@@ -2014,13 +2152,13 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <!-- ===== BACK TO TOP ===== -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 15l-6-6-6 6" /></svg>
     </button>
 
     <!-- ===== WHATSAPP FLOAT ===== -->
     <div class="whatsapp-float" id="whatsappFloat">
-        <button class="whatsapp-main-btn" id="whatsappMainBtn" aria-label="Chat on WhatsApp">
+        <button type="button" class="whatsapp-main-btn" id="whatsappMainBtn" aria-label="Chat on WhatsApp" aria-expanded="false" aria-controls="whatsappPopup">
             <svg class="whatsapp-icon" width="28" height="28" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
             <span class="whatsapp-btn-text">Chat with us</span>
         </button>
@@ -2028,10 +2166,10 @@
             <div class="whatsapp-popup-header">
                 <div class="whatsapp-popup-avatar">
                     <img src="assets/images/about-us.jpg" alt="" onerror="this.src='assets/images/logo.png'" />
-                    <div class="whatsapp-online-dot"></div>
+                    <div class="whatsapp-online-dot" aria-hidden="true"></div>
                 </div>
                 <div class="whatsapp-popup-info"><h4>Story and Smiles 📸</h4><p>Typically replies within 2 hours</p></div>
-                <button class="whatsapp-popup-close" id="whatsappPopupClose" aria-label="Close chat">✕</button>
+                <button type="button" class="whatsapp-popup-close" id="whatsappPopupClose" aria-label="Close chat">✕</button>
             </div>
             <div class="whatsapp-popup-body">
                 <div class="whatsapp-message-preview">
@@ -2039,11 +2177,11 @@
                     <p style="font-size:13px; color:#666;">Select a service to get started:</p>
                 </div>
                 <div class="whatsapp-quick-options">
-                    <a href="https://wa.me/919845808890?text=Hi!%20I'm%20interested%20in%20Wedding%20Photography." target="_blank" rel="noopener noreferrer" class="whatsapp-option track-whatsapp" data-cta="popup_wedding"><span class="whatsapp-option-icon">💍</span> Wedding Photography</a>
-                    <a href="https://wa.me/919845808890?text=Hi!%20I'd%20like%20to%20book%20a%20Pre-Wedding%20Photoshoot." target="_blank" rel="noopener noreferrer" class="whatsapp-option track-whatsapp" data-cta="popup_prewedding"><span class="whatsapp-option-icon">💑</span> Pre-Wedding Shoot</a>
-                    <a href="https://wa.me/919845808890?text=Hi!%20I%20need%20Event%20Photography." target="_blank" rel="noopener noreferrer" class="whatsapp-option track-whatsapp" data-cta="popup_event"><span class="whatsapp-option-icon">🎉</span> Event Photography</a>
-                    <a href="https://wa.me/919845808890?text=Hi!%20I'm%20interested%20in%20Maternity%20%26%20Baby%20Shower%20Photography." target="_blank" rel="noopener noreferrer" class="whatsapp-option track-whatsapp" data-cta="popup_maternity"><span class="whatsapp-option-icon">👶</span> Maternity &amp; Baby Shower</a>
-                    <a href="https://wa.me/919845808890?text=Hi!%20Please%20send%20your%20complete%20packages%20with%20pricing." target="_blank" rel="noopener noreferrer" class="whatsapp-option track-whatsapp" data-cta="popup_packages"><span class="whatsapp-option-icon">📋</span> Request Full Package</a>
+                    <a href="https://wa.me/919845808890?text=Hi!%20I'm%20interested%20in%20Wedding%20Photography." target="_blank" rel="noopener noreferrer" class="whatsapp-option track-whatsapp" data-cta="popup_wedding"><span class="whatsapp-option-icon" aria-hidden="true">💍</span> Wedding Photography</a>
+                    <a href="https://wa.me/919845808890?text=Hi!%20I'd%20like%20to%20book%20a%20Pre-Wedding%20Photoshoot." target="_blank" rel="noopener noreferrer" class="whatsapp-option track-whatsapp" data-cta="popup_prewedding"><span class="whatsapp-option-icon" aria-hidden="true">💑</span> Pre-Wedding Shoot</a>
+                    <a href="https://wa.me/919845808890?text=Hi!%20I%20need%20Event%20Photography." target="_blank" rel="noopener noreferrer" class="whatsapp-option track-whatsapp" data-cta="popup_event"><span class="whatsapp-option-icon" aria-hidden="true">🎉</span> Event Photography</a>
+                    <a href="https://wa.me/919845808890?text=Hi!%20I'm%20interested%20in%20Maternity%20%26%20Baby%20Shower%20Photography." target="_blank" rel="noopener noreferrer" class="whatsapp-option track-whatsapp" data-cta="popup_maternity"><span class="whatsapp-option-icon" aria-hidden="true">👶</span> Maternity &amp; Baby Shower</a>
+                    <a href="https://wa.me/919845808890?text=Hi!%20Please%20send%20your%20complete%20packages%20with%20pricing." target="_blank" rel="noopener noreferrer" class="whatsapp-option track-whatsapp" data-cta="popup_packages"><span class="whatsapp-option-icon" aria-hidden="true">📋</span> Request Full Package</a>
                 </div>
             </div>
             <div class="whatsapp-popup-footer">
@@ -2059,11 +2197,13 @@
     </div>
 
     <!-- ============================================================
-    SCRIPTS (all fixes applied)
+    SCRIPTS
     ============================================================ -->
     <script>
         (function() {
             'use strict';
+
+            var CONFIG = window.SMS_CONFIG || {};
 
             /* =======================================================
             1. COOKIE CONSENT + CONSENT MODE
@@ -2097,46 +2237,51 @@
             }
 
             var existingConsent = null;
-            try { existingConsent = localStorage.getItem(consentKey); } catch(e) {}
+            try { existingConsent = localStorage.getItem(consentKey); } catch (e) {}
+
             if (existingConsent === 'granted') {
                 grantConsent();
             } else if (existingConsent === 'denied') {
                 denyConsent();
             } else if (cookieBanner) {
-                setTimeout(function(){ cookieBanner.classList.add('visible'); }, 1500);
+                setTimeout(function () { cookieBanner.classList.add('visible'); }, 1500);
             }
 
-            if (cookieAccept) cookieAccept.addEventListener('click', function() {
-                grantConsent();
-                try { localStorage.setItem(consentKey, 'granted'); } catch(e) {}
-                cookieBanner.classList.remove('visible');
-            });
-            if (cookieReject) cookieReject.addEventListener('click', function() {
-                denyConsent();
-                try { localStorage.setItem(consentKey, 'denied'); } catch(e) {}
-                cookieBanner.classList.remove('visible');
-            });
+            if (cookieAccept && cookieBanner) {
+                cookieAccept.addEventListener('click', function () {
+                    grantConsent();
+                    try { localStorage.setItem(consentKey, 'granted'); } catch (e) {}
+                    cookieBanner.classList.remove('visible');
+                });
+            }
+            if (cookieReject && cookieBanner) {
+                cookieReject.addEventListener('click', function () {
+                    denyConsent();
+                    try { localStorage.setItem(consentKey, 'denied'); } catch (e) {}
+                    cookieBanner.classList.remove('visible');
+                });
+            }
 
             /* =======================================================
-            2. CONVERSION TRACKING (GA4 + Meta)
+            2. CONVERSION TRACKING
             ======================================================= */
             function track(eventName, params) {
                 if (typeof gtag === 'function') gtag('event', eventName, params || {});
                 if (typeof fbq === 'function') fbq('trackCustom', eventName, params || {});
             }
 
-            document.querySelectorAll('.track-whatsapp').forEach(function(el) {
-                el.addEventListener('click', function() {
+            document.querySelectorAll('.track-whatsapp').forEach(function (el) {
+                el.addEventListener('click', function () {
                     track('whatsapp_click', { cta_location: this.dataset.cta || 'unknown' });
                 });
             });
-            document.querySelectorAll('.track-call').forEach(function(el) {
-                el.addEventListener('click', function() {
+            document.querySelectorAll('.track-call').forEach(function (el) {
+                el.addEventListener('click', function () {
                     track('call_click', { cta_location: 'phone' });
                 });
             });
-            document.querySelectorAll('.cta-book').forEach(function(el) {
-                el.addEventListener('click', function() {
+            document.querySelectorAll('.cta-book').forEach(function (el) {
+                el.addEventListener('click', function () {
                     track('book_now_click', { cta_location: 'nav_or_hero' });
                 });
             });
@@ -2148,19 +2293,28 @@
             var navMenu = document.getElementById('navMenu');
             var navLinks = document.querySelectorAll('.nav-link');
 
+            function closeMobileMenu() {
+                if (!hamburger || !navMenu) return;
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+
             if (hamburger && navMenu) {
-                hamburger.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                    this.setAttribute('aria-expanded', this.classList.contains('active'));
+                hamburger.addEventListener('click', function () {
+                    var isOpen = this.classList.toggle('active');
+                    navMenu.classList.toggle('active', isOpen);
+                    this.setAttribute('aria-expanded', String(isOpen));
+                    document.body.style.overflow = isOpen ? 'hidden' : '';
                 });
-                navLinks.forEach(function(link) {
-                    link.addEventListener('click', function() {
-                        hamburger.classList.remove('active');
-                        navMenu.classList.remove('active');
-                        hamburger.setAttribute('aria-expanded', 'false');
-                        navLinks.forEach(function(l) { l.classList.remove('active'); });
-                        this.classList.add('active');
+                navLinks.forEach(function (link) {
+                    link.addEventListener('click', function () {
+                        closeMobileMenu();
+                        navLinks.forEach(function (l) { l.classList.remove('active'); });
+                        if (this.getAttribute('href').charAt(0) === '#') {
+                            this.classList.add('active');
+                        }
                     });
                 });
             }
@@ -2170,79 +2324,90 @@
             ======================================================= */
             var navbar = document.getElementById('navbar');
             var backToTop = document.getElementById('backToTop');
-            window.addEventListener('scroll', function() {
+
+            window.addEventListener('scroll', function () {
                 var y = window.scrollY;
                 if (navbar) navbar.classList.toggle('scrolled', y > 60);
                 if (backToTop) backToTop.classList.toggle('visible', y > 400);
             }, { passive: true });
 
-            if (backToTop) backToTop.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
+            if (backToTop) {
+                backToTop.addEventListener('click', function () {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
 
             /* =======================================================
             5. COUNTERS
             ======================================================= */
             var counters = document.querySelectorAll('.counter');
             var counterAnimated = false;
+
             function animateCounters() {
                 if (counterAnimated) return;
-                counters.forEach(function(counter) {
-                    var target = parseInt(counter.getAttribute('data-target'));
+                counterAnimated = true;
+                counters.forEach(function (counter) {
+                    var target = parseInt(counter.getAttribute('data-target'), 10);
                     if (!target || isNaN(target)) return;
                     var current = 0;
-                    var inc = Math.ceil(target / 60);
-                    var t = setInterval(function() {
+                    var inc = Math.max(1, Math.ceil(target / 60));
+                    var timer = setInterval(function () {
                         current += inc;
-                        if (current >= target) { current = target; clearInterval(t); }
+                        if (current >= target) { current = target; clearInterval(timer); }
                         counter.textContent = current;
                     }, 20);
                 });
-                counterAnimated = true;
             }
+
             var heroStats = document.querySelector('.hero-stats');
-            if (heroStats) {
-                var so = new IntersectionObserver(function(entries) {
-                    entries.forEach(function(e) {
+            if (heroStats && 'IntersectionObserver' in window) {
+                var so = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
                         if (e.isIntersecting) { animateCounters(); so.unobserve(e.target); }
                     });
                 }, { threshold: 0.3 });
                 so.observe(heroStats);
+            } else {
+                animateCounters();
             }
 
             /* =======================================================
             6. SCROLL ANIMATIONS
             ======================================================= */
             var animEls = document.querySelectorAll('.animate-on-scroll');
-            var animObs = new IntersectionObserver(function(entries) {
-                entries.forEach(function(e) {
-                    if (e.isIntersecting) {
-                        var delay = parseFloat(e.target.getAttribute('data-delay')) || 0;
-                        setTimeout(function(){ e.target.classList.add('visible'); }, delay * 1000);
-                        animObs.unobserve(e.target);
-                    }
-                });
-            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-            animEls.forEach(function(el) { animObs.observe(el); });
+            if ('IntersectionObserver' in window) {
+                var animObs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting) {
+                            var delay = parseFloat(e.target.getAttribute('data-delay')) || 0;
+                            setTimeout(function () { e.target.classList.add('visible'); }, delay * 1000);
+                            animObs.unobserve(e.target);
+                        }
+                    });
+                }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+                animEls.forEach(function (el) { animObs.observe(el); });
+            } else {
+                animEls.forEach(function (el) { el.classList.add('visible'); });
+            }
 
             /* =======================================================
-            7. SMOOTH SCROLL
+            7. SMOOTH SCROLL (with sticky-nav offset)
             ======================================================= */
-            document.querySelectorAll('a[href^="#"]').forEach(function(a) {
-                a.addEventListener('click', function(e) {
+            document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+                a.addEventListener('click', function (e) {
                     var id = this.getAttribute('href');
-                    if (id === '#' || id.length < 2) return;
-                    var t = document.querySelector(id);
-                    if (t) {
-                        e.preventDefault();
-                        var top = t.getBoundingClientRect().top + window.scrollY - 80;
-                        window.scrollTo({ top: top, behavior: 'smooth' });
-                    }
+                    if (!id || id === '#' || id.length < 2) return;
+                    var target = document.querySelector(id);
+                    if (!target) return;
+                    e.preventDefault();
+                    var top = target.getBoundingClientRect().top + window.scrollY - 80;
+                    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                    if (history.pushState) history.pushState(null, '', id);
                 });
             });
 
             /* =======================================================
-            8. WHATSAPP FLOAT — EXIT INTENT + SCROLL DEPTH
+            8. WHATSAPP FLOAT
             ======================================================= */
             var waMain = document.getElementById('whatsappMainBtn');
             var waPopup = document.getElementById('whatsappPopup');
@@ -2250,45 +2415,49 @@
             var waFloat = document.getElementById('whatsappFloat');
             var waShown = false;
 
+            function openWa() {
+                if (!waPopup) return;
+                waPopup.classList.add('open');
+                if (waMain) waMain.setAttribute('aria-expanded', 'true');
+            }
+            function closeWa() {
+                if (!waPopup) return;
+                waPopup.classList.remove('open');
+                if (waMain) waMain.setAttribute('aria-expanded', 'false');
+            }
             function toggleWa(e) {
                 if (e) { e.preventDefault(); e.stopPropagation(); }
-                if (waPopup) waPopup.classList.toggle('open');
+                if (!waPopup) return;
+                if (waPopup.classList.contains('open')) closeWa(); else openWa();
             }
-            function closeWa(e) {
-                if (e) e.stopPropagation();
-                if (waPopup) waPopup.classList.remove('open');
-            }
+
             if (waMain) waMain.addEventListener('click', toggleWa);
-            if (waClose) waClose.addEventListener('click', closeWa);
-            document.addEventListener('click', function(e) {
-                if (waFloat && !waFloat.contains(e.target)) closeWa(e);
+            if (waClose) waClose.addEventListener('click', function (e) { e.stopPropagation(); closeWa(); });
+            document.addEventListener('click', function (e) {
+                if (waFloat && !waFloat.contains(e.target)) closeWa();
             });
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape' && waPopup && waPopup.classList.contains('open')) closeWa(e);
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeWa();
             });
 
-            // Trigger 1: exit intent (desktop)
-            document.addEventListener('mouseout', function(e) {
+            // Exit intent (desktop)
+            document.addEventListener('mouseout', function (e) {
                 if (waShown) return;
                 if (e.clientY < 10 && !e.relatedTarget) {
-                    if (waPopup) waPopup.classList.add('open');
                     waShown = true;
-                    setTimeout(function() {
-                        if (waPopup && waPopup.classList.contains('open')) waPopup.classList.remove('open');
-                    }, 8000);
+                    openWa();
+                    setTimeout(closeWa, 8000);
                 }
             });
-            // Trigger 2: scroll depth 60% (mobile-friendly)
-            window.addEventListener('scroll', function() {
+            // Scroll depth 60%
+            window.addEventListener('scroll', function () {
                 if (waShown) return;
                 var doc = document.documentElement;
                 var pct = (window.scrollY + window.innerHeight) / doc.scrollHeight;
                 if (pct > 0.6) {
                     waShown = true;
-                    if (waPopup) waPopup.classList.add('open');
-                    setTimeout(function() {
-                        if (waPopup && waPopup.classList.contains('open')) waPopup.classList.remove('open');
-                    }, 7000);
+                    openWa();
+                    setTimeout(closeWa, 7000);
                 }
             }, { passive: true });
 
@@ -2300,27 +2469,27 @@
             var rb = document.getElementById('testimonialRightBtn');
             if (tg) {
                 if (lb && rb) {
-                    lb.addEventListener('click', function() { tg.scrollBy({ left: -340, behavior: 'smooth' }); });
-                    rb.addEventListener('click', function() { tg.scrollBy({ left: 340, behavior: 'smooth' }); });
+                    lb.addEventListener('click', function () { tg.scrollBy({ left: -340, behavior: 'smooth' }); });
+                    rb.addEventListener('click', function () { tg.scrollBy({ left: 340, behavior: 'smooth' }); });
                 }
-                var si, paused = false;
+                var si = null, paused = false;
                 function start() {
                     if (si) clearInterval(si);
-                    si = setInterval(function() {
+                    si = setInterval(function () {
                         if (paused) return;
                         var max = tg.scrollWidth - tg.clientWidth;
-                        var cur = tg.scrollLeft;
-                        if (cur + 340 >= max) tg.scrollTo({ left: 0, behavior: 'smooth' });
+                        if (max <= 0) return;
+                        if (tg.scrollLeft + 340 >= max - 5) tg.scrollTo({ left: 0, behavior: 'smooth' });
                         else tg.scrollBy({ left: 340, behavior: 'smooth' });
                     }, 4500);
                 }
-                tg.addEventListener('mouseenter', function() { paused = true; });
-                tg.addEventListener('mouseleave', function() { paused = false; });
-                tg.addEventListener('touchstart', function() { paused = true; }, { passive: true });
-                tg.addEventListener('touchend', function() { setTimeout(function(){ paused = false; }, 3000); });
+                tg.addEventListener('mouseenter', function () { paused = true; });
+                tg.addEventListener('mouseleave', function () { paused = false; });
+                tg.addEventListener('touchstart', function () { paused = true; }, { passive: true });
+                tg.addEventListener('touchend', function () { setTimeout(function () { paused = false; }, 3000); });
                 start();
-                document.addEventListener('visibilitychange', function() {
-                    if (document.hidden) clearInterval(si);
+                document.addEventListener('visibilitychange', function () {
+                    if (document.hidden) { if (si) clearInterval(si); }
                     else start();
                 });
             }
@@ -2331,114 +2500,217 @@
             var lightbox = document.getElementById('lightbox');
             var lightboxImg = document.getElementById('lightboxImg');
             var lightboxClose = document.getElementById('lightboxClose');
-            document.querySelectorAll('.gallery-btn').forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    var src = this.dataset.img;
-                    var alt = this.dataset.alt || '';
-                    if (lightbox && lightboxImg) {
-                        lightboxImg.src = src;
-                        lightboxImg.alt = alt;
-                        lightbox.classList.add('open');
-                        document.body.style.overflow = 'hidden';
-                    }
-                });
-            });
+
+            function openLightbox(src, alt) {
+                if (!lightbox || !lightboxImg) return;
+                lightboxImg.src = src;
+                lightboxImg.alt = alt || '';
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                if (lightboxClose) lightboxClose.focus();
+            }
             function closeLightbox() {
-                if (lightbox) lightbox.classList.remove('open');
+                if (!lightbox) return;
+                lightbox.classList.remove('open');
                 document.body.style.overflow = '';
             }
-            if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-            if (lightbox) lightbox.addEventListener('click', function(e) {
-                if (e.target === lightbox) closeLightbox();
+
+            document.querySelectorAll('.gallery-btn').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    openLightbox(this.dataset.img, this.dataset.alt);
+                });
             });
-            document.addEventListener('keydown', function(e) {
+            if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+            if (lightbox) {
+                lightbox.addEventListener('click', function (e) {
+                    if (e.target === lightbox) closeLightbox();
+                });
+            }
+            document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape' && lightbox && lightbox.classList.contains('open')) closeLightbox();
             });
 
             /* =======================================================
             11. LEGAL MODALS
             ======================================================= */
-            document.querySelectorAll('.legal-trigger').forEach(function(btn) {
-                btn.addEventListener('click', function(e) {
+            var lastFocused = null;
+
+            document.querySelectorAll('.legal-trigger').forEach(function (btn) {
+                btn.addEventListener('click', function (e) {
                     e.preventDefault();
                     var id = this.dataset.modal;
                     var modal = document.getElementById(id);
-                    if (modal) { modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
+                    if (!modal) return;
+                    lastFocused = this;
+                    modal.classList.add('open');
+                    document.body.style.overflow = 'hidden';
+                    var closeBtn = modal.querySelector('.legal-modal-close');
+                    if (closeBtn) closeBtn.focus();
                 });
             });
-            document.querySelectorAll('.legal-modal').forEach(function(modal) {
+
+            document.querySelectorAll('.legal-modal').forEach(function (modal) {
                 var closeBtn = modal.querySelector('.legal-modal-close');
-                if (closeBtn) closeBtn.addEventListener('click', function() {
-                    modal.classList.remove('open'); document.body.style.overflow = '';
-                });
-                modal.addEventListener('click', function(e) {
-                    if (e.target === modal) { modal.classList.remove('open'); document.body.style.overflow = ''; }
+                function closeModal() {
+                    modal.classList.remove('open');
+                    document.body.style.overflow = '';
+                    if (lastFocused) lastFocused.focus();
+                }
+                if (closeBtn) closeBtn.addEventListener('click', closeModal);
+                modal.addEventListener('click', function (e) {
+                    if (e.target === modal) closeModal();
                 });
             });
-            document.addEventListener('keydown', function(e) {
+
+            document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape') {
-                    document.querySelectorAll('.legal-modal.open').forEach(function(m) {
-                        m.classList.remove('open'); document.body.style.overflow = '';
+                    document.querySelectorAll('.legal-modal.open').forEach(function (m) {
+                        m.classList.remove('open');
                     });
+                    document.body.style.overflow = '';
                 }
             });
 
             /* =======================================================
-            12. CONTACT FORM — VALIDATION, HONEYPOT, TOAST, TRACKING
+            12. CONTACT FORM — validation, honeypot, AJAX submit
             ======================================================= */
             var contactForm = document.getElementById('contactForm');
             var pageUrlField = document.getElementById('pageUrlField');
             var formLoadedAt = document.getElementById('formLoadedAt');
-            if (pageUrlField) pageUrlField.value = location.href;
-            if (formLoadedAt) formLoadedAt.value = Date.now();
+            var submitBtn = document.getElementById('submitBtn');
+            var toastEl = document.getElementById('toast');
+            var toastTimer = null;
 
-            function showToast(msg, isError) {
-                var t = document.getElementById('toast');
-                if (!t) return;
-                t.innerHTML = msg;
-                t.classList.toggle('error', !!isError);
-                t.classList.add('show');
-                setTimeout(function(){ t.classList.remove('show'); }, 5000);
+            if (pageUrlField) pageUrlField.value = location.href;
+            if (formLoadedAt) formLoadedAt.value = String(Date.now());
+
+            function showToast(html, isError) {
+                if (!toastEl) return;
+                toastEl.innerHTML = html;
+                toastEl.classList.toggle('error', !!isError);
+                toastEl.classList.add('show');
+                if (toastTimer) clearTimeout(toastTimer);
+                toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 5500);
+            }
+
+            function markInvalid(el, invalid) {
+                if (!el) return;
+                if (invalid) el.setAttribute('aria-invalid', 'true');
+                else el.removeAttribute('aria-invalid');
             }
 
             if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    // Honeypot check
+                var nameField = document.getElementById('cf-name');
+                var phoneField = document.getElementById('cf-phone');
+                var emailField = document.getElementById('cf-email');
+                var reqField = document.getElementById('cf-req');
+
+                [nameField, phoneField, emailField, reqField].forEach(function (f) {
+                    if (f) f.addEventListener('input', function () { markInvalid(this, false); });
+                });
+
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Honeypot
                     var hp = document.getElementById('website_hp');
-                    if (hp && hp.value.trim() !== '') {
-                        e.preventDefault();
-                        return false;
-                    }
-                    // Time-trap: must take at least 3 seconds
+                    if (hp && hp.value.trim() !== '') return false;
+
+                    // Time-trap (min 3 seconds)
                     var loaded = parseInt(formLoadedAt ? formLoadedAt.value : '0', 10);
                     if (loaded && Date.now() - loaded < 3000) {
-                        e.preventDefault();
-                        showToast('<strong>⏳ Hold on</strong>Please take a moment to fill the form.', true);
+                        showToast('<strong>⏳ Just a moment</strong>Please take a few seconds to fill the form.', true);
                         return false;
                     }
-                    // Validate phone (10 digits)
-                    var phone = document.getElementById('cf-phone');
-                    if (phone && !/^[0-9]{10}$/.test(phone.value.replace(/\D/g,''))) {
-                        e.preventDefault();
-                        showToast('<strong>📱 Invalid phone</strong>Please enter a 10-digit mobile number.', true);
-                        phone.focus();
+
+                    // Name
+                    var nameVal = nameField ? nameField.value.trim() : '';
+                    if (nameVal.length < 2) {
+                        markInvalid(nameField, true);
+                        showToast('<strong>👤 Name needed</strong>Please enter your full name.', true);
+                        if (nameField) nameField.focus();
                         return false;
                     }
+
+                    // Phone
+                    var phoneVal = phoneField ? phoneField.value.replace(/\D/g, '') : '';
+                    if (!/^[0-9]{10}$/.test(phoneVal)) {
+                        markInvalid(phoneField, true);
+                        showToast('<strong>📱 Invalid phone</strong>Please enter a valid 10-digit mobile number.', true);
+                        if (phoneField) phoneField.focus();
+                        return false;
+                    }
+
+                    // Email
+                    var emailVal = emailField ? emailField.value.trim() : '';
+                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(emailVal)) {
+                        markInvalid(emailField, true);
+                        showToast('<strong>✉️ Invalid email</strong>Please enter a valid email address.', true);
+                        if (emailField) emailField.focus();
+                        return false;
+                    }
+
+                    // Requirements
+                    var reqVal = reqField ? reqField.value.trim() : '';
+                    if (reqVal.length < 10) {
+                        markInvalid(reqField, true);
+                        showToast('<strong>📝 Tell us more</strong>Please describe your event in a few words.', true);
+                        if (reqField) reqField.focus();
+                        return false;
+                    }
+
                     // Track
                     track('form_submit', {
                         service: document.getElementById('cf-service') ? document.getElementById('cf-service').value : '',
                         city: document.getElementById('cf-city') ? document.getElementById('cf-city').value : ''
                     });
+
+                    // Prepare payload
+                    var formData = new FormData(contactForm);
+                    var action = (CONFIG.formspreeUrl || contactForm.getAttribute('action'));
+
+                    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = '⏳ Sending…'; }
                     showToast('<strong>✅ Sending…</strong>Please wait while we submit your enquiry.');
+
+                    fetch(action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    })
+                    .then(function (response) {
+                        if (response.ok) {
+                            contactForm.reset();
+                            if (formLoadedAt) formLoadedAt.value = String(Date.now());
+                            track('form_success', {});
+                            showToast('<strong>🎉 Thank you!</strong>Your enquiry is in. Karthik will reply within 24 hours.');
+                        } else {
+                            throw new Error('Server responded with ' + response.status);
+                        }
+                    })
+                    .catch(function () {
+                        track('form_error', {});
+                        showToast('<strong>⚠️ Something went wrong</strong>Please WhatsApp us at +91-98458 08890 or try again.', true);
+                    })
+                    .finally(function () {
+                        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = '📸 Request Quote'; }
+                    });
+
+                    return false;
                 });
             }
 
             /* =======================================================
-            13. YEAR / PAGE-LEVEL EVENT: outbound portfolio
+            13. OUTBOUND PORTFOLIO TRACKING
             ======================================================= */
-            document.querySelectorAll('a[href*="karthikstories.my.canva.site"]').forEach(function(a) {
-                a.addEventListener('click', function() { track('portfolio_click', { location: 'link' }); });
+            document.querySelectorAll('a[href*="karthikstories.my.canva.site"]').forEach(function (a) {
+                a.addEventListener('click', function () { track('portfolio_click', { location: 'link' }); });
             });
+
+            /* =======================================================
+            14. FOOTER YEAR
+            ======================================================= */
+            var yearEl = document.getElementById('footerYear');
+            if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
         })();
     </script>
