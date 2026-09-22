@@ -1,0 +1,54 @@
+# Story and Smiles Photography
+
+> Candid wedding photographer based in Banashankari, Bengaluru, serving couples and families across South India. 6+ years of experience, 5.0★ from 92 Google reviews.
+
+Story and Smiles Photography is a wedding, pre-wedding, maternity, newborn and event photography studio led by founder Karthik. Full-day wedding coverage starts at ₹45,000. Edited galleries are delivered within 3–4 weeks.
+
+## Primary
+
+- [Homepage & Booking](https://story-and-smiles-photography.vercel.app/): Full service list, pricing, portfolio, testimonials, FAQ, and contact form.
+
+## Services
+
+- [Wedding Photography](https://story-and-smiles-photography.vercel.app/#svc-wedding): Candid, traditional and cinematic coverage. Full-day from ₹45,000; half-day from ₹25,000.
+- [Pre-Wedding Shoot](https://story-and-smiles-photography.vercel.app/#svc-pre-wedding): Couple sessions at scenic Bangalore locations. From ₹15,000.
+- [Maternity & Baby Shower](https://story-and-smiles-photography.vercel.app/#svc-maternity): Studio or at-home sessions. From ₹12,000.
+- [Newborn Photography](https://story-and-smiles-photography.vercel.app/#svc-newborn): Baby-led, safety-first in-home sessions. From ₹10,000.
+- [Event Photography](https://story-and-smiles-photography.vercel.app/#svc-event): Corporate events, birthdays, anniversaries, house warmings, naming ceremonies.
+- [Portfolio Photography](https://story-and-smiles-photography.vercel.app/#svc-portfolio): Professional portfolios for models, actors and professionals.
+- [All Services](https://story-and-smiles-photography.vercel.app/#all-services): Complete list including videography, drone, album design, photo restoration and product photography.
+
+## Key Facts
+
+- **Business name:** Story and Smiles Photography
+- **Founder:** Karthik (Founder & Lead Photographer)
+- **Address:** 2A, 5th main, 3rd Cross Rd, near Chikkalasandra, Banashankari, Bengaluru, Karnataka 560061, India
+- **Phone:** +91-9845808890
+- **Email:** info.storyandsmiles@gmail.com
+- **Experience:** 6+ years
+- **Rating:** 5.0★ (92 Google reviews)
+- **Service area:** Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Goa, Puducherry, Lucknow
+- **Starting prices:** ₹10,000 (newborn) to ₹45,000 (full-day wedding)
+- **Delivery time:** 3–4 weeks for weddings; faster for maternity, newborn and baby shoots
+- **Languages:** English, Kannada, Hindi, Telugu, Tamil
+- **Hours:** Monday–Sunday, 09:00–20:00 IST
+
+## Pricing
+
+- Wedding (Full Day, 10+ hrs, 2 photographers): from ₹45,000
+- Wedding (Half Day, 5 hrs, 1 photographer): from ₹25,000
+- Pre-Wedding Shoot (2–3 hrs, 1 location): from ₹15,000
+- Maternity / Baby Shower (2 hrs, studio or home): from ₹12,000
+- Newborn Session (2–3 hrs, in-home): from ₹10,000
+
+Prices are indicative. Final quotes depend on location, duration and add-ons.
+
+## FAQ
+
+- [Frequently Asked Questions](https://story-and-smiles-photography.vercel.app/#faq): 15 questions covering booking timelines, pricing, delivery, safety, travel and packages.
+
+## Optional
+
+- [Google Reviews](https://search.google.com/local/reviews?placeid=ChIJu3grGi1RrjsRI_yNq1Bk-8A): Verified 5.0★ rating from 92 client reviews.
+- [Instagram](https://www.instagram.com/storyandsmiles): Recent work, behind-the-scenes and client features.
+- [Facebook](https://www.facebook.com/storyandsmiles): Studio updates and event highlights.
