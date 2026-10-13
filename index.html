@@ -245,7 +245,7 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: LOCAL BUSINESS ===== -->
+    <!-- ===== SCHEMA: LOCAL BUSINESS (with nested reviews) ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -315,6 +315,64 @@
             "bestRating": "5",
             "worstRating": "1"
         },
+        "review": [
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Srinivasa Rao N" },
+                "datePublished": "2025-03-12",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+                "reviewBody": "Our occasion has been manifested ecstatically. It's not just an album of grand pics, but a visual treat. The stories behind each picture signify the meaning of bonding hidden in them. Fantastic photographer."
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Kiran Ravindra" },
+                "datePublished": "2025-05-22",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+                "reviewBody": "Karthik and his team are friendly and flexible. Very happy with the final output of photos and video of my wedding. Recommend to anyone looking for wedding photography, portfolios and events."
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Swathi Likith" },
+                "datePublished": "2025-07-08",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+                "reviewBody": "We are very happy we booked Karthik for my baby shower. Your suggestion, photography and final output were all excellent. For sure you are our lifetime family photographer."
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Lokesh H" },
+                "datePublished": "2025-09-14",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+                "reviewBody": "We contacted Story and Smiles for a family function. The flexibility was amazing. Our function ran longer than planned but he stayed and shot the whole event. Received photos within a couple of days where others take a week."
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Vasantha Priya" },
+                "datePublished": "2025-11-02",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+                "reviewBody": "Photos in the album are stunning and beautiful. Wedding video quality is exceptional. Friendly and patient with us throughout."
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Sateesh Patil" },
+                "datePublished": "2026-01-18",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+                "reviewBody": "Karthik patiently captured pre-birthday and birthday event photoshoots. The quality of the album and photos was amazing. Appreciate his support in choosing the best photos and his editing style."
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Ananya and Vikram" },
+                "datePublished": "2026-02-25",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+                "reviewBody": "Karthik is incredibly talented. Our pre-wedding photos looked like they belonged in a magazine. Highly recommend Story and Smiles."
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Priya and Ravi" },
+                "datePublished": "2026-04-10",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+                "reviewBody": "The newborn session was gentle and safe. Karthik captured our little one's first days perfectly. We will treasure these forever."
+            }
+        ],
         "founder": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" },
         "employee": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" },
         "sameAs": [
@@ -488,7 +546,7 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: SERVICE ===== -->
+    <!-- ===== SCHEMA: SERVICE (aggregateRating removed — invalid parent type) ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -525,13 +583,6 @@
             "lowPrice": "5000",
             "highPrice": "60000",
             "offerCount": "8"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "92",
-            "bestRating": "5",
-            "worstRating": "1"
         }
     }
     </script>
@@ -878,7 +929,7 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: BLOG POSTINGS (publisher logo added) ===== -->
+    <!-- ===== SCHEMA: BLOG POSTINGS ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -964,95 +1015,10 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: REVIEWS ===== -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": { "@id": "https://story-and-smiles-photography.vercel.app/#localbusiness" },
-        "author": { "@type": "Person", "name": "Srinivasa Rao N" },
-        "datePublished": "2025-03-12",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Our occasion has been manifested ecstatically. It's not just an album of grand pics, but a visual treat. The stories behind each picture signify the meaning of bonding hidden in them. Fantastic photographer."
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": { "@id": "https://story-and-smiles-photography.vercel.app/#localbusiness" },
-        "author": { "@type": "Person", "name": "Kiran Ravindra" },
-        "datePublished": "2025-05-22",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Karthik and his team are friendly and flexible. Very happy with the final output of photos and video of my wedding. Recommend to anyone looking for wedding photography, portfolios and events."
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": { "@id": "https://story-and-smiles-photography.vercel.app/#localbusiness" },
-        "author": { "@type": "Person", "name": "Swathi Likith" },
-        "datePublished": "2025-07-08",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "We are very happy we booked Karthik for my baby shower. Your suggestion, photography and final output were all excellent. For sure you are our lifetime family photographer."
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": { "@id": "https://story-and-smiles-photography.vercel.app/#localbusiness" },
-        "author": { "@type": "Person", "name": "Lokesh H" },
-        "datePublished": "2025-09-14",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "We contacted Story and Smiles for a family function. The flexibility was amazing. Our function ran longer than planned but he stayed and shot the whole event. Received photos within a couple of days where others take a week."
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": { "@id": "https://story-and-smiles-photography.vercel.app/#localbusiness" },
-        "author": { "@type": "Person", "name": "Vasantha Priya" },
-        "datePublished": "2025-11-02",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Photos in the album are stunning and beautiful. Wedding video quality is exceptional. Friendly and patient with us throughout."
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": { "@id": "https://story-and-smiles-photography.vercel.app/#localbusiness" },
-        "author": { "@type": "Person", "name": "Sateesh Patil" },
-        "datePublished": "2026-01-18",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Karthik patiently captured pre-birthday and birthday event photoshoots. The quality of the album and photos was amazing. Appreciate his support in choosing the best photos and his editing style."
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": { "@id": "https://story-and-smiles-photography.vercel.app/#localbusiness" },
-        "author": { "@type": "Person", "name": "Ananya and Vikram" },
-        "datePublished": "2026-02-25",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Karthik is incredibly talented. Our pre-wedding photos looked like they belonged in a magazine. Highly recommend Story and Smiles."
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": { "@id": "https://story-and-smiles-photography.vercel.app/#localbusiness" },
-        "author": { "@type": "Person", "name": "Priya and Ravi" },
-        "datePublished": "2026-04-10",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "The newborn session was gentle and safe. Karthik captured our little one's first days perfectly. We will treasure these forever."
-    }
-    </script>
+    <!-- ===== SCHEMA: REVIEWS =====
+         Removed. Standalone Review items were flagged as invalid by Search Console.
+         Reviews are now nested inside the LocalBusiness schema as a "review" array.
+    ===== -->
 
     <!-- ================================================================
     CRITICAL INLINE STYLES
@@ -2461,7 +2427,7 @@
                         <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"We are very happy we booked Karthik for my baby shower. For sure you are our lifetime family photographer."</p><div class="testimonial-author"><strong>Swathi Likith</strong><span>Baby Shower, July 2025</span></div></div>
                         <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"We contacted Story and Smiles for a family function. The flexibility was amazing. He stayed and shot the entire event."</p><div class="testimonial-author"><strong>Lokesh H</strong><span>Family Function, September 2025</span></div></div>
                         <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"Photos in the album are stunning and beautiful. Wedding video quality is exceptional."</p><div class="testimonial-author"><strong>Vasantha Priya</strong><span>Wedding, November 2025</span></div></div>
-                        <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"Karthik patiently captured pre-birthday and birthday event photoshoots. The quality of the album and photos were amazing."</p><div class="testimonial-author"><strong>Sateesh Patil</strong><span>Birthday Photography, January 2026</span></div></div>
+                        <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"Karthik patiently captured pre-birthday and birthday event photoshoots. The quality of the album and photos was amazing."</p><div class="testimonial-author"><strong>Sateesh Patil</strong><span>Birthday Photography, January 2026</span></div></div>
                         <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"Karthik is incredibly talented. Our pre-wedding photos looked like they belonged in a magazine."</p><div class="testimonial-author"><strong>Ananya and Vikram</strong><span>Pre-Wedding Shoot, February 2026</span></div></div>
                         <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"The newborn session was gentle and safe. Karthik captured our little one's first days perfectly."</p><div class="testimonial-author"><strong>Priya and Ravi</strong><span>Newborn Photography, April 2026</span></div></div>
                     </div>
