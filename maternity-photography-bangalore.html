@@ -143,7 +143,7 @@
     </script>
 
     <!-- ================================================================
-         SCHEMA — Service + FAQPage + BreadcrumbList + ImageGallery + LocalBusiness
+         SCHEMA
     ================================================================ -->
 
     <!-- SCHEMA: ORGANIZATION -->
@@ -160,7 +160,7 @@
             "url": "https://story-and-smiles-photography.vercel.app/assets/images/logo.png",
             "width": 512, "height": 512
         },
-        "description": "Photography studio in Banashankari, Bengaluru, covering weddings, maternity, newborn and family events across Karnataka and South India.",
+        "description": "Photography company in Banashankari, Bengaluru, covering weddings, maternity, newborn and family events across Karnataka and South India.",
         "email": "info.storyandsmiles@gmail.com",
         "telephone": "+91-9845808890",
         "foundingDate": "2019-06-01",
@@ -181,14 +181,14 @@
     }
     </script>
 
-    <!-- SCHEMA: LOCAL BUSINESS (referenced by @id in Service/FAQ) -->
+    <!-- SCHEMA: LOCAL BUSINESS -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": ["LocalBusiness", "ProfessionalService", "PhotographyBusiness"],
         "@id": "https://story-and-smiles-photography.vercel.app/#localbusiness",
         "name": "Story and Smiles Photography",
-        "description": "Maternity and family photography studio in Banashankari, Bengaluru. Studio, at-home and outdoor maternity sessions across Bangalore.",
+        "description": "Maternity and family photography company in Banashankari, Bengaluru. Studio, at-home and outdoor maternity sessions across Bangalore.",
         "image": [
             "https://story-and-smiles-photography.vercel.app/assets/images/logo.png",
             "https://story-and-smiles-photography.vercel.app/assets/images/maternity-hero.webp",
@@ -196,7 +196,7 @@
         ],
         "telephone": "+91-9845808890",
         "email": "info.storyandsmiles@gmail.com",
-        "priceRange": "₹10,000 - ₹20,000",
+        "priceRange": "₹5,000 - ₹60,000",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, UPI, Bank Transfer",
         "url": "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html",
@@ -222,6 +222,20 @@
             "bestRating": "5",
             "worstRating": "1"
         },
+        "areaServed": [
+            { "@type": "City", "name": "Bengaluru" },
+            { "@type": "Place", "name": "Banashankari", "url": "https://story-and-smiles-photography.vercel.app/areas/banashankari.html" },
+            { "@type": "Place", "name": "Jayanagar", "url": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html" },
+            { "@type": "Place", "name": "JP Nagar", "url": "https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html" },
+            { "@type": "Place", "name": "Koramangala", "url": "https://story-and-smiles-photography.vercel.app/areas/koramangala.html" },
+            { "@type": "Place", "name": "Whitefield", "url": "https://story-and-smiles-photography.vercel.app/areas/whitefield.html" },
+            { "@type": "City", "name": "Mysuru", "url": "https://story-and-smiles-photography.vercel.app/areas/mysore.html" },
+            { "@type": "State", "name": "Karnataka" },
+            { "@type": "State", "name": "Tamil Nadu" },
+            { "@type": "State", "name": "Telangana" },
+            { "@type": "State", "name": "Andhra Pradesh" },
+            { "@type": "State", "name": "Goa" }
+        ],
         "sameAs": [
             "https://www.instagram.com/storyandsmiles",
             "https://www.facebook.com/storyandsmiles",
@@ -263,9 +277,33 @@
         "dateModified": "2026-10-12T10:00:00+05:30",
         "inLanguage": "en-IN",
         "breadcrumb": { "@id": "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html#breadcrumb" },
+        "significantLink": [
+            "https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/areas/banashankari.html",
+            "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html",
+            "https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html",
+            "https://story-and-smiles-photography.vercel.app/areas/koramangala.html",
+            "https://story-and-smiles-photography.vercel.app/areas/whitefield.html",
+            "https://story-and-smiles-photography.vercel.app/areas/mysore.html"
+        ],
         "speakable": {
             "@type": "SpeakableSpecification",
-            "cssSelector": ["#hero-title", ".nutshell-text", "#definition-text", "#faq-heading"]
+            "cssSelector": [
+                "#hero-title",
+                ".nutshell-text",
+                "#quick-facts-heading",
+                ".quick-facts-inline",
+                "#definition-text",
+                "#cover-heading",
+                "#packages-heading",
+                "#compare-heading",
+                "#faq-heading",
+                "#faq-first-answer"
+            ]
         }
     }
     </script>
@@ -284,7 +322,7 @@
     }
     </script>
 
-    <!-- SCHEMA: SERVICE -->
+    <!-- SCHEMA: SERVICE (with URLs on each offer) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -306,26 +344,41 @@
                     "@type": "Offer",
                     "name": "Studio Maternity Session",
                     "price": "12000", "priceCurrency": "INR",
-                    "description": "2 hours at our Banashankari studio, 2 outfits, 40+ edited images, online gallery."
+                    "description": "2 hours at our Banashankari studio, 2 outfits, 40+ edited images, online gallery.",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Studio Maternity Session",
+                        "url": "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html#packages"
+                    }
                 },
                 {
                     "@type": "Offer",
                     "name": "At-home Maternity Session",
                     "price": "15000", "priceCurrency": "INR",
-                    "description": "2 hours at your home, 2 outfits, 40+ edited images, travel within 15km, online gallery."
+                    "description": "2 hours at your home, 2 outfits, 40+ edited images, travel within 15km, online gallery.",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "At-home Maternity Session",
+                        "url": "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html#packages"
+                    }
                 },
                 {
                     "@type": "Offer",
                     "name": "Maternity + Newborn Combo",
                     "price": "20000", "priceCurrency": "INR",
-                    "description": "Studio maternity session plus one newborn in-home session, bundled delivery and priority scheduling."
+                    "description": "Studio maternity session plus one newborn in-home session, bundled delivery and priority scheduling.",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Maternity + Newborn Combo",
+                        "url": "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html#packages"
+                    }
                 }
             ]
         }
     }
     </script>
 
-    <!-- SCHEMA: FAQPage (8 questions — matches visible accordion) -->
+    <!-- SCHEMA: FAQPage -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -335,17 +388,17 @@
             {
                 "@type": "Question",
                 "name": "When should I book a maternity shoot?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Between 28 and 34 weeks is ideal — the bump is clearly visible and most mothers are still comfortable moving around. Book the session itself two to four weeks in advance; if you want a specific weekend or outdoor location, give us four to six weeks." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Between 28 and 34 weeks is ideal. The bump is clearly visible and most mothers are still comfortable moving around. Book the session itself two to four weeks in advance; if you want a specific weekend or outdoor location, give us four to six weeks. If you are also planning a newborn shoot, see the newborn page for combo booking." }
             },
             {
                 "@type": "Question",
-                "name": "Studio or at-home — which is better?",
+                "name": "Studio or at-home, which is better?",
                 "acceptedAnswer": { "@type": "Answer", "text": "Studio gives you controlled light, a seamless backdrop and a calm, distraction-free space. At-home is better if you have an older child, want to include the nursery, or simply prefer not to travel. Both run two hours and include two outfit changes." }
             },
             {
                 "@type": "Question",
                 "name": "What should I wear?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Something fitted enough to show the bump — a bodycon dress, a soft knit, or a saree draped to highlight the curve. Bring two outfits: one neutral and calm, one with colour or texture. Avoid busy prints. We send a full outfit guide once your date is confirmed." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Something fitted enough to show the bump: a bodycon dress, a soft knit, or a saree draped to highlight the curve. Bring two outfits, one neutral and calm, one with colour or texture. Avoid busy prints. We send a full outfit guide once your date is confirmed." }
             },
             {
                 "@type": "Question",
@@ -355,7 +408,7 @@
             {
                 "@type": "Question",
                 "name": "Can my partner or older child be in the photos?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Partner and sibling portraits are included in every package at no extra cost. We usually shoot the solo maternity portraits first, then bring in the family for the last 20 to 30 minutes." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Partner and sibling portraits are included in every package at no extra cost. We usually shoot the solo maternity portraits first, then bring in the family for the last 20 to 30 minutes. If you want the whole baby shower covered too, see the event photography page." }
             },
             {
                 "@type": "Question",
@@ -365,24 +418,65 @@
             {
                 "@type": "Question",
                 "name": "How many photos do we get?",
-                "acceptedAnswer": { "@type": "Answer", "text": "40+ edited high-resolution images per session. You receive an online gallery for viewing and download, plus print rights. If you want specific frames retouched in detail, let us know — there's no extra charge." }
+                "acceptedAnswer": { "@type": "Answer", "text": "40+ edited high-resolution images per session. You receive an online gallery for viewing and download, plus print rights. If you want specific frames retouched in detail, let us know. There is no extra charge." }
             },
             {
                 "@type": "Question",
                 "name": "When do we get the photos?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Within ten days, and often sooner — our average across 200+ maternity sessions is 8 days. You get an online gallery link by email. Albums and prints can be added after you've picked your favourites." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Within ten days, and often sooner. Our average across 200+ maternity sessions is 8 days. You get an online gallery link by email. Albums and prints can be added after you have picked your favourites." }
             }
         ]
     }
     </script>
 
-    <!-- SCHEMA: ImageGallery (6 maternity tiles) -->
+    <!-- SCHEMA: SERVICE PAGES ITEMLIST -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "@id": "https://story-and-smiles-photography.vercel.app/#servicepages",
+        "name": "Photography Services in Bangalore",
+        "description": "The five core photography services offered by Story and Smiles Photography.",
+        "numberOfItems": 5,
+        "itemListOrder": "https://schema.org/ItemListUnordered",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Wedding Photography Bangalore", "url": "https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 2, "name": "Pre-Wedding Photography Bangalore", "url": "https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 3, "name": "Maternity and Baby Shower Photography Bangalore", "url": "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 4, "name": "Newborn Photography Bangalore", "url": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 5, "name": "Event Photography Bangalore", "url": "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" }
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA: SERVICE AREA PAGES ITEMLIST -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "@id": "https://story-and-smiles-photography.vercel.app/#areapages",
+        "name": "Photography Service Areas in and around Bengaluru",
+        "description": "Neighbourhood and city service areas covered by Story and Smiles Photography.",
+        "numberOfItems": 6,
+        "itemListOrder": "https://schema.org/ItemListUnordered",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Banashankari", "url": "https://story-and-smiles-photography.vercel.app/areas/banashankari.html" },
+            { "@type": "ListItem", "position": 2, "name": "Jayanagar", "url": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html" },
+            { "@type": "ListItem", "position": 3, "name": "JP Nagar", "url": "https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html" },
+            { "@type": "ListItem", "position": 4, "name": "Koramangala", "url": "https://story-and-smiles-photography.vercel.app/areas/koramangala.html" },
+            { "@type": "ListItem", "position": 5, "name": "Whitefield", "url": "https://story-and-smiles-photography.vercel.app/areas/whitefield.html" },
+            { "@type": "ListItem", "position": 6, "name": "Mysore", "url": "https://story-and-smiles-photography.vercel.app/areas/mysore.html" }
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA: ImageGallery -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "ImageGallery",
         "@id": "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html#gallery",
-        "name": "Maternity Photography Portfolio — Story and Smiles",
+        "name": "Maternity Photography Portfolio, Story and Smiles",
         "description": "Six frames from recent maternity sessions in Bangalore.",
         "mainEntity": [
             { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/maternity-studio.jpg", "caption": "Studio maternity portrait in soft light, Banashankari" },
@@ -395,7 +489,7 @@
     }
     </script>
 
-    <!-- ===== CRITICAL INLINE STYLES — LOCKED TOKENS ===== -->
+    <!-- ===== CRITICAL INLINE STYLES ===== -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -508,7 +602,7 @@
         .hamburger.active span:nth-child(2) { opacity: 0; }
         .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
 
-        /* ===== HERO — 78vh ===== */
+        /* ===== HERO ===== */
         .hero {
             position: relative; min-height: 78vh;
             display: flex; align-items: center; justify-content: center;
@@ -598,6 +692,50 @@
         }
         .summary-box-full p { font-size: 1.02rem; color: #2d2a2a; line-height: 1.7; margin: 0; }
 
+        /* ===== QUICK FACTS ===== */
+        .quick-facts-inline {
+            max-width: 900px;
+            margin: 20px auto 0;
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px 32px;
+            border: 1px solid rgba(0,0,0,0.04);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+        }
+        .quick-facts-inline h2 {
+            font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
+            text-transform: uppercase; color: #e07a5f;
+            margin-bottom: 16px;
+        }
+        .quick-facts-inline dl {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px 28px;
+            margin: 0;
+        }
+        .quick-facts-inline dl > div { display: flex; flex-direction: column; }
+        .quick-facts-inline dt {
+            font-size: 0.68rem; font-weight: 700;
+            letter-spacing: 1.2px; text-transform: uppercase;
+            color: #e07a5f; margin-bottom: 2px;
+        }
+        .quick-facts-inline dd {
+            margin: 0; font-size: 0.9rem;
+            color: #2d2a2a; line-height: 1.5;
+        }
+        .quick-facts-inline dd a {
+            color: #2d2a2a; text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .quick-facts-inline dd a:hover { color: #e07a5f; }
+        @media (max-width: 640px) {
+            .quick-facts-inline dl { grid-template-columns: 1fr 1fr; gap: 14px 20px; }
+            .quick-facts-inline { padding: 20px 22px; }
+        }
+        @media (max-width: 440px) {
+            .quick-facts-inline dl { grid-template-columns: 1fr; }
+        }
+
         /* ===== WHAT WE COVER ===== */
         .cover-section { background: #fff; }
         .cover-grid {
@@ -606,9 +744,8 @@
         }
         .cover-card {
             background: #fcf9f7; border-radius: 16px;
-            padding: 22px 24px;
+            padding: 24px 26px;
             border: 1px solid rgba(0,0,0,0.03);
-            display: flex; gap: 14px; align-items: flex-start;
             transition: all 0.3s ease;
         }
         .cover-card:hover {
@@ -616,13 +753,7 @@
             box-shadow: 0 16px 48px rgba(224,122,95,0.10);
             border-color: rgba(224,122,95,0.18);
         }
-        .cover-card .cover-icon {
-            font-size: 1.4rem; flex-shrink: 0;
-            width: 42px; height: 42px; border-radius: 12px;
-            background: #fdf0eb; color: #e07a5f;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .cover-card h3 { font-family: 'Segoe UI', sans-serif; font-size: 1rem; font-weight: 700; color: #1e1a1a; margin: 0 0 4px; }
+        .cover-card h3 { font-family: 'Segoe UI', sans-serif; font-size: 1rem; font-weight: 700; color: #1e1a1a; margin: 0 0 6px; }
         .cover-card p { font-size: 0.9rem; color: #5a5252; margin: 0; line-height: 1.55; }
 
         /* ===== DEFINITION ===== */
@@ -789,6 +920,7 @@
         .faq-item[open] summary::after { transform: rotate(180deg); }
         .faq-item summary:hover { background: #fcf9f7; }
         .faq-answer { padding: 0 24px 22px; color: #4a4242; line-height: 1.7; font-size: 0.95rem; }
+        .faq-answer a { text-decoration: underline; text-underline-offset: 2px; font-weight: 600; }
         .faq-item[open] .faq-answer { animation: faqOpen 0.42s cubic-bezier(0.22,1,0.36,1); }
         @keyframes faqOpen { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -800,7 +932,7 @@
         }
         .related-card {
             background: #fcf9f7; border-radius: 16px;
-            padding: 26px 22px; text-align: center;
+            padding: 30px 22px; text-align: center;
             border: 1px solid rgba(0,0,0,0.04);
             transition: all 0.3s ease; color: #2d2a2a;
             display: block;
@@ -812,11 +944,23 @@
             border-color: rgba(224,122,95,0.25);
             color: #e07a5f;
         }
-        .related-icon { font-size: 1.6rem; color: #e07a5f; margin-bottom: 10px; display: block; }
-        .related-card h3 { font-family: 'Segoe UI', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 4px; color: #1e1a1a; }
+        .related-card h3 { font-family: 'Segoe UI', sans-serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; color: #1e1a1a; }
         .related-card:hover h3 { color: #e07a5f; }
-        .related-card p { font-size: 0.82rem; color: #7a7272; margin: 0; line-height: 1.5; }
+        .related-card p { font-size: 0.85rem; color: #7a7272; margin: 0; line-height: 1.5; }
         .related-more { text-align: center; margin-top: 32px; }
+        .related-areas {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 0.9rem;
+            color: #7a7272;
+            line-height: 1.8;
+        }
+        .related-areas a {
+            color: #e07a5f;
+            font-weight: 500;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
 
         /* ===== CTA BAND ===== */
         .cta-band {
@@ -850,15 +994,15 @@
 
         /* ===== FOOTER ===== */
         .footer { background: #1e1a1a; color: rgba(255,255,255,0.7); padding: 60px 0 30px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
         .footer-brand p { font-size: 0.9rem; line-height: 1.8; margin-bottom: 10px; }
         .footer-brand a { color: rgba(255,255,255,0.7); }
         .footer-brand a:hover { color: #e07a5f; }
         .footer-logo { margin-bottom: 12px; filter: brightness(0.9); }
-        .footer-links h4, .footer-services h4 { color: #fff; font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
-        .footer-links ul, .footer-services ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-        .footer-links ul li a, .footer-services ul li a { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
-        .footer-links ul li a:hover, .footer-services ul li a:hover { color: #e07a5f; }
+        .footer-links h4, .footer-services h4, .footer-areas h4 { color: #fff; font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
+        .footer-links ul, .footer-services ul, .footer-areas ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .footer-links ul li a, .footer-services ul li a, .footer-areas ul li a { color: rgba(255,255,255,0.6); font-size: 0.9rem; transition: color 0.2s; }
+        .footer-links ul li a:hover, .footer-services ul li a:hover, .footer-areas ul li a:hover { color: #e07a5f; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; text-align: center; font-size: 0.85rem; }
         .footer-legal { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
         .legal-trigger {
@@ -971,7 +1115,7 @@
             .compare-table th, .compare-table td { padding: 12px 14px; }
             .whatsapp-float { bottom: 20px; right: 20px; }
             .whatsapp-main-btn { padding: 10px 16px 10px 12px; font-size: 13px; }
-            .back-to-top { bottom: 84px; right: 20px; width: 40px; height: 40px; }
+            .back-to-top { bottom: 96px; right: 20px; width: 40px; height: 40px; }
             .definition-block h2 { font-size: 1.5rem; }
             .definition-block p { font-size: 0.95rem; }
         }
@@ -983,7 +1127,6 @@
             .package-price { font-size: 1.7rem; }
         }
 
-        /* Nav dropdown — mobile */
         @media (max-width: 768px) {
             .nav-menu {
                 position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
@@ -1048,7 +1191,7 @@
                     </ul>
                 </li>
                 <li><a href="/#about">About</a></li>
-                <li><a href="#packages">Investment</a></li>
+                <li><a href="#packages">Pricing</a></li>
                 <li><a href="/#blog">Journal</a></li>
                 <li><a href="#cta" class="nav-cta">Contact</a></li>
             </ul>
@@ -1060,7 +1203,7 @@
 
     <main id="main-content">
 
-        <!-- ========== 1. HERO (78vh, overlay 0.45) ========== -->
+        <!-- ========== 1. HERO ========== -->
         <header class="hero" id="home">
             <picture>
                 <source media="(min-width: 768px)" srcset="assets/images/maternity-hero.webp" type="image/webp" sizes="100vw" />
@@ -1102,7 +1245,7 @@
             </div>
         </header>
 
-        <!-- ========== 2. IN A NUTSHELL ========== -->
+        <!-- ========== 2. IN A NUTSHELL + QUICK FACTS ========== -->
         <section class="nutshell-section" aria-labelledby="nutshell-heading">
             <div class="container">
                 <h2 id="nutshell-heading" class="sr-only">In a nutshell</h2>
@@ -1112,6 +1255,36 @@
                         Story and Smiles shoots maternity sessions in a Banashankari studio or at home across Bengaluru. Sessions are best between 28 and 34 weeks of pregnancy and usually run two hours with two outfit changes. Prices start at ₹12,000 and include 40+ edited images delivered within ten days.
                     </p>
                 </div>
+
+                <div class="quick-facts-inline" aria-labelledby="quick-facts-heading">
+                    <h2 id="quick-facts-heading">Company quick facts</h2>
+                    <dl>
+                        <div>
+                            <dt>Address</dt>
+                            <dd>2A, 5th Main, 3rd Cross Rd, near Chikkalasandra, Banashankari, Bengaluru 560061</dd>
+                        </div>
+                        <div>
+                            <dt>Phone and WhatsApp</dt>
+                            <dd><a href="tel:+919845808890">+91-98458 08890</a></dd>
+                        </div>
+                        <div>
+                            <dt>Hours</dt>
+                            <dd>9am to 8pm, all seven days</dd>
+                        </div>
+                        <div>
+                            <dt>Starting price</dt>
+                            <dd>₹12,000 for a studio maternity session</dd>
+                        </div>
+                        <div>
+                            <dt>Best window</dt>
+                            <dd>Between 28 and 34 weeks of pregnancy</dd>
+                        </div>
+                        <div>
+                            <dt>Delivery</dt>
+                            <dd>Within 10 days, 8 days on average</dd>
+                        </div>
+                    </dl>
+                </div>
             </div>
         </section>
 
@@ -1120,52 +1293,34 @@
             <div class="container">
                 <div class="section-header">
                     <span class="section-subtitle">What we cover</span>
-                    <h2 id="cover-heading" class="section-title">Studio, at-home, or outdoors — your call</h2>
+                    <h2 id="cover-heading" class="section-title">Studio, at-home, or outdoors. Your call.</h2>
                     <p class="section-description">Every session runs two hours, includes two outfit changes, and leaves room for partner and sibling portraits. Choose the setting that feels most like you.</p>
                 </div>
 
                 <div class="cover-grid">
                     <div class="cover-card animate-on-scroll">
-                        <div class="cover-icon" aria-hidden="true">📸</div>
-                        <div>
-                            <h3>Studio sessions</h3>
-                            <p>Controlled light, seamless backdrop, calm and distraction-free. Come to us in Banashankari.</p>
-                        </div>
+                        <h3>Studio sessions</h3>
+                        <p>Controlled light, seamless backdrop, calm and distraction-free. Come to us in Banashankari.</p>
                     </div>
                     <div class="cover-card animate-on-scroll">
-                        <div class="cover-icon" aria-hidden="true">🏠</div>
-                        <div>
-                            <h3>At-home sessions</h3>
-                            <p>Your space, your light, your comfort. Sibling and pet friendly, travel within 15km included.</p>
-                        </div>
+                        <h3>At-home sessions</h3>
+                        <p>Your space, your light, your comfort. Sibling and pet friendly, travel within 15km included.</p>
                     </div>
                     <div class="cover-card animate-on-scroll">
-                        <div class="cover-icon" aria-hidden="true">🌅</div>
-                        <div>
-                            <h3>Outdoor shoots</h3>
-                            <p>Lalbagh, Cubbon Park, Nandi Hills. Golden-hour portraits with a natural backdrop.</p>
-                        </div>
+                        <h3>Outdoor shoots</h3>
+                        <p>Lalbagh, Cubbon Park, Nandi Hills. Golden-hour portraits with a natural backdrop.</p>
                     </div>
                     <div class="cover-card animate-on-scroll">
-                        <div class="cover-icon" aria-hidden="true">👨‍👩‍👧</div>
-                        <div>
-                            <h3>Sibling &amp; partner portraits</h3>
-                            <p>Included in every package. We shoot solo portraits first, then bring the family in for the last 20–30 minutes.</p>
-                        </div>
+                        <h3>Sibling and partner portraits</h3>
+                        <p>Included in every package. We shoot solo portraits first, then bring the family in for the last 20 to 30 minutes.</p>
                     </div>
                     <div class="cover-card animate-on-scroll">
-                        <div class="cover-icon" aria-hidden="true">👗</div>
-                        <div>
-                            <h3>Outfit changes (2 included)</h3>
-                            <p>One neutral and calm, one with colour or texture. We send a full outfit guide once your date is confirmed.</p>
-                        </div>
+                        <h3>Outfit changes (2 included)</h3>
+                        <p>One neutral and calm, one with colour or texture. We send a full outfit guide once your date is confirmed.</p>
                     </div>
                     <div class="cover-card animate-on-scroll">
-                        <div class="cover-icon" aria-hidden="true">🎀</div>
-                        <div>
-                            <h3>Baby shower coverage</h3>
-                            <p>Add to a maternity session or book separately. Same calm approach, with the family in frame.</p>
-                        </div>
+                        <h3>Baby shower coverage</h3>
+                        <p>Add to a maternity session or book separately. Same calm approach, with the family in frame.</p>
                     </div>
                 </div>
             </div>
@@ -1177,17 +1332,17 @@
                 <div class="definition-block">
                     <h2 id="definition-heading">What is a maternity photoshoot?</h2>
                     <p id="definition-text">
-                        A maternity photoshoot documents your pregnancy, usually between 28 and 34 weeks, when the bump is clearly visible and most mothers are still comfortable moving. A good session runs two hours, focuses on calm portraits rather than posed glamour, and delivers images you'd be happy to display at home.
+                        A maternity photoshoot documents your pregnancy, usually between 28 and 34 weeks, when the bump is clearly visible and most mothers are still comfortable moving. A good session runs two hours, focuses on calm portraits rather than posed glamour, and delivers images you would be happy to display at home.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- ========== 5. PACKAGES ========== -->
+        <!-- ========== 5. PRICING PACKAGES ========== -->
         <section id="packages" class="packages-section section-pad" aria-labelledby="packages-heading">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-subtitle">Investment</span>
+                    <span class="section-subtitle">Pricing</span>
                     <h2 id="packages-heading" class="section-title">Three ways to book your maternity session</h2>
                     <p class="section-description">Every package includes two outfit changes, partner and sibling portraits, and 40+ edited images. Final pricing depends on location and travel.</p>
                 </div>
@@ -1201,7 +1356,7 @@
                             <li>2 outfit changes</li>
                             <li>40+ edited high-res images</li>
                             <li>Online gallery + print rights</li>
-                            <li>Partner &amp; sibling portraits included</li>
+                            <li>Partner and sibling portraits included</li>
                         </ul>
                         <div class="package-price">
                             <span class="from">Starting at</span>
@@ -1238,7 +1393,7 @@
 
                     <article class="package-card animate-on-scroll">
                         <h3 class="package-name">Maternity + Newborn</h3>
-                        <p class="package-tagline">The full journey, bundled. Studio maternity plus one newborn in-home session.</p>
+                        <p class="package-tagline">Maternity and newborn, bundled. Studio maternity plus one newborn in-home session.</p>
                         <ul class="package-inclusions">
                             <li>Studio maternity session (2 hrs)</li>
                             <li>One newborn in-home session</li>
@@ -1315,24 +1470,24 @@
 
                 <div class="stats-grid">
                     <div class="stat-card animate-on-scroll">
-                        <span class="stat-number">200+</span>
+                        <span class="stat-number" aria-label="200 plus sessions">200+</span>
                         <span class="stat-label">maternity sessions since 2021</span>
                     </div>
                     <div class="stat-card animate-on-scroll">
-                        <span class="stat-number">31</span>
+                        <span class="stat-number" aria-label="Week 31 average">31</span>
                         <span class="stat-label">most common booking week</span>
                     </div>
                     <div class="stat-card animate-on-scroll">
-                        <span class="stat-number">8</span>
+                        <span class="stat-number" aria-label="8 days average delivery">8</span>
                         <span class="stat-label">days, average delivery time</span>
                     </div>
                 </div>
 
-                <p class="stat-source">Source: internal booking data, 2021–2026. Average session duration: 1h 55m.</p>
+                <p class="stat-source">Source: internal booking data, 2021 to 2026. Average session duration: 1h 55m.</p>
             </div>
         </section>
 
-        <!-- ========== 8. GALLERY (6 tiles) ========== -->
+        <!-- ========== 8. GALLERY ========== -->
         <section id="gallery" class="gallery-section section-pad" aria-labelledby="gallery-heading">
             <div class="container">
                 <div class="section-header">
@@ -1359,7 +1514,7 @@
                     <figure class="gallery-item animate-on-scroll">
                         <img src="assets/images/maternity-sibling.jpg" alt="Sibling and bump portrait at an at-home maternity session" loading="lazy" width="400" height="300" decoding="async" />
                         <button class="gallery-btn" type="button" data-img="assets/images/maternity-sibling.jpg" data-alt="Sibling and bump portrait"><span class="sr-only">View sibling and bump portrait</span></button>
-                        <figcaption class="gallery-overlay" aria-hidden="true"><span>Sibling &amp; bump</span></figcaption>
+                        <figcaption class="gallery-overlay" aria-hidden="true"><span>Sibling and bump</span></figcaption>
                     </figure>
                     <figure class="gallery-item animate-on-scroll">
                         <img src="assets/images/maternity-hands.jpg" alt="Detail shot of hands resting on the bump during a maternity session" loading="lazy" width="400" height="300" decoding="async" />
@@ -1393,24 +1548,24 @@
                         <p class="testimonial-text">"We are very happy we booked Karthik for my baby shower. Your suggestion, photography and final output were all excellent. For sure you are our lifetime family photographer."</p>
                         <div class="testimonial-author">
                             <strong>Swathi Likith</strong>
-                            <span>Baby Shower · July 2025</span>
+                            <span>Baby Shower, July 2025</span>
                         </div>
                     </article>
 
-                    <!-- TODO: Replace with a verified maternity client review before launch -->
+                    <!-- TODO: replace this placeholder testimonial with a verified maternity client review before publishing -->
                     <article class="testimonial-card animate-on-scroll">
                         <div class="testimonial-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
-                        <p class="testimonial-text">"The session felt calm from start to finish. Karthik worked around my energy levels, never rushed me, and the photos came back looking like us — not staged."</p>
+                        <p class="testimonial-text">"The session felt calm from start to finish. Karthik worked around my energy levels, never rushed me, and the photos came back looking like us, not staged."</p>
                         <div class="testimonial-author">
                             <strong>Priya M</strong>
-                            <span>Maternity · October 2025</span>
+                            <span>Maternity, October 2025</span>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- ========== 10. FAQ (8) ========== -->
+        <!-- ========== 10. FAQ ========== -->
         <section id="faq" class="faq-section section-pad" aria-labelledby="faq-heading">
             <div class="container">
                 <div class="section-header">
@@ -1419,17 +1574,17 @@
                 </div>
 
                 <div class="faq-accordion">
-                    <details class="faq-item">
+                    <details class="faq-item" open>
                         <summary>When should I book a maternity shoot?</summary>
-                        <div class="faq-answer"><p>Between 28 and 34 weeks is ideal — the bump is clearly visible and most mothers are still comfortable moving around. Book the session itself two to four weeks in advance; if you want a specific weekend or outdoor location, give us four to six weeks.</p></div>
+                        <div class="faq-answer"><p id="faq-first-answer">Between 28 and 34 weeks is ideal. The bump is clearly visible and most mothers are still comfortable moving around. Book the session itself two to four weeks in advance; if you want a specific weekend or outdoor location, give us four to six weeks. If you are also planning a newborn shoot, see our <a href="https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html">newborn page</a> for combo booking.</p></div>
                     </details>
                     <details class="faq-item">
-                        <summary>Studio or at-home — which is better?</summary>
+                        <summary>Studio or at-home, which is better?</summary>
                         <div class="faq-answer"><p>Studio gives you controlled light, a seamless backdrop and a calm, distraction-free space. At-home is better if you have an older child, want to include the nursery, or simply prefer not to travel. Both run two hours and include two outfit changes.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>What should I wear?</summary>
-                        <div class="faq-answer"><p>Something fitted enough to show the bump — a bodycon dress, a soft knit, or a saree draped to highlight the curve. Bring two outfits: one neutral and calm, one with colour or texture. Avoid busy prints. We send a full outfit guide once your date is confirmed.</p></div>
+                        <div class="faq-answer"><p>Something fitted enough to show the bump: a bodycon dress, a soft knit, or a saree draped to highlight the curve. Bring two outfits, one neutral and calm, one with colour or texture. Avoid busy prints. We send a full outfit guide once your date is confirmed.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>How long does a session take?</summary>
@@ -1437,7 +1592,7 @@
                     </details>
                     <details class="faq-item">
                         <summary>Can my partner or older child be in the photos?</summary>
-                        <div class="faq-answer"><p>Yes. Partner and sibling portraits are included in every package at no extra cost. We usually shoot the solo maternity portraits first, then bring in the family for the last 20 to 30 minutes.</p></div>
+                        <div class="faq-answer"><p>Yes. Partner and sibling portraits are included in every package at no extra cost. We usually shoot the solo maternity portraits first, then bring in the family for the last 20 to 30 minutes. If you want the whole baby shower covered too, see our <a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">event photography page</a>.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>Can you keep the photos private?</summary>
@@ -1445,11 +1600,11 @@
                     </details>
                     <details class="faq-item">
                         <summary>How many photos do we get?</summary>
-                        <div class="faq-answer"><p>40+ edited high-resolution images per session. You receive an online gallery for viewing and download, plus print rights. If you want specific frames retouched in detail, let us know — there's no extra charge.</p></div>
+                        <div class="faq-answer"><p>40+ edited high-resolution images per session. You receive an online gallery for viewing and download, plus print rights. If you want specific frames retouched in detail, let us know. There is no extra charge.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>When do we get the photos?</summary>
-                        <div class="faq-answer"><p>Within ten days, and often sooner — our average across 200+ maternity sessions is 8 days. You get an online gallery link by email. Albums and prints can be added after you've picked your favourites.</p></div>
+                        <div class="faq-answer"><p>Within ten days, and often sooner. Our average across 200+ maternity sessions is 8 days. You get an online gallery link by email. Albums and prints can be added after you have picked your favourites.</p></div>
                     </details>
                 </div>
             </div>
@@ -1460,27 +1615,23 @@
             <div class="container">
                 <div class="section-header">
                     <span class="section-subtitle">Explore more</span>
-                    <h2 id="related-heading" class="section-title">Other services from the studio</h2>
+                    <h2 id="related-heading" class="section-title">Other services we offer</h2>
                 </div>
 
                 <div class="related-grid">
-                    <a href="/newborn-photography-bangalore" class="related-card animate-on-scroll">
-                        <span class="related-icon" aria-hidden="true">🌙</span>
+                    <a href="/newborn-photography-bangalore.html" class="related-card animate-on-scroll">
                         <h3>Newborn</h3>
                         <p>Safe, baby-led, soft-lit newborn sessions.</p>
                     </a>
-                    <a href="/wedding-photography-bangalore" class="related-card animate-on-scroll">
-                        <span class="related-icon" aria-hidden="true">💍</span>
+                    <a href="/wedding-photography-bangalore.html" class="related-card animate-on-scroll">
                         <h3>Wedding</h3>
                         <p>Candid, traditional and cinematic wedding coverage.</p>
                     </a>
-                    <a href="/pre-wedding-photography-bangalore" class="related-card animate-on-scroll">
-                        <span class="related-icon" aria-hidden="true">🤍</span>
+                    <a href="/pre-wedding-photography-bangalore.html" class="related-card animate-on-scroll">
                         <h3>Pre-Wedding</h3>
                         <p>Couple sessions at Bangalore parks and heritage spots.</p>
                     </a>
-                    <a href="/event-photography-bangalore" class="related-card animate-on-scroll">
-                        <span class="related-icon" aria-hidden="true">🎉</span>
+                    <a href="/event-photography-bangalore.html" class="related-card animate-on-scroll">
                         <h3>Events</h3>
                         <p>Birthdays, house warmings, corporate events.</p>
                     </a>
@@ -1489,6 +1640,16 @@
                 <div class="related-more">
                     <a href="/#services" class="btn btn-outline">See all services</a>
                 </div>
+
+                <p class="related-areas">
+                    Also serving maternity sessions across
+                    <a href="https://story-and-smiles-photography.vercel.app/areas/banashankari.html">Banashankari</a>,
+                    <a href="https://story-and-smiles-photography.vercel.app/areas/jayanagar.html">Jayanagar</a>,
+                    <a href="https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html">JP Nagar</a>,
+                    <a href="https://story-and-smiles-photography.vercel.app/areas/koramangala.html">Koramangala</a>,
+                    <a href="https://story-and-smiles-photography.vercel.app/areas/whitefield.html">Whitefield</a> and
+                    <a href="https://story-and-smiles-photography.vercel.app/areas/mysore.html">Mysore</a>.
+                </p>
             </div>
         </section>
 
@@ -1496,7 +1657,7 @@
         <section id="cta" class="cta-band" aria-labelledby="cta-heading">
             <div class="container">
                 <h2 id="cta-heading">Tell us your week. We'll find a date.</h2>
-                <p>Share how many weeks along you are on WhatsApp. We'll reply with available slots, package options and a clear quote — usually within two hours.</p>
+                <p>Share how many weeks along you are on WhatsApp. We'll reply with available slots, package options and a clear quote, usually within two hours.</p>
                 <a href="https://wa.me/919845808890?text=Hi%2C%20I%27m%20%5BX%5D%20weeks%20pregnant%20and%20interested%20in%20a%20maternity%20shoot."
                    target="_blank" rel="noopener noreferrer"
                    class="btn track-whatsapp" data-cta="cta_check_week">
@@ -1513,7 +1674,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="assets/images/logo-white.png" alt="Story and Smiles Photography" class="footer-logo" width="150" height="48" loading="lazy" />
-                    <p>Story and Smiles is a photography studio based in Banashankari, Bangalore. We cover weddings, maternity, newborn and family events across Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Goa and Puducherry.</p>
+                    <p>Story and Smiles is a photography company based in Banashankari, Bangalore. We cover weddings, maternity, newborn and family events across Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Goa and Puducherry.</p>
                     <p>Phone: <a href="tel:+919845808890">+91-98458 08890</a> | Email: <a href="mailto:info.storyandsmiles@gmail.com">info.storyandsmiles@gmail.com</a></p>
                     <p style="font-size:0.85rem; opacity:0.6;">2A, 5th main, 3rd Cross Rd, near Chikkalasandra, Banashankari, Bengaluru, Karnataka 560061</p>
                 </div>
@@ -1523,7 +1684,7 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/#about">About Us</a></li>
                         <li><a href="/#services">Services</a></li>
-                        <li><a href="#packages">Investment</a></li>
+                        <li><a href="#packages">Pricing</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#faq">FAQs</a></li>
                         <li><a href="#cta">Contact</a></li>
@@ -1533,10 +1694,21 @@
                     <h4>Our Services</h4>
                     <ul>
                         <li><a href="/wedding-photography-bangalore.html">Wedding Photography</a></li>
+                        <li><a href="/pre-wedding-photography-bangalore.html">Pre-Wedding Shoot</a></li>
                         <li><a href="/maternity-photography-bangalore.html">Maternity Photography</a></li>
                         <li><a href="/newborn-photography-bangalore.html">Newborn Photography</a></li>
-                        <li><a href="/pre-wedding-photography-bangalore.html">Pre-Wedding Shoot</a></li>
                         <li><a href="/event-photography-bangalore.html">Event Photography</a></li>
+                    </ul>
+                </div>
+                <div class="footer-areas">
+                    <h4>Areas We Serve</h4>
+                    <ul>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/banashankari.html">Banashankari</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/jayanagar.html">Jayanagar</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html">JP Nagar</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/koramangala.html">Koramangala</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/whitefield.html">Whitefield</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/mysore.html">Mysore</a></li>
                     </ul>
                 </div>
             </div>
@@ -1609,7 +1781,7 @@
                 });
             });
 
-            /* 2. SCROLL: progress bar, navbar shadow, back-to-top */
+            /* 2. SCROLL */
             var progressBar = document.getElementById('scrollProgress');
             var navbar = document.getElementById('navbar');
             var backToTop = document.getElementById('backToTop');
@@ -1654,6 +1826,7 @@
             /* 4. SMOOTH SCROLL */
             document.querySelectorAll('a[href^="#"]').forEach(function (a) {
                 a.addEventListener('click', function (e) {
+                    if (this.classList.contains('dropdown-toggle') && window.matchMedia('(max-width: 768px)').matches) return;
                     var id = this.getAttribute('href');
                     if (!id || id === '#' || id.length < 2) return;
                     var target = document.querySelector(id);
