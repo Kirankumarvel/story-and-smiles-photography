@@ -41,9 +41,9 @@
     " />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    <!-- ===== PRIMARY META ===== -->
+    <!-- ===== PRIMARY META (Fix 17 — ₹ standardised) ===== -->
     <title>Wedding Photographers in Bangalore | Story and Smiles</title>
-    <meta name="description" content="Wedding photography studio in Banashankari, Bangalore. Candid weddings, maternity and newborn shoots across Karnataka. Full-day weddings from Rs 45,000." />
+    <meta name="description" content="Wedding photography studio in Banashankari, Bangalore. Candid weddings, maternity and newborn shoots across Karnataka. Full-day weddings from ₹45,000." />
     <meta name="author" content="Story and Smiles Photography" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="theme-color" content="#e07a5f" />
@@ -53,12 +53,12 @@
     <meta name="geo.position" content="12.9100;77.5590" />
     <meta name="ICBM" content="12.9100, 77.5590" />
 
-    <!-- ===== OPEN GRAPH ===== -->
+    <!-- ===== OPEN GRAPH (Fix 18 — specific og:image:alt) ===== -->
     <meta property="og:title" content="Wedding Photographers in Bangalore | Story and Smiles" />
-    <meta property="og:description" content="A small team in Banashankari capturing weddings, maternity and family stories across South India. Full-day wedding coverage from Rs 45,000." />
+    <meta property="og:description" content="A small team in Banashankari capturing weddings, maternity and family stories across South India. Full-day wedding coverage from ₹45,000." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://story-and-smiles-photography.vercel.app/assets/images/hero-bg.webp" />
-    <meta property="og:image:alt" content="Bride and groom during a South Indian wedding ceremony in Bangalore" />
+    <meta property="og:image:alt" content="Bride and groom at the muhurtham moment of a South Indian wedding in Bengaluru, shot by Story and Smiles Photography" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://story-and-smiles-photography.vercel.app/" />
@@ -90,7 +90,7 @@
     <!-- ===== SITEMAP ===== -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
-    <!-- ===== PRECONNECT / DNS-PREFETCH ===== -->
+    <!-- ===== PRECONNECT ===== -->
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
     <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
@@ -98,16 +98,12 @@
     <link rel="dns-prefetch" href="https://maps.google.com" />
     <link rel="dns-prefetch" href="https://formspree.io" />
 
-    <!-- ===== PRELOAD (single hero only) ===== -->
     <link rel="preload" href="assets/images/hero-bg.webp" as="image" type="image/webp" fetchpriority="high" />
 
-    <!-- ===== STYLESHEETS ===== -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.css" />
 
-    <!-- ===== VERIFICATION ===== -->
     <meta name="google-site-verification" content="ZMTUWN4rBwuVtQTiprMbyWiizYeSOAj3S2h0cnIvQhc" />
-    <!-- TODO: replace with real Bing Webmaster token before launch -->
     <meta name="msvalidate.01" content="REPLACE_WITH_BING_VERIFICATION" />
 
     <!-- ===== SITE CONFIG ===== -->
@@ -136,17 +132,14 @@
         });
     </script>
 
-    <!-- ===== GA4 ===== -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F6NL6CT9YJ"></script>
     <script>
         gtag('js', new Date());
         gtag('config', 'G-F6NL6CT9YJ', { 'anonymize_ip': true });
     </script>
 
-    <!-- ===== GTM ===== -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TC9D7BX3');</script>
 
-    <!-- ===== FACEBOOK PIXEL ===== -->
     <script>
         (function () {
             var id = window.SMS_CONFIG && window.SMS_CONFIG.fbPixelId;
@@ -164,7 +157,6 @@
         })();
     </script>
 
-    <!-- ===== CLARITY ===== -->
     <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wpjxrcvyk6");</script>
 
     <!-- ================================================================
@@ -245,7 +237,7 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: LOCAL BUSINESS (with nested reviews) ===== -->
+    <!-- ===== SCHEMA: LOCAL BUSINESS (Fix 12 — priceRange, reviews, offer URLs, areaServed Places) ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -261,7 +253,7 @@
         ],
         "telephone": "+91-9845808890",
         "email": "info.storyandsmiles@gmail.com",
-        "priceRange": "Rs 10,000 - Rs 60,000",
+        "priceRange": "₹5,000 - ₹60,000",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, UPI, Bank Transfer",
         "url": "https://story-and-smiles-photography.vercel.app/",
@@ -300,7 +292,12 @@
         ],
         "areaServed": [
             { "@type": "City", "name": "Bengaluru" },
-            { "@type": "City", "name": "Mysuru" },
+            { "@type": "Place", "name": "Banashankari", "url": "https://story-and-smiles-photography.vercel.app/areas/banashankari.html" },
+            { "@type": "Place", "name": "Jayanagar", "url": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html" },
+            { "@type": "Place", "name": "JP Nagar", "url": "https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html" },
+            { "@type": "Place", "name": "Koramangala", "url": "https://story-and-smiles-photography.vercel.app/areas/koramangala.html" },
+            { "@type": "Place", "name": "Whitefield", "url": "https://story-and-smiles-photography.vercel.app/areas/whitefield.html" },
+            { "@type": "City", "name": "Mysuru", "url": "https://story-and-smiles-photography.vercel.app/areas/mysore.html" },
             { "@type": "State", "name": "Karnataka" },
             { "@type": "State", "name": "Tamil Nadu" },
             { "@type": "State", "name": "Andhra Pradesh" },
@@ -357,20 +354,6 @@
                 "datePublished": "2026-01-18",
                 "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
                 "reviewBody": "Karthik patiently captured pre-birthday and birthday event photoshoots. The quality of the album and photos was amazing. Appreciate his support in choosing the best photos and his editing style."
-            },
-            {
-                "@type": "Review",
-                "author": { "@type": "Person", "name": "Ananya and Vikram" },
-                "datePublished": "2026-02-25",
-                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-                "reviewBody": "Karthik is incredibly talented. Our pre-wedding photos looked like they belonged in a magazine. Highly recommend Story and Smiles."
-            },
-            {
-                "@type": "Review",
-                "author": { "@type": "Person", "name": "Priya and Ravi" },
-                "datePublished": "2026-04-10",
-                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-                "reviewBody": "The newborn session was gentle and safe. Karthik captured our little one's first days perfectly. We will treasure these forever."
             }
         ],
         "founder": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" },
@@ -386,11 +369,11 @@
             "@type": "OfferCatalog",
             "name": "Photography Packages",
             "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Day Wedding Photography" }, "price": "45000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half Day Wedding Photography" }, "price": "25000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pre-Wedding Photoshoot" }, "price": "15000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maternity and Baby Shower" }, "price": "12000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Newborn Photography" }, "price": "10000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" }
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Day Wedding Photography", "url": "https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html" }, "price": "45000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half Day Wedding Photography", "url": "https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html" }, "price": "25000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pre-Wedding Photoshoot", "url": "https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html" }, "price": "15000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maternity and Baby Shower", "url": "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html" }, "price": "12000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Newborn Photography", "url": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html" }, "price": "10000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" }
             ]
         },
         "makesOffer": [
@@ -409,7 +392,7 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: PERSON (FOUNDER) ===== -->
+    <!-- ===== SCHEMA: PERSON ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -446,9 +429,7 @@
                 "recognizedBy": { "@type": "Organization", "name": "Independent Practice" }
             }
         ],
-        "award": [
-            "Top Rated Photographer, Banashankari, Bengaluru"
-        ],
+        "award": ["Top Rated Photographer, Banashankari, Bengaluru"],
         "sameAs": [
             "https://www.instagram.com/storyandsmiles",
             "https://www.facebook.com/storyandsmiles"
@@ -470,7 +451,7 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: WEBPAGE (with Speakable + significantLink) ===== -->
+    <!-- ===== SCHEMA: WEBPAGE (Fix 13 — significantLink to real URLs, Speakable expanded) ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -498,17 +479,25 @@
         "dateModified": "2026-10-12T10:00:00+05:30",
         "inLanguage": "en-IN",
         "significantLink": [
-            "https://story-and-smiles-photography.vercel.app/#services",
-            "https://story-and-smiles-photography.vercel.app/#pricing",
-            "https://story-and-smiles-photography.vercel.app/#gallery",
-            "https://story-and-smiles-photography.vercel.app/#faq",
-            "https://story-and-smiles-photography.vercel.app/#contact"
+            "https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/areas/banashankari.html",
+            "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html",
+            "https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html",
+            "https://story-and-smiles-photography.vercel.app/areas/koramangala.html",
+            "https://story-and-smiles-photography.vercel.app/areas/whitefield.html",
+            "https://story-and-smiles-photography.vercel.app/areas/mysore.html"
         ],
         "speakable": {
             "@type": "SpeakableSpecification",
             "cssSelector": [
                 "#hero-title",
                 ".summary-box p",
+                "#quick-facts-heading",
+                ".quick-facts-list",
                 "#about-heading",
                 "#about-summary",
                 "#faq-heading",
@@ -542,7 +531,7 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: SERVICE (aggregateRating removed — invalid parent type) ===== -->
+    <!-- ===== SCHEMA: SERVICE ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -563,14 +552,14 @@
             "@type": "OfferCatalog",
             "name": "Photography Packages",
             "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Day Wedding Photography" }, "price": "45000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half Day Wedding Photography" }, "price": "25000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pre-Wedding Photoshoot" }, "price": "15000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maternity and Baby Shower" }, "price": "12000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Newborn Photography" }, "price": "10000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Event Photography" }, "price": "20000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Portfolio Shoot" }, "price": "8000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Product Photography" }, "price": "5000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" }
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Day Wedding Photography", "url": "https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html" }, "price": "45000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half Day Wedding Photography", "url": "https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html" }, "price": "25000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pre-Wedding Photoshoot", "url": "https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html" }, "price": "15000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maternity and Baby Shower", "url": "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html" }, "price": "12000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Newborn Photography", "url": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html" }, "price": "10000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Event Photography", "url": "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" }, "price": "20000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Portfolio Shoot", "url": "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" }, "price": "8000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Product Photography", "url": "https://story-and-smiles-photography.vercel.app/#contact" }, "price": "5000", "priceCurrency": "INR", "validFrom": "2026-01-01", "validThrough": "2026-12-31" }
             ]
         },
         "aggregateOffer": {
@@ -593,26 +582,26 @@
         "itemListOrder": "https://schema.org/ItemListUnordered",
         "numberOfItems": 20,
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Wedding Photography", "url": "https://story-and-smiles-photography.vercel.app/#svc-wedding" },
-            { "@type": "ListItem", "position": 2, "name": "Pre-Wedding Photoshoot", "url": "https://story-and-smiles-photography.vercel.app/#svc-pre-wedding" },
-            { "@type": "ListItem", "position": 3, "name": "Maternity and Pregnancy Photography", "url": "https://story-and-smiles-photography.vercel.app/#svc-maternity" },
-            { "@type": "ListItem", "position": 4, "name": "Baby Shower Photography", "url": "https://story-and-smiles-photography.vercel.app/#svc-maternity" },
-            { "@type": "ListItem", "position": 5, "name": "Event Photography", "url": "https://story-and-smiles-photography.vercel.app/#svc-event" },
-            { "@type": "ListItem", "position": 6, "name": "Portfolio Photography", "url": "https://story-and-smiles-photography.vercel.app/#svc-portfolio" },
-            { "@type": "ListItem", "position": 7, "name": "Newborn Photography", "url": "https://story-and-smiles-photography.vercel.app/#svc-newborn" },
-            { "@type": "ListItem", "position": 8, "name": "Product and E-Commerce Photography", "url": "https://story-and-smiles-photography.vercel.app/#services" },
-            { "@type": "ListItem", "position": 9, "name": "Birthday Photography", "url": "https://story-and-smiles-photography.vercel.app/#svc-event" },
-            { "@type": "ListItem", "position": 10, "name": "Engagement Photography", "url": "https://story-and-smiles-photography.vercel.app/#svc-pre-wedding" },
-            { "@type": "ListItem", "position": 11, "name": "Family Photography", "url": "https://story-and-smiles-photography.vercel.app/#svc-event" },
-            { "@type": "ListItem", "position": 12, "name": "House Warming Ceremony Photography", "url": "https://story-and-smiles-photography.vercel.app/#svc-event" },
-            { "@type": "ListItem", "position": 13, "name": "Photo Restoration", "url": "https://story-and-smiles-photography.vercel.app/#services" },
-            { "@type": "ListItem", "position": 14, "name": "Candid Videography", "url": "https://story-and-smiles-photography.vercel.app/#services" },
-            { "@type": "ListItem", "position": 15, "name": "Corporate Video Production", "url": "https://story-and-smiles-photography.vercel.app/#services" },
-            { "@type": "ListItem", "position": 16, "name": "Album Design and Printing", "url": "https://story-and-smiles-photography.vercel.app/#services" },
-            { "@type": "ListItem", "position": 17, "name": "Drone Photography", "url": "https://story-and-smiles-photography.vercel.app/#services" },
-            { "@type": "ListItem", "position": 18, "name": "Upanayana Photography", "url": "https://story-and-smiles-photography.vercel.app/#svc-event" },
-            { "@type": "ListItem", "position": 19, "name": "Cradle Ceremony Photography", "url": "https://story-and-smiles-photography.vercel.app/#svc-event" },
-            { "@type": "ListItem", "position": 20, "name": "Christian and Muslim Wedding Photography", "url": "https://story-and-smiles-photography.vercel.app/#svc-wedding" }
+            { "@type": "ListItem", "position": 1, "name": "Wedding Photography", "url": "https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 2, "name": "Pre-Wedding Photoshoot", "url": "https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 3, "name": "Maternity and Pregnancy Photography", "url": "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 4, "name": "Baby Shower Photography", "url": "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 5, "name": "Event Photography", "url": "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 6, "name": "Portfolio Photography", "url": "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 7, "name": "Newborn Photography", "url": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 8, "name": "Product and E-Commerce Photography", "url": "https://story-and-smiles-photography.vercel.app/#contact" },
+            { "@type": "ListItem", "position": 9, "name": "Birthday Photography", "url": "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 10, "name": "Engagement Photography", "url": "https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 11, "name": "Family Photography", "url": "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 12, "name": "House Warming Ceremony Photography", "url": "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 13, "name": "Photo Restoration", "url": "https://story-and-smiles-photography.vercel.app/#contact" },
+            { "@type": "ListItem", "position": 14, "name": "Candid Videography", "url": "https://story-and-smiles-photography.vercel.app/#contact" },
+            { "@type": "ListItem", "position": 15, "name": "Corporate Video Production", "url": "https://story-and-smiles-photography.vercel.app/#contact" },
+            { "@type": "ListItem", "position": 16, "name": "Album Design and Printing", "url": "https://story-and-smiles-photography.vercel.app/#contact" },
+            { "@type": "ListItem", "position": 17, "name": "Drone Photography", "url": "https://story-and-smiles-photography.vercel.app/#contact" },
+            { "@type": "ListItem", "position": 18, "name": "Upanayana Photography", "url": "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 19, "name": "Cradle Ceremony Photography", "url": "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 20, "name": "Christian and Muslim Wedding Photography", "url": "https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html" }
         ]
     }
     </script>
@@ -626,11 +615,7 @@
         "name": "How to book a wedding photographer in Bangalore",
         "description": "A simple four-step process to book Story and Smiles Photography for your wedding, maternity or family event in Bengaluru.",
         "totalTime": "P3D",
-        "estimatedCost": {
-            "@type": "MonetaryAmount",
-            "currency": "INR",
-            "value": "45000"
-        },
+        "estimatedCost": { "@type": "MonetaryAmount", "currency": "INR", "value": "45000" },
         "supply": [
             { "@type": "HowToSupply", "name": "Event date and venue details" },
             { "@type": "HowToSupply", "name": "Guest count and coverage hours" },
@@ -642,44 +627,13 @@
             { "@type": "HowToTool", "name": "Website contact form" }
         ],
         "step": [
-            {
-                "@type": "HowToStep",
-                "position": 1,
-                "name": "Share your date and venue",
-                "text": "Message us on WhatsApp at +91-98458 08890 or call us with your event date, venue and rough guest count. This helps us check availability."
-            },
-            {
-                "@type": "HowToStep",
-                "position": 2,
-                "name": "Get a custom quote",
-                "text": "We send a package tailored to your coverage hours, number of photographers and add-ons like albums or drone shots. Most quotes go out within a day."
-            },
-            {
-                "@type": "HowToStep",
-                "position": 3,
-                "name": "Confirm with a booking advance",
-                "text": "A booking advance locks your date. We share a simple agreement covering delivery timelines, usage rights and reschedule terms."
-            },
-            {
-                "@type": "HowToStep",
-                "position": 4,
-                "name": "Plan the shoot and enjoy the day",
-                "text": "A week before the event we go over your must-have shots, family groupings and the timeline. On the day, you focus on your guests and we handle the rest."
-            }
+            { "@type": "HowToStep", "position": 1, "name": "Share your date and venue", "text": "Message us on WhatsApp at +91-98458 08890 or call us with your event date, venue and rough guest count. This helps us check availability." },
+            { "@type": "HowToStep", "position": 2, "name": "Get a custom quote", "text": "We send a package tailored to your coverage hours, number of photographers and add-ons like albums or drone shots. Most quotes go out within a day." },
+            { "@type": "HowToStep", "position": 3, "name": "Confirm with a booking advance", "text": "A booking advance locks your date. We share a simple agreement covering delivery timelines, usage rights and reschedule terms." },
+            { "@type": "HowToStep", "position": 4, "name": "Plan the shoot and enjoy the day", "text": "A week before the event we go over your must-have shots, family groupings and the timeline. On the day, you focus on your guests and we handle the rest." }
         ]
     }
     </script>
-
-    <!-- ===== SCHEMA: EVENT — REMOVED =====
-         The previous Event schema (startDate 2026-01-01, endDate 2026-12-31) modelled a
-         year-long service as a one-off event and mismatched the page content. Service and
-         Offer schema already cover the offering correctly.
-    ===== -->
-
-    <!-- ===== SCHEMA: VIDEO OBJECT — REMOVED =====
-         No video is embedded in the supplied HTML. Re-add VideoObject only when a real
-         player and real embedUrl exist on the page.
-    ===== -->
 
     <!-- ===== SCHEMA: HERO IMAGE OBJECT ===== -->
     <script type="application/ld+json">
@@ -690,7 +644,7 @@
         "url": "https://story-and-smiles-photography.vercel.app/assets/images/hero-bg.webp",
         "width": 1920,
         "height": 1080,
-        "caption": "Bride and groom during a South Indian wedding ceremony in Bangalore",
+        "caption": "Bride and groom at the muhurtham moment of a South Indian wedding in Bengaluru",
         "creator": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" },
         "copyrightHolder": { "@id": "https://story-and-smiles-photography.vercel.app/#organization" },
         "copyrightNotice": "\u00a9 2026 Story and Smiles Photography. All rights reserved.",
@@ -700,7 +654,7 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: PHOTOGRAPHS (portfolio images) ===== -->
+    <!-- ===== SCHEMA: PHOTOGRAPHS ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -754,7 +708,7 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: FAQ ===== -->
+    <!-- ===== SCHEMA: FAQ (Fix 15 — internal links appended to 6 answers) ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -763,16 +717,16 @@
         "mainEntity": [
             { "@type": "Question", "name": "Are you based in Banashankari and do you travel across Bengaluru?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our studio is in Banashankari and we regularly travel across Bengaluru and nearby towns for weddings, maternity, newborn and family events. Travel beyond 30 km is quoted separately." } },
             { "@type": "Question", "name": "How far in advance should I book a wedding photographer?", "acceptedAnswer": { "@type": "Answer", "text": "Book three to six months ahead for popular wedding dates. Smaller events, maternity and baby shoots can often be scheduled four to six weeks ahead." } },
-            { "@type": "Question", "name": "What wedding photography packages do you offer?", "acceptedAnswer": { "@type": "Answer", "text": "We offer custom packages for full-day and half-day wedding coverage, plus pre-wedding shoots, mehendi, sangeet and reception. Every package is built around your timeline." } },
-            { "@type": "Question", "name": "When is the best time for a maternity shoot?", "acceptedAnswer": { "@type": "Answer", "text": "Between 28 and 34 weeks of pregnancy. The bump is clearly visible and most mothers are still comfortable moving around." } },
-            { "@type": "Question", "name": "How do you ensure safety during newborn shoots?", "acceptedAnswer": { "@type": "Answer", "text": "Newborn safety comes first. We keep the room warm, use soft props, follow baby-led posing and never force a position. Parents stay close throughout the session." } },
-            { "@type": "Question", "name": "What are your starting prices?", "acceptedAnswer": { "@type": "Answer", "text": "Full-day wedding coverage starts at Rs 45,000. Half-day is Rs 25,000, pre-wedding shoots are Rs 15,000, maternity and baby shower sessions are Rs 12,000, and newborn sessions start at Rs 10,000. Final quotes depend on location, duration and add-ons." } },
+            { "@type": "Question", "name": "What wedding photography packages do you offer?", "acceptedAnswer": { "@type": "Answer", "text": "We offer custom packages for full-day and half-day wedding coverage, plus pre-wedding shoots, mehendi, sangeet and reception. Every package is built around your timeline. See the wedding photography page for what each package covers." } },
+            { "@type": "Question", "name": "When is the best time for a maternity shoot?", "acceptedAnswer": { "@type": "Answer", "text": "Between 28 and 34 weeks of pregnancy. The bump is clearly visible and most mothers are still comfortable moving around. The maternity page covers studio and at-home options." } },
+            { "@type": "Question", "name": "How do you ensure safety during newborn shoots?", "acceptedAnswer": { "@type": "Answer", "text": "Newborn safety comes first. We keep the room warm, use soft props, follow baby-led posing and never force a position. Parents stay close throughout the session. Full session details are on the newborn page." } },
+            { "@type": "Question", "name": "What are your starting prices?", "acceptedAnswer": { "@type": "Answer", "text": "Full-day wedding coverage starts at ₹45,000. Half-day is ₹25,000, pre-wedding shoots are ₹15,000, maternity and baby shower sessions are ₹12,000, and newborn sessions start at ₹10,000. Final quotes depend on location, duration and add-ons." } },
             { "@type": "Question", "name": "How long until we receive our photos?", "acceptedAnswer": { "@type": "Answer", "text": "Weddings are delivered in three to four weeks. Maternity, newborn and baby shoots usually come back sooner, often within ten days." } },
-            { "@type": "Question", "name": "Do you offer videography as well?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We shoot cinematic wedding films alongside stills. Ask about our photo and video combo packages." } },
-            { "@type": "Question", "name": "Can we choose the location for our pre-wedding shoot?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work with you to pick a location in or around Bangalore that fits the mood you want, and we can suggest options based on the season." } },
+            { "@type": "Question", "name": "Do you offer videography as well?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We shoot cinematic wedding films alongside stills. Ask about our photo and video combo packages. Video is bundled into the event photography page." } },
+            { "@type": "Question", "name": "Can we choose the location for our pre-wedding shoot?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We work with you to pick a location in or around Bangalore that fits the mood you want, and we can suggest options based on the season. Location lists per area are on the pre-wedding page." } },
             { "@type": "Question", "name": "Do you provide albums and prints?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer handcrafted albums, fine-art prints and canvas frames as add-ons to any package." } },
             { "@type": "Question", "name": "What happens if it rains on the wedding day?", "acceptedAnswer": { "@type": "Answer", "text": "We plan for indoor and covered outdoor backups and carry professional lighting, so the day runs smoothly whatever the weather does." } },
-            { "@type": "Question", "name": "Do you cover destination weddings?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We have covered weddings in Goa, Kerala and Tamil Nadu, and we travel across India on request." } },
+            { "@type": "Question", "name": "Do you cover destination weddings?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We have covered weddings in Goa, Kerala and Tamil Nadu, and we travel across India on request. Mysore-specific logistics are on the Mysore page." } },
             { "@type": "Question", "name": "How many photos do we get?", "acceptedAnswer": { "@type": "Answer", "text": "A full-day wedding usually delivers 600 to 1000+ edited high-resolution images, depending on the number of events and hours." } },
             { "@type": "Question", "name": "Can we request specific shots or poses?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build a shot list with you before the event and blend your must-haves with the candid moments as they happen." } },
             { "@type": "Question", "name": "How do we book you?", "acceptedAnswer": { "@type": "Answer", "text": "Reach us on WhatsApp or call +91-98458 08890. You can also use the contact form on this site. We confirm your date once the booking advance is received." } },
@@ -788,21 +742,48 @@
     }
     </script>
 
-    <!-- ===== SCHEMA: BREADCRUMB (aligned to visible breadcrumb) ===== -->
+    <!-- ===== SCHEMA: SERVICE PAGES ITEMLIST (Fix 14) ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "@id": "https://story-and-smiles-photography.vercel.app/#breadcrumb",
+        "@type": "ItemList",
+        "@id": "https://story-and-smiles-photography.vercel.app/#servicepages",
+        "name": "Photography Services in Bangalore",
+        "description": "The five core photography services offered by Story and Smiles Photography.",
+        "numberOfItems": 5,
+        "itemListOrder": "https://schema.org/ItemListUnordered",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://story-and-smiles-photography.vercel.app/#home" },
-            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://story-and-smiles-photography.vercel.app/#services" },
-            { "@type": "ListItem", "position": 3, "name": "Photography", "item": "https://story-and-smiles-photography.vercel.app/" }
+            { "@type": "ListItem", "position": 1, "name": "Wedding Photography Bangalore", "url": "https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 2, "name": "Pre-Wedding Photography Bangalore", "url": "https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 3, "name": "Maternity and Baby Shower Photography Bangalore", "url": "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 4, "name": "Newborn Photography Bangalore", "url": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 5, "name": "Event Photography Bangalore", "url": "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" }
         ]
     }
     </script>
 
-    <!-- ===== SCHEMA: IMAGE GALLERY (FIXED) ===== -->
+    <!-- ===== SCHEMA: SERVICE AREA PAGES ITEMLIST (Fix 14) ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "@id": "https://story-and-smiles-photography.vercel.app/#areapages",
+        "name": "Photography Service Areas in and around Bengaluru",
+        "description": "Neighbourhood and city service areas covered by Story and Smiles Photography.",
+        "numberOfItems": 6,
+        "itemListOrder": "https://schema.org/ItemListUnordered",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Banashankari", "url": "https://story-and-smiles-photography.vercel.app/areas/banashankari.html" },
+            { "@type": "ListItem", "position": 2, "name": "Jayanagar", "url": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html" },
+            { "@type": "ListItem", "position": 3, "name": "JP Nagar", "url": "https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html" },
+            { "@type": "ListItem", "position": 4, "name": "Koramangala", "url": "https://story-and-smiles-photography.vercel.app/areas/koramangala.html" },
+            { "@type": "ListItem", "position": 5, "name": "Whitefield", "url": "https://story-and-smiles-photography.vercel.app/areas/whitefield.html" },
+            { "@type": "ListItem", "position": 6, "name": "Mysore", "url": "https://story-and-smiles-photography.vercel.app/areas/mysore.html" }
+        ]
+    }
+    </script>
+
+    <!-- ===== SCHEMA: IMAGE GALLERY ===== -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -811,75 +792,14 @@
         "name": "Story and Smiles Photography Portfolio",
         "description": "Candid wedding, maternity and event photography portfolio from Bangalore.",
         "mainEntity": [
-            {
-                "@type": "ImageObject",
-                "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/wedding-1.jpg",
-                "caption": "Candid wedding photography in Banashankari, Bangalore",
-                "creator": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" },
-                "copyrightHolder": { "@id": "https://story-and-smiles-photography.vercel.app/#organization" },
-                "copyrightNotice": "\u00a9 2026 Story and Smiles Photography. All rights reserved.",
-                "creditText": "Story and Smiles Photography",
-                "license": "https://story-and-smiles-photography.vercel.app/#termsModal",
-                "acquireLicensePage": "https://story-and-smiles-photography.vercel.app/#contact"
-            },
-            {
-                "@type": "ImageObject",
-                "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/baby-shower.jpg",
-                "caption": "Maternity and baby shower photoshoot in Banashankari, Bengaluru",
-                "creator": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" },
-                "copyrightHolder": { "@id": "https://story-and-smiles-photography.vercel.app/#organization" },
-                "copyrightNotice": "\u00a9 2026 Story and Smiles Photography. All rights reserved.",
-                "creditText": "Story and Smiles Photography",
-                "license": "https://story-and-smiles-photography.vercel.app/#termsModal",
-                "acquireLicensePage": "https://story-and-smiles-photography.vercel.app/#contact"
-            },
-            {
-                "@type": "ImageObject",
-                "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/pre-wedding.jpg",
-                "caption": "Pre-wedding photoshoot at a scenic outdoor location in Bangalore",
-                "creator": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" },
-                "copyrightHolder": { "@id": "https://story-and-smiles-photography.vercel.app/#organization" },
-                "copyrightNotice": "\u00a9 2026 Story and Smiles Photography. All rights reserved.",
-                "creditText": "Story and Smiles Photography",
-                "license": "https://story-and-smiles-photography.vercel.app/#termsModal",
-                "acquireLicensePage": "https://story-and-smiles-photography.vercel.app/#contact"
-            },
-            {
-                "@type": "ImageObject",
-                "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/event.jpg",
-                "caption": "Event photography in Banashankari, Bangalore, capturing candid guest moments",
-                "creator": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" },
-                "copyrightHolder": { "@id": "https://story-and-smiles-photography.vercel.app/#organization" },
-                "copyrightNotice": "\u00a9 2026 Story and Smiles Photography. All rights reserved.",
-                "creditText": "Story and Smiles Photography",
-                "license": "https://story-and-smiles-photography.vercel.app/#termsModal",
-                "acquireLicensePage": "https://story-and-smiles-photography.vercel.app/#contact"
-            },
-            {
-                "@type": "ImageObject",
-                "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/portfolio.jpg",
-                "caption": "Portfolio photography in Bengaluru for professionals and models",
-                "creator": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" },
-                "copyrightHolder": { "@id": "https://story-and-smiles-photography.vercel.app/#organization" },
-                "copyrightNotice": "\u00a9 2026 Story and Smiles Photography. All rights reserved.",
-                "creditText": "Story and Smiles Photography",
-                "license": "https://story-and-smiles-photography.vercel.app/#termsModal",
-                "acquireLicensePage": "https://story-and-smiles-photography.vercel.app/#contact"
-            }
+            { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/wedding-1.jpg", "caption": "Candid wedding photograph at a South Indian muhurtham in Banashankari, Bengaluru", "creator": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" }, "copyrightHolder": { "@id": "https://story-and-smiles-photography.vercel.app/#organization" }, "copyrightNotice": "\u00a9 2026 Story and Smiles Photography. All rights reserved.", "creditText": "Story and Smiles Photography", "license": "https://story-and-smiles-photography.vercel.app/#termsModal", "acquireLicensePage": "https://story-and-smiles-photography.vercel.app/#contact" },
+            { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/baby-shower.jpg", "caption": "Baby shower portrait of an expectant mother in Banashankari, Bengaluru", "creator": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" }, "copyrightHolder": { "@id": "https://story-and-smiles-photography.vercel.app/#organization" }, "copyrightNotice": "\u00a9 2026 Story and Smiles Photography. All rights reserved.", "creditText": "Story and Smiles Photography", "license": "https://story-and-smiles-photography.vercel.app/#termsModal", "acquireLicensePage": "https://story-and-smiles-photography.vercel.app/#contact" },
+            { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/pre-wedding.jpg", "caption": "Pre-wedding couple portrait at an outdoor location near Bengaluru", "creator": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" }, "copyrightHolder": { "@id": "https://story-and-smiles-photography.vercel.app/#organization" }, "copyrightNotice": "\u00a9 2026 Story and Smiles Photography. All rights reserved.", "creditText": "Story and Smiles Photography", "license": "https://story-and-smiles-photography.vercel.app/#termsModal", "acquireLicensePage": "https://story-and-smiles-photography.vercel.app/#contact" },
+            { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/event.jpg", "caption": "Guests laughing at a family event covered in Banashankari, Bengaluru", "creator": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" }, "copyrightHolder": { "@id": "https://story-and-smiles-photography.vercel.app/#organization" }, "copyrightNotice": "\u00a9 2026 Story and Smiles Photography. All rights reserved.", "creditText": "Story and Smiles Photography", "license": "https://story-and-smiles-photography.vercel.app/#termsModal", "acquireLicensePage": "https://story-and-smiles-photography.vercel.app/#contact" },
+            { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/portfolio.jpg", "caption": "Studio portfolio portrait of a professional shot in Bengaluru", "creator": { "@id": "https://story-and-smiles-photography.vercel.app/#karthik" }, "copyrightHolder": { "@id": "https://story-and-smiles-photography.vercel.app/#organization" }, "copyrightNotice": "\u00a9 2026 Story and Smiles Photography. All rights reserved.", "creditText": "Story and Smiles Photography", "license": "https://story-and-smiles-photography.vercel.app/#termsModal", "acquireLicensePage": "https://story-and-smiles-photography.vercel.app/#contact" }
         ]
     }
     </script>
-
-    <!-- ===== SCHEMA: BLOG POSTINGS — REMOVED =====
-         The three BlogPosting blocks previously pointed at hash fragments (#blog-wedding-dates,
-         #blog-maternity-wear, #blog-candid-poses) on the homepage and had no matching article
-         URLs or full article content. Re-add BlogPosting only when real article pages exist.
-    ===== -->
-
-    <!-- ===== SCHEMA: REVIEWS =====
-         Standalone Review items were flagged as invalid by Search Console.
-         Reviews are now nested inside the LocalBusiness schema as a "review" array.
-    ===== -->
 
     <!-- ================================================================
     CRITICAL INLINE STYLES
@@ -907,11 +827,7 @@
             transition: top 0.2s;
         }
         .skip-link:focus { top: 0; color: #fff; }
-        :focus-visible {
-            outline: 3px solid #e07a5f;
-            outline-offset: 3px;
-            border-radius: 4px;
-        }
+        :focus-visible { outline: 3px solid #e07a5f; outline-offset: 3px; border-radius: 4px; }
         .sr-only {
             position: absolute; width: 1px; height: 1px;
             padding: 0; margin: -1px; overflow: hidden;
@@ -926,11 +842,7 @@
             font-size: 0.9rem;
         }
         .cookie-banner.visible { display: block; }
-        .cookie-banner-inner {
-            max-width: 1200px; margin: 0 auto;
-            display: flex; align-items: center; gap: 20px;
-            flex-wrap: wrap; justify-content: space-between;
-        }
+        .cookie-banner-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: space-between; }
         .cookie-banner p { margin: 0; flex: 1; min-width: 240px; line-height: 1.5; }
         .cookie-banner a { color: #f4a261; text-decoration: underline; }
         .cookie-actions { display: flex; gap: 10px; flex-wrap: wrap; }
@@ -1113,11 +1025,6 @@
         .insta-badge-link:hover { background: rgba(0,0,0,0.85); transform: scale(1.04); color: #fff; }
         .insta-followers { opacity: 0.6; font-weight: 400; font-size: 0.75rem; }
 
-        .breadcrumb { padding: 12px 0 0; font-size: 0.8rem; color: rgba(255,255,255,0.5); }
-        .breadcrumb a { color: rgba(255,255,255,0.7); }
-        .breadcrumb a:hover { color: #fff; }
-        .breadcrumb span { margin: 0 6px; }
-
         .about-section { padding: 80px 0; background: #fff; }
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .about-image { position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
@@ -1159,6 +1066,13 @@
         .service-card h3 { font-size: 1.2rem; margin-bottom: 8px; color: #1e1a1a; }
         .service-card p { font-size: 0.95rem; color: #5a5252; line-height: 1.6; }
 
+        /* Fix 5 — service cards become real links */
+        a.service-card {
+            display: block; color: #2d2a2a;
+            text-decoration: none;
+        }
+        a.service-card:hover h3 { color: #e07a5f; }
+
         #pricing { scroll-margin-top: 100px; }
 
         .all-services-section { padding: 60px 0; background: #fff; }
@@ -1197,10 +1111,7 @@
             background: rgba(224,122,95,0.85); padding: 8px 24px;
             border-radius: 40px; backdrop-filter: blur(4px);
         }
-        .gallery-btn {
-            position: absolute; inset: 0; background: transparent;
-            border: none; cursor: pointer; z-index: 3;
-        }
+        .gallery-btn { position: absolute; inset: 0; background: transparent; border: none; cursor: pointer; z-index: 3; }
         .gallery-portfolio-link { text-align: center; margin-top: 48px; }
 
         .lightbox {
@@ -1262,33 +1173,21 @@
         .contact-item a:hover { color: #e07a5f; }
         .whatsapp-contact a { color: #25D366; font-weight: 600; }
 
-        .contact-form {
-            background: #fcf9f7; padding: 40px; border-radius: 24px;
-            border: 1px solid rgba(0,0,0,0.04);
-        }
+        .contact-form { background: #fcf9f7; padding: 40px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.04); }
         .form-group { margin-bottom: 18px; position: relative; }
-        .form-group label {
-            display: block; font-size: 0.85rem;
-            font-weight: 600; color: #2d2a2a;
-            margin-bottom: 6px;
-        }
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
+        .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: #2d2a2a; margin-bottom: 6px; }
+        .form-group input, .form-group select, .form-group textarea {
             width: 100%; padding: 14px 18px;
             border: 1.5px solid #e8e0dc; border-radius: 14px;
             font-size: 0.95rem; font-family: inherit;
             background: #fff; transition: border-color 0.2s, box-shadow 0.2s;
             color: #1e1a1a;
         }
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
             outline: none; border-color: #e07a5f;
             box-shadow: 0 0 0 4px rgba(224,122,95,0.08);
         }
-        .form-group input[aria-invalid="true"],
-        .form-group textarea[aria-invalid="true"] {
+        .form-group input[aria-invalid="true"], .form-group textarea[aria-invalid="true"] {
             border-color: #e63946;
             box-shadow: 0 0 0 4px rgba(230,57,70,0.08);
         }
@@ -1297,12 +1196,7 @@
         .btn-submit:disabled { opacity: 0.65; cursor: not-allowed; transform: none !important; }
         .form-note { text-align: center; margin-top: 12px; font-size: 0.85rem; color: #7a7272; }
 
-        .hp-field {
-            position: absolute !important;
-            left: -9999px !important;
-            width: 1px !important; height: 1px !important;
-            opacity: 0 !important;
-        }
+        .hp-field { position: absolute !important; left: -9999px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
         @media (max-width: 560px) { .form-row { grid-template-columns: 1fr; } }
 
@@ -1386,17 +1280,19 @@
         .faq-item[open] summary::after { transform: rotate(180deg); }
         .faq-item summary:hover { background: #fcf9f7; }
         .faq-answer { padding: 0 24px 24px; color: #4a4242; line-height: 1.7; }
+        .faq-answer a { text-decoration: underline; text-underline-offset: 2px; font-weight: 600; }
 
         .footer { background: #1e1a1a; color: rgba(255,255,255,0.7); padding: 60px 0 30px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        /* Fix 11 — 4 columns */
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
         .footer-brand p { font-size: 0.9rem; line-height: 1.8; margin-bottom: 10px; }
         .footer-brand a { color: rgba(255,255,255,0.7); }
         .footer-brand a:hover { color: #e07a5f; }
         .footer-logo { margin-bottom: 12px; filter: brightness(0.9); }
-        .footer-links h4, .footer-services h4 { color: #fff; font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
-        .footer-links ul, .footer-services ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-        .footer-links ul li a, .footer-services ul li a { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
-        .footer-links ul li a:hover, .footer-services ul li a:hover { color: #e07a5f; }
+        .footer-links h4, .footer-services h4, .footer-areas h4 { color: #fff; font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
+        .footer-links ul, .footer-services ul, .footer-areas ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .footer-links ul li a, .footer-services ul li a, .footer-areas ul li a { color: rgba(255,255,255,0.6); font-size: 0.9rem; transition: color 0.2s; }
+        .footer-links ul li a:hover, .footer-services ul li a:hover, .footer-areas ul li a:hover { color: #e07a5f; }
 
         .footer-keywords { padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 20px; }
         .footer-keywords p { font-size: 0.8rem; color: rgba(255,255,255,0.4); text-align: center; max-width: 900px; margin: 0 auto; line-height: 2; }
@@ -1565,8 +1461,6 @@
             box-shadow: 0 0 10px rgba(224,122,95,0.55);
             transition: width 0.08s linear;
         }
-
-        /* Ken Burns runs a single pass to save battery on mobile */
         .hero picture img {
             animation: kenBurns 22s ease-in-out 1 forwards;
             will-change: transform;
@@ -1575,7 +1469,6 @@
             0%   { transform: scale(1.06) translate3d(0, 0, 0); }
             100% { transform: scale(1.12) translate3d(-1%, -0.8%, 0); }
         }
-
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(34px);
@@ -1592,7 +1485,6 @@
             filter: blur(0);
             will-change: auto;
         }
-
         .section-header .section-title::after {
             content: '';
             display: block;
@@ -1604,11 +1496,9 @@
             transform-origin: center;
             transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.1s;
         }
-        .section-header.in-view .section-title::after {
-            transform: scaleX(1);
-        }
+        .section-header.in-view .section-title::after { transform: scaleX(1); }
 
-        .btn, .cta-book, .faq-more-btn { position: relative; overflow: hidden; }
+        .btn, .cta-book { position: relative; overflow: hidden; }
         .btn-ripple {
             position: absolute;
             border-radius: 50%;
@@ -1617,11 +1507,8 @@
             animation: rippleAnim 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
             pointer-events: none;
         }
-        .btn-outline .btn-ripple,
-        .faq-more-btn .btn-ripple { background: rgba(224, 122, 95, 0.35); }
-        @keyframes rippleAnim {
-            to { transform: scale(2.6); opacity: 0; }
-        }
+        .btn-outline .btn-ripple { background: rgba(224, 122, 95, 0.35); }
+        @keyframes rippleAnim { to { transform: scale(2.6); opacity: 0; } }
 
         @media (pointer: fine) {
             .hero-buttons .btn,
@@ -1632,7 +1519,6 @@
                             box-shadow 0.25s ease;
             }
         }
-
         .service-icon, .why-card .icon {
             transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
             display: inline-block;
@@ -1643,32 +1529,21 @@
             0%, 100% { transform: translateY(0); }
             50%      { transform: translateY(-6px); }
         }
-
         .service-card { position: relative; overflow: hidden; }
         .service-card::before {
             content: '';
             position: absolute;
             top: 0; left: -60%;
             width: 55%; height: 100%;
-            background: linear-gradient(115deg,
-                transparent 0%,
-                rgba(244, 162, 97, 0.10) 45%,
-                rgba(224, 122, 95, 0.16) 55%,
-                transparent 100%);
+            background: linear-gradient(115deg, transparent 0%, rgba(244, 162, 97, 0.10) 45%, rgba(224, 122, 95, 0.16) 55%, transparent 100%);
             transform: skewX(-18deg);
             transition: left 0.85s cubic-bezier(0.22, 1, 0.36, 1);
             pointer-events: none;
         }
         .service-card:hover::before { left: 130%; }
+        .gallery-item img { transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1); }
 
-        .gallery-item img {
-            transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .nav-menu li a {
-            position: relative;
-            transition: color 0.25s ease;
-        }
+        .nav-menu li a { position: relative; transition: color 0.25s ease; }
         .nav-menu li a::after {
             content: '';
             position: absolute;
@@ -1702,7 +1577,6 @@
             0%   { transform: scale(0.92); opacity: 0.65; }
             100% { transform: scale(1.22); opacity: 0; }
         }
-
         .faq-item[open] .faq-answer {
             animation: faqOpen 0.42s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
@@ -1710,48 +1584,6 @@
             from { opacity: 0; transform: translateY(-8px); }
             to   { opacity: 1; transform: translateY(0); }
         }
-
-        .faq-more-wrap {
-            display: flex;
-            justify-content: center;
-            margin-top: 28px;
-        }
-        .faq-more-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 32px;
-            border-radius: 60px;
-            background: #fff;
-            color: #e07a5f;
-            border: 1.5px solid rgba(224, 122, 95, 0.3);
-            font-weight: 600;
-            font-size: 0.95rem;
-            font-family: inherit;
-            cursor: pointer;
-            transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-            box-shadow: 0 4px 16px rgba(224, 122, 95, 0.08);
-        }
-        .faq-more-btn:hover {
-            background: #e07a5f;
-            color: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 14px 34px rgba(224, 122, 95, 0.32);
-            border-color: #e07a5f;
-        }
-        .faq-more-icon { transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1); }
-        .faq-more-btn[aria-expanded="true"] .faq-more-icon { transform: rotate(180deg); }
-
-        .faq-item.faq-hidden { display: none; }
-        .faq-item.faq-entering {
-            animation: faqSlideIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        }
-        @keyframes faqSlideIn {
-            from { opacity: 0; transform: translateY(18px) scale(0.985); }
-            to   { opacity: 1; transform: translateY(0) scale(1); }
-        }
-
-        /* ===== PRICING TABLE SCROLL HINT ===== */
         .pricing-scroll-hint {
             display: none;
             text-align: center;
@@ -1763,14 +1595,12 @@
         @media (max-width: 640px) {
             .pricing-scroll-hint { display: block; }
         }
-
         @media (prefers-reduced-motion: reduce) {
             .hero picture img,
             .whatsapp-main-btn::before,
             .animate-on-scroll,
             .section-header .section-title::after,
-            .faq-item[open] .faq-answer,
-            .faq-item.faq-entering {
+            .faq-item[open] .faq-answer {
                 animation: none !important;
                 transition: none !important;
                 filter: none !important;
@@ -1778,6 +1608,95 @@
                 transform: none !important;
             }
             .scroll-progress { transition: none; }
+        }
+
+        /* =========================================================
+           Fix 2 — NAV DROPDOWNS + MOBILE OVERLAP + QUICK FACTS
+           ========================================================= */
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-toggle { display: inline-flex; align-items: center; gap: 4px; }
+        .nav-dropdown-toggle .caret {
+            font-size: 0.65rem; opacity: 0.7;
+            transition: transform 0.25s ease;
+        }
+        .nav-dropdown:hover .caret,
+        .nav-dropdown:focus-within .caret,
+        .nav-dropdown.open .caret { transform: rotate(180deg); }
+
+        .nav-dropdown-menu {
+            position: absolute; top: 100%; left: 50%;
+            transform: translateX(-50%) translateY(8px);
+            min-width: 240px; background: #fff;
+            border-radius: 16px; padding: 8px;
+            box-shadow: 0 16px 48px rgba(224,122,95,0.14), 0 4px 12px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.04);
+            list-style: none; opacity: 0; visibility: hidden;
+            transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+            z-index: 10;
+        }
+        .nav-dropdown:hover .nav-dropdown-menu,
+        .nav-dropdown:focus-within .nav-dropdown-menu,
+        .nav-dropdown.open .nav-dropdown-menu {
+            opacity: 1; visibility: visible;
+            transform: translateX(-50%) translateY(4px);
+        }
+        .nav-dropdown-menu li { margin: 0; }
+        .nav-dropdown-menu a {
+            display: block; padding: 10px 14px;
+            border-radius: 10px; font-size: 0.9rem;
+            color: #2d2a2a; font-weight: 500;
+            border-bottom: none;
+        }
+        .nav-dropdown-menu a:hover { background: #fdf0eb; color: #e07a5f; }
+
+        @media (max-width: 1180px) and (min-width: 769px) {
+            .nav-menu { gap: 12px; }
+            .nav-menu li a { font-size: 0.82rem; }
+            .nav-cta { padding: 7px 16px !important; }
+        }
+        @media (max-width: 768px) {
+            .nav-dropdown-menu {
+                position: static; transform: none;
+                opacity: 1; visibility: visible;
+                box-shadow: none; background: transparent;
+                padding: 0 0 0 16px; max-height: 0; overflow: hidden;
+                transition: max-height 0.35s ease;
+                border: none; min-width: 0;
+            }
+            .nav-dropdown.open .nav-dropdown-menu { max-height: 420px; }
+            .nav-dropdown-toggle { justify-content: space-between; width: 100%; }
+        }
+        @media (max-width: 768px) {
+            .back-to-top { bottom: 148px !important; right: 16px; }
+        }
+
+        .quick-facts-section { padding: 48px 0; background: #fff; }
+        .quick-facts-inner {
+            max-width: 1000px; margin: 0 auto;
+            background: #fcf9f7; border-radius: 20px;
+            padding: 28px 32px;
+            border: 1px solid rgba(0,0,0,0.04);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+        }
+        .quick-facts-list {
+            display: grid; grid-template-columns: repeat(2, 1fr);
+            gap: 18px 32px; margin: 0;
+        }
+        .quick-facts-list > div { display: flex; flex-direction: column; }
+        .quick-facts-list dt {
+            font-size: 0.72rem; font-weight: 700;
+            letter-spacing: 1.2px; text-transform: uppercase;
+            color: #e07a5f; margin-bottom: 3px;
+        }
+        .quick-facts-list dd {
+            margin: 0; font-size: 0.95rem;
+            color: #2d2a2a; line-height: 1.55;
+        }
+        .quick-facts-list dd a { color: #2d2a2a; text-decoration: underline; text-underline-offset: 2px; }
+        .quick-facts-list dd a:hover { color: #e07a5f; }
+        @media (max-width: 640px) {
+            .quick-facts-list { grid-template-columns: 1fr; gap: 14px; }
+            .quick-facts-inner { padding: 22px 20px; }
         }
 
         /* ===== RESPONSIVE ===== */
@@ -1798,14 +1717,12 @@
         @media (max-width: 768px) {
             body { font-size: 1rem; }
             .service-card p, .about-text, .faq-answer { font-size: 1rem; }
-
             .navbar {
                 backdrop-filter: none;
                 -webkit-backdrop-filter: none;
                 background: rgba(255,252,250,0.99);
             }
             .navbar.scrolled { background: rgba(255,252,250,0.99); }
-
             .nav-menu {
                 position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
                 background: rgba(255,252,250,0.99);
@@ -1829,8 +1746,7 @@
             .whatsapp-float { bottom: 88px; right: 16px; }
             .whatsapp-main-btn { padding: 10px 14px 10px 12px; font-size: 13px; }
             .whatsapp-popup { width: 92vw; right: 0; bottom: 72px; }
-            .back-to-top { bottom: 88px; right: 16px; width: 40px; height: 40px; }
-            .breadcrumb { font-size: 0.7rem; }
+            .back-to-top { bottom: 148px; right: 16px; width: 40px; height: 40px; }
             .trust-badges { gap: 10px; }
             .trust-badge { font-size: 0.75rem; padding: 4px 12px 4px 10px; }
             .mobile-sticky-cta { display: flex; }
@@ -1861,11 +1777,12 @@
 <body>
 
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-
     <a href="#main-content" class="skip-link">Skip to main content</a>
-
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TC9D7BX3" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
 
+    <!-- ============================================================
+         NAV — Fix 1: dropdowns carry real URLs; 9 items not 11
+         ============================================================ -->
     <nav class="navbar" id="navbar" aria-label="Main navigation">
         <div class="container nav-container">
             <a href="#home" class="logo-link" aria-label="Story and Smiles Photography home">
@@ -1875,10 +1792,32 @@
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#why" class="nav-link">Why Us</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-dropdown">
+                    <a href="#services" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Services <span class="caret" aria-hidden="true">&#9662;</span>
+                    </a>
+                    <ul class="nav-dropdown-menu" role="menu">
+                        <li><a href="https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html" role="menuitem">Wedding</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html" role="menuitem">Pre-Wedding</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html" role="menuitem">Maternity &amp; Baby Shower</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html" role="menuitem">Newborn</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" role="menuitem">Events</a></li>
+                    </ul>
+                </li>
                 <li><a href="#pricing" class="nav-link">Pricing</a></li>
-                <li><a href="#all-services" class="nav-link">All Services</a></li>
-                <li><a href="#areas" class="nav-link">Areas</a></li>
+                <li class="nav-dropdown">
+                    <a href="#areas" class="nav-link nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Areas <span class="caret" aria-hidden="true">&#9662;</span>
+                    </a>
+                    <ul class="nav-dropdown-menu" role="menu">
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/banashankari.html" role="menuitem">Banashankari</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/jayanagar.html" role="menuitem">Jayanagar</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html" role="menuitem">JP Nagar</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/koramangala.html" role="menuitem">Koramangala</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/whitefield.html" role="menuitem">Whitefield</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/mysore.html" role="menuitem">Mysore</a></li>
+                    </ul>
+                </li>
                 <li><a href="#gallery" class="nav-link">Gallery</a></li>
                 <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
                 <li><a href="#faq" class="nav-link">FAQs</a></li>
@@ -1897,12 +1836,15 @@
         <a href="https://wa.me/?text=Check%20out%20Story%20and%20Smiles%20Photography%20in%20Bangalore%20https://story-and-smiles-photography.vercel.app/" target="_blank" rel="noopener noreferrer" class="share-btn whatsapp" aria-label="Share on WhatsApp">WA</a>
     </div>
 
+    <!-- ============================================================
+         HERO — Fix 3: breadcrumb removed, aria-labels added to stats
+         ============================================================ -->
     <header id="home" class="hero">
         <picture>
             <source media="(min-width: 768px)" srcset="assets/images/hero-bg.webp" type="image/webp" sizes="100vw" />
             <source media="(max-width: 767px)" srcset="assets/images/hero-bg-mobile.jpg" type="image/jpeg" sizes="100vw" />
             <img src="assets/images/hero-bg.webp"
-                 alt="Bride and groom during a South Indian wedding ceremony in Bangalore"
+                 alt="Bride and groom at the muhurtham moment of a South Indian wedding in Bengaluru"
                  fetchpriority="high" width="1920" height="1080" decoding="async" />
         </picture>
         <div class="hero-overlay"></div>
@@ -1920,12 +1862,6 @@
         </div>
 
         <div class="hero-content">
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <a href="#home">Home</a> <span>&rsaquo;</span>
-                <a href="#services">Services</a> <span>&rsaquo;</span>
-                <span style="color:rgba(255,255,255,0.6);">Photography</span>
-            </nav>
-
             <h1 class="hero-title fade-in-up" id="hero-title">
                 Wedding Photographers in <span class="highlight">Bangalore</span>
             </h1>
@@ -1949,24 +1885,24 @@
 
             <div class="summary-box fade-in-up delay-2" style="background:rgba(255,255,255,0.10); backdrop-filter:blur(6px); border-left:4px solid #f4a261; border-radius:12px; padding:16px 22px; margin:16px auto 28px; max-width:760px; text-align:left;">
                 <strong style="color:#f4a261; display:block; margin-bottom:4px; font-size:0.85rem; text-transform:uppercase; letter-spacing:0.5px;">In a nutshell</strong>
-                <p style="margin:0; font-size:0.95rem; color:rgba(255,255,255,0.90); line-height:1.6;">Story and Smiles is a wedding photography company in Banashankari, Bangalore. Karthik and his team shoot candid weddings, pre-weddings, maternity, newborn and family functions across Karnataka and neighbouring states. Full-day wedding coverage starts at Rs 45,000.</p>
+                <p style="margin:0; font-size:0.95rem; color:rgba(255,255,255,0.90); line-height:1.6;">Story and Smiles is a wedding photography company in Banashankari, Bangalore. Karthik and his team shoot candid weddings, pre-weddings, maternity, newborn and family functions across Karnataka and neighbouring states. Full-day wedding coverage starts at ₹45,000.</p>
             </div>
 
             <div class="hero-stats fade-in-up delay-3">
                 <div class="stat-item">
-                    <span class="stat-number counter" data-target="350">0</span>
+                    <span class="stat-number counter" data-target="350" aria-label="350">0</span>
                     <span class="stat-label">Happy Clients</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number counter" data-target="869">0</span>
+                    <span class="stat-number counter" data-target="869" aria-label="869">0</span>
                     <span class="stat-label">Events Covered</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">7+</span>
+                    <span class="stat-number" aria-label="7">7+</span>
                     <span class="stat-label">States Served</span>
                 </div>
                 <div class="stat-item insta-stat">
-                    <span class="stat-number">1.2K</span>
+                    <span class="stat-number" aria-label="1200 Instagram followers">1.2K</span>
                     <span class="stat-label">Instagram Followers</span>
                 </div>
             </div>
@@ -2031,6 +1967,43 @@
             </div>
         </section>
 
+        <!-- ============================================================
+             QUICK FACTS — Fix 4
+             ============================================================ -->
+        <section id="quick-facts" class="quick-facts-section" aria-labelledby="quick-facts-heading">
+            <div class="container">
+                <h2 id="quick-facts-heading" class="sr-only">Studio quick facts</h2>
+                <div class="quick-facts-inner">
+                    <dl class="quick-facts-list">
+                        <div>
+                            <dt>Studio</dt>
+                            <dd>2A, 5th Main, 3rd Cross Rd, near Chikkalasandra, Banashankari, Bengaluru 560061</dd>
+                        </div>
+                        <div>
+                            <dt>Phone and WhatsApp</dt>
+                            <dd><a href="tel:+919845808890">+91-98458 08890</a></dd>
+                        </div>
+                        <div>
+                            <dt>Hours</dt>
+                            <dd>9am to 8pm, all seven days</dd>
+                        </div>
+                        <div>
+                            <dt>Founded</dt>
+                            <dd>2019, by Karthik</dd>
+                        </div>
+                        <div>
+                            <dt>Starting prices</dt>
+                            <dd>Newborn sessions from ₹10,000 · Maternity from ₹12,000 · Full-day weddings from ₹45,000</dd>
+                        </div>
+                        <div>
+                            <dt>Coverage</dt>
+                            <dd>Bengaluru, Mysuru, and destination weddings across Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Goa and Puducherry</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
         <section id="about" class="about-section" aria-labelledby="about-heading">
             <div class="container">
                 <div class="about-grid">
@@ -2077,6 +2050,9 @@
             </div>
         </section>
 
+        <!-- ============================================================
+             SERVICES — Fix 5: cards are real <a> links to live pages
+             ============================================================ -->
         <section id="services" class="services-section" aria-labelledby="services-heading">
             <div class="container">
                 <div class="section-header">
@@ -2085,36 +2061,36 @@
                     <p class="section-description">One team for your wedding, your baby shower, your newborn's first shoot and every family function in between.</p>
                 </div>
                 <div class="services-grid">
-                    <article id="svc-wedding" class="service-card animate-on-scroll">
+                    <a href="https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html" class="service-card animate-on-scroll">
                         <div class="service-icon" aria-hidden="true">&#128247;</div>
                         <h3>Wedding Photography</h3>
                         <p>Candid, traditional and cinematic coverage of every ritual, without you ever feeling posed.</p>
-                    </article>
-                    <article id="svc-pre-wedding" class="service-card animate-on-scroll" data-delay="0.15">
+                    </a>
+                    <a href="https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html" class="service-card animate-on-scroll" data-delay="0.15">
                         <div class="service-icon" aria-hidden="true">&#128106;</div>
                         <h3>Pre-Wedding Shoot</h3>
                         <p>Couple sessions at Bangalore's parks, heritage spots and countryside, planned around light.</p>
-                    </article>
-                    <article id="svc-event" class="service-card animate-on-scroll" data-delay="0.3">
+                    </a>
+                    <a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" class="service-card animate-on-scroll" data-delay="0.3">
                         <div class="service-icon" aria-hidden="true">&#127882;</div>
                         <h3>Event Photography</h3>
                         <p>Corporate events, birthdays, house warmings and anniversaries, captured and delivered fast.</p>
-                    </article>
-                    <article id="svc-maternity" class="service-card animate-on-scroll" data-delay="0.15">
+                    </a>
+                    <a href="https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html" class="service-card animate-on-scroll" data-delay="0.15">
                         <div class="service-icon" aria-hidden="true">&#128118;</div>
                         <h3>Baby Shower and Maternity</h3>
                         <p>Studio or at-home maternity shoots that keep the session relaxed and the mood light.</p>
-                    </article>
-                    <article id="svc-portfolio" class="service-card animate-on-scroll" data-delay="0.3">
+                    </a>
+                    <a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" class="service-card animate-on-scroll" data-delay="0.3">
                         <div class="service-icon" aria-hidden="true">&#128100;</div>
                         <h3>Portfolio Photography</h3>
                         <p>Clean, well-lit portfolios for actors, models and professionals updating their profile.</p>
-                    </article>
-                    <article id="svc-newborn" class="service-card animate-on-scroll" data-delay="0.45">
+                    </a>
+                    <a href="https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html" class="service-card animate-on-scroll" data-delay="0.45">
                         <div class="service-icon" aria-hidden="true">&#127868;</div>
                         <h3>Newborn Photography</h3>
                         <p>Gentle, baby-led sessions with soft props, warm rooms and plenty of patience.</p>
-                    </article>
+                    </a>
                 </div>
 
                 <div id="pricing" style="margin-top:50px; background:#fff; border-radius:24px; padding:32px 28px; box-shadow:0 6px 24px rgba(0,0,0,0.04); border:1px solid rgba(0,0,0,0.03);">
@@ -2132,11 +2108,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Wedding, Full Day</td><td style="padding:12px 16px; color:#4a4242;">10+ hrs, 2 photographers</td><td style="padding:12px 16px; color:#4a4242;">600+ edited images, online gallery, print rights</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">Rs 45,000</td></tr>
-                                <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Wedding, Half Day</td><td style="padding:12px 16px; color:#4a4242;">5 hrs, 1 photographer</td><td style="padding:12px 16px; color:#4a4242;">300+ edited images, online gallery</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">Rs 25,000</td></tr>
-                                <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Pre-Wedding Shoot</td><td style="padding:12px 16px; color:#4a4242;">2 to 3 hrs, 1 location</td><td style="padding:12px 16px; color:#4a4242;">60+ edited images, 2 outfit changes</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">Rs 15,000</td></tr>
-                                <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Maternity or Baby Shower</td><td style="padding:12px 16px; color:#4a4242;">2 hrs, studio or home</td><td style="padding:12px 16px; color:#4a4242;">40+ edited images, 2 outfits</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">Rs 12,000</td></tr>
-                                <tr><td style="padding:12px 16px; font-weight:500;">Newborn Session</td><td style="padding:12px 16px; color:#4a4242;">2 to 3 hrs, in-home</td><td style="padding:12px 16px; color:#4a4242;">30+ edited images, 3 props, family shots</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">Rs 10,000</td></tr>
+                                <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Wedding, Full Day</td><td style="padding:12px 16px; color:#4a4242;">10+ hrs, 2 photographers</td><td style="padding:12px 16px; color:#4a4242;">600+ edited images, online gallery, print rights</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹45,000</td></tr>
+                                <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Wedding, Half Day</td><td style="padding:12px 16px; color:#4a4242;">5 hrs, 1 photographer</td><td style="padding:12px 16px; color:#4a4242;">300+ edited images, online gallery</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹25,000</td></tr>
+                                <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Pre-Wedding Shoot</td><td style="padding:12px 16px; color:#4a4242;">2 to 3 hrs, 1 location</td><td style="padding:12px 16px; color:#4a4242;">60+ edited images, 2 outfit changes</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹15,000</td></tr>
+                                <tr style="border-bottom:1px solid #eee;"><td style="padding:12px 16px; font-weight:500;">Maternity or Baby Shower</td><td style="padding:12px 16px; color:#4a4242;">2 hrs, studio or home</td><td style="padding:12px 16px; color:#4a4242;">40+ edited images, 2 outfits</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹12,000</td></tr>
+                                <tr><td style="padding:12px 16px; font-weight:500;">Newborn Session</td><td style="padding:12px 16px; color:#4a4242;">2 to 3 hrs, in-home</td><td style="padding:12px 16px; color:#4a4242;">30+ edited images, 3 props, family shots</td><td style="padding:12px 16px; color:#e07a5f; font-weight:600;">₹10,000</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -2145,6 +2121,9 @@
             </div>
         </section>
 
+        <!-- ============================================================
+             ALL SERVICES — Fix 6: real URLs, no #svc-* hashes
+             ============================================================ -->
         <section id="all-services" class="all-services-section" aria-labelledby="all-services-heading">
             <div class="container">
                 <div class="section-header">
@@ -2153,56 +2132,59 @@
                     <p class="section-description">From weddings to product shots. If it involves a camera and a moment worth remembering, we probably do it.</p>
                 </div>
                 <div class="all-services-grid">
-                    <div class="service-item"><a href="#svc-wedding">Wedding Photographers</a></div>
-                    <div class="service-item"><a href="#svc-pre-wedding">Pre Wedding Photoshoot</a></div>
-                    <div class="service-item"><a href="#svc-maternity">Maternity and Pregnancy Photographers</a></div>
-                    <div class="service-item"><a href="#svc-maternity">Baby Shower Photographers</a></div>
-                    <div class="service-item"><a href="#svc-event">Event Photographers</a></div>
-                    <div class="service-item"><a href="#svc-portfolio">Portfolio Shoot</a></div>
-                    <div class="service-item"><a href="#svc-event">Product and E-Commerce Photography</a></div>
-                    <div class="service-item"><a href="#svc-event">Birthday Photographers</a></div>
-                    <div class="service-item"><a href="#svc-newborn">Newborn Photography</a></div>
-                    <div class="service-item"><a href="#svc-pre-wedding">Engagement Photographers</a></div>
-                    <div class="service-item"><a href="#svc-event">Family Shoot</a></div>
-                    <div class="service-item"><a href="#svc-event">House Warming Ceremony Photographers</a></div>
-                    <div class="service-item"><a href="#services">Photo Restoration Service</a></div>
-                    <div class="service-item"><a href="#svc-pre-wedding">Post Wedding Photoshoot</a></div>
-                    <div class="service-item"><a href="#svc-event">Naming Ceremony Photography</a></div>
-                    <div class="service-item"><a href="#svc-event">Upanayana Photography</a></div>
-                    <div class="service-item"><a href="#svc-event">Shastipurthi Photography</a></div>
-                    <div class="service-item"><a href="#services">Photo Frames</a></div>
-                    <div class="service-item"><a href="#services">Album Design and Printing</a></div>
-                    <div class="service-item"><a href="#svc-wedding">Candid Wedding Photography</a></div>
-                    <div class="service-item"><a href="#services">Candid Videographers</a></div>
-                    <div class="service-item"><a href="#services">Professional Videography</a></div>
-                    <div class="service-item"><a href="#svc-event">Corporate Photographers</a></div>
-                    <div class="service-item"><a href="#svc-wedding">Christian Wedding Photographers</a></div>
-                    <div class="service-item"><a href="#svc-wedding">Muslim Wedding Photographers</a></div>
-                    <div class="service-item"><a href="#services">Digital Photo Studio Near Me</a></div>
-                    <div class="service-item"><a href="#svc-event">Puberty Function Photographers</a></div>
-                    <div class="service-item"><a href="#svc-portfolio">Portrait Photography</a></div>
-                    <div class="service-item"><a href="#services">Karizma Album Printing</a></div>
-                    <div class="service-item"><a href="#services">Drone Photography</a></div>
-                    <div class="service-item"><a href="#svc-newborn">Baby Photoshoot</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html">Wedding Photographers</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html">Pre Wedding Photoshoot</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html">Maternity and Pregnancy Photographers</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html">Baby Shower Photographers</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Event Photographers</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Portfolio Shoot</a></div>
+                    <div class="service-item"><a href="#contact">Product and E-Commerce Photography</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Birthday Photographers</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html">Newborn Photography</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html">Engagement Photographers</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Family Shoot</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">House Warming Ceremony Photographers</a></div>
+                    <div class="service-item"><a href="#contact">Photo Restoration Service</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html">Post Wedding Photoshoot</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Naming Ceremony Photography</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Upanayana Photography</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Shastipurthi Photography</a></div>
+                    <div class="service-item"><a href="#contact">Photo Frames</a></div>
+                    <div class="service-item"><a href="#contact">Album Design and Printing</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html">Candid Wedding Photography</a></div>
+                    <div class="service-item"><a href="#contact">Candid Videographers</a></div>
+                    <div class="service-item"><a href="#contact">Professional Videography</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Corporate Photographers</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html">Christian Wedding Photographers</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html">Muslim Wedding Photographers</a></div>
+                    <div class="service-item"><a href="#contact">Digital Photo Studio Near Me</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Puberty Function Photographers</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Portrait Photography</a></div>
+                    <div class="service-item"><a href="#contact">Karizma Album Printing</a></div>
+                    <div class="service-item"><a href="#contact">Drone Photography</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html">Baby Photoshoot</a></div>
                     <div class="service-item"><a href="#contact">Photographers Near Me</a></div>
-                    <div class="service-item"><a href="#svc-event">Cradle Ceremony</a></div>
-                    <div class="service-item"><a href="#services">Video Editing Services</a></div>
-                    <div class="service-item"><a href="#services">Corporate Video Production</a></div>
-                    <div class="service-item"><a href="#services">Personalized Coffee Mug Printing</a></div>
-                    <div class="service-item"><a href="#services">Freelance Photographers</a></div>
-                    <div class="service-item"><a href="#services">Canvera Album Design and Printing</a></div>
-                    <div class="service-item"><a href="#svc-pre-wedding">Elements Resort Pre-Wedding Shoot</a></div>
-                    <div class="service-item"><a href="#svc-newborn">Baby Photoshoot Places</a></div>
-                    <div class="service-item"><a href="#svc-maternity">Maternity Photoshoot Places</a></div>
-                    <div class="service-item"><a href="#svc-event">Anniversary Photoshoot</a></div>
-                    <div class="service-item"><a href="#svc-event">Holy Communion and Baptism Photography</a></div>
-                    <div class="service-item"><a href="#svc-maternity">Indoor Maternity Photoshoot</a></div>
-                    <div class="service-item"><a href="#svc-portfolio">Fashion Photographers</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Cradle Ceremony</a></div>
+                    <div class="service-item"><a href="#contact">Video Editing Services</a></div>
+                    <div class="service-item"><a href="#contact">Corporate Video Production</a></div>
+                    <div class="service-item"><a href="#contact">Personalized Coffee Mug Printing</a></div>
+                    <div class="service-item"><a href="#contact">Freelance Photographers</a></div>
+                    <div class="service-item"><a href="#contact">Canvera Album Design and Printing</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html">Elements Resort Pre-Wedding Shoot</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html">Baby Photoshoot Places</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html">Maternity Photoshoot Places</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Anniversary Photoshoot</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Holy Communion and Baptism Photography</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html">Indoor Maternity Photoshoot</a></div>
+                    <div class="service-item"><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Fashion Photographers</a></div>
                 </div>
                 <p style="text-align:center; margin-top:24px; font-size:0.9rem; color:#7a7272;">Click any service to learn more, or <a href="#contact" style="color:#e07a5f; font-weight:600;">get in touch</a> for a custom quote.</p>
             </div>
         </section>
 
+        <!-- ============================================================
+             AREAS — Fix 7: 6 linked chips + "Also covered" line
+             ============================================================ -->
         <section id="areas" class="areas-section" aria-labelledby="areas-heading">
             <div class="container">
                 <div class="section-header">
@@ -2211,22 +2193,22 @@
                     <p class="section-description">Based in Banashankari. We travel across Bangalore and South India for weddings and events.</p>
                 </div>
                 <div class="areas-grid">
-                    <a href="#contact" class="area-chip">Banashankari</a>
-                    <a href="#contact" class="area-chip">Chikkalasandra</a>
-                    <a href="#contact" class="area-chip">Hanumagiri</a>
-                    <a href="#contact" class="area-chip">Jayanagar</a>
-                    <a href="#contact" class="area-chip">JP Nagar</a>
-                    <a href="#contact" class="area-chip">Basavanagudi</a>
-                    <a href="#contact" class="area-chip">Koramangala</a>
-                    <a href="#contact" class="area-chip">Indiranagar</a>
-                    <a href="#contact" class="area-chip">Whitefield</a>
-                    <a href="#contact" class="area-chip">Electronic City</a>
-                    <a href="#contact" class="area-chip">Mysore</a>
-                    <a href="#contact" class="area-chip">Goa</a>
+                    <a href="https://story-and-smiles-photography.vercel.app/areas/banashankari.html" class="area-chip">Banashankari</a>
+                    <a href="https://story-and-smiles-photography.vercel.app/areas/jayanagar.html" class="area-chip">Jayanagar</a>
+                    <a href="https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html" class="area-chip">JP Nagar</a>
+                    <a href="https://story-and-smiles-photography.vercel.app/areas/koramangala.html" class="area-chip">Koramangala</a>
+                    <a href="https://story-and-smiles-photography.vercel.app/areas/whitefield.html" class="area-chip">Whitefield</a>
+                    <a href="https://story-and-smiles-photography.vercel.app/areas/mysore.html" class="area-chip">Mysore</a>
                 </div>
+                <p style="text-align:center; margin-top:18px; font-size:0.9rem; color:#7a7272;">
+                    Also covered: Chikkalasandra, Hanumagiri, Basavanagudi, Indiranagar, Electronic City and Goa. <a href="#contact" style="color:#e07a5f; font-weight:600;">Enquire about your area</a>.
+                </p>
             </div>
         </section>
 
+        <!-- ============================================================
+             GALLERY — Fix 9 (placeholder removed) + Fix 18 (alts)
+             ============================================================ -->
         <section id="gallery" class="gallery-section" aria-labelledby="gallery-heading">
             <div class="container">
                 <div class="section-header">
@@ -2235,35 +2217,29 @@
                 </div>
                 <div class="gallery-grid">
                     <figure class="gallery-item animate-on-scroll">
-                        <img src="assets/images/wedding-1.jpg" alt="Candid wedding photography in Banashankari, Bangalore, capturing South Indian wedding rituals" loading="lazy" width="400" height="300" decoding="async" />
-                        <button class="gallery-btn" type="button" data-img="assets/images/wedding-1.jpg" data-alt="Candid wedding photography in Banashankari, Bangalore"><span class="sr-only">View wedding photo</span></button>
+                        <img src="assets/images/wedding-1.jpg" alt="Candid wedding photograph at a South Indian muhurtham in Banashankari, Bengaluru" loading="lazy" width="400" height="300" decoding="async" />
+                        <button class="gallery-btn" type="button" data-img="assets/images/wedding-1.jpg" data-alt="Candid wedding photograph at a South Indian muhurtham in Banashankari, Bengaluru"><span class="sr-only">View wedding photo</span></button>
                         <figcaption class="gallery-overlay" aria-hidden="true"><span>Wedding</span></figcaption>
                     </figure>
                     <figure class="gallery-item animate-on-scroll">
-                        <img src="assets/images/pre-wedding.jpg" alt="Pre-wedding photoshoot in Banashankari, Bangalore for a couple at an outdoor location" loading="lazy" width="400" height="300" decoding="async" />
-                        <button class="gallery-btn" type="button" data-img="assets/images/pre-wedding.jpg" data-alt="Pre-wedding photoshoot in Bangalore"><span class="sr-only">View pre-wedding photo</span></button>
+                        <img src="assets/images/pre-wedding.jpg" alt="Pre-wedding couple portrait at an outdoor location near Bengaluru" loading="lazy" width="400" height="300" decoding="async" />
+                        <button class="gallery-btn" type="button" data-img="assets/images/pre-wedding.jpg" data-alt="Pre-wedding couple portrait at an outdoor location near Bengaluru"><span class="sr-only">View pre-wedding photo</span></button>
                         <figcaption class="gallery-overlay" aria-hidden="true"><span>Pre-Wedding</span></figcaption>
                     </figure>
                     <figure class="gallery-item animate-on-scroll">
-                        <img src="assets/images/event.jpg" alt="Event photography in Banashankari, Bangalore, capturing candid guest moments" loading="lazy" width="400" height="300" decoding="async" />
-                        <button class="gallery-btn" type="button" data-img="assets/images/event.jpg" data-alt="Event photography in Bangalore"><span class="sr-only">View event photo</span></button>
+                        <img src="assets/images/event.jpg" alt="Guests laughing at a family event covered in Banashankari, Bengaluru" loading="lazy" width="400" height="300" decoding="async" />
+                        <button class="gallery-btn" type="button" data-img="assets/images/event.jpg" data-alt="Guests laughing at a family event covered in Banashankari, Bengaluru"><span class="sr-only">View event photo</span></button>
                         <figcaption class="gallery-overlay" aria-hidden="true"><span>Events</span></figcaption>
                     </figure>
                     <figure class="gallery-item animate-on-scroll">
-                        <img src="assets/images/baby-shower.jpg" alt="Maternity and baby shower photography in Banashankari, Bengaluru" loading="lazy" width="400" height="300" decoding="async" />
-                        <button class="gallery-btn" type="button" data-img="assets/images/baby-shower.jpg" data-alt="Maternity and baby shower photography"><span class="sr-only">View baby shower photo</span></button>
+                        <img src="assets/images/baby-shower.jpg" alt="Baby shower portrait of an expectant mother in Banashankari, Bengaluru" loading="lazy" width="400" height="300" decoding="async" />
+                        <button class="gallery-btn" type="button" data-img="assets/images/baby-shower.jpg" data-alt="Baby shower portrait of an expectant mother in Banashankari, Bengaluru"><span class="sr-only">View baby shower photo</span></button>
                         <figcaption class="gallery-overlay" aria-hidden="true"><span>Baby Shower</span></figcaption>
                     </figure>
                     <figure class="gallery-item animate-on-scroll">
-                        <img src="assets/images/portfolio.jpg" alt="Portfolio photography in Bengaluru for professionals and models" loading="lazy" width="400" height="300" decoding="async" />
-                        <button class="gallery-btn" type="button" data-img="assets/images/portfolio.jpg" data-alt="Portfolio photography in Bengaluru"><span class="sr-only">View portfolio photo</span></button>
+                        <img src="assets/images/portfolio.jpg" alt="Studio portfolio portrait of a professional shot in Bengaluru" loading="lazy" width="400" height="300" decoding="async" />
+                        <button class="gallery-btn" type="button" data-img="assets/images/portfolio.jpg" data-alt="Studio portfolio portrait of a professional shot in Bengaluru"><span class="sr-only">View portfolio photo</span></button>
                         <figcaption class="gallery-overlay" aria-hidden="true"><span>Portfolio</span></figcaption>
-                    </figure>
-                    <!-- TODO: replace placeholder.jpg with a real family photograph before launch -->
-                    <figure class="gallery-item animate-on-scroll">
-                        <img src="assets/images/placeholder.jpg" alt="Candid family photography in Bengaluru capturing natural smiles" loading="lazy" width="400" height="300" decoding="async" />
-                        <button class="gallery-btn" type="button" data-img="assets/images/placeholder.jpg" data-alt="Candid family photography"><span class="sr-only">View family photo</span></button>
-                        <figcaption class="gallery-overlay" aria-hidden="true"><span>Family</span></figcaption>
                     </figure>
                 </div>
                 <div class="gallery-portfolio-link animate-on-scroll">
@@ -2273,6 +2249,9 @@
             </div>
         </section>
 
+        <!-- ============================================================
+             TESTIMONIALS — Fix 10: only 6 real Google reviews
+             ============================================================ -->
         <section id="testimonials" class="testimonials-section" aria-labelledby="testimonials-heading">
             <div class="container">
                 <div class="section-header">
@@ -2288,39 +2267,41 @@
                         <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"We contacted Story and Smiles for a family function. The flexibility was amazing. He stayed and shot the entire event."</p><div class="testimonial-author"><strong>Lokesh H</strong><span>Family Function, September 2025</span></div></div>
                         <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"Photos in the album are stunning and beautiful. Wedding video quality is exceptional."</p><div class="testimonial-author"><strong>Vasantha Priya</strong><span>Wedding, November 2025</span></div></div>
                         <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"Karthik patiently captured pre-birthday and birthday event photoshoots. The quality of the album and photos was amazing."</p><div class="testimonial-author"><strong>Sateesh Patil</strong><span>Birthday Photography, January 2026</span></div></div>
-                        <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"Karthik is incredibly talented. Our pre-wedding photos looked like they belonged in a magazine."</p><div class="testimonial-author"><strong>Ananya and Vikram</strong><span>Pre-Wedding Shoot, February 2026</span></div></div>
-                        <div class="testimonial-card"><div class="testimonial-stars" role="img" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text">"The newborn session was gentle and safe. Karthik captured our little one's first days perfectly."</p><div class="testimonial-author"><strong>Priya and Ravi</strong><span>Newborn Photography, April 2026</span></div></div>
                     </div>
                     <button class="testimonial-scroll-btn" id="testimonialRightBtn" type="button" aria-label="Scroll testimonials right">&#8250;</button>
                 </div>
             </div>
         </section>
 
+        <!-- ============================================================
+             BLOG / START HERE — Fix 8: real destinations, honest heading
+             ============================================================ -->
         <section id="blog" class="blog-section" style="padding:80px 0; background:#fff;" aria-labelledby="blog-heading">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-subtitle">Notes and Guides</span>
-                    <h2 id="blog-heading" style="font-size:2.2rem; font-weight:700; color:#1e1a1a;">Things we get asked a lot</h2>
+                    <span class="section-subtitle">Start here</span>
+                    <h2 id="blog-heading" style="font-size:2.2rem; font-weight:700; color:#1e1a1a;">Three questions most families ask before they book</h2>
+                    <p class="section-description">Short answers, linked through to the full service page for each topic.</p>
                 </div>
                 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px;">
-                    <article id="blog-wedding-dates" style="background:#fcf9f7; border-radius:24px; overflow:hidden; border:1px solid rgba(0,0,0,0.04); padding:24px;">
+                    <a href="https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html#faq" style="display:block; text-decoration:none; color:inherit; background:#fcf9f7; border-radius:24px; overflow:hidden; border:1px solid rgba(0,0,0,0.04); padding:24px;">
                         <span style="font-size:0.7rem; background:#e07a5f20; color:#e07a5f; padding:4px 12px; border-radius:40px; font-weight:600; display:inline-block;">Planning</span>
-                        <h3 style="font-size:1.2rem; margin:12px 0 8px; color:#1e1a1a;">Best Wedding Dates in Bangalore for 2026</h3>
-                        <p style="color:#5a5252; font-size:0.9rem;">Which months fill up fast and how far ahead to lock your photographer.</p>
-                        <a href="#faq" style="color:#e07a5f; font-weight:600; display:inline-block; margin-top:12px;">Read the booking FAQ</a>
-                    </article>
-                    <article id="blog-maternity-wear" style="background:#fcf9f7; border-radius:24px; overflow:hidden; border:1px solid rgba(0,0,0,0.04); padding:24px;">
+                        <h3 style="font-size:1.2rem; margin:12px 0 8px; color:#1e1a1a;">Best wedding dates in Bangalore for 2026</h3>
+                        <p style="color:#5a5252; font-size:0.9rem; margin:0;">Which months fill up fast and how far ahead to lock your photographer.</p>
+                        <span style="color:#e07a5f; font-weight:600; display:inline-block; margin-top:12px;">Read the wedding FAQ</span>
+                    </a>
+                    <a href="https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html#faq" style="display:block; text-decoration:none; color:inherit; background:#fcf9f7; border-radius:24px; overflow:hidden; border:1px solid rgba(0,0,0,0.04); padding:24px;">
                         <span style="font-size:0.7rem; background:#e07a5f20; color:#e07a5f; padding:4px 12px; border-radius:40px; font-weight:600; display:inline-block;">Maternity</span>
-                        <h3 style="font-size:1.2rem; margin:12px 0 8px; color:#1e1a1a;">What to Wear for a Maternity Shoot in Bengaluru</h3>
-                        <p style="color:#5a5252; font-size:0.9rem;">Comfortable outfit ideas for studio and outdoor sessions.</p>
-                        <a href="#svc-maternity" style="color:#e07a5f; font-weight:600; display:inline-block; margin-top:12px;">See maternity sessions</a>
-                    </article>
-                    <article id="blog-candid-poses" style="background:#fcf9f7; border-radius:24px; overflow:hidden; border:1px solid rgba(0,0,0,0.04); padding:24px;">
+                        <h3 style="font-size:1.2rem; margin:12px 0 8px; color:#1e1a1a;">What to wear for a maternity shoot in Bengaluru</h3>
+                        <p style="color:#5a5252; font-size:0.9rem; margin:0;">Comfortable outfit ideas for studio and outdoor sessions.</p>
+                        <span style="color:#e07a5f; font-weight:600; display:inline-block; margin-top:12px;">Read the maternity FAQ</span>
+                    </a>
+                    <a href="https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html#gallery" style="display:block; text-decoration:none; color:inherit; background:#fcf9f7; border-radius:24px; overflow:hidden; border:1px solid rgba(0,0,0,0.04); padding:24px;">
                         <span style="font-size:0.7rem; background:#e07a5f20; color:#e07a5f; padding:4px 12px; border-radius:40px; font-weight:600; display:inline-block;">Wedding</span>
-                        <h3 style="font-size:1.2rem; margin:12px 0 8px; color:#1e1a1a;">Five Candid Wedding Poses That Feel Natural</h3>
-                        <p style="color:#5a5252; font-size:0.9rem;">Simple prompts that help couples relax in front of the camera.</p>
-                        <a href="#gallery" style="color:#e07a5f; font-weight:600; display:inline-block; margin-top:12px;">See them in the gallery</a>
-                    </article>
+                        <h3 style="font-size:1.2rem; margin:12px 0 8px; color:#1e1a1a;">Five candid wedding poses that feel natural</h3>
+                        <p style="color:#5a5252; font-size:0.9rem; margin:0;">Simple prompts that help couples relax in front of the camera.</p>
+                        <span style="color:#e07a5f; font-weight:600; display:inline-block; margin-top:12px;">See them in the gallery</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -2389,13 +2370,11 @@
                           aria-label="Book a session form">
                         <input type="hidden" name="_subject" value="New booking enquiry from StoryAndSmiles.com" />
                         <input type="hidden" name="page_url" id="pageUrlField" />
-
                         <div class="hp-field" aria-hidden="true">
                             <label for="website_hp">Website (leave blank)</label>
                             <input type="text" id="website_hp" name="website_hp" tabindex="-1" autocomplete="off" />
                         </div>
                         <input type="hidden" name="form_loaded_at" id="formLoadedAt" />
-
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="cf-name">Your full name *</label>
@@ -2474,6 +2453,9 @@
             </div>
         </section>
 
+        <!-- ============================================================
+             FAQ — Fix 15: internal links on 6 answers
+             ============================================================ -->
         <section id="faq" class="faq-section" aria-labelledby="faq-heading">
             <div class="container">
                 <div class="section-header">
@@ -2491,19 +2473,19 @@
                     </details>
                     <details class="faq-item">
                         <summary>What wedding photography packages do you offer?</summary>
-                        <div class="faq-answer"><p>We offer custom packages for full-day and half-day wedding coverage, plus pre-wedding shoots, mehendi, sangeet and reception. Every package is built around your timeline.</p></div>
+                        <div class="faq-answer"><p>We offer custom packages for full-day and half-day wedding coverage, plus pre-wedding shoots, mehendi, sangeet and reception. Every package is built around your timeline. See the <a href="https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html">wedding photography page</a> for what each package covers.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>When is the best time for a maternity shoot?</summary>
-                        <div class="faq-answer"><p>Between 28 and 34 weeks of pregnancy. The bump is clearly visible and most mothers are still comfortable moving around.</p></div>
+                        <div class="faq-answer"><p>Between 28 and 34 weeks of pregnancy. The bump is clearly visible and most mothers are still comfortable moving around. The <a href="https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html">maternity page</a> covers studio and at-home options.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>How do you ensure safety during newborn shoots?</summary>
-                        <div class="faq-answer"><p>Newborn safety comes first. We keep the room warm, use soft props, follow baby-led posing and never force a position. Parents stay close throughout the session.</p></div>
+                        <div class="faq-answer"><p>Newborn safety comes first. We keep the room warm, use soft props, follow baby-led posing and never force a position. Parents stay close throughout the session. Full session details are on the <a href="https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html">newborn page</a>.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>What are your starting prices?</summary>
-                        <div class="faq-answer"><p>Full-day wedding coverage starts at Rs 45,000. Half-day is Rs 25,000, pre-wedding shoots are Rs 15,000, maternity and baby shower sessions are Rs 12,000, and newborn sessions start at Rs 10,000. Final quotes depend on location, duration and add-ons.</p></div>
+                        <div class="faq-answer"><p>Full-day wedding coverage starts at ₹45,000. Half-day is ₹25,000, pre-wedding shoots are ₹15,000, maternity and baby shower sessions are ₹12,000, and newborn sessions start at ₹10,000. Final quotes depend on location, duration and add-ons.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>How long until we receive our photos?</summary>
@@ -2511,11 +2493,11 @@
                     </details>
                     <details class="faq-item">
                         <summary>Do you offer videography as well?</summary>
-                        <div class="faq-answer"><p>Yes. We shoot cinematic wedding films alongside stills. Ask about our photo and video combo packages.</p></div>
+                        <div class="faq-answer"><p>Yes. We shoot cinematic wedding films alongside stills. Ask about our photo and video combo packages. Video is bundled into the <a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">event photography page</a>.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>Can we choose the location for our pre-wedding shoot?</summary>
-                        <div class="faq-answer"><p>Yes. We work with you to pick a location in or around Bangalore that fits the mood you want, and we can suggest options based on the season.</p></div>
+                        <div class="faq-answer"><p>Yes. We work with you to pick a location in or around Bangalore that fits the mood you want, and we can suggest options based on the season. Location lists per area are on the <a href="https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html">pre-wedding page</a>.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>Do you provide albums and prints?</summary>
@@ -2527,7 +2509,7 @@
                     </details>
                     <details class="faq-item">
                         <summary>Do you cover destination weddings?</summary>
-                        <div class="faq-answer"><p>Yes. We have covered weddings in Goa, Kerala and Tamil Nadu, and we travel across India on request.</p></div>
+                        <div class="faq-answer"><p>Yes. We have covered weddings in Goa, Kerala and Tamil Nadu, and we travel across India on request. Mysore-specific logistics are on the <a href="https://story-and-smiles-photography.vercel.app/areas/mysore.html">Mysore page</a>.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>How many photos do we get?</summary>
@@ -2541,7 +2523,6 @@
                         <summary>How do we book you?</summary>
                         <div class="faq-answer"><p>Reach us on WhatsApp or call <a href="tel:+919845808890" class="track-call">+91-98458 08890</a>. You can also use the contact form on this site. We confirm your date once the booking advance is received.</p></div>
                     </details>
-
                     <details class="faq-item">
                         <summary>How many photographers come to the wedding?</summary>
                         <div class="faq-answer"><p>Half-day coverage comes with one photographer. Full-day packages include two, and we add a third for large weddings or when both sides need parallel coverage. Videographers are booked separately or bundled in a combo package.</p></div>
@@ -2579,6 +2560,9 @@
         </section>
     </main>
 
+    <!-- ============================================================
+         FOOTER — Fix 11: 4 columns, real links, new areas column
+         ============================================================ -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -2599,7 +2583,6 @@
                         <li><a href="#areas">Areas We Serve</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#blog">Notes</a></li>
                         <li><a href="#faq">FAQs</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -2607,16 +2590,26 @@
                 <div class="footer-services">
                     <h4>Our Services</h4>
                     <ul>
-                        <li><a href="#svc-wedding">Wedding Photography</a></li>
-                        <li><a href="#svc-pre-wedding">Pre-Wedding Shoot</a></li>
-                        <li><a href="#svc-event">Event Photography</a></li>
-                        <li><a href="#svc-maternity">Baby Shower and Maternity</a></li>
-                        <li><a href="#svc-newborn">Newborn Photography</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html">Wedding Photography</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html">Pre-Wedding Shoot</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html">Maternity and Baby Shower</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html">Newborn Photography</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html">Event Photography</a></li>
+                    </ul>
+                </div>
+                <div class="footer-areas">
+                    <h4>Areas We Serve</h4>
+                    <ul>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/banashankari.html">Banashankari</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/jayanagar.html">Jayanagar</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html">JP Nagar</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/koramangala.html">Koramangala</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/whitefield.html">Whitefield</a></li>
+                        <li><a href="https://story-and-smiles-photography.vercel.app/areas/mysore.html">Mysore</a></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Footer keyword block: anchor tags removed to avoid a keyword-stuffing signal. Plain-text description retained. -->
             <div class="footer-keywords">
                 <p>
                     <strong>Popular searches:</strong>
@@ -2627,14 +2620,12 @@
             <div class="footer-bottom">
                 <p>&copy; <span id="footerYear">2026</span> Story and Smiles Photography. All rights reserved. Wedding photographers in Bangalore.</p>
                 <p style="font-size:0.75rem; color:rgba(255,255,255,0.3); margin-top:4px;">Last updated: October 12, 2026</p>
-
                 <div class="footer-legal">
                     <button type="button" class="legal-trigger" data-modal="privacyModal">Privacy Policy</button>
                     <button type="button" class="legal-trigger" data-modal="termsModal">Terms of Service</button>
                     <button type="button" class="legal-trigger" data-modal="refundModal">Refund Policy</button>
                     <button type="button" class="legal-trigger" data-modal="cookieModal">Cookie Policy</button>
                 </div>
-
                 <div class="credit-wrapper">
                     <span class="credit-separator"></span>
                     <p class="credit-line">Crafted with <span class="credit-heart">&#9829;</span> by <a href="https://kirankumarvel.github.io/" target="_blank" rel="noopener noreferrer" class="credit-link">Kiran (Kronix Systems)</a> <span class="credit-role">Web and Creative</span></p>
@@ -2643,6 +2634,7 @@
         </div>
     </footer>
 
+    <!-- ===== LEGAL MODALS ===== -->
     <div class="legal-modal" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
         <div class="legal-modal-inner">
             <button type="button" class="legal-modal-close" aria-label="Close">&#10005;</button>
@@ -2656,7 +2648,6 @@
             <p>Email <a href="mailto:info.storyandsmiles@gmail.com">info.storyandsmiles@gmail.com</a> to access, correct or delete your data.</p>
         </div>
     </div>
-
     <div class="legal-modal" id="termsModal" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
         <div class="legal-modal-inner">
             <button type="button" class="legal-modal-close" aria-label="Close">&#10005;</button>
@@ -2670,7 +2661,6 @@
             <p>You receive personal-use rights to all delivered images. Commercial use requires written permission.</p>
         </div>
     </div>
-
     <div class="legal-modal" id="refundModal" role="dialog" aria-modal="true" aria-labelledby="refundTitle">
         <div class="legal-modal-inner">
             <button type="button" class="legal-modal-close" aria-label="Close">&#10005;</button>
@@ -2683,7 +2673,6 @@
             <p>Natural events, government restrictions or health emergencies are handled case by case.</p>
         </div>
     </div>
-
     <div class="legal-modal" id="cookieModal" role="dialog" aria-modal="true" aria-labelledby="cookieTitle">
         <div class="legal-modal-inner">
             <button type="button" class="legal-modal-close" aria-label="Close">&#10005;</button>
@@ -2793,13 +2782,9 @@
             var existingConsent = null;
             try { existingConsent = localStorage.getItem(consentKey); } catch (e) {}
 
-            if (existingConsent === 'granted') {
-                grantConsent();
-            } else if (existingConsent === 'denied') {
-                denyConsent();
-            } else if (cookieBanner) {
-                setTimeout(function () { cookieBanner.classList.add('visible'); }, 1500);
-            }
+            if (existingConsent === 'granted') grantConsent();
+            else if (existingConsent === 'denied') denyConsent();
+            else if (cookieBanner) setTimeout(function () { cookieBanner.classList.add('visible'); }, 1500);
 
             if (cookieAccept && cookieBanner) {
                 cookieAccept.addEventListener('click', function () {
@@ -2821,24 +2806,17 @@
                 if (typeof gtag === 'function') gtag('event', eventName, params || {});
                 if (typeof fbq === 'function') fbq('trackCustom', eventName, params || {});
             }
-
             document.querySelectorAll('.track-whatsapp').forEach(function (el) {
-                el.addEventListener('click', function () {
-                    track('whatsapp_click', { cta_location: this.dataset.cta || 'unknown' });
-                });
+                el.addEventListener('click', function () { track('whatsapp_click', { cta_location: this.dataset.cta || 'unknown' }); });
             });
             document.querySelectorAll('.track-call').forEach(function (el) {
-                el.addEventListener('click', function () {
-                    track('call_click', { cta_location: 'phone' });
-                });
+                el.addEventListener('click', function () { track('call_click', { cta_location: 'phone' }); });
             });
             document.querySelectorAll('.cta-book').forEach(function (el) {
-                el.addEventListener('click', function () {
-                    track('book_now_click', { cta_location: 'nav_or_hero' });
-                });
+                el.addEventListener('click', function () { track('book_now_click', { cta_location: 'nav_or_hero' }); });
             });
 
-            /* 3. NAVIGATION */
+            /* 3. NAVIGATION — Fix 16: dropdown toggles handled for mobile */
             var hamburger = document.getElementById('hamburger');
             var navMenu = document.getElementById('navMenu');
             var navLinks = document.querySelectorAll('.nav-link');
@@ -2860,35 +2838,42 @@
                 });
                 navLinks.forEach(function (link) {
                     link.addEventListener('click', function () {
+                        // Let the dropdown-toggle handler manage itself on mobile
+                        if (this.classList.contains('nav-dropdown-toggle') && window.matchMedia('(max-width: 768px)').matches) return;
                         closeMobileMenu();
                         navLinks.forEach(function (l) { l.classList.remove('active'); });
-                        if (this.getAttribute('href').charAt(0) === '#') {
-                            this.classList.add('active');
-                        }
+                        if (this.getAttribute('href').charAt(0) === '#') this.classList.add('active');
                     });
                 });
             }
 
+            /* Fix 16 — Mobile dropdown toggle */
+            document.querySelectorAll('.nav-dropdown-toggle').forEach(function (toggle) {
+                toggle.addEventListener('click', function (e) {
+                    if (window.matchMedia('(max-width: 768px)').matches) {
+                        e.preventDefault();
+                        var parent = this.parentElement;
+                        var open = parent.classList.toggle('open');
+                        this.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    }
+                });
+            });
+
             /* 4. SCROLL EFFECTS */
             var navbar = document.getElementById('navbar');
             var backToTop = document.getElementById('backToTop');
-
             window.addEventListener('scroll', function () {
                 var y = window.scrollY;
                 if (navbar) navbar.classList.toggle('scrolled', y > 60);
                 if (backToTop) backToTop.classList.toggle('visible', y > 400);
             }, { passive: true });
-
             if (backToTop) {
-                backToTop.addEventListener('click', function () {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
+                backToTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
             }
 
             /* 5. COUNTERS */
             var counters = document.querySelectorAll('.counter');
             var counterAnimated = false;
-
             function animateCounters() {
                 if (counterAnimated) return;
                 counterAnimated = true;
@@ -2904,7 +2889,6 @@
                     }, 20);
                 });
             }
-
             var heroStats = document.querySelector('.hero-stats');
             if (heroStats && 'IntersectionObserver' in window) {
                 var so = new IntersectionObserver(function (entries) {
@@ -2934,9 +2918,10 @@
                 animEls.forEach(function (el) { el.classList.add('visible'); });
             }
 
-            /* 7. SMOOTH SCROLL */
+            /* 7. SMOOTH SCROLL (skip mobile dropdown toggles) */
             document.querySelectorAll('a[href^="#"]').forEach(function (a) {
                 a.addEventListener('click', function (e) {
+                    if (this.classList.contains('nav-dropdown-toggle') && window.matchMedia('(max-width: 768px)').matches) return;
                     var id = this.getAttribute('href');
                     if (!id || id === '#' || id.length < 2) return;
                     var target = document.querySelector(id);
@@ -2954,52 +2939,25 @@
             var waClose = document.getElementById('whatsappPopupClose');
             var waFloat = document.getElementById('whatsappFloat');
             var waShown = false;
-
-            function openWa() {
-                if (!waPopup) return;
-                waPopup.classList.add('open');
-                if (waMain) waMain.setAttribute('aria-expanded', 'true');
-            }
-            function closeWa() {
-                if (!waPopup) return;
-                waPopup.classList.remove('open');
-                if (waMain) waMain.setAttribute('aria-expanded', 'false');
-            }
-            function toggleWa(e) {
-                if (e) { e.preventDefault(); e.stopPropagation(); }
-                if (!waPopup) return;
-                if (waPopup.classList.contains('open')) closeWa(); else openWa();
-            }
-
+            function openWa() { if (waPopup) { waPopup.classList.add('open'); if (waMain) waMain.setAttribute('aria-expanded', 'true'); } }
+            function closeWa() { if (waPopup) { waPopup.classList.remove('open'); if (waMain) waMain.setAttribute('aria-expanded', 'false'); } }
+            function toggleWa(e) { if (e) { e.preventDefault(); e.stopPropagation(); } if (waPopup) { waPopup.classList.contains('open') ? closeWa() : openWa(); } }
             if (waMain) waMain.addEventListener('click', toggleWa);
             if (waClose) waClose.addEventListener('click', function (e) { e.stopPropagation(); closeWa(); });
-            document.addEventListener('click', function (e) {
-                if (waFloat && !waFloat.contains(e.target)) closeWa();
-            });
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') closeWa();
-            });
-
+            document.addEventListener('click', function (e) { if (waFloat && !waFloat.contains(e.target)) closeWa(); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeWa(); });
             document.addEventListener('mouseout', function (e) {
                 if (waShown) return;
-                if (e.clientY < 10 && !e.relatedTarget) {
-                    waShown = true;
-                    openWa();
-                    setTimeout(closeWa, 8000);
-                }
+                if (e.clientY < 10 && !e.relatedTarget) { waShown = true; openWa(); setTimeout(closeWa, 8000); }
             });
             window.addEventListener('scroll', function () {
                 if (waShown) return;
                 var doc = document.documentElement;
                 var pct = (window.scrollY + window.innerHeight) / doc.scrollHeight;
-                if (pct > 0.6) {
-                    waShown = true;
-                    openWa();
-                    setTimeout(closeWa, 7000);
-                }
+                if (pct > 0.6) { waShown = true; openWa(); setTimeout(closeWa, 7000); }
             }, { passive: true });
 
-            /* 9. TESTIMONIALS AUTO-SCROLL */
+            /* 9. TESTIMONIALS SCROLL */
             var tg = document.getElementById('testimonialsGrid');
             var lb = document.getElementById('testimonialLeftBtn');
             var rb = document.getElementById('testimonialRightBtn');
@@ -3025,8 +2983,7 @@
                 tg.addEventListener('touchend', function () { setTimeout(function () { paused = false; }, 3000); });
                 start();
                 document.addEventListener('visibilitychange', function () {
-                    if (document.hidden) { if (si) clearInterval(si); }
-                    else start();
+                    if (document.hidden) { if (si) clearInterval(si); } else start();
                 });
             }
 
@@ -3034,39 +2991,23 @@
             var lightbox = document.getElementById('lightbox');
             var lightboxImg = document.getElementById('lightboxImg');
             var lightboxClose = document.getElementById('lightboxClose');
-
             function openLightbox(src, alt) {
                 if (!lightbox || !lightboxImg) return;
-                lightboxImg.src = src;
-                lightboxImg.alt = alt || '';
+                lightboxImg.src = src; lightboxImg.alt = alt || '';
                 lightbox.classList.add('open');
                 document.body.style.overflow = 'hidden';
                 if (lightboxClose) lightboxClose.focus();
             }
-            function closeLightbox() {
-                if (!lightbox) return;
-                lightbox.classList.remove('open');
-                document.body.style.overflow = '';
-            }
-
+            function closeLightbox() { if (lightbox) { lightbox.classList.remove('open'); document.body.style.overflow = ''; } }
             document.querySelectorAll('.gallery-btn').forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    openLightbox(this.dataset.img, this.dataset.alt);
-                });
+                btn.addEventListener('click', function () { openLightbox(this.dataset.img, this.dataset.alt); });
             });
             if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-            if (lightbox) {
-                lightbox.addEventListener('click', function (e) {
-                    if (e.target === lightbox) closeLightbox();
-                });
-            }
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && lightbox && lightbox.classList.contains('open')) closeLightbox();
-            });
+            if (lightbox) lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && lightbox && lightbox.classList.contains('open')) closeLightbox(); });
 
             /* 11. LEGAL MODALS */
             var lastFocused = null;
-
             document.querySelectorAll('.legal-trigger').forEach(function (btn) {
                 btn.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -3080,7 +3021,6 @@
                     if (closeBtn) closeBtn.focus();
                 });
             });
-
             document.querySelectorAll('.legal-modal').forEach(function (modal) {
                 var closeBtn = modal.querySelector('.legal-modal-close');
                 function closeModal() {
@@ -3089,16 +3029,11 @@
                     if (lastFocused) lastFocused.focus();
                 }
                 if (closeBtn) closeBtn.addEventListener('click', closeModal);
-                modal.addEventListener('click', function (e) {
-                    if (e.target === modal) closeModal();
-                });
+                modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
             });
-
             document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape') {
-                    document.querySelectorAll('.legal-modal.open').forEach(function (m) {
-                        m.classList.remove('open');
-                    });
+                    document.querySelectorAll('.legal-modal.open').forEach(function (m) { m.classList.remove('open'); });
                     document.body.style.overflow = '';
                 }
             });
@@ -3110,7 +3045,6 @@
             var submitBtn = document.getElementById('submitBtn');
             var toastEl = document.getElementById('toast');
             var toastTimer = null;
-
             if (pageUrlField) pageUrlField.value = location.href;
             if (formLoadedAt) formLoadedAt.value = String(Date.now());
 
@@ -3122,111 +3056,64 @@
                 if (toastTimer) clearTimeout(toastTimer);
                 toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 5500);
             }
-
-            function markInvalid(el, invalid) {
-                if (!el) return;
-                if (invalid) el.setAttribute('aria-invalid', 'true');
-                else el.removeAttribute('aria-invalid');
-            }
+            function markInvalid(el, invalid) { if (!el) return; if (invalid) el.setAttribute('aria-invalid', 'true'); else el.removeAttribute('aria-invalid'); }
 
             if (contactForm) {
                 var nameField = document.getElementById('cf-name');
                 var phoneField = document.getElementById('cf-phone');
                 var emailField = document.getElementById('cf-email');
                 var reqField = document.getElementById('cf-req');
-
                 [nameField, phoneField, emailField, reqField].forEach(function (f) {
                     if (f) f.addEventListener('input', function () { markInvalid(this, false); });
                 });
-
                 contactForm.addEventListener('submit', function (e) {
                     e.preventDefault();
-
                     var hp = document.getElementById('website_hp');
                     if (hp && hp.value.trim() !== '') return false;
-
                     var loaded = parseInt(formLoadedAt ? formLoadedAt.value : '0', 10);
-                    if (loaded && Date.now() - loaded < 3000) {
-                        showToast('<strong>Just a moment</strong>Please take a few seconds to fill the form.', true);
-                        return false;
-                    }
-
+                    if (loaded && Date.now() - loaded < 3000) { showToast('<strong>Just a moment</strong>Please take a few seconds to fill the form.', true); return false; }
                     var nameVal = nameField ? nameField.value.trim() : '';
-                    if (nameVal.length < 2) {
-                        markInvalid(nameField, true);
-                        showToast('<strong>Name needed</strong>Please enter your full name.', true);
-                        if (nameField) nameField.focus();
-                        return false;
-                    }
-
+                    if (nameVal.length < 2) { markInvalid(nameField, true); showToast('<strong>Name needed</strong>Please enter your full name.', true); if (nameField) nameField.focus(); return false; }
                     var phoneVal = phoneField ? phoneField.value.replace(/\D/g, '') : '';
-                    if (!/^[0-9]{10}$/.test(phoneVal)) {
-                        markInvalid(phoneField, true);
-                        showToast('<strong>Invalid phone</strong>Please enter a valid 10-digit mobile number.', true);
-                        if (phoneField) phoneField.focus();
-                        return false;
-                    }
-
+                    if (!/^[0-9]{10}$/.test(phoneVal)) { markInvalid(phoneField, true); showToast('<strong>Invalid phone</strong>Please enter a valid 10-digit mobile number.', true); if (phoneField) phoneField.focus(); return false; }
                     var emailVal = emailField ? emailField.value.trim() : '';
-                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(emailVal)) {
-                        markInvalid(emailField, true);
-                        showToast('<strong>Invalid email</strong>Please enter a valid email address.', true);
-                        if (emailField) emailField.focus();
-                        return false;
-                    }
-
+                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(emailVal)) { markInvalid(emailField, true); showToast('<strong>Invalid email</strong>Please enter a valid email address.', true); if (emailField) emailField.focus(); return false; }
                     var reqVal = reqField ? reqField.value.trim() : '';
-                    if (reqVal.length < 10) {
-                        markInvalid(reqField, true);
-                        showToast('<strong>Tell us a bit more</strong>Please describe your event in a few words.', true);
-                        if (reqField) reqField.focus();
-                        return false;
-                    }
-
+                    if (reqVal.length < 10) { markInvalid(reqField, true); showToast('<strong>Tell us a bit more</strong>Please describe your event in a few words.', true); if (reqField) reqField.focus(); return false; }
                     track('form_submit', {
                         service: document.getElementById('cf-service') ? document.getElementById('cf-service').value : '',
                         city: document.getElementById('cf-city') ? document.getElementById('cf-city').value : ''
                     });
-
                     var formData = new FormData(contactForm);
                     var action = (CONFIG.formspreeUrl || contactForm.getAttribute('action'));
-
                     if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
                     showToast('<strong>Sending</strong>Please wait while we submit your enquiry.');
-
-                    fetch(action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: { 'Accept': 'application/json' }
-                    })
-                    .then(function (response) {
-                        if (response.ok) {
-                            contactForm.reset();
-                            if (formLoadedAt) formLoadedAt.value = String(Date.now());
-                            track('form_success', {});
-                            showToast('<strong>Thank you</strong>Your enquiry is in. We will reply within 24 hours.');
-                        } else {
-                            throw new Error('Server responded with ' + response.status);
-                        }
-                    })
-                    .catch(function () {
-                        track('form_error', {});
-                        showToast('<strong>Something went wrong</strong>Please WhatsApp us at +91-98458 08890 or try again.', true);
-                    })
-                    .finally(function () {
-                        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Request a Quote'; }
-                    });
-
+                    fetch(action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } })
+                        .then(function (response) {
+                            if (response.ok) {
+                                contactForm.reset();
+                                if (formLoadedAt) formLoadedAt.value = String(Date.now());
+                                track('form_success', {});
+                                showToast('<strong>Thank you</strong>Your enquiry is in. We will reply within 24 hours.');
+                            } else { throw new Error('Server responded with ' + response.status); }
+                        })
+                        .catch(function () {
+                            track('form_error', {});
+                            showToast('<strong>Something went wrong</strong>Please WhatsApp us at +91-98458 08890 or try again.', true);
+                        })
+                        .finally(function () {
+                            if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Request a Quote'; }
+                        });
                     return false;
                 });
             }
 
-            /* 13. OUTBOUND PORTFOLIO TRACKING */
+            /* 13. OUTBOUND TRACKING */
             document.querySelectorAll('a[href*="karthikstories.my.canva.site"]').forEach(function (a) {
                 a.addEventListener('click', function () { track('portfolio_click', { location: 'link' }); });
             });
 
-            /* 14. SCROLL PROGRESS BAR */
+            /* 14. SCROLL PROGRESS */
             var progressBar = document.getElementById('scrollProgress');
             function updateProgress() {
                 if (!progressBar) return;
@@ -3243,16 +3130,13 @@
             var heroPicture = document.querySelector('.hero picture');
             var parallaxTicking = false;
             var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
             if (heroPicture && !reduceMotion) {
                 window.addEventListener('scroll', function () {
                     if (parallaxTicking) return;
                     parallaxTicking = true;
                     requestAnimationFrame(function () {
                         var y = window.scrollY;
-                        if (y < window.innerHeight * 1.2) {
-                            heroPicture.style.transform = 'translate3d(0,' + (y * 0.18) + 'px,0)';
-                        }
+                        if (y < window.innerHeight * 1.2) heroPicture.style.transform = 'translate3d(0,' + (y * 0.18) + 'px,0)';
                         parallaxTicking = false;
                     });
                 }, { passive: true });
@@ -3263,10 +3147,7 @@
             if (sectionHeaders.length && 'IntersectionObserver' in window) {
                 var headerObs = new IntersectionObserver(function (entries) {
                     entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('in-view');
-                            headerObs.unobserve(entry.target);
-                        }
+                        if (entry.isIntersecting) { entry.target.classList.add('in-view'); headerObs.unobserve(entry.target); }
                     });
                 }, { threshold: 0.25 });
                 sectionHeaders.forEach(function (h) { headerObs.observe(h); });
@@ -3274,9 +3155,9 @@
                 sectionHeaders.forEach(function (h) { h.classList.add('in-view'); });
             }
 
-            /* 17. BUTTON RIPPLE (cookie buttons excluded) */
+            /* 17. BUTTON RIPPLE */
             if (!reduceMotion) {
-                document.querySelectorAll('.btn, .cta-book, .faq-more-btn').forEach(function (btn) {
+                document.querySelectorAll('.btn, .cta-book').forEach(function (btn) {
                     btn.addEventListener('click', function (e) {
                         var rect = this.getBoundingClientRect();
                         var size = Math.max(rect.width, rect.height);
@@ -3286,14 +3167,12 @@
                         ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
                         ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
                         this.appendChild(ripple);
-                        setTimeout(function () {
-                            if (ripple.parentNode) ripple.parentNode.removeChild(ripple);
-                        }, 720);
+                        setTimeout(function () { if (ripple.parentNode) ripple.parentNode.removeChild(ripple); }, 720);
                     });
                 });
             }
 
-            /* 18. MAGNETIC BUTTONS (desktop only) */
+            /* 18. MAGNETIC BUTTONS */
             if (window.matchMedia('(pointer: fine)').matches && !reduceMotion) {
                 document.querySelectorAll('.hero-buttons .btn, .hero-cta-grid .btn, .cta-section .btn').forEach(function (btn) {
                     btn.addEventListener('mousemove', function (e) {
@@ -3302,55 +3181,11 @@
                         var y = e.clientY - rect.top - rect.height / 2;
                         this.style.transform = 'translate(' + (x * 0.12) + 'px, ' + (y * 0.18 - 2) + 'px)';
                     });
-                    btn.addEventListener('mouseleave', function () {
-                        this.style.transform = '';
-                    });
+                    btn.addEventListener('mouseleave', function () { this.style.transform = ''; });
                 });
             }
 
-            /* 19. FAQ — SHOW MORE / SHOW LESS
-               Inert on this page: all 23 FAQs are now rendered visible by default so the
-               FAQPage schema and the visible accordion stay in exact alignment. The block
-               below is kept so the button can be re-added later without a JS rewrite. */
-            var faqMoreBtn = document.getElementById('faqMoreBtn');
-            var faqSection = document.getElementById('faq');
-            if (faqMoreBtn) {
-                var extraFaqs = document.querySelectorAll('.faq-item.faq-hidden');
-                var moreLabel = faqMoreBtn.querySelector('.faq-more-label');
-                var faqExpanded = false;
-
-                faqMoreBtn.addEventListener('click', function () {
-                    faqExpanded = !faqExpanded;
-
-                    if (faqExpanded) {
-                        extraFaqs.forEach(function (item, i) {
-                            setTimeout(function () {
-                                item.classList.remove('faq-hidden');
-                                item.classList.add('faq-entering');
-                                setTimeout(function () {
-                                    item.classList.remove('faq-entering');
-                                }, 620);
-                            }, i * 65);
-                        });
-                        if (moreLabel) moreLabel.textContent = 'Show fewer questions';
-                        faqMoreBtn.setAttribute('aria-expanded', 'true');
-                        track('faq_expand', { count: extraFaqs.length });
-                    } else {
-                        extraFaqs.forEach(function (item) {
-                            item.classList.add('faq-hidden');
-                            item.removeAttribute('open');
-                        });
-                        if (moreLabel) moreLabel.textContent = 'Show 8 more questions';
-                        faqMoreBtn.setAttribute('aria-expanded', 'false');
-                        if (faqSection) {
-                            var top = faqSection.getBoundingClientRect().top + window.scrollY - 100;
-                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
-                        }
-                    }
-                });
-            }
-
-            /* 20. FOOTER YEAR */
+            /* 19. FOOTER YEAR */
             var yearEl = document.getElementById('footerYear');
             if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
