@@ -38,7 +38,7 @@
 
     <!-- ===== PRIMARY META ===== -->
     <title>Wedding Photographers in Jayanagar | Story and Smiles</title>
-    <meta name="description" content="Wedding, namakarana, seemantham and upanayana photography in Jayanagar, Bengaluru. 4 km from our Banashankari studio — no travel add-on. Full-day weddings from ₹45,000." />
+    <meta name="description" content="Wedding, namakarana, seemantham and upanayana photography in Jayanagar, Bengaluru. 4 km from our Banashankari studio, with no travel add-on. Full-day weddings from ₹45,000." />
     <meta name="author" content="Story and Smiles Photography" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="theme-color" content="#e07a5f" />
@@ -50,13 +50,13 @@
 
     <!-- ===== OPEN GRAPH ===== -->
     <meta property="og:title" content="Wedding Photographers in Jayanagar | Story and Smiles" />
-    <meta property="og:description" content="Namakarana, seemantham, upanayana and temple weddings across Jayanagar — 4 km from our Banashankari studio. Weddings from ₹45,000." />
+    <meta property="og:description" content="Namakarana, seemantham, upanayana and temple weddings across Jayanagar, 4 km from our Banashankari studio. Weddings from ₹45,000." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://story-and-smiles-photography.vercel.app/assets/images/areas/jayanagar-hero.webp" />
-    <meta property="og:image:alt" content="Family ceremony photography at a Jayanagar home — namakarana, elders in frame" />
+    <meta property="og:image:alt" content="Family ceremony photography at a Jayanagar home, namakarana with elders in frame" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://story-and-smiles-photography.vercel.app/areas/jayanagar" />
+    <meta property="og:url" content="https://story-and-smiles-photography.vercel.app/areas/jayanagar.html" />
     <meta property="og:site_name" content="Story and Smiles Photography" />
     <meta property="og:locale" content="en_IN" />
     <meta property="og:updated_time" content="2026-11-05T10:00:00+05:30" />
@@ -76,9 +76,9 @@
     <link rel="llms" type="text/plain" href="/llms-full.txt">
 
     <!-- ===== CANONICAL + HREFLANG ===== -->
-    <link rel="canonical" href="https://story-and-smiles-photography.vercel.app/areas/jayanagar" />
-    <link rel="alternate" hreflang="en-in" href="https://story-and-smiles-photography.vercel.app/areas/jayanagar" />
-    <link rel="alternate" hreflang="x-default" href="https://story-and-smiles-photography.vercel.app/areas/jayanagar" />
+    <link rel="canonical" href="https://story-and-smiles-photography.vercel.app/areas/jayanagar.html" />
+    <link rel="alternate" hreflang="en-in" href="https://story-and-smiles-photography.vercel.app/areas/jayanagar.html" />
+    <link rel="alternate" hreflang="x-default" href="https://story-and-smiles-photography.vercel.app/areas/jayanagar.html" />
 
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
@@ -143,10 +143,10 @@
     </script>
 
     <!-- ================================================================
-         SCHEMA — Organization + WebPage + BreadcrumbList + FAQPage
-         NO LocalBusiness (Banashankari-only). NO Service. NO ImageGallery.
+         SCHEMA
     ================================================================ -->
 
+    <!-- SCHEMA: ORGANIZATION -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -160,7 +160,7 @@
             "url": "https://story-and-smiles-photography.vercel.app/assets/images/logo.png",
             "width": 512, "height": 512
         },
-        "description": "Wedding, maternity, newborn, pre-wedding and event photography studio in Banashankari, Bengaluru.",
+        "description": "Wedding, maternity, newborn, pre-wedding and event photography company in Banashankari, Bengaluru.",
         "email": "info.storyandsmiles@gmail.com",
         "telephone": "+91-9845808890",
         "foundingDate": "2019-06-01",
@@ -173,15 +173,75 @@
     }
     </script>
 
+    <!-- SCHEMA: LOCAL BUSINESS (site-wide entity, @id reference; address stays in Banashankari) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "ProfessionalService", "PhotographyBusiness"],
+        "@id": "https://story-and-smiles-photography.vercel.app/#localbusiness",
+        "name": "Story and Smiles Photography",
+        "description": "Wedding photography company in Banashankari, Bengaluru. Candid, traditional and cinematic coverage across South Bangalore and Karnataka.",
+        "image": [
+            "https://story-and-smiles-photography.vercel.app/assets/images/logo.png",
+            "https://story-and-smiles-photography.vercel.app/assets/images/areas/jayanagar-hero.webp"
+        ],
+        "telephone": "+91-9845808890",
+        "email": "info.storyandsmiles@gmail.com",
+        "priceRange": "₹5,000 - ₹60,000",
+        "currenciesAccepted": "INR",
+        "paymentAccepted": "Cash, UPI, Bank Transfer",
+        "url": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2A, 5th Main, 3rd Cross Rd, near Chikkalasandra, Banashankari",
+            "addressLocality": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "postalCode": "560061",
+            "addressCountry": "IN"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": "12.9100", "longitude": "77.5590" },
+        "hasMap": "https://maps.google.com/?q=Story+And+Smiles+Photography+Banashankari+Bengaluru",
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "09:00", "closes": "20:00"
+        }],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "92",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "areaServed": [
+            { "@type": "Place", "name": "Banashankari", "url": "https://story-and-smiles-photography.vercel.app/areas/banashankari.html" },
+            { "@type": "Place", "name": "Jayanagar", "url": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html" },
+            { "@type": "Place", "name": "JP Nagar", "url": "https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html" },
+            { "@type": "Place", "name": "Koramangala", "url": "https://story-and-smiles-photography.vercel.app/areas/koramangala.html" },
+            { "@type": "Place", "name": "Whitefield", "url": "https://story-and-smiles-photography.vercel.app/areas/whitefield.html" },
+            { "@type": "Place", "name": "Mysore", "url": "https://story-and-smiles-photography.vercel.app/areas/mysore.html" },
+            { "@type": "City", "name": "Bengaluru" },
+            { "@type": "State", "name": "Karnataka" }
+        ],
+        "sameAs": [
+            "https://www.instagram.com/storyandsmiles",
+            "https://www.facebook.com/storyandsmiles",
+            "https://search.google.com/local/reviews?placeid=ChIJu3grGi1RrjsRI_yNq1Bk-8A"
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA: WEBPAGE -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "@id": "https://story-and-smiles-photography.vercel.app/areas/jayanagar#webpage",
-        "url": "https://story-and-smiles-photography.vercel.app/areas/jayanagar",
+        "@id": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html#webpage",
+        "url": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html",
         "name": "Wedding Photographers in Jayanagar | Story and Smiles",
         "isPartOf": { "@id": "https://story-and-smiles-photography.vercel.app/#website" },
         "about": [
+            { "@id": "https://story-and-smiles-photography.vercel.app/#localbusiness" },
             { "@id": "https://story-and-smiles-photography.vercel.app/#organization" },
             { "@type": "Place", "name": "Jayanagar, Bengaluru" }
         ],
@@ -189,59 +249,121 @@
         "datePublished": "2026-11-05T09:00:00+05:30",
         "dateModified": "2026-11-05T10:00:00+05:30",
         "inLanguage": "en-IN",
-        "breadcrumb": { "@id": "https://story-and-smiles-photography.vercel.app/areas/jayanagar#breadcrumb" }
+        "breadcrumb": { "@id": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html#breadcrumb" },
+        "significantLink": [
+            "https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/areas/banashankari.html",
+            "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html",
+            "https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html",
+            "https://story-and-smiles-photography.vercel.app/areas/koramangala.html",
+            "https://story-and-smiles-photography.vercel.app/areas/whitefield.html",
+            "https://story-and-smiles-photography.vercel.app/areas/mysore.html"
+        ],
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [
+                "#hero-title",
+                ".nutshell-text",
+                "#quick-facts-heading",
+                ".quick-facts-inline",
+                "#packages-heading",
+                "#faq-heading",
+                "#faq .faq-item:first-child .faq-answer"
+            ]
+        }
     }
     </script>
 
+    <!-- SCHEMA: BREADCRUMB (matches visible Home > Services > Jayanagar) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "@id": "https://story-and-smiles-photography.vercel.app/areas/jayanagar#breadcrumb",
+        "@id": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html#breadcrumb",
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://story-and-smiles-photography.vercel.app/" },
-            { "@type": "ListItem", "position": 2, "name": "Areas", "item": "https://story-and-smiles-photography.vercel.app/areas" },
-            { "@type": "ListItem", "position": 3, "name": "Jayanagar", "item": "https://story-and-smiles-photography.vercel.app/areas/jayanagar" }
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://story-and-smiles-photography.vercel.app/#services" },
+            { "@type": "ListItem", "position": 3, "name": "Jayanagar", "item": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html" }
         ]
     }
     </script>
 
+    <!-- SCHEMA: FAQPage -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "@id": "https://story-and-smiles-photography.vercel.app/areas/jayanagar#faq",
+        "@id": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html#faq",
         "mainEntity": [
             {
                 "@type": "Question",
                 "name": "Do you charge extra to travel to Jayanagar?",
-                "acceptedAnswer": { "@type": "Answer", "text": "No. Jayanagar is inside our standard South Bangalore coverage. The studio is in Banashankari, about 4 km away, and we build the drive into the schedule rather than onto the invoice. Outstation work — Mysore, Coorg and beyond — is quoted separately." }
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Jayanagar is inside our standard South Bangalore coverage. The studio is in Banashankari, about 4 km away, and we build the drive into the schedule rather than onto the invoice. Outstation work such as Mysore and Coorg is quoted separately." }
             },
             {
                 "@type": "Question",
                 "name": "Which Jayanagar venues have you shot at?",
-                "acceptedAnswer": { "@type": "Answer", "text": "We shoot at kalyan mantapas and community halls across Jayanagar's 4th Block, 9th Block and South End Circle. If your hall isn't one we've listed, send the name — we'll tell you honestly whether we've worked there and what the light and access are like." }
+                "acceptedAnswer": { "@type": "Answer", "text": "We shoot at kalyan mantapas and community halls across Jayanagar's 4th Block, 9th Block and South End Circle. If your hall isn't one we've listed, send the name, and we'll tell you honestly whether we've worked there and what the light and access are like. Full wedding coverage details are on our wedding photography page." }
             },
             {
                 "@type": "Question",
                 "name": "How early should we book for a Jayanagar wedding?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Three to four months ahead for November–February weddings, when muhurtham dates cluster. Maternity sessions book four to six weeks ahead. We take one wedding per day, so a popular muhurtham date can go early — check before you fix the hall if the date is flexible." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Three to four months ahead for November to February weddings, when muhurtham dates cluster. Maternity sessions book four to six weeks ahead. We take one wedding per day, so a popular muhurtham date can go early. Check before you fix the hall if the date is flexible." }
             },
             {
                 "@type": "Question",
                 "name": "Do you cover temple weddings and naming ceremonies in Jayanagar?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Regularly. Namakarana, seemantham, upanayana and temple weddings are most of what we shoot here, and the ritual order differs by family. Tell us which ceremonies you're doing and who leads them — we'd rather follow your priest's sequence than impose a standard one." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Regularly. Namakarana, seemantham, upanayana and temple weddings are most of what we shoot here, and the ritual order differs by family. Tell us which ceremonies you're doing and who leads them. We'd rather follow your priest's sequence than impose a standard one." }
             },
             {
                 "@type": "Question",
                 "name": "Can we do a pre-wedding shoot in Jayanagar?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Lalbagh is a short drive from Jayanagar and works well for early-morning sessions before the gates get busy. If you'd rather stay local, the quieter residential streets around 9th Block and the older Jayanagar homes give a more personal set of frames." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Lalbagh is a short drive from Jayanagar and works well for early-morning sessions before the gates get busy. If you'd rather stay local, the quieter residential streets around 9th Block and the older Jayanagar homes give a more personal set of frames. See our pre-wedding photography page for locations and packages." }
             }
         ]
     }
     </script>
 
-    <!-- ===== CRITICAL INLINE STYLES — LOCKED TOKENS (§1, unchanged) ===== -->
+    <!-- SCHEMA: ItemList service pages -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "@id": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html#servicepages",
+        "name": "Service pages",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "url": "https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 2, "url": "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 3, "url": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 4, "url": "https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 5, "url": "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" }
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA: ItemList area pages -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "@id": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html#areapages",
+        "name": "Area pages",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "url": "https://story-and-smiles-photography.vercel.app/areas/banashankari.html" },
+            { "@type": "ListItem", "position": 2, "url": "https://story-and-smiles-photography.vercel.app/areas/jayanagar.html" },
+            { "@type": "ListItem", "position": 3, "url": "https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html" },
+            { "@type": "ListItem", "position": 4, "url": "https://story-and-smiles-photography.vercel.app/areas/koramangala.html" },
+            { "@type": "ListItem", "position": 5, "url": "https://story-and-smiles-photography.vercel.app/areas/whitefield.html" },
+            { "@type": "ListItem", "position": 6, "url": "https://story-and-smiles-photography.vercel.app/areas/mysore.html" }
+        ]
+    }
+    </script>
+
+    <!-- ===== CRITICAL INLINE STYLES — LOCKED TOKENS ===== -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -353,7 +475,7 @@
         .hamburger.active span:nth-child(2) { opacity: 0; }
         .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
 
-        /* ===== HERO — AREA VARIANT: 68vh, overlay 0.52 (Jayanagar) ===== */
+        /* ===== HERO ===== */
         .hero {
             position: relative; min-height: 68vh;
             display: flex; align-items: center; justify-content: center;
@@ -437,7 +559,49 @@
         }
         .summary-box-full p { font-size: 1.02rem; color: #2d2a2a; line-height: 1.7; margin: 0; }
 
-        /* ===== WHY THIS AREA — 2 col: facts + map ===== */
+        /* ===== QUICK FACTS ===== */
+        .quick-facts-section { background: #fcf9f7; padding: 0 0 48px; }
+        .quick-facts-heading {
+            display: block;
+            text-align: center;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #e07a5f;
+            margin: 0 auto 14px;
+        }
+        .quick-facts-inline {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px 28px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 28px 32px;
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid rgba(0,0,0,0.04);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.04);
+            list-style: none;
+        }
+        .quick-facts-inline > div { display: flex; flex-direction: column; gap: 4px; }
+        .quick-facts-inline dt {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #e07a5f;
+            margin: 0;
+        }
+        .quick-facts-inline dd {
+            font-size: 0.9rem;
+            color: #4a4242;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ===== WHY THIS AREA ===== */
         .local-section { background: #fff; }
         .local-grid {
             display: grid; grid-template-columns: 1.15fr 0.85fr;
@@ -492,7 +656,7 @@
         }
         .map-address strong { color: #1e1a1a; }
 
-        /* ===== WHAT WE SHOOT — 3-card mini grid ===== */
+        /* ===== WHAT WE SHOOT ===== */
         .shoot-section { background: #fcf9f7; }
         .shoot-grid {
             display: grid; grid-template-columns: repeat(3, 1fr);
@@ -511,7 +675,6 @@
             border-color: rgba(224,122,95,0.22);
             color: #e07a5f;
         }
-        .shoot-icon { font-size: 1.8rem; margin-bottom: 10px; display: block; }
         .shoot-card h3 {
             font-family: 'Fraunces', serif; font-size: 1.25rem;
             color: #1e1a1a; margin: 0 0 8px;
@@ -565,7 +728,7 @@
         .faq-item[open] .faq-answer { animation: faqOpen 0.42s cubic-bezier(0.22,1,0.36,1); }
         @keyframes faqOpen { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* ===== RELATED (2 rows) ===== */
+        /* ===== RELATED ===== */
         .related-section { background: #fff; }
         .related-row {
             display: flex; align-items: center; flex-wrap: wrap;
@@ -589,6 +752,11 @@
             background: #fdf0eb; color: #e07a5f;
             border-color: rgba(224,122,95,0.25);
             transform: translateY(-2px);
+        }
+        .also-serving {
+            text-align: center; margin-top: 24px;
+            font-size: 0.9rem; color: #5a5252; line-height: 1.7;
+            max-width: 800px; margin-left: auto; margin-right: auto;
         }
 
         /* ===== CTA BAND ===== */
@@ -623,15 +791,15 @@
 
         /* ===== FOOTER ===== */
         .footer { background: #1e1a1a; color: rgba(255,255,255,0.7); padding: 60px 0 30px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
         .footer-brand p { font-size: 0.9rem; line-height: 1.8; margin-bottom: 10px; }
         .footer-brand a { color: rgba(255,255,255,0.7); }
         .footer-brand a:hover { color: #e07a5f; }
         .footer-logo { margin-bottom: 12px; filter: brightness(0.9); }
-        .footer-links h4, .footer-services h4 { color: #fff; font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
-        .footer-links ul, .footer-services ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-        .footer-links ul li a, .footer-services ul li a { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
-        .footer-links ul li a:hover, .footer-services ul li a:hover { color: #e07a5f; }
+        .footer-links h4, .footer-services h4, .footer-areas h4 { color: #fff; font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
+        .footer-links ul, .footer-services ul, .footer-areas ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .footer-links ul li a, .footer-services ul li a, .footer-areas ul li a { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+        .footer-links ul li a:hover, .footer-services ul li a:hover, .footer-areas ul li a:hover { color: #e07a5f; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; text-align: center; font-size: 0.85rem; }
         .footer-legal { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
         .legal-trigger {
@@ -707,6 +875,7 @@
             .local-grid { grid-template-columns: 1fr; gap: 32px; }
             .shoot-grid { grid-template-columns: 1fr; max-width: 440px; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
+            .quick-facts-inline { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
             .section-pad { padding: 56px 0; }
@@ -728,7 +897,10 @@
             .summary-box-full p { font-size: 0.95rem; }
             .whatsapp-float { bottom: 20px; right: 20px; }
             .whatsapp-main-btn { padding: 10px 16px 10px 12px; font-size: 13px; }
-            .back-to-top { bottom: 84px; right: 20px; width: 40px; height: 40px; }
+            .back-to-top { bottom: 96px; right: 20px; width: 40px; height: 40px; }
+        }
+        @media (max-width: 576px) {
+            .quick-facts-inline { grid-template-columns: 1fr; padding: 22px 22px; }
         }
         @media (max-width: 480px) {
             .hero-title { font-size: 1.7rem; }
@@ -789,15 +961,15 @@
                         Services <span class="caret" aria-hidden="true">▾</span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="/wedding-photography-bangalore" role="menuitem">Wedding</a></li>
-                        <li><a href="/maternity-photography-bangalore" role="menuitem">Maternity</a></li>
-                        <li><a href="/newborn-photography-bangalore" role="menuitem">Newborn</a></li>
-                        <li><a href="/pre-wedding-photography-bangalore" role="menuitem">Pre-Wedding</a></li>
-                        <li><a href="/event-photography-bangalore" role="menuitem">Events</a></li>
+                        <li><a href="/wedding-photography-bangalore.html" role="menuitem">Wedding</a></li>
+                        <li><a href="/maternity-photography-bangalore.html" role="menuitem">Maternity</a></li>
+                        <li><a href="/newborn-photography-bangalore.html" role="menuitem">Newborn</a></li>
+                        <li><a href="/pre-wedding-photography-bangalore.html" role="menuitem">Pre-Wedding</a></li>
+                        <li><a href="/event-photography-bangalore.html" role="menuitem">Events</a></li>
                     </ul>
                 </li>
                 <li><a href="/#about">About</a></li>
-                <li><a href="/investment">Investment</a></li>
+                <li><a href="#packages">Pricing</a></li>
                 <li><a href="/#blog">Journal</a></li>
                 <li><a href="#cta" class="nav-cta">Contact</a></li>
             </ul>
@@ -815,7 +987,7 @@
                 <source media="(min-width: 768px)" srcset="assets/images/areas/jayanagar-hero.webp" type="image/webp" sizes="100vw" />
                 <source media="(max-width: 767px)" srcset="assets/images/areas/jayanagar-hero-mobile.jpg" type="image/jpeg" sizes="100vw" />
                 <img src="assets/images/areas/jayanagar-hero.webp"
-                     alt="Namakarana ceremony at a Jayanagar home — grandparents, parents and baby in frame"
+                     alt="Namakarana ceremony at a Jayanagar home, grandparents, parents and baby in frame"
                      fetchpriority="high" width="1920" height="1080" decoding="async" />
             </picture>
             <div class="hero-overlay"></div>
@@ -823,7 +995,7 @@
             <div class="hero-content">
                 <nav class="breadcrumb" aria-label="Breadcrumb">
                     <a href="/">Home</a><span>&rsaquo;</span>
-                    <a href="/areas">Areas</a><span>&rsaquo;</span>
+                    <a href="/#services">Services</a><span>&rsaquo;</span>
                     <span class="current">Jayanagar</span>
                 </nav>
 
@@ -831,7 +1003,7 @@
                     Wedding Photographers in <span class="highlight">Jayanagar</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Namakarana, seemantham, upanayana and temple weddings for Jayanagar's multi-generation families — 4 km from our studio.
+                    Namakarana, seemantham, upanayana and temple weddings for Jayanagar's multi-generation families, 4 km from our studio.
                 </p>
 
                 <div class="hero-buttons">
@@ -857,45 +1029,78 @@
                 <div class="summary-box-full">
                     <span class="summary-label">In a nutshell</span>
                     <p class="nutshell-text">
-                        Story and Smiles is a photography studio in Banashankari, about 4 km from Jayanagar. Karthik and his team shoot weddings, namakarana, seemantham and receptions across Jayanagar's 4th Block, 9th Block and South End Circle. Walk-in friendly by appointment. Full-day weddings start at ₹45,000.
+                        Story and Smiles is a photography company in Banashankari, about 4 km from Jayanagar. Karthik and his team shoot weddings, namakarana, seemantham and receptions across Jayanagar's 4th Block, 9th Block and South End Circle. Walk-in friendly by appointment. Full-day weddings start at ₹45,000.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- ========== 3. WHY THIS AREA ========== -->
+        <!-- ========== 3. COMPANY QUICK FACTS ========== -->
+        <section id="quick-facts" class="quick-facts-section" aria-labelledby="quick-facts-heading">
+            <div class="container">
+                <h2 id="quick-facts-heading" class="quick-facts-heading">Company quick facts</h2>
+                <dl class="quick-facts-inline">
+                    <div>
+                        <dt>Address</dt>
+                        <dd>2A, 5th main, 3rd Cross Rd, near Chikkalasandra, Banashankari, Bengaluru 560061</dd>
+                    </div>
+                    <div>
+                        <dt>Phone and WhatsApp</dt>
+                        <dd><a href="tel:+919845808890">+91-98458 08890</a></dd>
+                    </div>
+                    <div>
+                        <dt>Hours</dt>
+                        <dd>9:00 AM to 8:00 PM, all days</dd>
+                    </div>
+                    <div>
+                        <dt>Starting price</dt>
+                        <dd>Weddings from ₹45,000; maternity from ₹12,000</dd>
+                    </div>
+                    <div>
+                        <dt>Best window or typical turnaround</dt>
+                        <dd>Book 3 to 4 months ahead for peak wedding dates (November to February); galleries in 3 to 4 weeks</dd>
+                    </div>
+                    <div>
+                        <dt>Delivery</dt>
+                        <dd>Online gallery in 3 to 4 weeks</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- ========== 4. WHY THIS AREA ========== -->
         <section id="local" class="local-section section-pad" aria-labelledby="local-heading">
             <div class="container">
                 <div class="local-grid">
                     <div class="local-copy animate-on-scroll">
                         <h2 id="local-heading">We know Jayanagar's ceremony calendar, not just its pincode</h2>
                         <p class="local-lead">
-                            We work out of Banashankari, on the Jayanagar side of South Bangalore — close enough that the studio has become the default meeting point for families here.
+                            We work out of Banashankari, on the Jayanagar side of South Bangalore, close enough that the studio has become the default meeting point for families here.
                         </p>
                         <ul class="facts-list">
                             <li>
-                                Morning muhurthams here don't wait for traffic, so every Jayanagar booking carries a built-in travel buffer of <strong>20–30 minutes</strong>. We'd rather stand at the venue early than walk in during the procession.
+                                Morning muhurthams here don't wait for traffic, so every Jayanagar booking carries a built-in travel buffer of <strong>20 to 30 minutes</strong>. We'd rather stand at the venue early than walk in during the procession.
                             </li>
                             <li>
-                                We shoot at kalyan mantapas across <strong>4th Block</strong> and <strong>9th Block</strong> — the ones near 30th Cross and the community hall by <strong>Ragigudda Anjaneya Temple</strong> are the two we know best.
+                                We shoot at kalyan mantapas across <strong>4th Block</strong> and <strong>9th Block</strong>. The ones near 30th Cross and the community hall by <strong>Ragigudda Anjaneya Temple</strong> are the two we know best.
                             </li>
                             <li>
-                                Most of what we're booked for here is <strong>family ceremony work</strong> — namakarana, seemantham, upanayana and temple weddings — rather than large banquet receptions you'd see further east.
+                                Most of what we're booked for here is <strong>family ceremony work</strong> such as namakarana, seemantham, upanayana and temple weddings, rather than large banquet receptions you'd see further east.
                             </li>
                             <li>
-                                First meetings usually happen at the <strong>4th Block shopping complex</strong> or the Ragigudda side — easy to find, easy to park near, close to most residential blocks.
+                                First meetings usually happen at the <strong>4th Block shopping complex</strong> or the Ragigudda side, easy to find, easy to park near, close to most residential blocks.
                             </li>
                             <li>
-                                At the Ragigudda hall, parking fills up early — we load gear the evening before rather than carry cases through a muhurtham crowd.
+                                At the Ragigudda hall, parking fills up early, so we load gear the evening before rather than carry cases through a muhurtham crowd.
                             </li>
                         </ul>
                         <p class="local-note">
-                            Multi-generation families here tend to want the elders photographed first, before the hall fills up — so the opening twenty minutes of a Jayanagar booking go to family portraits, not candids.
+                            Multi-generation families here tend to want the elders photographed first, before the hall fills up, so the opening twenty minutes of a Jayanagar booking go to family portraits, not candids.
                         </p>
                     </div>
 
                     <div class="animate-on-scroll">
-                        <!-- Map facade — SERVICE-AREA variant: radius circle, no pin, no address -->
+                        <!-- Map facade, service-area variant -->
                         <div class="map-facade"
                              id="areaMap"
                              data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31106.7!2d77.5590!3d12.9100!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzM2LjAiTiA3N8KwMzMnMzIuNCJF!5e0!3m2!1sen!2sin!4v1700000000000"
@@ -913,7 +1118,7 @@
                             </a>
                         </div>
                         <p class="map-address">
-                            <strong>Service area — Jayanagar</strong><br>
+                            <strong>Service area: Jayanagar</strong><br>
                             Covered from our Banashankari studio. No second office here, and no travel surcharge for South Bangalore.
                         </p>
                     </div>
@@ -921,52 +1126,50 @@
             </div>
         </section>
 
-        <!-- ========== 4. WHAT WE SHOOT HERE ========== -->
+        <!-- ========== 5. WHAT WE SHOOT HERE ========== -->
         <section id="services" class="shoot-section section-pad" aria-labelledby="services-heading">
             <div class="container">
                 <div class="section-header">
                     <span class="section-subtitle">What we shoot in Jayanagar</span>
                     <h2 id="services-heading" class="section-title">Three things we're booked for most here</h2>
-                    <p class="section-description">Jayanagar books ceremony work more than anything else — the rituals, the elders, and the family that's flown in for the week.</p>
+                    <p class="section-description">Jayanagar books ceremony work more than anything else: the rituals, the elders, and the family that's flown in for the week.</p>
                 </div>
 
                 <div class="shoot-grid">
-                    <a href="/wedding-photography-bangalore" class="shoot-card animate-on-scroll">
-                        <span class="shoot-icon" aria-hidden="true">💍</span>
+                    <a href="/wedding-photography-bangalore.html" class="shoot-card animate-on-scroll">
                         <h3>Weddings</h3>
                         <p>Mantapa and temple weddings, muhurtham through reception, including the ritual sequences most families want documented.</p>
                     </a>
-                    <a href="/maternity-photography-bangalore" class="shoot-card animate-on-scroll">
-                        <span class="shoot-icon" aria-hidden="true">🌿</span>
+                    <a href="/maternity-photography-bangalore.html" class="shoot-card animate-on-scroll">
                         <h3>Maternity</h3>
                         <p>Studio or at-home sessions, usually between 28 and 34 weeks, before the seemantham calendar gets busy.</p>
                     </a>
-                    <a href="/event-photography-bangalore" class="shoot-card animate-on-scroll">
-                        <span class="shoot-icon" aria-hidden="true">🪔</span>
+                    <a href="/event-photography-bangalore.html" class="shoot-card animate-on-scroll">
                         <h3>Family ceremonies</h3>
-                        <p>Namakarana, seemantham, upanayana and housewarmings — at home or in a hall, following your priest's order.</p>
+                        <p>Namakarana, seemantham, upanayana and housewarmings. At home or in a hall, following your priest's order.</p>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- ========== 5. LOCAL PROOF — INTENTIONALLY OMITTED ==========
-             No confirmed, attributable Jayanagar review exists. Per brief §0 flag 4 and
-             §3 row 7, a testimonial ships only where a real review exists, and no nearby
-             client may be substituted. The page is compliant without this section.
+        <!-- ========== 6. LOCAL PROOF, INTENTIONALLY OMITTED ==========
+             No confirmed, attributable Jayanagar review exists. Per brief section 0 flag 4
+             and section 3 row 7, a testimonial ships only where a real review exists, and
+             no nearby client may be substituted. The page is compliant without this section.
              If Karthik supplies a verified Jayanagar review before launch, insert the
-             .proof-section block and update the word count. -->
+             .proof-section block and update the word count. DO NOT INVENT A REVIEW. -->
 
-        <!-- ========== 6. PRICING BAND ========== -->
-        <div class="price-band" role="region" aria-label="Starting prices">
+        <!-- ========== 7. PRICING BAND ========== -->
+        <div class="price-band" id="packages" role="region" aria-labelledby="packages-heading">
+            <h2 id="packages-heading" class="sr-only">Pricing</h2>
             <p>
                 Full-day weddings from <strong>₹45,000</strong>
                 · Maternity from <strong>₹12,000</strong>
-                · <a href="/investment">See what's included</a>
+                · <a href="/wedding-photography-bangalore.html#packages">See what's included</a>
             </p>
         </div>
 
-        <!-- ========== 7. FAQ ========== -->
+        <!-- ========== 8. FAQ ========== -->
         <section id="faq" class="faq-section section-pad" aria-labelledby="faq-heading">
             <div class="container">
                 <div class="section-header">
@@ -977,29 +1180,29 @@
                 <div class="faq-accordion">
                     <details class="faq-item">
                         <summary>Do you charge extra to travel to Jayanagar?</summary>
-                        <div class="faq-answer"><p>No. Jayanagar is inside our standard South Bangalore coverage. The studio is in Banashankari, about 4 km away, and we build the drive into the schedule rather than onto the invoice. Outstation work — Mysore, Coorg and beyond — is quoted separately.</p></div>
+                        <div class="faq-answer"><p>No. Jayanagar is inside our standard South Bangalore coverage. The studio is in Banashankari, about 4 km away, and we build the drive into the schedule rather than onto the invoice. Outstation work such as Mysore and Coorg is quoted separately.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>Which Jayanagar venues have you shot at?</summary>
-                        <div class="faq-answer"><p>We shoot at kalyan mantapas and community halls across Jayanagar's 4th Block, 9th Block and South End Circle. If your hall isn't one we've listed, send the name — we'll tell you honestly whether we've worked there and what the light and access are like.</p></div>
+                        <div class="faq-answer"><p>We shoot at kalyan mantapas and community halls across Jayanagar's 4th Block, 9th Block and South End Circle. If your hall isn't one we've listed, send the name, and we'll tell you honestly whether we've worked there and what the light and access are like. Full wedding coverage details are on our <a href="/wedding-photography-bangalore.html">wedding photography page</a>.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>How early should we book for a Jayanagar wedding?</summary>
-                        <div class="faq-answer"><p>Three to four months ahead for November–February weddings, when muhurtham dates cluster. Maternity sessions book four to six weeks ahead. We take one wedding per day, so a popular muhurtham date can go early — check before you fix the hall if the date is flexible.</p></div>
+                        <div class="faq-answer"><p>Three to four months ahead for November to February weddings, when muhurtham dates cluster. Maternity sessions book four to six weeks ahead. We take one wedding per day, so a popular muhurtham date can go early. Check before you fix the hall if the date is flexible.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>Do you cover temple weddings and naming ceremonies in Jayanagar?</summary>
-                        <div class="faq-answer"><p>Regularly. Namakarana, seemantham, upanayana and temple weddings are most of what we shoot here, and the ritual order differs by family. Tell us which ceremonies you're doing and who leads them — we'd rather follow your priest's sequence than impose a standard one.</p></div>
+                        <div class="faq-answer"><p>Regularly. Namakarana, seemantham, upanayana and temple weddings are most of what we shoot here, and the ritual order differs by family. Tell us which ceremonies you're doing and who leads them. We'd rather follow your priest's sequence than impose a standard one.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>Can we do a pre-wedding shoot in Jayanagar?</summary>
-                        <div class="faq-answer"><p>Yes. Lalbagh is a short drive from Jayanagar and works well for early-morning sessions before the gates get busy. If you'd rather stay local, the quieter residential streets around 9th Block and the older Jayanagar homes give a more personal set of frames.</p></div>
+                        <div class="faq-answer"><p>Yes. Lalbagh is a short drive from Jayanagar and works well for early-morning sessions before the gates get busy. If you'd rather stay local, the quieter residential streets around 9th Block and the older Jayanagar homes give a more personal set of frames. See our <a href="/pre-wedding-photography-bangalore.html">pre-wedding photography page</a> for locations and packages.</p></div>
                     </details>
                 </div>
             </div>
         </section>
 
-        <!-- ========== 8. RELATED ========== -->
+        <!-- ========== 9. RELATED ========== -->
         <section id="related" class="related-section section-pad" aria-labelledby="related-heading">
             <div class="container">
                 <div class="section-header">
@@ -1009,25 +1212,35 @@
 
                 <div class="related-row">
                     <h3>Nearby areas</h3>
-                    <a href="/areas/banashankari" class="related-pill">Banashankari</a>
-                    <a href="/areas/jp-nagar" class="related-pill">JP Nagar</a>
-                    <a href="/areas/koramangala" class="related-pill">Koramangala</a>
+                    <a href="/areas/banashankari.html" class="related-pill">Banashankari</a>
+                    <a href="/areas/jp-nagar.html" class="related-pill">JP Nagar</a>
+                    <a href="/areas/koramangala.html" class="related-pill">Koramangala</a>
                 </div>
 
                 <div class="related-row">
                     <h3>Services</h3>
-                    <a href="/wedding-photography-bangalore" class="related-pill">Wedding photography</a>
-                    <a href="/maternity-photography-bangalore" class="related-pill">Maternity photography</a>
-                    <a href="/event-photography-bangalore" class="related-pill">Family ceremony photography</a>
+                    <a href="/wedding-photography-bangalore.html" class="related-pill">Wedding photography</a>
+                    <a href="/maternity-photography-bangalore.html" class="related-pill">Maternity photography</a>
+                    <a href="/event-photography-bangalore.html" class="related-pill">Family ceremony photography</a>
                 </div>
+
+                <p class="also-serving">
+                    Also serving
+                    <a href="/areas/banashankari.html">Banashankari</a>,
+                    <a href="/areas/jayanagar.html">Jayanagar</a>,
+                    <a href="/areas/jp-nagar.html">JP Nagar</a>,
+                    <a href="/areas/koramangala.html">Koramangala</a>,
+                    <a href="/areas/whitefield.html">Whitefield</a>,
+                    and <a href="/areas/mysore.html">Mysore</a>.
+                </p>
             </div>
         </section>
 
-        <!-- ========== 9. CLOSING CTA ========== -->
+        <!-- ========== 10. CLOSING CTA ========== -->
         <section id="cta" class="cta-band" aria-labelledby="cta-heading">
             <div class="container">
                 <h2 id="cta-heading">Send a date, get a quote.</h2>
-                <p>Send your date and ceremony type on WhatsApp. We'll confirm Jayanagar availability — usually within two hours.</p>
+                <p>Send your date and ceremony type on WhatsApp. We'll confirm Jayanagar availability, usually within two hours.</p>
                 <a href="https://wa.me/919845808890?text=Hi%2C%20checking%20availability%20for%20a%20session%20in%20Jayanagar."
                    target="_blank" rel="noopener noreferrer"
                    class="btn track-whatsapp" data-cta="cta_check_date">
@@ -1044,7 +1257,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="assets/images/logo-white.png" alt="Story and Smiles Photography" class="footer-logo" width="150" height="48" loading="lazy" />
-                    <p>Story and Smiles is a photography studio based in Banashankari, Bangalore. We cover weddings, maternity, newborn and family sessions across South Bangalore.</p>
+                    <p>Story and Smiles is a photography company based in Banashankari, Bangalore. We cover weddings, maternity, newborn and family sessions across South Bangalore.</p>
                     <p>Phone: <a href="tel:+919845808890">+91-98458 08890</a> | Email: <a href="mailto:info.storyandsmiles@gmail.com">info.storyandsmiles@gmail.com</a></p>
                     <p style="font-size:0.85rem; opacity:0.6;">2A, 5th main, 3rd Cross Rd, near Chikkalasandra, Banashankari, Bengaluru, Karnataka 560061</p>
                 </div>
@@ -1054,7 +1267,7 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/#about">About Us</a></li>
                         <li><a href="/#services">Services</a></li>
-                        <li><a href="/investment">Investment</a></li>
+                        <li><a href="#packages">Pricing</a></li>
                         <li><a href="/#gallery">Gallery</a></li>
                         <li><a href="#faq">FAQs</a></li>
                         <li><a href="#cta">Contact</a></li>
@@ -1063,11 +1276,22 @@
                 <div class="footer-services">
                     <h4>Our Services</h4>
                     <ul>
-                        <li><a href="/wedding-photography-bangalore">Wedding Photography</a></li>
-                        <li><a href="/pre-wedding-photography-bangalore">Pre-Wedding Shoot</a></li>
-                        <li><a href="/maternity-photography-bangalore">Maternity Photography</a></li>
-                        <li><a href="/newborn-photography-bangalore">Newborn Photography</a></li>
-                        <li><a href="/event-photography-bangalore">Event Photography</a></li>
+                        <li><a href="/wedding-photography-bangalore.html">Wedding Photography</a></li>
+                        <li><a href="/pre-wedding-photography-bangalore.html">Pre-Wedding Shoot</a></li>
+                        <li><a href="/maternity-photography-bangalore.html">Maternity Photography</a></li>
+                        <li><a href="/newborn-photography-bangalore.html">Newborn Photography</a></li>
+                        <li><a href="/event-photography-bangalore.html">Event Photography</a></li>
+                    </ul>
+                </div>
+                <div class="footer-areas">
+                    <h4>Areas We Serve</h4>
+                    <ul>
+                        <li><a href="/areas/banashankari.html">Banashankari</a></li>
+                        <li><a href="/areas/jayanagar.html">Jayanagar</a></li>
+                        <li><a href="/areas/jp-nagar.html">JP Nagar</a></li>
+                        <li><a href="/areas/koramangala.html">Koramangala</a></li>
+                        <li><a href="/areas/whitefield.html">Whitefield</a></li>
+                        <li><a href="/areas/mysore.html">Mysore</a></li>
                     </ul>
                 </div>
             </div>
@@ -1170,6 +1394,9 @@
 
             document.querySelectorAll('a[href^="#"]').forEach(function (a) {
                 a.addEventListener('click', function (e) {
+                    if (this.classList.contains('dropdown-toggle') && window.matchMedia('(max-width: 768px)').matches) {
+                        return;
+                    }
                     var id = this.getAttribute('href');
                     if (!id || id === '#' || id.length < 2) return;
                     var target = document.querySelector(id);
@@ -1190,7 +1417,6 @@
                 });
             });
 
-            /* MAP FACADE — CLICK-TO-LOAD */
             document.querySelectorAll('.map-facade').forEach(function (facade) {
                 var btn = facade.querySelector('.map-btn');
                 if (!btn) return;
