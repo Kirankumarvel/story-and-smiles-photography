@@ -143,7 +143,7 @@
     </script>
 
     <!-- ================================================================
-         SCHEMA — Service + FAQPage + BreadcrumbList + ImageGallery + LocalBusiness
+         SCHEMA
     ================================================================ -->
 
     <!-- SCHEMA: ORGANIZATION -->
@@ -160,7 +160,7 @@
             "url": "https://story-and-smiles-photography.vercel.app/assets/images/logo.png",
             "width": 512, "height": 512
         },
-        "description": "Photography studio in Banashankari, Bengaluru, covering weddings, maternity, newborn and family events across Karnataka and South India.",
+        "description": "Photography company in Banashankari, Bengaluru, covering weddings, maternity, newborn and family events across Karnataka and South India.",
         "email": "info.storyandsmiles@gmail.com",
         "telephone": "+91-9845808890",
         "foundingDate": "2019-06-01",
@@ -181,14 +181,14 @@
     }
     </script>
 
-    <!-- SCHEMA: LOCAL BUSINESS (referenced by @id in Service/FAQ) -->
+    <!-- SCHEMA: LOCAL BUSINESS -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": ["LocalBusiness", "ProfessionalService", "PhotographyBusiness"],
         "@id": "https://story-and-smiles-photography.vercel.app/#localbusiness",
         "name": "Story and Smiles Photography",
-        "description": "Newborn and family photography studio in Banashankari, Bengaluru. Safe, baby-led in-home newborn sessions across Bangalore.",
+        "description": "Newborn and family photography company in Banashankari, Bengaluru. Safe, baby-led in-home newborn sessions across Bangalore.",
         "image": [
             "https://story-and-smiles-photography.vercel.app/assets/images/logo.png",
             "https://story-and-smiles-photography.vercel.app/assets/images/newborn-hero.webp",
@@ -196,7 +196,7 @@
         ],
         "telephone": "+91-9845808890",
         "email": "info.storyandsmiles@gmail.com",
-        "priceRange": "₹10,000 - ₹15,000",
+        "priceRange": "₹5,000 - ₹60,000",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, UPI, Bank Transfer",
         "url": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html",
@@ -222,14 +222,15 @@
             "bestRating": "5",
             "worstRating": "1"
         },
-        "review": [
-            {
-                "@type": "Review",
-                "author": { "@type": "Person", "name": "Priya and Ravi" },
-                "datePublished": "2026-04-10",
-                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                "reviewBody": "The newborn session was gentle and safe. Karthik captured our little one's first days perfectly. We will treasure these forever."
-            }
+        "areaServed": [
+            { "@type": "Place", "name": "Banashankari", "url": "https://story-and-smiles-photography.vercel.app/banashankari-photography-bangalore.html" },
+            { "@type": "Place", "name": "Jayanagar", "url": "https://story-and-smiles-photography.vercel.app/jayanagar-photography-bangalore.html" },
+            { "@type": "Place", "name": "JP Nagar", "url": "https://story-and-smiles-photography.vercel.app/jp-nagar-photography-bangalore.html" },
+            { "@type": "Place", "name": "Koramangala", "url": "https://story-and-smiles-photography.vercel.app/koramangala-photography-bangalore.html" },
+            { "@type": "Place", "name": "Whitefield", "url": "https://story-and-smiles-photography.vercel.app/whitefield-photography-bangalore.html" },
+            { "@type": "Place", "name": "Mysore", "url": "https://story-and-smiles-photography.vercel.app/mysore-photography-bangalore.html" },
+            { "@type": "City", "name": "Bengaluru" },
+            { "@type": "State", "name": "Karnataka" }
         ],
         "sameAs": [
             "https://www.instagram.com/storyandsmiles",
@@ -272,14 +273,36 @@
         "dateModified": "2026-10-12T10:00:00+05:30",
         "inLanguage": "en-IN",
         "breadcrumb": { "@id": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html#breadcrumb" },
+        "significantLink": [
+            "https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/banashankari-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/jayanagar-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/jp-nagar-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/koramangala-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/whitefield-photography-bangalore.html",
+            "https://story-and-smiles-photography.vercel.app/mysore-photography-bangalore.html"
+        ],
         "speakable": {
             "@type": "SpeakableSpecification",
-            "cssSelector": ["#hero-title", ".nutshell-text", "#definition-text", "#faq-heading"]
+            "cssSelector": [
+                "#hero-title",
+                ".nutshell-text",
+                "#quick-facts-heading",
+                ".quick-facts-inline",
+                "#definition-text",
+                "#packages-heading",
+                "#faq-heading",
+                "#faq .faq-item:first-child .faq-answer"
+            ]
         }
     }
     </script>
 
-    <!-- SCHEMA: BREADCRUMB -->
+    <!-- SCHEMA: BREADCRUMB (matches visible 3-item breadcrumb) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -315,26 +338,41 @@
                     "@type": "Offer",
                     "name": "Fresh 48 Session",
                     "price": "14000", "priceCurrency": "INR",
-                    "description": "Hospital or birth centre, 90 minutes, 25+ edited images, delivered within 10 days."
+                    "description": "Hospital or birth centre, 90 minutes, 25+ edited images, delivered within 10 days.",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Fresh 48 Newborn Photography Session",
+                        "url": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html#packages"
+                    }
                 },
                 {
                     "@type": "Offer",
                     "name": "Classic In-Home Session",
                     "price": "10000", "priceCurrency": "INR",
-                    "description": "Days 5–14, 2–3 hours at your home, 30+ edited images, props and lighting included."
+                    "description": "Days 5 to 14, 2 to 3 hours at your home, 30+ edited images, props and lighting included.",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Classic In-Home Newborn Photography Session",
+                        "url": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html#packages"
+                    }
                 },
                 {
                     "@type": "Offer",
                     "name": "Extended Family Session",
                     "price": "15000", "priceCurrency": "INR",
-                    "description": "3 hours, parents and siblings in frame, 45+ edited images, full print rights."
+                    "description": "3 hours, parents and siblings in frame, 45+ edited images, full print rights.",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Extended Family Newborn Photography Session",
+                        "url": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html#packages"
+                    }
                 }
             ]
         }
     }
     </script>
 
-    <!-- SCHEMA: FAQPage (8 questions — matches visible accordion) -->
+    <!-- SCHEMA: FAQPage -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -344,12 +382,12 @@
             {
                 "@type": "Question",
                 "name": "When should we schedule a newborn session?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Schedule the session while you're still pregnant — around 32 to 36 weeks. We pencil in your due date and confirm once your baby arrives. The ideal shooting window is days 5 to 14, when your baby is still sleepy and curls naturally. If you go past 14 days, don't worry — we adjust to your baby's pace." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Schedule the session while you're still pregnant, around 32 to 36 weeks. We pencil in your due date and confirm once your baby arrives. The ideal shooting window is days 5 to 14, when your baby is still sleepy and curls naturally. If you go past 14 days, don't worry, we adjust to your baby's pace. Many parents also book a maternity session at 28 to 34 weeks first." }
             },
             {
                 "@type": "Question",
                 "name": "Is in-home safer than studio?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Both can be safe. In-home is our default for two reasons: the baby stays in familiar smells and sounds, and there's no car journey or strange environment in those first two weeks. Parents are also more relaxed. If you prefer studio, we can do that too — but in-home is what most parents choose, and what we recommend for the first 14 days." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Both can be safe. In-home is our default for two reasons: the baby stays in familiar smells and sounds, and there's no car ride or strange environment in those first two weeks. Parents are also more relaxed. If you prefer studio, we can do that too, but in-home is what most parents choose, and what we recommend for the first 14 days." }
             },
             {
                 "@type": "Question",
@@ -359,17 +397,17 @@
             {
                 "@type": "Question",
                 "name": "Do you bring props and lighting?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes. We bring soft blankets, baskets, neutral wraps and lighting — all washed, sanitised and prepped before we arrive. You don't need to provide props. If you have a family blanket or heirloom you want in the photos, tell us and we'll weave it in." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. We bring soft blankets, baskets, neutral wraps and lighting, all washed, sanitised and prepped before we arrive. You don't need to provide props. If you have a family blanket or heirloom you want in the photos, tell us and we'll weave it in." }
             },
             {
                 "@type": "Question",
                 "name": "Are you trained in newborn safety?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Newborn posing is a specialised skill, and safety comes first. We keep the room at 26–28°C, use a spotter for any wrapped poses, and never force the baby into a position. The safest approach — and the one we follow — is baby-led: your baby sets the pace, and we work around it." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Newborn posing is a specialised skill, and safety comes first. We keep the room at 26 to 28 degrees Celsius, use a spotter for any wrapped poses, and never force the baby into a position. The safest approach, and the one we follow, is baby-led: your baby sets the pace, and we work around it." }
             },
             {
                 "@type": "Question",
                 "name": "Can parents and siblings be in the photos?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Parents and siblings are welcome in the photos, and 78% of our galleries include at least one parent portrait. We usually shoot the solo newborn portraits first, then bring the family in for the last 30 minutes. Older siblings have short attention spans, so we plan around that." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Parents and siblings are welcome in the photos, and 78% of our galleries include at least one parent portrait. We usually shoot the solo newborn portraits first, then bring the family in for the last 30 minutes. Older siblings have short attention spans, so we plan around that. For older children and family celebrations, our event photography covers birthdays and house warmings." }
             },
             {
                 "@type": "Question",
@@ -379,19 +417,19 @@
             {
                 "@type": "Question",
                 "name": "When do we get the photos?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Within ten days, and often sooner. You get an online gallery link by email, plus print rights. Albums and prints can be added once you've picked favourites. If you need a few images urgently for a birth announcement, tell us at booking — we can usually prioritise those." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Within ten days, and often sooner. You get an online gallery link by email, plus print rights. Albums and prints can be added once you've picked favourites. If you need a few images urgently for a birth announcement, tell us at booking and we can usually prioritise those." }
             }
         ]
     }
     </script>
 
-    <!-- SCHEMA: ImageGallery (6 newborn tiles) -->
+    <!-- SCHEMA: ImageGallery -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "ImageGallery",
         "@id": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html#gallery",
-        "name": "Newborn Photography Portfolio — Story and Smiles",
+        "name": "Newborn Photography Portfolio, Story and Smiles",
         "description": "Six frames from recent newborn sessions in Bangalore.",
         "mainEntity": [
             { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/newborn-hands.jpg", "caption": "Sleeping newborn cradled in a parent's cupped hands" },
@@ -400,6 +438,41 @@
             { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/newborn-wrapped.jpg", "caption": "Wrapped newborn detail shot with soft neutral textures" },
             { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/newborn-parent.jpg", "caption": "Parent and newborn portrait in window light" },
             { "@type": "ImageObject", "contentUrl": "https://story-and-smiles-photography.vercel.app/assets/images/newborn-awake.jpg", "caption": "Quiet awake moment of a newborn in the first days" }
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA: ItemList service pages -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "@id": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html#servicepages",
+        "name": "Service pages",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "url": "https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 2, "url": "https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 3, "url": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 4, "url": "https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 5, "url": "https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html" }
+        ]
+    }
+    </script>
+
+    <!-- SCHEMA: ItemList area pages -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "@id": "https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html#areapages",
+        "name": "Area pages",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "url": "https://story-and-smiles-photography.vercel.app/banashankari-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 2, "url": "https://story-and-smiles-photography.vercel.app/jayanagar-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 3, "url": "https://story-and-smiles-photography.vercel.app/jp-nagar-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 4, "url": "https://story-and-smiles-photography.vercel.app/koramangala-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 5, "url": "https://story-and-smiles-photography.vercel.app/whitefield-photography-bangalore.html" },
+            { "@type": "ListItem", "position": 6, "url": "https://story-and-smiles-photography.vercel.app/mysore-photography-bangalore.html" }
         ]
     }
     </script>
@@ -517,7 +590,7 @@
         .hamburger.active span:nth-child(2) { opacity: 0; }
         .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
 
-        /* ===== HERO — 78vh, overlay 0.50 ===== */
+        /* ===== HERO ===== */
         .hero {
             position: relative; min-height: 78vh;
             display: flex; align-items: center; justify-content: center;
@@ -546,7 +619,6 @@
             font-size: 0.92rem; color: rgba(255,255,255,0.85);
             letter-spacing: 0.3px; margin-top: 8px;
         }
-        .trust-line .star { color: #f5b042; }
         .trust-line .dot { opacity: 0.4; margin: 0 8px; }
 
         .breadcrumb {
@@ -606,6 +678,48 @@
             display: block; margin-bottom: 8px;
         }
         .summary-box-full p { font-size: 1.02rem; color: #2d2a2a; line-height: 1.7; margin: 0; }
+
+        /* ===== QUICK FACTS ===== */
+        .quick-facts-section { background: #fcf9f7; padding: 0 0 48px; }
+        .quick-facts-heading {
+            display: block;
+            text-align: center;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #e07a5f;
+            margin: 0 auto 14px;
+        }
+        .quick-facts-inline {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px 28px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 28px 32px;
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid rgba(0,0,0,0.04);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.04);
+            list-style: none;
+        }
+        .quick-facts-inline > div { display: flex; flex-direction: column; gap: 4px; }
+        .quick-facts-inline dt {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #e07a5f;
+            margin: 0;
+        }
+        .quick-facts-inline dd {
+            font-size: 0.9rem;
+            color: #4a4242;
+            margin: 0;
+            line-height: 1.5;
+        }
 
         /* ===== WHAT WE COVER ===== */
         .cover-section { background: #fff; }
@@ -678,7 +792,7 @@
         }
         .package-inclusions li:last-child { border-bottom: none; }
         .package-inclusions li::before {
-            content: '✓'; position: absolute; left: 0; top: 7px;
+            content: '\2713'; position: absolute; left: 0; top: 7px;
             color: #e07a5f; font-weight: 700;
         }
         .package-price {
@@ -821,10 +935,14 @@
             border-color: rgba(224,122,95,0.25);
             color: #e07a5f;
         }
-        .related-icon { font-size: 1.6rem; color: #e07a5f; margin-bottom: 10px; display: block; }
         .related-card h3 { font-family: 'Segoe UI', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: 4px; color: #1e1a1a; }
         .related-card:hover h3 { color: #e07a5f; }
         .related-card p { font-size: 0.82rem; color: #7a7272; margin: 0; line-height: 1.5; }
+        .also-serving {
+            text-align: center; margin-top: 32px;
+            font-size: 0.9rem; color: #5a5252; line-height: 1.7;
+            max-width: 800px; margin-left: auto; margin-right: auto;
+        }
         .related-more { text-align: center; margin-top: 32px; }
 
         /* ===== CTA BAND ===== */
@@ -859,15 +977,15 @@
 
         /* ===== FOOTER ===== */
         .footer { background: #1e1a1a; color: rgba(255,255,255,0.7); padding: 60px 0 30px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
         .footer-brand p { font-size: 0.9rem; line-height: 1.8; margin-bottom: 10px; }
         .footer-brand a { color: rgba(255,255,255,0.7); }
         .footer-brand a:hover { color: #e07a5f; }
         .footer-logo { margin-bottom: 12px; filter: brightness(0.9); }
-        .footer-links h4, .footer-services h4 { color: #fff; font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
-        .footer-links ul, .footer-services ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-        .footer-links ul li a, .footer-services ul li a { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
-        .footer-links ul li a:hover, .footer-services ul li a:hover { color: #e07a5f; }
+        .footer-links h4, .footer-services h4, .footer-areas h4 { color: #fff; font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
+        .footer-links ul, .footer-services ul, .footer-areas ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .footer-links ul li a, .footer-services ul li a, .footer-areas ul li a { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+        .footer-links ul li a:hover, .footer-services ul li a:hover, .footer-areas ul li a:hover { color: #e07a5f; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; text-align: center; font-size: 0.85rem; }
         .footer-legal { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
         .legal-trigger {
@@ -955,6 +1073,7 @@
             .testimonials-grid-2 { grid-template-columns: 1fr; max-width: 520px; }
             .related-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: 1fr 1fr; }
+            .quick-facts-inline { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
             .section-pad { padding: 56px 0; }
@@ -980,9 +1099,12 @@
             .compare-table th, .compare-table td { padding: 12px 14px; }
             .whatsapp-float { bottom: 20px; right: 20px; }
             .whatsapp-main-btn { padding: 10px 16px 10px 12px; font-size: 13px; }
-            .back-to-top { bottom: 84px; right: 20px; width: 40px; height: 40px; }
+            .back-to-top { bottom: 96px; right: 20px; width: 40px; height: 40px; }
             .definition-block h2 { font-size: 1.5rem; }
             .definition-block p { font-size: 0.95rem; }
+        }
+        @media (max-width: 576px) {
+            .quick-facts-inline { grid-template-columns: 1fr; padding: 22px 22px; }
         }
         @media (max-width: 480px) {
             .hero-title { font-size: 1.7rem; }
@@ -1057,7 +1179,7 @@
                     </ul>
                 </li>
                 <li><a href="/#about">About</a></li>
-                <li><a href="#packages">Investment</a></li>
+                <li><a href="#packages">Pricing</a></li>
                 <li><a href="/#blog">Journal</a></li>
                 <li><a href="#cta" class="nav-cta">Contact</a></li>
             </ul>
@@ -1069,7 +1191,7 @@
 
     <main id="main-content">
 
-        <!-- ========== 1. HERO (78vh, overlay 0.50) ========== -->
+        <!-- ========== 1. HERO ========== -->
         <header class="hero" id="home">
             <picture>
                 <source media="(min-width: 768px)" srcset="assets/images/newborn-hero.webp" type="image/webp" sizes="100vw" />
@@ -1104,7 +1226,7 @@
                 </div>
 
                 <p class="trust-line">
-                    <span class="star" aria-hidden="true">✓</span> Trained in newborn safety
+                    Trained in newborn safety
                     <span class="dot">·</span> Parents present throughout
                     <span class="dot">·</span> In-home across Bengaluru
                 </p>
@@ -1124,7 +1246,40 @@
             </div>
         </section>
 
-        <!-- ========== 3. WHAT WE COVER ========== -->
+        <!-- ========== 3. COMPANY QUICK FACTS ========== -->
+        <section id="quick-facts" class="quick-facts-section" aria-labelledby="quick-facts-heading">
+            <div class="container">
+                <h2 id="quick-facts-heading" class="quick-facts-heading">Company quick facts</h2>
+                <dl class="quick-facts-inline">
+                    <div>
+                        <dt>Address</dt>
+                        <dd>2A, 5th main, 3rd Cross Rd, near Chikkalasandra, Banashankari, Bengaluru 560061</dd>
+                    </div>
+                    <div>
+                        <dt>Phone and WhatsApp</dt>
+                        <dd><a href="tel:+919845808890">+91-98458 08890</a></dd>
+                    </div>
+                    <div>
+                        <dt>Hours</dt>
+                        <dd>9:00 AM to 8:00 PM, all days</dd>
+                    </div>
+                    <div>
+                        <dt>Starting price</dt>
+                        <dd>₹10,000</dd>
+                    </div>
+                    <div>
+                        <dt>Best window or typical turnaround</dt>
+                        <dd>Days 5 to 14 after birth</dd>
+                    </div>
+                    <div>
+                        <dt>Delivery</dt>
+                        <dd>Online gallery within 10 days</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- ========== 4. WHAT WE COVER ========== -->
         <section id="cover" class="cover-section section-pad" aria-labelledby="cover-heading">
             <div class="container">
                 <div class="section-header">
@@ -1135,52 +1290,46 @@
 
                 <div class="cover-grid">
                     <div class="cover-card animate-on-scroll">
-                        <div class="cover-icon" aria-hidden="true">🏥</div>
                         <div>
                             <h3>Fresh 48</h3>
                             <p>Hospital or birth centre, in the first 48 hours. Captured before you've even packed up to go home.</p>
                         </div>
                     </div>
                     <div class="cover-card animate-on-scroll">
-                        <div class="cover-icon" aria-hidden="true">🏠</div>
                         <div>
-                            <h3>Classic in-home (days 5–14)</h3>
+                            <h3>Classic in-home (days 5 to 14)</h3>
                             <p>We come to you. Your baby is sleepy, curls naturally, and the room is already familiar.</p>
                         </div>
                     </div>
                     <div class="cover-card animate-on-scroll">
-                        <div class="cover-icon" aria-hidden="true">👨‍👩‍👧</div>
                         <div>
                             <h3>Extended family</h3>
                             <p>Parents, siblings and grandparents in frame. Everyone who loves them, on the record.</p>
                         </div>
                     </div>
                     <div class="cover-card animate-on-scroll">
-                        <div class="cover-icon" aria-hidden="true">🛡️</div>
                         <div>
                             <h3>Safe posing</h3>
                             <p>No forced positions. Baby-led, supported, spotter on hand for any wrapped pose.</p>
                         </div>
                     </div>
                     <div class="cover-card animate-on-scroll">
-                        <div class="cover-icon" aria-hidden="true">🔥</div>
                         <div>
                             <h3>Warm-room setup &amp; soft props</h3>
-                            <p>Room warmed to 26–28°C. Neutral blankets, soft wraps and baskets, sanitised before we arrive.</p>
+                            <p>Room warmed to 26 to 28 degrees Celsius. Neutral blankets, soft wraps and baskets, sanitised before we arrive.</p>
                         </div>
                     </div>
                     <div class="cover-card animate-on-scroll">
-                        <div class="cover-icon" aria-hidden="true">🍼</div>
                         <div>
                             <h3>Feeding &amp; settling breaks</h3>
-                            <p>Built into every session. Feed, change, settle — we wait, not rush. Parents stay in frame if wanted.</p>
+                            <p>Built into every session. Feed, change, settle. We wait, not rush. Parents stay in frame if wanted.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ========== 4. DEFINITION ========== -->
+        <!-- ========== 5. DEFINITION ========== -->
         <section id="definition" class="definition-section section-pad" aria-labelledby="definition-heading">
             <div class="container">
                 <div class="definition-block">
@@ -1192,11 +1341,11 @@
             </div>
         </section>
 
-        <!-- ========== 5. PACKAGES ========== -->
+        <!-- ========== 6. PACKAGES ========== -->
         <section id="packages" class="packages-section section-pad" aria-labelledby="packages-heading">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-subtitle">Investment</span>
+                    <span class="section-subtitle">Pricing</span>
                     <h2 id="packages-heading" class="section-title">Three sessions, all baby-led</h2>
                     <p class="section-description">Every session includes props, lighting, feeding and settling time, and a parent or sibling portrait at no extra cost. Travel across Bengaluru included within 15km.</p>
                 </div>
@@ -1226,10 +1375,10 @@
                     <article class="package-card featured animate-on-scroll">
                         <span class="package-badge">Most booked</span>
                         <h3 class="package-name">Classic In-Home</h3>
-                        <p class="package-tagline">Days 5–14, at home, with props and lighting included.</p>
+                        <p class="package-tagline">Days 5 to 14, at home, with props and lighting included.</p>
                         <ul class="package-inclusions">
-                            <li>2–3 hours at your home</li>
-                            <li>Days 5–14 (best window)</li>
+                            <li>2 to 3 hours at your home</li>
+                            <li>Days 5 to 14 (best window)</li>
                             <li>30+ edited high-res images</li>
                             <li>Props &amp; lighting included</li>
                             <li>Online gallery + print rights</li>
@@ -1247,7 +1396,7 @@
 
                     <article class="package-card animate-on-scroll">
                         <h3 class="package-name">Extended Family</h3>
-                        <p class="package-tagline">The whole family in frame — siblings, grandparents, everyone.</p>
+                        <p class="package-tagline">The whole family in frame: siblings, grandparents, everyone.</p>
                         <ul class="package-inclusions">
                             <li>3 hours at your home</li>
                             <li>Parents &amp; siblings in frame</li>
@@ -1269,7 +1418,7 @@
             </div>
         </section>
 
-        <!-- ========== 6. COMPARISON TABLE ========== -->
+        <!-- ========== 7. COMPARISON TABLE ========== -->
         <section id="compare" class="compare-section section-pad" aria-labelledby="compare-heading">
             <div class="container">
                 <div class="section-header">
@@ -1293,13 +1442,13 @@
                             <tr>
                                 <th scope="row">Best for</th>
                                 <td>Hospital-room moments in the first 48 hours</td>
-                                <td>The ideal window — days 5–14, sleepy and curled</td>
+                                <td>The ideal window, days 5 to 14, sleepy and curled</td>
                                 <td>The full household, including older siblings and grandparents</td>
                             </tr>
                             <tr>
                                 <th scope="row">Duration</th>
                                 <td>90 minutes</td>
-                                <td>2–3 hours (avg. 2h 40m)</td>
+                                <td>2 to 3 hours (avg. 2h 40m)</td>
                                 <td>3 hours</td>
                             </tr>
                             <tr>
@@ -1314,7 +1463,7 @@
             </div>
         </section>
 
-        <!-- ========== 7. BY THE NUMBERS ========== -->
+        <!-- ========== 8. BY THE NUMBERS ========== -->
         <section id="stats" class="stats-section section-pad" aria-labelledby="stats-heading">
             <div class="container">
                 <div class="section-header">
@@ -1337,11 +1486,11 @@
                     </div>
                 </div>
 
-                <p class="stat-source">Source: internal booking data, 2022–2026. Average session duration: 2h 40m.</p>
+                <p class="stat-source">Source: internal booking data, 2022 to 2026. Average session duration: 2h 40m.</p>
             </div>
         </section>
 
-        <!-- ========== 8. GALLERY (6 tiles) ========== -->
+        <!-- ========== 9. GALLERY ========== -->
         <section id="gallery" class="gallery-section section-pad" aria-labelledby="gallery-heading">
             <div class="container">
                 <div class="section-header">
@@ -1388,7 +1537,7 @@
             </div>
         </section>
 
-        <!-- ========== 9. TESTIMONIALS ========== -->
+        <!-- ========== 10. TESTIMONIALS ========== -->
         <section id="testimonials" class="testimonials-section section-pad" aria-labelledby="testimonials-heading">
             <div class="container">
                 <div class="section-header">
@@ -1406,7 +1555,11 @@
                         </div>
                     </article>
 
-                    <!-- TODO: Replace with a verified newborn client review before launch -->
+                    <!-- ============================================================
+                         TODO: CRITICAL. THIS TESTIMONIAL IS A PLACEHOLDER.
+                         DO NOT LAUNCH THIS PAGE UNTIL IT IS REPLACED WITH A
+                         VERIFIED NEWBORN CLIENT REVIEW. DO NOT INVENT A REVIEW.
+                         ============================================================ -->
                     <article class="testimonial-card animate-on-scroll">
                         <div class="testimonial-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
                         <p class="testimonial-text">"We were nervous about having a stranger in the house in the first week. Karthik was calm, washed his hands without being asked, and never pushed the baby into anything. The photos are exactly what we hoped for."</p>
@@ -1419,7 +1572,7 @@
             </div>
         </section>
 
-        <!-- ========== 10. FAQ (8) ========== -->
+        <!-- ========== 11. FAQ ========== -->
         <section id="faq" class="faq-section section-pad" aria-labelledby="faq-heading">
             <div class="container">
                 <div class="section-header">
@@ -1430,11 +1583,11 @@
                 <div class="faq-accordion">
                     <details class="faq-item">
                         <summary>When should we schedule a newborn session?</summary>
-                        <div class="faq-answer"><p>Schedule the session while you're still pregnant — around 32 to 36 weeks. We pencil in your due date and confirm once your baby arrives. The ideal shooting window is days 5 to 14, when your baby is still sleepy and curls naturally. If you go past 14 days, don't worry — we adjust to your baby's pace.</p></div>
+                        <div class="faq-answer"><p>Schedule the session while you're still pregnant, around 32 to 36 weeks. We pencil in your due date and confirm once your baby arrives. The ideal shooting window is days 5 to 14, when your baby is still sleepy and curls naturally. If you go past 14 days, don't worry, we adjust to your baby's pace. Many parents also book a <a href="/maternity-photography-bangalore.html">maternity session</a> at 28 to 34 weeks first.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>Is in-home safer than studio?</summary>
-                        <div class="faq-answer"><p>Both can be safe. In-home is our default for two reasons: the baby stays in familiar smells and sounds, and there's no car journey or strange environment in those first two weeks. Parents are also more relaxed. If you prefer studio, we can do that too — but in-home is what most parents choose, and what we recommend for the first 14 days.</p></div>
+                        <div class="faq-answer"><p>Both can be safe. In-home is our default for two reasons: the baby stays in familiar smells and sounds, and there's no car ride or strange environment in those first two weeks. Parents are also more relaxed. If you prefer studio, we can do that too, but in-home is what most parents choose, and what we recommend for the first 14 days.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>What if my baby is unsettled during the session?</summary>
@@ -1442,15 +1595,15 @@
                     </details>
                     <details class="faq-item">
                         <summary>Do you bring props and lighting?</summary>
-                        <div class="faq-answer"><p>Yes. We bring soft blankets, baskets, neutral wraps and lighting — all washed, sanitised and prepped before we arrive. You don't need to provide props. If you have a family blanket or heirloom you want in the photos, tell us and we'll weave it in.</p></div>
+                        <div class="faq-answer"><p>Yes. We bring soft blankets, baskets, neutral wraps and lighting, all washed, sanitised and prepped before we arrive. You don't need to provide props. If you have a family blanket or heirloom you want in the photos, tell us and we'll weave it in.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>Are you trained in newborn safety?</summary>
-                        <div class="faq-answer"><p>Yes. Newborn posing is a specialised skill, and safety comes first. We keep the room at 26–28°C, use a spotter for any wrapped poses, and never force the baby into a position. The safest approach — and the one we follow — is baby-led: your baby sets the pace, and we work around it.</p></div>
+                        <div class="faq-answer"><p>Yes. Newborn posing is a specialised skill, and safety comes first. We keep the room at 26 to 28 degrees Celsius, use a spotter for any wrapped poses, and never force the baby into a position. The safest approach, and the one we follow, is baby-led: your baby sets the pace, and we work around it.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>Can parents and siblings be in the photos?</summary>
-                        <div class="faq-answer"><p>Yes. Parents and siblings are welcome in the photos, and 78% of our galleries include at least one parent portrait. We usually shoot the solo newborn portraits first, then bring the family in for the last 30 minutes. Older siblings have short attention spans, so we plan around that.</p></div>
+                        <div class="faq-answer"><p>Yes. Parents and siblings are welcome in the photos, and 78% of our galleries include at least one parent portrait. We usually shoot the solo newborn portraits first, then bring the family in for the last 30 minutes. Older siblings have short attention spans, so we plan around that. For older children and family celebrations, our <a href="/event-photography-bangalore.html">event photography</a> covers birthdays and house warmings.</p></div>
                     </details>
                     <details class="faq-item">
                         <summary>How long does a session take?</summary>
@@ -1458,42 +1611,48 @@
                     </details>
                     <details class="faq-item">
                         <summary>When do we get the photos?</summary>
-                        <div class="faq-answer"><p>Within ten days, and often sooner. You get an online gallery link by email, plus print rights. Albums and prints can be added once you've picked favourites. If you need a few images urgently for a birth announcement, tell us at booking — we can usually prioritise those.</p></div>
+                        <div class="faq-answer"><p>Within ten days, and often sooner. You get an online gallery link by email, plus print rights. Albums and prints can be added once you've picked favourites. If you need a few images urgently for a birth announcement, tell us at booking and we can usually prioritise those.</p></div>
                     </details>
                 </div>
             </div>
         </section>
 
-        <!-- ========== 11. RELATED ========== -->
+        <!-- ========== 12. RELATED ========== -->
         <section id="related" class="related-section section-pad" aria-labelledby="related-heading">
             <div class="container">
                 <div class="section-header">
                     <span class="section-subtitle">Explore more</span>
-                    <h2 id="related-heading" class="section-title">Other services from the studio</h2>
+                    <h2 id="related-heading" class="section-title">Other services from the company</h2>
                 </div>
 
                 <div class="related-grid">
-                    <a href="/maternity-photography-bangalore" class="related-card animate-on-scroll">
-                        <span class="related-icon" aria-hidden="true">🌿</span>
+                    <a href="/maternity-photography-bangalore.html" class="related-card animate-on-scroll">
                         <h3>Maternity</h3>
-                        <p>Studio and at-home sessions, 28–34 weeks.</p>
+                        <p>studio and at-home sessions, 28 to 34 weeks.</p>
                     </a>
-                    <a href="/wedding-photography-bangalore" class="related-card animate-on-scroll">
-                        <span class="related-icon" aria-hidden="true">💍</span>
+                    <a href="/wedding-photography-bangalore.html" class="related-card animate-on-scroll">
                         <h3>Wedding</h3>
                         <p>Candid, traditional and cinematic wedding coverage.</p>
                     </a>
-                    <a href="/pre-wedding-photography-bangalore" class="related-card animate-on-scroll">
-                        <span class="related-icon" aria-hidden="true">🤍</span>
+                    <a href="/pre-wedding-photography-bangalore.html" class="related-card animate-on-scroll">
                         <h3>Pre-Wedding</h3>
                         <p>Couple sessions at Bangalore parks and heritage spots.</p>
                     </a>
-                    <a href="/event-photography-bangalore" class="related-card animate-on-scroll">
-                        <span class="related-icon" aria-hidden="true">🎉</span>
+                    <a href="/event-photography-bangalore.html" class="related-card animate-on-scroll">
                         <h3>Events</h3>
                         <p>Birthdays, house warmings, corporate events.</p>
                     </a>
                 </div>
+
+                <p class="also-serving">
+                    Also serving
+                    <a href="/banashankari-photography-bangalore.html">Banashankari</a>,
+                    <a href="/jayanagar-photography-bangalore.html">Jayanagar</a>,
+                    <a href="/jp-nagar-photography-bangalore.html">JP Nagar</a>,
+                    <a href="/koramangala-photography-bangalore.html">Koramangala</a>,
+                    <a href="/whitefield-photography-bangalore.html">Whitefield</a>,
+                    and <a href="/mysore-photography-bangalore.html">Mysore</a>.
+                </p>
 
                 <div class="related-more">
                     <a href="/#services" class="btn btn-outline">See all services</a>
@@ -1501,11 +1660,11 @@
             </div>
         </section>
 
-        <!-- ========== 12. CLOSING CTA ========== -->
+        <!-- ========== 13. CLOSING CTA ========== -->
         <section id="cta" class="cta-band" aria-labelledby="cta-heading">
             <div class="container">
                 <h2 id="cta-heading">Tell us your due date. We'll reserve the window.</h2>
-                <p>Message us on WhatsApp with your due date. We'll pencil in the 5–14 day window, answer any safety questions, and hold your slot — usually responding within two hours.</p>
+                <p>Message us on WhatsApp with your due date. We'll pencil in the 5 to 14 day window, answer any safety questions, and hold your slot. We usually respond within two hours.</p>
                 <a href="https://wa.me/919845808890?text=Hi%2C%20my%20baby%20is%20due%20on%20%5Bdate%5D%20and%20I%27d%20like%20to%20book%20a%20newborn%20session."
                    target="_blank" rel="noopener noreferrer"
                    class="btn track-whatsapp" data-cta="cta_book_newborn">
@@ -1516,13 +1675,13 @@
 
     </main>
 
-    <!-- ========== 13. FOOTER ========== -->
+    <!-- ========== 14. FOOTER ========== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="assets/images/logo-white.png" alt="Story and Smiles Photography" class="footer-logo" width="150" height="48" loading="lazy" />
-                    <p>Story and Smiles is a photography studio based in Banashankari, Bangalore. We cover weddings, maternity, newborn and family events across Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Goa and Puducherry.</p>
+                    <p>Story and Smiles is a photography company based in Banashankari, Bangalore. We cover weddings, maternity, newborn and family events across Karnataka, Tamil Nadu, Andhra Pradesh, Telangana, Goa and Puducherry.</p>
                     <p>Phone: <a href="tel:+919845808890">+91-98458 08890</a> | Email: <a href="mailto:info.storyandsmiles@gmail.com">info.storyandsmiles@gmail.com</a></p>
                     <p style="font-size:0.85rem; opacity:0.6;">2A, 5th main, 3rd Cross Rd, near Chikkalasandra, Banashankari, Bengaluru, Karnataka 560061</p>
                 </div>
@@ -1532,7 +1691,7 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/#about">About Us</a></li>
                         <li><a href="/#services">Services</a></li>
-                        <li><a href="#packages">Investment</a></li>
+                        <li><a href="#packages">Pricing</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#faq">FAQs</a></li>
                         <li><a href="#cta">Contact</a></li>
@@ -1546,6 +1705,17 @@
                         <li><a href="/newborn-photography-bangalore.html">Newborn Photography</a></li>
                         <li><a href="/pre-wedding-photography-bangalore.html">Pre-Wedding Shoot</a></li>
                         <li><a href="/event-photography-bangalore.html">Event Photography</a></li>
+                    </ul>
+                </div>
+                <div class="footer-areas">
+                    <h4>Areas We Serve</h4>
+                    <ul>
+                        <li><a href="/banashankari-photography-bangalore.html">Banashankari</a></li>
+                        <li><a href="/jayanagar-photography-bangalore.html">Jayanagar</a></li>
+                        <li><a href="/jp-nagar-photography-bangalore.html">JP Nagar</a></li>
+                        <li><a href="/koramangala-photography-bangalore.html">Koramangala</a></li>
+                        <li><a href="/whitefield-photography-bangalore.html">Whitefield</a></li>
+                        <li><a href="/mysore-photography-bangalore.html">Mysore</a></li>
                     </ul>
                 </div>
             </div>
@@ -1660,9 +1830,12 @@
                 animEls.forEach(function (el) { el.classList.add('visible'); });
             }
 
-            /* 4. SMOOTH SCROLL */
+            /* 4. SMOOTH SCROLL (ignores mobile dropdown toggles) */
             document.querySelectorAll('a[href^="#"]').forEach(function (a) {
                 a.addEventListener('click', function (e) {
+                    if (this.classList.contains('dropdown-toggle') && window.matchMedia('(max-width: 768px)').matches) {
+                        return;
+                    }
                     var id = this.getAttribute('href');
                     if (!id || id === '#' || id.length < 2) return;
                     var target = document.querySelector(id);
