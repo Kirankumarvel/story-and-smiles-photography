@@ -5,7 +5,7 @@
   <!-- ===== HOMEPAGE (primary conversion page) ===== -->
   <url>
     <loc>https://story-and-smiles-photography.vercel.app/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
 
@@ -61,6 +61,85 @@
       <image:title>Story and Smiles Photography logo</image:title>
       <image:caption>Story and Smiles Photography – Best wedding photographers in Bangalore</image:caption>
     </image:image>
+  </url>
+
+  <!-- ===== SERVICE PAGES (high-intent conversion pages) ===== -->
+  <url>
+    <loc>https://story-and-smiles-photography.vercel.app/wedding-photography-bangalore.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://story-and-smiles-photography.vercel.app/event-photography-bangalore.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://story-and-smiles-photography.vercel.app/maternity-photography-bangalore.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://story-and-smiles-photography.vercel.app/pre-wedding-photography-bangalore.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://story-and-smiles-photography.vercel.app/newborn-photography-bangalore.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ===== AREA PAGES (local SEO landing pages) ===== -->
+  <url>
+    <loc>https://story-and-smiles-photography.vercel.app/areas/banashankari.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://story-and-smiles-photography.vercel.app/areas/jayanagar.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://story-and-smiles-photography.vercel.app/areas/jp-nagar.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://story-and-smiles-photography.vercel.app/areas/koramangala.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://story-and-smiles-photography.vercel.app/areas/whitefield.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://story-and-smiles-photography.vercel.app/areas/mysore.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
